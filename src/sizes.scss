@@ -1,0 +1,15 @@
+:root{
+    --size-font-size-article-header: 80px;
+
+    --size-main-margin: 50px;
+
+    --size-article-hero-image-height: 110vh;
+}
+
+@media screen and (max-width: 600px) {
+    :root{
+        --size-font-size-article-header: 60px;
+
+        --size-main-margin: 20px;
+    }
+}

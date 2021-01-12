@@ -1,3 +1,11 @@
+@import './colors.scss';
+@import './sizes.scss';
+@import './fonts.scss';
+
 .App {
-  background-color: lightgrey;
+    font-family: AnticDidone;
+    color: var(--color-off-black);
+    .main-wrapper {
+        margin: 0 var(--size-main-margin);
+    }
 }
