@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useRef } from 'react';
+import ArticleModel from '../../../model/Article';
 import Local from '../LocalisationContext/Local';
 import { LocalValueContext } from '../LocalisationContext/LocalContext';
 import './Article.scss';
-import English from './English/English';
-import French from './French/French';
 
 interface IArticleProps {
-
+    article : ArticleModel;
 }
 
 const Article : React.FC<IArticleProps> = props => {
@@ -50,15 +49,15 @@ const Article : React.FC<IArticleProps> = props => {
 
     switch (localisation) {
         case Local.FR:
-            return <French titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} />;
+            return <props.article.french.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef}/>;
         break;
 
         case Local.EN:
-            return <English titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} />;
+            return <props.article.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef}/>;
         break;
 
         default:
-            return <English titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} />;
+            return <props.article.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef}/>;
     }
 }
 
