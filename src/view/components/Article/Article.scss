@@ -1,0 +1,23 @@
+.article {
+    >.article-hero-image {
+        height: var(--size-article-hero-image-height);
+        overflow: hidden;
+        padding: 0 var(--size-main-margin);
+        >.article-title {
+            &.top-layer {
+                color: var(--color-off-white);
+            }
+        }
+    }
+    .article-title {
+        font-size: var(--size-font-size-article-header);
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 900px;
+        margin: var(--size-main-margin) auto;
+    }
+    >.main-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+}

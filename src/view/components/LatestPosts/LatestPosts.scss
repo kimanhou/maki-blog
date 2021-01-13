@@ -1,0 +1,24 @@
+.latest-posts {
+    >.main-wrapper {
+        >.title {
+            text-align: center;
+            font-size: var(--size-font-size-section-title);
+            margin-bottom: var(--size-margin-30);
+        }
+        >.posts {
+            display: flex;
+            flex-direction: row;
+            margin: 0 calc(var(--size-gutter) * (-1));
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .latest-posts {
+        >.main-wrapper {
+            >.posts {
+                flex-direction: column;
+            }
+        }
+    }
+}

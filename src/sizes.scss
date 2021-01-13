@@ -1,0 +1,26 @@
+:root{
+    --size-font-size-article-header: 80px;
+    --size-font-size-section-title: 60px;
+    --size-font-size-preview-title: 24px;
+    --size-font-size-small: 12px;
+
+    --size-main-margin: 70px;
+    --size-margin-60: 60px;
+    --size-margin-30: 30px;
+    --size-margin-10: 10px;
+
+    --size-article-hero-image-height: 110vh;
+    --size-zig-zag-height: 10px;
+
+    --size-gutter: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    :root{
+        --size-font-size-article-header: 40px;
+
+        --size-main-margin: 30px;
+
+        --size-gutter: 10px;
+    }
+}
