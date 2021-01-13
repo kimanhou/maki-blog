@@ -28,12 +28,16 @@ export default class Article {
         this.categories = categories
     }
 
+    static getAllSortedArticles = () => {
+        return Article.getAllArticles().sort((a, b) => b.date.getTime() - a.date.getTime());
+    }
+
     static getAllArticles = () => {
         return [ Article.THREE, Article.TWO, Article.ONE ];
     }
 
     static getLatestArticles = (numberOfArticles : number) => {
-        const all = Article.getAllArticles();
+        const all = Article.getAllSortedArticles();
         return all.slice(0, numberOfArticles);
     }
 
