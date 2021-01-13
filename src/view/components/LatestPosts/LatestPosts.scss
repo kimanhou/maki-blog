@@ -12,3 +12,13 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .latest-posts {
+        >.main-wrapper {
+            >.posts {
+                flex-direction: column;
+            }
+        }
+    }
+}
