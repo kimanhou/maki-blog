@@ -1,5 +1,6 @@
 import React from 'react';
 import Article from '../../../../model/Article';
+import ZigZag from '../../ZigZag/ZigZag';
 import './PostPreview.scss';
 
 interface IPostPreviewProps {
@@ -11,15 +12,20 @@ const PostPreview : React.FC<IPostPreviewProps> = props => {
 
     return (
         <div className={`post-preview`}>
-            <div className={`image`} style={{ backgroundImage: `url(${image})` }}></div>
-            <div className={`title`}>
-                {props.article.english.title}
+            <div className={`image`}>
+                <img src={image} />
             </div>
-            <div className={`categories`}>
-                {props.article.categories.map(t => <p>{t.description}</p>)}
-            </div>
-            <div className={`date`}>
-                {props.article.getDateEN()}
+            <div className={`text`}>
+                <div className={`date`}>
+                    {props.article.getDateEN()}
+                </div>
+                <div className={`title`}>
+                    {props.article.english.title}
+                </div>
+                <div className={`categories`}>
+                    {props.article.getCategories()}
+                </div>
+                <ZigZag />
             </div>
         </div>
     );

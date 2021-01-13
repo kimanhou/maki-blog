@@ -44,6 +44,9 @@ export default class Article {
         return [(dd>9 ? '' : '0') + dd, mm, this.date.getFullYear()].join(' ');
     }
 
+    getCategories = () => {
+        return this.categories.map(t => t.description).join(', ');
+    }
     
 
     static ONE = new Article(1, new Date('2021-01-12'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA, Category.WEBDESIGN ]);

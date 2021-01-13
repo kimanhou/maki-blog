@@ -13,7 +13,14 @@ const LatestPosts : React.FC<ILatestPostsProps> = props => {
 
     return (
         <div className={`latest-posts`}>
-            {posts.map(t => <PostPreview article={t}/>)}
+            <div className={`main-wrapper`}>
+                <div className={`title`}>
+                    Latest on the blog
+                </div>
+                <div className={`posts`}>
+                    {posts.map(t => <PostPreview article={t}/>)}
+                </div>
+            </div>
         </div>
     );
 }
