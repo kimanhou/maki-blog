@@ -7,10 +7,11 @@ interface IPostPreviewProps {
 }
 
 const PostPreview : React.FC<IPostPreviewProps> = props => {
-    const imageUrl = `url(../../Article/${props.article.id}/images/hero-image.jpg)`;
+    const image = require(`../../Article/${props.article.id}/images/hero-image.jpg`);
+
     return (
         <div className={`post-preview`}>
-            <div className={`image`} style={{ backgroundImage: imageUrl}} ></div>
+            <div className={`image`} style={{ backgroundImage: `url(${image})` }}></div>
             <div className={`title`}>
                 {props.article.english.title}
             </div>

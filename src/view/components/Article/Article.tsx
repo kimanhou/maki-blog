@@ -49,15 +49,15 @@ const Article : React.FC<IArticleProps> = props => {
 
     switch (localisation) {
         case Local.FR:
-            return <props.article.french.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef}/>;
+            return <props.article.french.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.article.french.title} />;
         break;
 
         case Local.EN:
-            return <props.article.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef}/>;
+            return <props.article.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.article.english.title} />;
         break;
 
         default:
-            return <props.article.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef}/>;
+            return <props.article.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.article.english.title} />;
     }
 }
 

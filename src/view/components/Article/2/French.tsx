@@ -1,6 +1,7 @@
 import React from 'react';
 import { IArticleContentProps } from '../../../../model/Article';
 import '../Article.scss';
+import './Article.scss';
 
 const French : React.FC<IArticleContentProps> = props => {
     const title = 'Ajouter un post Instagram sur son site web';
@@ -9,12 +10,12 @@ const French : React.FC<IArticleContentProps> = props => {
         <div className={`article`}>
             <div className={`article-hero-image`}>
                 <div className={`article-title top-layer`} ref={props.titleTopLayerRef}>
-                    {title}
+                    {props.title}
                 </div>
             </div>
             <div className={`main-wrapper`}>
                 <div className={`article-title bottom-layer`} ref={props.titleBottomLayerRef}>
-                    {title}
+                    {props.title}
                 </div>
                 <div className={`article-text`}>
                     <p>Créer / Utiliser un compte Facebook</p>

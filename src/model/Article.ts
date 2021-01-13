@@ -10,6 +10,7 @@ import LanguageVersion from "./LanguageVersion";
 export interface IArticleContentProps{
     titleTopLayerRef: React.RefObject<HTMLDivElement>;
     titleBottomLayerRef: React.RefObject<HTMLDivElement>;
+    title : string;
 }
 
 export default class Article {
