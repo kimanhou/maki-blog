@@ -4,10 +4,8 @@ import '../Article.scss';
 import './Article.scss';
 
 const French : React.FC<IArticleContentProps> = props => {
-    const title = 'Ajouter un post Instagram sur son site web';
-
     return (
-        <div className={`article`}>
+        <div className={`article three`}>
             <div className={`article-hero-image`}>
                 <div className={`article-title top-layer`} ref={props.titleTopLayerRef}>
                     {props.title}

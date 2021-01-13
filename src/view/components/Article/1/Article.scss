@@ -1,5 +1,11 @@
 .article {
-    >.article-hero-image {
-        background: url('images/hero-image.jpg') no-repeat center center; 
+    &.one {
+        >.article-hero-image {
+            background: url('images/hero-image.jpg') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
     }
 }

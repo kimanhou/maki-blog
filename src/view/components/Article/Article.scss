@@ -1,10 +1,6 @@
 .article {
     >.article-hero-image {
         height: var(--size-article-hero-image-height);
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
         overflow: hidden;
         padding: 0 var(--size-main-margin);
         >.article-title {

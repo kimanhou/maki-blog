@@ -7,7 +7,7 @@ const English : React.FC<IArticleContentProps> = props => {
     const title = 'Post #2';
 
     return (
-        <div className={`article`}>
+        <div className={`article two`}>
             <div className={`article-hero-image`}>
                 <div className={`article-title top-layer`} ref={props.titleTopLayerRef}>
                     {props.title}

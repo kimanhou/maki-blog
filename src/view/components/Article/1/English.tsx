@@ -5,7 +5,7 @@ import './Article.scss';
 
 const English : React.FC<IArticleContentProps> = props => {
     return (
-        <div className={`article`}>
+        <div className={`article one`}>
             <div className={`article-hero-image`}>
                 <div className={`article-title top-layer`} ref={props.titleTopLayerRef}>
                     {props.title}

@@ -29,12 +29,12 @@ export default class Article {
     }
 
     static getAllArticles = () => {
-        return [ Article.ONE, Article.TWO, Article.THREE ];
+        return [ Article.THREE, Article.TWO, Article.ONE ];
     }
 
     static getLatestArticles = (numberOfArticles : number) => {
         const all = Article.getAllArticles();
-        return all.slice(all.length - numberOfArticles, all.length);
+        return all.slice(0, numberOfArticles);
     }
 
     getDateEN = () => {

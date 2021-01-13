@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Article from '../../../../model/Article';
 import ZigZag from '../../ZigZag/ZigZag';
 import './PostPreview.scss';
@@ -11,7 +12,7 @@ const PostPreview : React.FC<IPostPreviewProps> = props => {
     const image = require(`../../Article/${props.article.id}/images/hero-image.jpg`);
 
     return (
-        <div className={`post-preview`}>
+        <Link className={`post-preview`} to={`posts/${props.article.id}`}>
             <div className={`image`}>
                 <img src={image} />
             </div>
@@ -27,7 +28,7 @@ const PostPreview : React.FC<IPostPreviewProps> = props => {
                 </div>
                 <ZigZag />
             </div>
-        </div>
+        </Link>
     );
 }
 
