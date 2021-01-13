@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Article from '../../../../model/Article';
+import Text from '../../LocalisationContext/Text';
 import ZigZag from '../../ZigZag/ZigZag';
 import './PostPreview.scss';
 
@@ -14,6 +15,11 @@ const PostPreview : React.FC<IPostPreviewProps> = props => {
     return (
         <Link className={`post-preview`} to={`posts/${props.article.id}`}>
             <div className={`image`}>
+                <div className={`hover-shadow`}></div>
+                <div className={`read-more`}>
+                    <Text english='Read more' french="Lire l'article" />
+                    <div className={`read-more-background`}></div>
+                </div>
                 <img src={image} />
             </div>
             <div className={`text`}>
