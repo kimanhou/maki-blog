@@ -10,13 +10,12 @@
             >.maki-logo {
                 width: var(--size-header-maki-logo);
                 .maki-logo-path {
-                    stroke: var(--color-dark-green);
+                    stroke: var(--color-off-black);
                 }
             }
             >.header-logo-subtitle {
                 margin-top: var(--size-header-maki-logo-subtitle-margin-top);
                 >.mark, >.kim-anh {
-                    color: var(--color-dark-green);
                     font-size: var(--size-font-size-navigation);
                 }
                 >.mark {}
