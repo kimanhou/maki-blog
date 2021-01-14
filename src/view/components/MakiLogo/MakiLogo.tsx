@@ -2,7 +2,6 @@ import React from 'react';
 import './MakiLogo.scss';
 
 interface IMakiLogoProps {
-
 }
 
 const MakiLogo : React.FC<IMakiLogoProps> = props => {

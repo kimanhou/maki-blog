@@ -1,0 +1,31 @@
+.header {
+    margin-bottom: var(--size-margin-30);
+    >.main-wrapper {
+        display: flex;
+        flex-direction: row;
+        >.header-logo {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            >.maki-logo {
+                width: var(--size-header-maki-logo);
+                .maki-logo-path {
+                    stroke: var(--color-off-black);
+                }
+            }
+            >.header-logo-subtitle {
+                margin-top: var(--size-header-maki-logo-subtitle-margin-top);
+                >.mark, >.kim-anh {
+                    font-size: var(--size-font-size-navigation);
+                }
+                >.mark {}
+                >.plus {
+                    color: var(--color-yellow);
+                    margin: 0 var(--size-margin-5);
+                    font-size: var(--size-font-size-navigation);
+                }
+                >.kim-anh {}
+            }
+        }
+    }
+}

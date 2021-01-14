@@ -13,7 +13,16 @@
         >.footer-right {
             text-align: right;
         }
-        >.footer-logo {
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        >.main-wrapper {
+            flex-direction: column;
+            >.footer-left, >.footer-right, >.footer-logo {
+                margin: var(--size-margin-10) 0; 
+            }
         }
     }
 }
