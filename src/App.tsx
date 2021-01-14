@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import ArticleRoot from './view/components/Article/ArticleRoot';
-import LatestPosts from './view/components/LatestPosts/LatestPosts';
+import Home from './view/components/Home/Home';
 
 const App : React.FunctionComponent = props => {
 
@@ -11,7 +11,7 @@ const App : React.FunctionComponent = props => {
             <HashRouter>
                     <Switch>
                         <Route exact path={["/", "/posts/"]}>
-                            <LatestPosts />
+                            <Home />
                         </Route>
                         <Route path={["/posts/:postId"]}>
                             <ArticleRoot />
