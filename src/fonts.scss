@@ -4,3 +4,10 @@
     src: url('./fonts/AnticDidone-Regular.woff') format('woff'),
          url('./fonts/AnticDidone-Regular.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: BsSignature;
+    font-display: swap;
+    src: url('./fonts/Bs-Signature-Demo.woff') format('woff'),
+         url('./fonts/Bs-Signature-Demo.ttf') format('truetype');
+}
