@@ -1,0 +1,77 @@
+.section-header {
+    text-align: center;
+    font-weight: normal;
+    font-size: var(--size-font-size-section-title);
+    >.section-header-title {
+        text-transform: uppercase;
+        position: relative;
+        height: var(--size-section-header-title-height);
+        overflow: hidden;
+        >.down, >.up {
+            color: transparent;
+            position: relative;
+            >.moving {
+                position: absolute;
+                left: 0;
+                height: var(--size-section-header-title-height);
+                width: 100%;
+                color: var(--color-off-black);
+            }
+        }
+        >.down {
+            >.moving {
+                top: -100%;
+                animation: section-header-title-down-animation 0.3s linear 1s forwards;
+            }
+        }
+        >.up {
+            >.moving {
+                top: 100%;
+                animation: section-header-title-up-animation 0.3s linear 1s forwards;
+            }
+        }
+    }
+    >.section-header-subtitle {
+        font-family: Dawning;
+        margin-left: var(--size-section-header-subtitle-margin-left);
+        margin-top: var(--size-section-header-subtitle-margin-top);
+        position: relative;
+        height: var(--size-section-header-subtitle-height);
+        width: var(--size-section-header-subtitle-width);
+        overflow: hidden;
+        >.section-header-subtitle-text {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            height: var(--size-section-header-subtitle-height);
+            animation: section-header-subtitle-animation 0.4s linear 1.5s forwards;
+        }
+    }
+}
+
+@keyframes section-header-title-up-animation {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes section-header-title-down-animation {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes section-header-subtitle-animation {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: var(--size-margin-10);
+    }
+}
