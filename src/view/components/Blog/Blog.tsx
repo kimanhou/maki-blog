@@ -14,6 +14,10 @@ const Blog : React.FC<IBlogProps> = props => {
     const posts = Article.getAllSortedArticles();
     const categories = Category.getAllCategories();
 
+    const postsColumn1 = posts.filter((t , index) => index % 3 == 0);
+    const postsColumn2 = posts.filter((t , index) => index % 3 == 1);
+    const postsColumn3 = posts.filter((t , index) => index % 3 == 2);
+
     return (
         <div className={`blog`}>
             <Header />
@@ -25,7 +29,15 @@ const Blog : React.FC<IBlogProps> = props => {
                     </div>
                 </div>
                 <div className={`posts`}>
-                    {posts.map(t => <PostPreview article={t}/>)}
+                    <div className={`posts-column`}>
+                        {postsColumn1.map(t => <PostPreview article={t}/>)}
+                    </div>
+                    <div className={`posts-column`}>
+                        {postsColumn2.map(t => <PostPreview article={t}/>)}
+                    </div>
+                    <div className={`posts-column`}>
+                        {postsColumn3.map(t => <PostPreview article={t}/>)}
+                    </div>
                 </div>
             </div>
             <Footer />
