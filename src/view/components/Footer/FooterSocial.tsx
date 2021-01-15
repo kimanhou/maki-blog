@@ -1,4 +1,5 @@
 import React from 'react';
+import BackgroundOnHover from '../BackgroundOnHover/BackgroundOnHover';
 import './FooterSocial.scss';
 
 interface IFooterSocialProps {
@@ -10,7 +11,7 @@ const FooterSocial : React.FC<IFooterSocialProps> = props => {
 
     return(
         <div className={`footer-social ${props.classname}`}>
-            <div className={`footer-social-background-hover`}></div>
+            <BackgroundOnHover className={`footer-social-background`} />
             <a href={props.link} target='_blank'/>
         </div>
     )

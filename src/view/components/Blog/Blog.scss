@@ -1,0 +1,16 @@
+.blog {
+    >.main-wrapper {
+        >.blog-categories {
+            display: flex;
+            flex-direction: row;
+            border-top: solid 1px var(--color-yellow);
+            border-bottom: solid 1px var(--color-yellow);
+            padding: var(--size-margin-30) auto;
+        }
+        >.posts {
+            display: flex;
+            flex-direction: row;
+            margin: 0 calc(var(--size-gutter) * (-1));
+        }
+    }
+}

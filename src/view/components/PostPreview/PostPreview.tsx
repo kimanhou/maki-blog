@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Article from '../../../../model/Article';
-import Text from '../../LocalisationContext/Text';
-import ZigZag from '../../ZigZag/ZigZag';
+import Article from '../../../model/Article';
+import BackgroundOnHover from '../BackgroundOnHover/BackgroundOnHover';
+import Text from '../LocalisationContext/Text';
+import ZigZag from '../ZigZag/ZigZag';
 import './PostPreview.scss';
 
 interface IPostPreviewProps {
@@ -10,7 +11,7 @@ interface IPostPreviewProps {
 }
 
 const PostPreview : React.FC<IPostPreviewProps> = props => {
-    const image = require(`../../Article/${props.article.id}/images/hero-image.jpg`);
+    const image = require(`../Article/${props.article.id}/images/hero-image.jpg`);
 
     return (
         <Link className={`post-preview`} to={`posts/${props.article.id}`}>
@@ -18,7 +19,7 @@ const PostPreview : React.FC<IPostPreviewProps> = props => {
                 <div className={`hover-shadow`}></div>
                 <div className={`read-more`}>
                     <Text english='Read more' french="Lire l'article" />
-                    <div className={`read-more-background`}></div>
+                    <BackgroundOnHover className={`read-more-background`} />
                 </div>
                 <img src={image} />
             </div>

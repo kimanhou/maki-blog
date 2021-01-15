@@ -5,6 +5,7 @@
     background-position: center;
     background-size: 100%;
     position: relative;
+    z-index: 0;
     &.mail {
         background-image: url(../../../images/icon-mail.svg);
     }
@@ -19,20 +20,11 @@
         width: var(--size-footer-social-height);
         display: block;
     }
-    >.footer-social-background-hover, >.footer-social-cross {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: opacity 0.4s;
-        pointer-events: none;
-    }
-    >.footer-social-background-hover {
-        background-color: var(--color-off-black);
-    }
     &:hover {
-        >.footer-social-background-hover { 
-            opacity: 0.2;
+        >.footer-social-background { 
+            width: calc(100%);
+            z-index: -1;
+            left: 0;
         }
         >.cross {
             opacity: 1;

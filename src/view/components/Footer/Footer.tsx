@@ -1,5 +1,6 @@
 import React from 'react';
 import MakiLogo from '../MakiLogo/MakiLogo';
+import MakiLogoWithNames from '../MakiLogo/MakiLogoWithNames';
 import './Footer.scss';
 import FooterSocial from './FooterSocial';
 
@@ -12,9 +13,7 @@ const Footer : React.FC<IFooterProps> = props => {
                 <div className={`footer-left`}>
                     Copyright © 2021 Maki
                 </div>
-                <div className={`footer-logo`}>
-                    <MakiLogo />
-                </div>
+                <MakiLogoWithNames />
                 <div className={`footer-right`}>
                     <FooterSocial classname={`mail`} link={`mailto:mark.kimanh@gmail.com`}/>
                     <FooterSocial classname={`instagram`} link={`https://www.instagram.com/thisismakiworld/`}/>

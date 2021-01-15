@@ -1,16 +1,15 @@
 import React from 'react';
-import ArticleModel from '../../../model/Article';
-import Article from '../Article/Article';
+import Article from '../../../model/Article';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import './LatestPosts.scss';
-import PostPreview from './PostPreview/PostPreview';
+import PostPreview from '../PostPreview/PostPreview';
 
 interface ILatestPostsProps {
 
 }
 
 const LatestPosts : React.FC<ILatestPostsProps> = props => {
-    const posts = ArticleModel.getLatestArticles(3);
+    const posts = Article.getLatestArticles(3);
 
     return (
         <div className={`latest-posts`}>
