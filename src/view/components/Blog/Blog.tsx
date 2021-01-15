@@ -1,6 +1,8 @@
 import React from 'react';
-import Article from '../../../model/Article';
+import { useHistory, useLocation } from 'react-router';
+import Filters from '../../../business/Filters';
 import Category from '../../../model/Category';
+import { useQueryParams } from '../../hooks/UseQueryParams';
 import FadeIn from '../FadeIn/FadeIn';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -12,12 +14,31 @@ import BlogCategory from './BlogCategory';
 interface IBlogProps {}
 
 const Blog : React.FC<IBlogProps> = props => {
-    const posts = Article.getAllSortedArticles();
-    const categories = Category.getAllCategories();
+    const queryParams = useQueryParams();
+    let categoriesString = queryParams['categories'];
+    let categories : Category[] = [];
+    if (categoriesString != undefined) {
+        categories = (JSON.parse(categoriesString) as string[]).map(Category.deserialize);
+    }
+    let displayedPosts = Filters.getPosts(categories);
+    
+    const isCategorySelected = (category : Category) => {
+        return categories.includes(category);
+    }
 
-    const postsColumn1 = posts.filter((t , index) => index % 3 == 0);
-    const postsColumn2 = posts.filter((t , index) => index % 3 == 1);
-    const postsColumn3 = posts.filter((t , index) => index % 3 == 2);
+    const history = useHistory();
+    const location = useLocation();
+    const setSelectedCategories = (categories : Category[]) => {
+        const {categories : tagsParams, ...otherQueryParams} = queryParams;
+        const search = Object.keys(otherQueryParams).map(key => `${key}=${encodeURIComponent(queryParams[key]!)}`);
+        history.push(`${location.pathname}?${Category.toQueryParam(categories)}${search}`)
+    }
+
+    const allCategories = Category.getAllCategories();
+
+    const postsColumn1 = displayedPosts.filter((t , index) => index % 3 == 0);
+    const postsColumn2 = displayedPosts.filter((t , index) => index % 3 == 1);
+    const postsColumn3 = displayedPosts.filter((t , index) => index % 3 == 2);
 
     return (
         <div className={`blog`}>
@@ -26,7 +47,7 @@ const Blog : React.FC<IBlogProps> = props => {
                 <SectionHeader englishTitle='The blog' englishSubtitle='' frenchTitle='Le blog' frenchSubtitle='' />
                 <div className={`blog-categories`}>
                     <div className={`blog-categories-container`}>
-                        {categories.map(t => <BlogCategory category={t} />)}
+                        {allCategories.map(t => <BlogCategory category={t} isSelected={isCategorySelected(t)} onClick={() =>setSelectedCategories([t])}/>)}
                     </div>
                 </div>
                 <div className={`posts`}>

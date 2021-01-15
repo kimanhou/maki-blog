@@ -13,4 +13,7 @@
             z-index: -1;
         }
     }
+    &.is-selected {
+        color: var(--color-yellow);
+    }
 }

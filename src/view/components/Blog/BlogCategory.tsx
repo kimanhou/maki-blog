@@ -5,12 +5,15 @@ import './BlogCategory.scss';
 
 interface IBlogCategoryProps {
     category : Category;
+    isSelected : boolean;
+    onClick : () => void;
 }
 
 const BlogCategory : React.FC<IBlogCategoryProps> = props => {
+    const isSelectedClassName = props.isSelected ? 'is-selected' : '';
 
     return (
-        <div className={`blog-category`}>
+        <div className={`blog-category ${isSelectedClassName}`} onClick={props.onClick}>
             <BackgroundOnHover  className={`blog-category-background`}/>
             {props.category.description}
         </div>
