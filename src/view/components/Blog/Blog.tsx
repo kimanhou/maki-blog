@@ -20,7 +20,9 @@ const Blog : React.FC<IBlogProps> = props => {
             <div className={`main-wrapper`}>
                 <SectionHeader englishTitle='Blog' englishSubtitle='' frenchTitle='Le blog' frenchSubtitle='' />
                 <div className={`blog-categories`}>
-                    {categories.map(t => <BlogCategory category={t} />)}
+                    <div className={`blog-categories-container`}>
+                        {categories.map(t => <BlogCategory category={t} />)}
+                    </div>
                 </div>
                 <div className={`posts`}>
                     {posts.map(t => <PostPreview article={t}/>)}

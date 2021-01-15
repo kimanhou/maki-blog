@@ -1,3 +1,16 @@
 .blog-category {
     flex: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.4s;
+    z-index: 0;
+    position: relative;
+    &:hover {
+        color: var(--color-yellow);
+        >.blog-category-background {
+            width: calc(100%);
+            left: 0;
+            z-index: -1;
+        }
+    }
 }
