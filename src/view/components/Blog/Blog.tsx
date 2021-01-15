@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import Filters from '../../../business/Filters';
 import Category from '../../../model/Category';
@@ -40,6 +40,20 @@ const Blog : React.FC<IBlogProps> = props => {
     const postsColumn2 = displayedPosts.filter((t , index) => index % 3 == 1);
     const postsColumn3 = displayedPosts.filter((t , index) => index % 3 == 2);
 
+    const [isInvisible, setIsInvisible] = useState(false);
+    const isInvisibleClassname = isInvisible ? 'is-invisible' : '';
+
+    const onCategoryClick = (category : Category) => {
+        setIsInvisible(true);
+        const timer = setTimeout(() => {
+            setSelectedCategories([ category ]);
+            setIsInvisible(false);
+        }, 1000);
+        return () => clearTimeout(timer);
+    }
+
+   
+
     return (
         <div className={`blog`}>
             <Header />
@@ -47,10 +61,10 @@ const Blog : React.FC<IBlogProps> = props => {
                 <SectionHeader englishTitle='The blog' englishSubtitle='' frenchTitle='Le blog' frenchSubtitle='' />
                 <div className={`blog-categories`}>
                     <div className={`blog-categories-container`}>
-                        {allCategories.map(t => <BlogCategory category={t} isSelected={isCategorySelected(t)} onClick={() =>setSelectedCategories([t])}/>)}
+                        {allCategories.map(t => <BlogCategory category={t} isSelected={isCategorySelected(t)} onClick={() => onCategoryClick(t)}/>)}
                     </div>
                 </div>
-                <div className={`posts`}>
+                <div className={`posts ${isInvisibleClassname}`}>
                     <div className={`posts-column`}>
                         {postsColumn1.map(t => 
                             <FadeIn noDelay>
