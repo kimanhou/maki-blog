@@ -33,7 +33,12 @@ export default class Article {
     }
 
     static getAllArticles = () => {
-        return [ Article.THREE, Article.TWO, Article.ONE ];
+        return [ 
+            Article.THREE, Article.TWO, Article.ONE,
+            Article.THREE, Article.TWO, Article.ONE,
+            Article.THREE, Article.TWO, Article.ONE,
+            Article.THREE, Article.TWO, Article.ONE,
+         ];
     }
 
     static getLatestArticles = (numberOfArticles : number) => {

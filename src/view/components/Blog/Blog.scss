@@ -21,8 +21,10 @@
                 flex-direction: column;
                 margin: 0 var(--size-gutter);
                 display: table;
-                >.post-preview {
-                    margin: 0;
+                >.fade-in {
+                    >.post-preview {
+                        margin: 0;
+                    }
                 }
             }
         }

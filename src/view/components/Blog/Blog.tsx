@@ -1,6 +1,7 @@
 import React from 'react';
 import Article from '../../../model/Article';
 import Category from '../../../model/Category';
+import FadeIn from '../FadeIn/FadeIn';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import PostPreview from '../PostPreview/PostPreview';
@@ -22,7 +23,7 @@ const Blog : React.FC<IBlogProps> = props => {
         <div className={`blog`}>
             <Header />
             <div className={`main-wrapper`}>
-                <SectionHeader englishTitle='Blog' englishSubtitle='' frenchTitle='Le blog' frenchSubtitle='' />
+                <SectionHeader englishTitle='The blog' englishSubtitle='' frenchTitle='Le blog' frenchSubtitle='' />
                 <div className={`blog-categories`}>
                     <div className={`blog-categories-container`}>
                         {categories.map(t => <BlogCategory category={t} />)}
@@ -30,13 +31,22 @@ const Blog : React.FC<IBlogProps> = props => {
                 </div>
                 <div className={`posts`}>
                     <div className={`posts-column`}>
-                        {postsColumn1.map(t => <PostPreview article={t}/>)}
+                        {postsColumn1.map(t => 
+                            <FadeIn noDelay>
+                                <PostPreview article={t}/>
+                            </FadeIn>)}
                     </div>
                     <div className={`posts-column`}>
-                        {postsColumn2.map(t => <PostPreview article={t}/>)}
+                        {postsColumn2.map(t => 
+                            <FadeIn noDelay>
+                                <PostPreview article={t}/>
+                            </FadeIn>)}
                     </div>
                     <div className={`posts-column`}>
-                        {postsColumn3.map(t => <PostPreview article={t}/>)}
+                        {postsColumn3.map(t => 
+                            <FadeIn noDelay>
+                                <PostPreview article={t}/>
+                            </FadeIn>)}
                     </div>
                 </div>
             </div>
