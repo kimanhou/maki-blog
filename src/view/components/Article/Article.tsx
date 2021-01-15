@@ -3,6 +3,7 @@ import ArticleModel from '../../../model/Article';
 import Local from '../LocalisationContext/Local';
 import { LocalValueContext } from '../LocalisationContext/LocalContext';
 import './Article.scss';
+import './Tldr.scss';
 
 interface IArticleProps {
     article : ArticleModel;

@@ -45,14 +45,12 @@ const Blog : React.FC<IBlogProps> = props => {
 
     const onCategoryClick = (category : Category) => {
         setIsInvisible(true);
-        const timer = setTimeout(() => {
+        setTimeout(() => {
             setSelectedCategories([ category ]);
             setIsInvisible(false);
         }, 1000);
-        return () => clearTimeout(timer);
     }
 
-   
 
     return (
         <div className={`blog`}>

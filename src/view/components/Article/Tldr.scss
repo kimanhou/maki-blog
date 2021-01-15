@@ -1,0 +1,8 @@
+.tldr {
+    margin: var(--size-margin-30) 0;
+    >.fade-in {
+        >.tldr-title {
+            font-size: var(--size-font-size-preview-title);
+        }
+    }
+}

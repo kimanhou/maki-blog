@@ -1,9 +1,20 @@
 import React from 'react';
+import { myScrollTo } from '../../../../Util';
 import { IArticleContentProps } from '../../../../model/Article';
 import '../Article.scss';
 import './Article.scss';
+import TldrEnglish from './TldrEnglish';
+import FadeIn from '../../FadeIn/FadeIn';
 
 const English : React.FC<IArticleContentProps> = props => {
+    const onClickTldr = () => {
+        myScrollTo('tldr');
+    }
+
+    const onClickTop = () => {
+        myScrollTo('top');
+    }
+
     return (
         <div className={`article one`}>
             <div className={`article-hero-image`}>
@@ -11,10 +22,16 @@ const English : React.FC<IArticleContentProps> = props => {
                     {props.title}
                 </div>
             </div>
-            <div className={`main-wrapper`}>
+            <div className={`main-wrapper`} id={`top`}>
                 <div className={`article-title bottom-layer`} ref={props.titleBottomLayerRef}>
                     {props.title}
                 </div>
+                <FadeIn noDelay>
+                    <div className={`go-to-tldr`} onClick={onClickTldr}>
+                        <span>Go to TL;DR</span>
+                        <span className={`arrow-down`}>⌄</span>
+                    </div>
+                </FadeIn>
                 <div className={`article-text`}>
                     <p>Create / Have a Facebook account</p>
                     <p>Make it a developer account</p>
@@ -47,6 +64,13 @@ const English : React.FC<IArticleContentProps> = props => {
                     <p>Write the command curl</p>
                     <p>Get json and do what you want with it</p>
                 </div>
+                <TldrEnglish />
+                <FadeIn noDelay>
+                    <div className={`back-to-top`} onClick={onClickTop}>
+                        <span>Back to top</span>
+                        <span className={`arrow-up`}>⌃</span>
+                    </div>
+                </FadeIn>
             </div>
         </div>
     );
