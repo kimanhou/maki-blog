@@ -11,14 +11,6 @@ const Header : React.FC<IHeaderProps> = props => {
     return (
         <div className={`header`}>
             <div className={`main-wrapper`}>
-                {/* <Link className={`header-logo`} to='/'>
-                    <MakiLogo />
-                    <div className={`header-logo-subtitle`}>
-                        <span className={`mark`}>Mark</span>
-                        <span className={`plus`}>+</span>
-                        <span className={`kim-anh`}>Kim Anh</span>
-                    </div>
-                </Link> */}
                 <MakiLogoWithNames />
                 <Navigation />
             </div>
