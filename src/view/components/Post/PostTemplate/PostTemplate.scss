@@ -1,9 +1,27 @@
 .post {
     >.post-hero-image {
-        background: url('images/hero-image.jpg') no-repeat center center;
+        // background: url('images/hero-image.jpg') no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+    >.main-wrapper {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: var(--size-margin-30);
+        >.header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            >.fade-in {
+                >.main-wrapper {
+                    margin: 0;
+                }
+                >.screen-detector-fade-in {
+                    top: 230px;
+                }
+            }
+        }
     }
 }

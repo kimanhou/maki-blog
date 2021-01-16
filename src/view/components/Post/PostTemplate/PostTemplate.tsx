@@ -1,6 +1,7 @@
 import React from 'react';
 import { IPostContentProps } from '../../../../model/Post';
 import FadeIn from '../../FadeIn/FadeIn';
+import Header from '../../Header/Header';
 import './PostTemplate.scss';
 import BackToTop from './TemplateComponents/BackToTop';
 import GoToTldr from './TemplateComponents/GoToTldr';
@@ -19,6 +20,7 @@ const PostTemplate : React.FC<IPostTemplateProps> = props => {
             <PostHeroImage title={props.title} titleTopLayerRef={props.titleTopLayerRef} />
             <div className={`main-wrapper`} id={`top`}>
                 <PostTitleBottomLayer title={props.title} titleBottomLayerRef={props.titleBottomLayerRef} />
+                <Header/>
                 <GoToTldr />
                 <FadeIn noDelay>
                     <div className={`post-text`}>
