@@ -1,12 +1,12 @@
 import React from 'react';
 import { myScrollTo } from '../../../../Util';
-import { IArticleContentProps } from '../../../../model/Article';
-import '../Article.scss';
-import './Article.scss';
+import { IPostContentProps } from '../../../../model/Post';
+import '../PostPage.scss';
+import './PostPage.scss';
 import TldrEnglish from './TldrEnglish';
 import FadeIn from '../../FadeIn/FadeIn';
 
-const English : React.FC<IArticleContentProps> = props => {
+const English : React.FC<IPostContentProps> = props => {
     const onClickTldr = () => {
         myScrollTo('tldr');
     }

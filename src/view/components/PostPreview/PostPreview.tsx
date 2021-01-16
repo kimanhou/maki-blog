@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Article from '../../../model/Article';
+import Post from '../../../model/Post';
 import BackgroundOnHover from '../BackgroundOnHover/BackgroundOnHover';
 import Text from '../LocalisationContext/Text';
 import ZigZag from '../ZigZag/ZigZag';
 import './PostPreview.scss';
 
 interface IPostPreviewProps {
-    article : Article
+    article : Post
 }
 
 const PostPreview : React.FC<IPostPreviewProps> = props => {
-    const image = require(`../Article/${props.article.id}/images/hero-image.jpg`);
+    const image = require(`../Post/${props.article.id}/images/hero-image.jpg`);
 
     return (
         <Link className={`post-preview`} to={`posts/${props.article.id}`}>

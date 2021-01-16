@@ -1,11 +1,9 @@
 import React from 'react';
-import { IArticleContentProps } from '../../../../model/Article';
-import '../Article.scss';
-import './Article.scss';
+import { IPostContentProps } from '../../../../model/Post';
+import '../PostPage.scss';
+import './PostPage.scss';
 
-const English : React.FC<IArticleContentProps> = props => {
-    const title = 'Post #3';
-
+const English : React.FC<IPostContentProps> = props => {
     return (
         <div className={`article three`}>
             <div className={`article-hero-image`}>

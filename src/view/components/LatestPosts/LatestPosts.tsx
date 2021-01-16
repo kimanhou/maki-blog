@@ -1,5 +1,5 @@
 import React from 'react';
-import Article from '../../../model/Article';
+import Post from '../../../model/Post';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import './LatestPosts.scss';
 import PostPreview from '../PostPreview/PostPreview';
@@ -10,7 +10,7 @@ interface ILatestPostsProps {
 }
 
 const LatestPosts : React.FC<ILatestPostsProps> = props => {
-    const posts = Article.getLatestArticles(3);
+    const posts = Post.getLatestArticles(3);
 
     return (
         <div className={`latest-posts`}>

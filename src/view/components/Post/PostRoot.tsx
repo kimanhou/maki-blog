@@ -1,20 +1,20 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import Article from './Article';
-import ArticleModel from '../../../model/Article';
+import PostPage from './PostPage';
+import ArticleModel from '../../../model/Post';
 import Footer from '../Footer/Footer';
 
-const ArticleRoot : React.FC = props => {
+const PostRoot : React.FC = props => {
     let { postId } = useParams<{postId ?: string}>();
-    var foundArticle = ArticleModel.getAllArticles().find(t => t.id.toString() == postId);
+    var foundArticle = ArticleModel.getAllPosts().find(t => t.id.toString() == postId);
     const article = foundArticle == undefined ? ArticleModel.ONE : foundArticle;
 
     return(
         <>
-            <Article article={article} />
+            <PostPage article={article} />
             <Footer />
         </>
     );
 }
 
-export default ArticleRoot;
+export default PostRoot;

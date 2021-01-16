@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import ArticleModel from '../../../model/Article';
+import ArticleModel from '../../../model/Post';
 import Local from '../LocalisationContext/Local';
 import { LocalValueContext } from '../LocalisationContext/LocalContext';
-import './Article.scss';
+import './PostPage.scss';
 import './Tldr.scss';
 
-interface IArticleProps {
+interface IPostPageProps {
     article : ArticleModel;
 }
 
-const Article : React.FC<IArticleProps> = props => {
+const PostPage : React.FC<IPostPageProps> = props => {
     var localisation = useContext(LocalValueContext);
 
     const topLayerRef = useRef<HTMLDivElement>(null);
@@ -62,4 +62,4 @@ const Article : React.FC<IArticleProps> = props => {
     }
 }
 
-export default Article;
+export default PostPage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
-import ArticleRoot from './view/components/Article/ArticleRoot';
+import PostRoot from './view/components/Post/PostRoot';
 import Blog from './view/components/Blog/Blog';
 import Home from './view/components/Home/Home';
 import ScrollToTop from './view/components/ScrollToTop/ScrollToTop';
@@ -20,7 +20,7 @@ const App : React.FunctionComponent = props => {
                         <Blog />
                     </Route>
                     <Route path={["/posts/:postId"]}>
-                        <ArticleRoot />
+                        <PostRoot />
                     </Route>
                 </Switch>
             </HashRouter>

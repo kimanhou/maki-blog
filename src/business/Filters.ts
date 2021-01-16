@@ -1,10 +1,10 @@
-import Article from "../model/Article";
+import Post from "../model/Post";
 import Category from "../model/Category";
 
 
 class Filters {
     getPosts = (categories : Category[]) => {
-        const allPosts = Article.getAllSortedArticles();
+        const allPosts = Post.getAllSortedPosts();
 
         if (categories.includes(Category.ALL)) {
             return allPosts;
