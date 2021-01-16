@@ -1,0 +1,33 @@
+.arrow-back {
+    margin: var(--size-margin-30) 0;
+    position: absolute;
+    top: calc(var(--size-header-height) - var(--size-font-size-post-header));
+    >.fade-in {
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.4s;
+        position: relative;
+        &:hover {
+            color: var(--color-yellow);
+        }
+        >.arrow-back-left {
+            position: absolute;
+            animation: arrow-left-animation 2s linear 0s infinite;
+        }
+        >.arrow-back-text {
+            margin-left: var(--size-margin-20);
+        }
+    }
+}
+
+@keyframes arrow-left-animation {
+    0% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}

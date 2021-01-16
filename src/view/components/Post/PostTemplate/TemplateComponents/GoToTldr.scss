@@ -11,10 +11,6 @@
         >.arrow-down {
             position: absolute;
             margin-left: var(--size-margin-10);
-        }
-    }
-    >.go-to-tldr {
-        >.arrow-down {
             animation: arrow-down-animation 2s linear 0s infinite;
         }
     }
