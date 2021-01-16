@@ -20,20 +20,13 @@
         width: var(--size-footer-social-height);
         display: block;
     }
+    >.footer-social-background { 
+        left: 0;
+    }
     &:hover {
         >.footer-social-background { 
             width: calc(100%);
             z-index: -1;
-            left: 0;
-        }
-        >.cross {
-            opacity: 1;
-            .bar-1 {
-                animation: cross-bar 0.4s linear 0s forwards;
-            }
-            .bar-2 {
-                animation: cross-bar 0.4s linear 0.5s forwards;
-            }
         }
     }
 }
