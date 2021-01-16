@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import postModel from '../../../model/Post';
+import Post from '../../../model/Post';
 import Local from '../LocalisationContext/Local';
 import { LocalValueContext } from '../LocalisationContext/LocalContext';
-import './PostPage.scss';
-import './Tldr.scss';
 
 interface IPostPageProps {
-    post : postModel;
+    post : Post;
 }
 
 const PostPage : React.FC<IPostPageProps> = props => {
