@@ -66,19 +66,19 @@ const Blog : React.FC<IBlogProps> = props => {
                     <div className={`posts-column`}>
                         {postsColumn1.map(t => 
                             <FadeIn noDelay>
-                                <PostPreview article={t}/>
+                                <PostPreview post={t}/>
                             </FadeIn>)}
                     </div>
                     <div className={`posts-column`}>
                         {postsColumn2.map(t => 
                             <FadeIn noDelay>
-                                <PostPreview article={t}/>
+                                <PostPreview post={t}/>
                             </FadeIn>)}
                     </div>
                     <div className={`posts-column`}>
                         {postsColumn3.map(t => 
                             <FadeIn noDelay>
-                                <PostPreview article={t}/>
+                                <PostPreview post={t}/>
                             </FadeIn>)}
                     </div>
                 </div>

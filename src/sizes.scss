@@ -1,7 +1,7 @@
 :root{
 
     // FONT-SIZES
-    --size-font-size-article-header: 80px;
+    --size-font-size-post-header: 80px;
     --size-font-size-section-title: 60px;
     --size-font-size-preview-title: 24px;
     --size-font-size-navigation: 18px;
@@ -32,7 +32,7 @@
 
     --size-main-wrapper-max-width: 1400px;
     --size-gutter: 20px;
-    --size-article-hero-image-height: 110vh;
+    --size-post-hero-image-height: 110vh;
     --size-zig-zag-height: 10px;
 
     --size-blog-categories-max-width: 500px;
@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 600px) {
     :root{
-        --size-font-size-article-header: 40px;
+        --size-font-size-post-header: 40px;
 
         --size-main-margin: 30px;
 

@@ -11,11 +11,11 @@
     >.screen-detector-fade-in {
         position: absolute;
         bottom: -20vh;
-        height: 1px;
+        height: 100%;
     }
     &.no-delay {
         >.screen-detector-fade-in {
-            top: 30%;
+            top: 20vh;
         }
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FadeIn from '../FadeIn/FadeIn';
 import MakiLogo from '../MakiLogo/MakiLogo';
 import MakiLogoWithNames from '../MakiLogo/MakiLogoWithNames';
 import Navigation from '../Navigation/Navigation';
@@ -10,10 +11,12 @@ interface IHeaderProps {}
 const Header : React.FC<IHeaderProps> = props => {
     return (
         <div className={`header`}>
-            <div className={`main-wrapper`}>
-                <MakiLogoWithNames />
-                <Navigation />
-            </div>
+            <FadeIn noDelay>
+                <div className={`main-wrapper`}>
+                    <MakiLogoWithNames />
+                    <Navigation />
+                </div>
+            </FadeIn>
         </div>
     );
 }

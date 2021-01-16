@@ -1,16 +1,16 @@
-.article {
-    >.article-hero-image {
-        height: var(--size-article-hero-image-height);
+.post {
+    >.post-hero-image {
+        height: var(--size-post-hero-image-height);
         overflow: hidden;
         padding: 0 var(--size-main-margin);
-        >.article-title {
+        >.post-title {
             &.top-layer {
                 color: var(--color-white);
             }
         }
     }
-    .article-title {
-        font-size: var(--size-font-size-article-header);
+    .post-title {
+        font-size: var(--size-font-size-post-header);
         text-transform: uppercase;
         text-align: center;
         max-width: 900px;

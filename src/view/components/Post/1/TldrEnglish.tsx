@@ -1,6 +1,5 @@
 import React from 'react';
 import FadeIn from '../../FadeIn/FadeIn';
-import SectionHeader from '../../SectionHeader/SectionHeader';
 import './TldrEnglish.scss';
 
 const TldrEnglish : React.FC = props => {

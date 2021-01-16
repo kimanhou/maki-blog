@@ -38,9 +38,9 @@ export default class Post {
          ];
     }
 
-    static getLatestArticles = (numberOfArticles : number) => {
+    static getLatestposts = (numberOfposts : number) => {
         const all = Post.getAllSortedPosts();
-        return all.slice(0, numberOfArticles);
+        return all.slice(0, numberOfposts);
     }
 
     getDateEN = () => {
@@ -56,8 +56,8 @@ export default class Post {
     
 
     static ONE = new Post(1, new Date('2021-01-12'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA, Category.WEBDESIGN ]);
-    static TWO = new Post(2, new Date('2021-01-31'), new LanguageVersion(English2, 'Post #2'), new LanguageVersion(French2, 'Article #2'), [ Category.SOCIALMEDIA ]);
-    static THREE = new Post(3, new Date('2021-02-16'), new LanguageVersion(English3, 'Post #3'), new LanguageVersion(French3, 'Article #2'), [ Category.WEBDESIGN ]);
+    static TWO = new Post(2, new Date('2021-01-31'), new LanguageVersion(English2, 'Post #2'), new LanguageVersion(French2, 'post #2'), [ Category.SOCIALMEDIA ]);
+    static THREE = new Post(3, new Date('2021-02-16'), new LanguageVersion(English3, 'Post #3'), new LanguageVersion(French3, 'post #2'), [ Category.WEBDESIGN ]);
 }
 
 const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]

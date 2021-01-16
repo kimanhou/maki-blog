@@ -16,14 +16,14 @@ const English : React.FC<IPostContentProps> = props => {
     }
 
     return (
-        <div className={`article one`}>
-            <div className={`article-hero-image`}>
-                <div className={`article-title top-layer`} ref={props.titleTopLayerRef}>
+        <div className={`post one`}>
+            <div className={`post-hero-image`}>
+                <div className={`post-title top-layer`} ref={props.titleTopLayerRef}>
                     {props.title}
                 </div>
             </div>
             <div className={`main-wrapper`} id={`top`}>
-                <div className={`article-title bottom-layer`} ref={props.titleBottomLayerRef}>
+                <div className={`post-title bottom-layer`} ref={props.titleBottomLayerRef}>
                     {props.title}
                 </div>
                 <FadeIn noDelay>
@@ -32,7 +32,7 @@ const English : React.FC<IPostContentProps> = props => {
                         <span className={`arrow-down`}>⌄</span>
                     </div>
                 </FadeIn>
-                <div className={`article-text`}>
+                <div className={`post-text`}>
                     <p>Create / Have a Facebook account</p>
                     <p>Make it a developer account</p>
                     <p>Create an App</p>

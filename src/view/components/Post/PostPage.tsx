@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import ArticleModel from '../../../model/Post';
+import postModel from '../../../model/Post';
 import Local from '../LocalisationContext/Local';
 import { LocalValueContext } from '../LocalisationContext/LocalContext';
 import './PostPage.scss';
 import './Tldr.scss';
 
 interface IPostPageProps {
-    article : ArticleModel;
+    post : postModel;
 }
 
 const PostPage : React.FC<IPostPageProps> = props => {
@@ -50,15 +50,15 @@ const PostPage : React.FC<IPostPageProps> = props => {
 
     switch (localisation) {
         case Local.FR:
-            return <props.article.french.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.article.french.title} />;
+            return <props.post.french.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.post.french.title} />;
         break;
 
         case Local.EN:
-            return <props.article.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.article.english.title} />;
+            return <props.post.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.post.english.title} />;
         break;
 
         default:
-            return <props.article.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.article.english.title} />;
+            return <props.post.english.content titleBottomLayerRef={bottomLayerRef} titleTopLayerRef={topLayerRef} title={props.post.english.title} />;
     }
 }
 
