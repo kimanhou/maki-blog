@@ -8,9 +8,18 @@
     color: var(--color-off-black);
     .main-wrapper {
         margin: 0 var(--size-main-margin);
+        max-width: var(--size-main-wrapper-max-width);
     }
     a {
         color: var(--color-off-black);
         text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1540px) {
+    .App {
+        .main-wrapper {
+            margin: 0 auto;
+        }
     }
 }

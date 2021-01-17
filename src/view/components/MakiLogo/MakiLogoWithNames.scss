@@ -1,0 +1,16 @@
+.maki-logo-with-names {
+    >.maki-logo {
+        width: var(--size-maki-logo-width);
+    }
+    >.maki-logo-with-names-subtitle {
+        margin-top: var(--size-maki-logo-subtitle-margin-top);
+        >.mark, >.kim-anh, >.plus {
+            font-size: var(--size-font-size-navigation);
+        }
+        >.plus {
+            color: var(--color-yellow);
+            margin: 0 var(--size-margin-5);
+            font-size: var(--size-font-size-navigation);
+        }
+    }
+}

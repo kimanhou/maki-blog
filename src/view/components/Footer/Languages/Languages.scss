@@ -1,0 +1,12 @@
+.languages {
+    >.languages-title {
+        display: inline-block;
+        margin-right: var(--size-margin-20);
+        line-height: calc(var(--size-margin-20) * 2);
+    }
+    >img {
+        display: inline-block;
+        height: var(--size-margin-20);
+        cursor: pointer;
+    }
+}

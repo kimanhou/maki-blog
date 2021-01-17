@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './MakiLogo.scss';
 
 interface IMakiLogoProps {
 }
 
 const MakiLogo : React.FC<IMakiLogoProps> = props => {
+    const ref = useRef<SVGSVGElement>(null);
+    const setAnimation = () => {
+        if(ref.current != null){
+            ref.current.classList.remove("animate");
+            setTimeout(() => {
+                    if(ref.current != null){
+                        ref.current.classList.add("animate");
+                    }
+                }
+            , 0);
+        }
+    }
+
+    useEffect(() => {
+        setTimeout(setAnimation, 1000);
+    }, []);
+    
     return (
-        <svg className={`maki-logo`} viewBox="0 0 219.60417 104.775" >
+        <svg className={`maki-logo`} viewBox="0 0 219.60417 104.775" ref={ref} onMouseEnter={setAnimation}>
             <g>
             <path className={`maki-logo-path`} 
                 style={{ fill: 'none',

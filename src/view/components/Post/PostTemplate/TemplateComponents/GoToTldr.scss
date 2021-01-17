@@ -1,0 +1,29 @@
+.fade-in {
+    margin: var(--size-margin-30) 0;
+    >.go-to-tldr {
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.4s;
+        position: relative;
+        &:hover {
+            color: var(--color-yellow);
+        }
+        >.arrow-down {
+            position: absolute;
+            margin-left: var(--size-margin-10);
+            animation: arrow-down-animation 2s linear 0s infinite;
+        }
+    }
+}
+
+@keyframes arrow-down-animation {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}

@@ -2,16 +2,28 @@
     height: var(--size-footer-height);
     background-color: var(--color-dark-green);
     color: var(--color-white);
-    >.main-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 100%;
-        >.footer-left, >.footer-right {
-            flex: 1;
-        }
-        >.footer-right {
-            text-align: right;
+    >.fade-in {
+        >.main-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100%;
+            >.footer-left, >.footer-right {
+                flex: 1;
+            }
+            >.footer-right {
+                text-align: right;
+            }
+            >.maki-logo-with-names {
+                >.maki-logo {
+                    width: var(--size-maki-logo-width);
+                }
+                >.maki-logo-with-names-subtitle {
+                    >.mark, >.kim-anh {
+                        color: var(--color-white);
+                    }
+                }
+            }
         }
     }
 }

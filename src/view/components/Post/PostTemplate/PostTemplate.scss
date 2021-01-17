@@ -1,0 +1,20 @@
+.post {
+    >.main-wrapper {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: var(--size-margin-30);
+        >.header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            >.fade-in {
+                >.main-wrapper {
+                    margin: 0;
+                }
+                >.screen-detector-fade-in {
+                    top: 230px;
+                }
+            }
+        }
+    }
+}

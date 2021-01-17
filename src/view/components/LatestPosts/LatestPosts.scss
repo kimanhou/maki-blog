@@ -1,18 +1,22 @@
 .latest-posts {
-    >.main-wrapper {
-        >.posts {
-            display: flex;
-            flex-direction: row;
-            margin: 0 calc(var(--size-gutter) * (-1));
+    >.fade-in {
+        >.main-wrapper {
+            >.posts {
+                display: flex;
+                flex-direction: row;
+                margin: 0 calc(var(--size-gutter) * (-1));
+            }
         }
     }
 }
 
 @media screen and (max-width: 600px) {
     .latest-posts {
-        >.main-wrapper {
-            >.posts {
-                flex-direction: column;
+        >.fade-in {
+            >.main-wrapper {
+                >.posts {
+                    flex-direction: column;
+                }
             }
         }
     }
