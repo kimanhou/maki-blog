@@ -1,3 +1,4 @@
+import Local from "../view/components/LocalisationContext/Local";
 import English1 from "../view/components/Post/1/English";
 import French1 from "../view/components/Post/1/French";
 import English2 from "../view/components/Post/2/English";
@@ -43,21 +44,47 @@ export default class Post {
         return all.slice(0, numberOfposts);
     }
 
-    getDateEN = () => {
-        var mm = months[this.date.getMonth()];
+    getDateFormat = (localisation : Local) => {
+        var mm = '';
+        switch (localisation) {
+            case Local.FR:
+                mm = monthsFr[this.date.getMonth()];
+            break;
+            case Local.EN:
+                mm = monthsEn[this.date.getMonth()];
+            break;
+        }
         var dd = this.date.getDate();
         
         return [(dd>9 ? '' : '0') + dd, mm, this.date.getFullYear()].join(' ');
     }
 
-    getCategories = () => {
-        return this.categories.map(t => t.description).join(', ');
+    getCategories = (localisation : Local) => {
+        switch (localisation) {
+            case Local.FR:
+                return this.categories.map(t => t.descriptionFr).join(', ');
+            break;
+            case Local.EN:
+                return this.categories.map(t => t.descriptionEn).join(', ');
+            break;
+        }
     }
-    
+
+    getTitle = (localisation : Local) => {
+        switch (localisation) {
+            case Local.FR:
+                return this.french.title;
+            break;
+            case Local.EN:
+                return this.english.title;
+            break;
+        }
+    }
 
     static ONE = new Post(1, new Date('2021-01-12'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA, Category.WEBDESIGN ]);
-    static TWO = new Post(2, new Date('2021-01-31'), new LanguageVersion(English2, 'Post #2'), new LanguageVersion(French2, 'post #2'), [ Category.SOCIALMEDIA ]);
-    static THREE = new Post(3, new Date('2021-02-16'), new LanguageVersion(English3, 'Post #3'), new LanguageVersion(French3, 'post #2'), [ Category.WEBDESIGN ]);
+    static TWO = new Post(2, new Date('2021-01-31'), new LanguageVersion(English2, 'Post #2'), new LanguageVersion(French2, 'Post #2 en français'), [ Category.SOCIALMEDIA ]);
+    static THREE = new Post(3, new Date('2021-02-16'), new LanguageVersion(English3, 'Post #3'), new LanguageVersion(French3, 'Post #3 en français'), [ Category.WEBDESIGN ]);
 }
 
-const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
+const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]
+const monthsEn = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]

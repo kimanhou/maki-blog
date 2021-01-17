@@ -1,5 +1,6 @@
 import React from 'react';
 import FadeIn from '../../../FadeIn/FadeIn';
+import Text from '../../../LocalisationContext/Text';
 import './Tldr.scss';
 
 const Tldr : React.FC = props => {
@@ -7,7 +8,7 @@ const Tldr : React.FC = props => {
         <div className={`tldr one english`} id={`tldr`}>
             <FadeIn noDelay>
                 <div className={`tldr-title`}>
-                    TL;DR
+                    <Text english='TL;DR' french='Trop Long; Pas Lu'/>
                 </div>
                 {props.children}
             </FadeIn>

@@ -1,14 +1,29 @@
+import Local from "../view/components/LocalisationContext/Local";
+
 export default class Category {
     readonly label : string;
-    readonly description : string;
+    readonly descriptionEn : string;
+    readonly descriptionFr : string;
 
-    constructor(label : string, description : string){
+    constructor(label : string, descriptionEn : string, descriptionFr : string){
         this.label = label;
-        this.description = description;
+        this.descriptionEn = descriptionEn;
+        this.descriptionFr = descriptionFr;
     }
 
     static getAllCategories = () => {
         return [ Category.ALL, Category.WEBDESIGN, Category.SOCIALMEDIA ];
+    }
+
+    getDescription = (localisation : Local) => {
+        switch (localisation) {
+            case Local.FR:
+                return this.descriptionFr;
+            break;
+            case Local.EN:
+                return this.descriptionEn;
+            break;
+        }
     }
 
     equals = (category : Category) => {
@@ -51,7 +66,7 @@ export default class Category {
         return false;
     }
 
-    static SOCIALMEDIA = new Category('SOCIALMEDIA', 'Social media');
-    static WEBDESIGN = new Category('WEBDESIGN', 'Website design');
-    static ALL = new Category('ALL', 'All');
+    static SOCIALMEDIA = new Category('SOCIALMEDIA', 'Social media', 'Réseaux sociaux');
+    static WEBDESIGN = new Category('WEBDESIGN', 'Website design', 'Conception web');
+    static ALL = new Category('ALL', 'All', 'Tous');
 }

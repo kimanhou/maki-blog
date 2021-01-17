@@ -1,6 +1,7 @@
 .header {
     margin-bottom: var(--size-margin-30);
     >.fade-in {
+        margin-top: 0;
         >.main-wrapper {
             display: flex;
             flex-direction: row;
