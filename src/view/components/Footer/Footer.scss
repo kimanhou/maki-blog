@@ -1,7 +1,5 @@
 .footer {
     height: var(--size-footer-height);
-    background-color: var(--color-dark-green);
-    color: var(--color-white);
     >.fade-in {
         >.main-wrapper {
             display: flex;
@@ -18,11 +16,6 @@
                 >.maki-logo {
                     width: var(--size-maki-logo-width);
                 }
-                >.maki-logo-with-names-subtitle {
-                    >.mark, >.kim-anh {
-                        color: var(--color-white);
-                    }
-                }
             }
         }
     }
@@ -30,10 +23,14 @@
 
 @media screen and (max-width: 600px) {
     .footer {
-        >.main-wrapper {
-            flex-direction: column;
-            >.footer-left, >.footer-right, >.footer-logo {
-                margin: var(--size-margin-10) 0; 
+        height: unset;
+        >.fade-in {
+            margin-bottom: 0;
+            >.main-wrapper {
+                flex-direction: column;
+                >.footer-left, >.footer-right, >.footer-logo {
+                    margin: var(--size-margin-10) 0; 
+                }
             }
         }
     }

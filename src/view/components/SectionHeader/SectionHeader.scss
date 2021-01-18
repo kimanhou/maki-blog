@@ -2,6 +2,34 @@
     text-align: center;
     font-weight: normal;
     font-size: var(--size-font-size-section-title);
+    &.color-white {
+        >.section-header-title {
+            >.down, >.up {
+                >.moving {
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+    &.animate {
+        >.section-header-title {
+            >.down {
+                >.moving {
+                    animation: section-header-title-down-animation 0.3s linear 0.5s forwards;
+                }
+            }
+            >.up {
+                >.moving {
+                    animation: section-header-title-up-animation 0.3s linear 0.5s forwards;
+                }
+            }
+        }
+        >.section-header-subtitle {
+            >.section-header-subtitle-text {
+                animation: section-header-subtitle-animation 0.4s linear 1s forwards;
+            }
+        }
+    }
     >.section-header-title {
         text-transform: uppercase;
         position: relative;
@@ -21,13 +49,11 @@
         >.down {
             >.moving {
                 top: -100%;
-                animation: section-header-title-down-animation 0.3s linear 1s forwards;
             }
         }
         >.up {
             >.moving {
                 top: 100%;
-                animation: section-header-title-up-animation 0.3s linear 1s forwards;
             }
         }
     }
@@ -37,14 +63,12 @@
         margin-top: var(--size-section-header-subtitle-margin-top);
         position: relative;
         height: var(--size-section-header-subtitle-height);
-        width: var(--size-section-header-subtitle-width);
         overflow: hidden;
         >.section-header-subtitle-text {
             position: absolute;
             top: 0;
             left: -100%;
             height: var(--size-section-header-subtitle-height);
-            animation: section-header-subtitle-animation 0.4s linear 1.5s forwards;
         }
     }
 }
@@ -72,6 +96,17 @@
         left: -100%;
     }
     100% {
-        left: var(--size-margin-10);
+        left: var(--size-section-header-subtitle-margin-left-animation);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-header {
+        >.section-header-subtitle {
+            text-align: center;
+            >.section-header-subtitle-text {
+                width: 100%;
+            }
+        }
     }
 }

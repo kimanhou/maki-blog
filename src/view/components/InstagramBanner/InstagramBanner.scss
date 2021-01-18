@@ -1,0 +1,28 @@
+.instagram-banner {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    padding-bottom: var(--size-margin-30);
+    >.fade-in {
+        >.main-wrapper {
+            padding-top: var(--size-margin-30);
+            >.insta-photos-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 calc(var(--size-margin-10) * (-1))
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .instagram-banner {
+        >.fade-in {
+            >.main-wrapper {
+                >.insta-photos-container {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

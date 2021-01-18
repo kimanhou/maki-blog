@@ -22,6 +22,7 @@
 
     // SECTION HEADER
     --size-section-header-subtitle-margin-left: 50%;
+    --size-section-header-subtitle-margin-left-animation: 10px;
     --size-section-header-subtitle-margin-top: -40px;
     --size-section-header-title-height: 71px;
     --size-section-header-subtitle-height: 96px;
@@ -37,15 +38,21 @@
     --size-zig-zag-height: 10px;
 
     --size-blog-categories-max-width: 500px;
+
+    --size-insta-banner-height: 350px;
+    --size-insta-photo-height: 200px;
 }
 
 @media screen and (max-width: 600px) {
-    :root{
+    :root {
+        // FONT SIZES
         --size-font-size-post-header: 40px;
+        --size-font-size-section-title: 28px;
 
         --size-main-margin: 30px;
 
-        --size-section-header-subtitle-margin-left: 0px;
+        --size-section-header-subtitle-margin-left: 0;
+        --size-section-header-subtitle-margin-left-animation: 0;
 
         --size-footer-height: 220px;
 

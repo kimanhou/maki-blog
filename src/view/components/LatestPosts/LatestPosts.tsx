@@ -17,7 +17,7 @@ const LatestPosts : React.FC<ILatestPostsProps> = props => {
             <FadeIn noDelay>
                 <div className={`main-wrapper`}>
                     <div className={`title`}>
-                        <SectionHeader englishTitle='Latest' englishSubtitle='on the blog' frenchTitle='Les derniers articles' frenchSubtitle='sur le blog' />
+                        <SectionHeader englishTitle='Latest' englishSubtitle='on the blog' frenchTitle='Les nouveautés' frenchSubtitle='sur le blog' />
                     </div>
                     <div className={`posts`}>
                         {posts.map(t => <PostPreview post={t}/>)}
