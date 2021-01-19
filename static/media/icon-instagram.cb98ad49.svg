@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666659 8.4666659"
+   version="1.1"
+   id="svg17442"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   sodipodi:docname="icon-instagram.svg">
+  <defs
+     id="defs17436" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="17.48821"
+     inkscape:cx="28.656126"
+     inkscape:cy="16.340987"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer14"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1440"
+     inkscape:window-height="775"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata17439">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer14"
+     inkscape:label="Drawing 1"
+     style="opacity:1;">
+    <path
+       style="fill:none;stroke:#3c3c41;stroke-width:0.52916662;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 1.5874999,2.6458331 V 5.8208328 C 1.7537651,6.3262117 2.0380469,6.7350315 2.6458331,6.879166 H 5.8208328 C 6.314487,6.7396224 6.7080128,6.4811828 6.879166,5.8208328 l 0,-3.1749997 C 6.7158925,1.9828314 6.2607263,1.776296 5.8208328,1.5874999 H 2.6458331 C 2.0604661,1.7288329 1.7292939,2.101252 1.5874999,2.6458331 Z"
+       id="path6077"
+       sodipodi:nodetypes="ccccccccc" />
+    <ellipse
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#3c3c41;stroke-width:0.52916662;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:7.56;stroke-opacity:1"
+       id="path12308-8-1-1-3-3-68"
+       cx="4.2408619"
+       cy="4.2559896"
+       rx="1.1813527"
+       ry="1.181353" />
+    <ellipse
+       style="opacity:1;fill:#3c3c41;fill-opacity:1;stroke:#3c4141;stroke-width:0.145244;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:7.56;stroke-opacity:1"
+       id="path12308-8-1-1-3-3-68-0"
+       cx="5.8044839"
+       cy="2.7181189"
+       rx="0.32425305"
+       ry="0.32425302" />
+  </g>
+</svg>
