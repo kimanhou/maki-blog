@@ -1,0 +1,54 @@
+.insta-photo {
+    height: calc(var(--size-insta-photo-height));
+    width: var(--size-insta-photo-height);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: solid 1px var(--color-grey);
+    margin: var(--size-margin-10) var(--size-margin-10);
+    >a {
+        >.insta-photo-caption, >.insta-photo-photo-credits {
+            opacity: 0;
+            transition: opacity 0.4s;
+            position: absolute;
+            color: var(--color-yellow);
+        }
+        >.insta-photo-caption {
+            text-align: center;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        >.insta-photo-photo-credits {
+            text-transform: uppercase;
+            font-size: var(--size-font-size-small);
+            bottom: 0;
+            right: 2px;
+        }
+        >.insta-photo-background-hover {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: var(--color-off-black);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+    }
+    &:hover {
+        >a {
+            >.insta-photo-background-hover {
+                opacity: 0.5;
+            }
+            >.insta-photo-caption, >.insta-photo-photo-credits {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .insta-photo {
+        height: calc(100vw - (var(--size-main-margin) * 2));
+        width: calc(100vw - (var(--size-main-margin) * 2));
+    }
+}

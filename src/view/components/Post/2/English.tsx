@@ -4,7 +4,14 @@ import PostTemplate from '../PostTemplate/PostTemplate';
 import './PostPage.scss';
 
 const English : React.FC<IPostContentProps> = props => {
-    const tldr = <p>TLDR #2</p>;
+    const tldr = 
+        <>
+            <p>Instead of pure black and white, experiment with off black and off white.</p>
+            <p>A color depends on the other colors around it.</p>
+            <p>A cool website to create your color palette is https://coolors.co/</p>
+            <p>Don't have too many colors, usually the same color in a dark shade and in a light shade is enough. Black and white don't count.</p>
+            <p>Use inspector to check the contrast ratio (should be above 5)</p>
+        </>;
 
     return (
         <PostTemplate title={props.title} 
@@ -12,7 +19,7 @@ const English : React.FC<IPostContentProps> = props => {
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`two`}
                     tldr={tldr}>
-            <p>This is post #3</p>
+            <p>Colors</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie lectus vitae accumsan volutpat. Mauris eleifend neque nulla, vel pellentesque metus mattis et. Sed pharetra lorem tortor, condimentum eleifend purus cursus in. Ut dignissim sollicitudin ornare. Sed nulla nulla, dapibus id cursus sit amet, blandit vitae ligula. Nunc condimentum ullamcorper odio id dapibus. Nulla venenatis erat arcu, vel eleifend enim tristique in. Etiam sollicitudin venenatis felis non sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie cursus enim, ac rhoncus felis vulputate egestas. Integer eget semper sem.</p>
             <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis mi arcu, malesuada vitae arcu non, consequat tempus diam. Aenean at fermentum purus, sit amet ultrices lacus. Mauris sit amet vehicula diam. Quisque eget sem neque. Maecenas sed augue eros. Suspendisse facilisis tortor id sem posuere, nec molestie augue tincidunt. Suspendisse dignissim velit augue, ac aliquam turpis feugiat ac. Vivamus eget odio eu lacus dignissim condimentum. Etiam sit amet justo volutpat, cursus augue id, finibus magna. Nullam cursus sollicitudin ligula ac tempor.</p>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras nibh libero, vehicula ac suscipit at, consequat in nulla. Cras molestie pulvinar quam eget fermentum. Aenean quis feugiat orci. Ut nec dui sodales, suscipit orci eget, laoreet mauris. Sed eget est vitae magna tristique condimentum non vel tellus. Mauris tellus mauris, porttitor in tincidunt eget, tristique vel diam. Duis pellentesque a massa vitae pellentesque. Cras commodo sapien sit amet nulla venenatis porttitor. Donec consectetur faucibus facilisis. Nam sed facilisis augue. Etiam id pellentesque nunc, sed blandit magna. Aenean finibus varius erat vel fermentum.</p>

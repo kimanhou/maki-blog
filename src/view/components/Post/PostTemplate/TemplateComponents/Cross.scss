@@ -1,0 +1,28 @@
+.cross {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    transform: translateY(2px);
+    .bar-1, .bar-2 {
+        stroke-dasharray: 9;
+        stroke-dashoffset: -9;
+    }
+    &.animate {
+        .bar-1 {
+            animation: cross-bar 0.4s linear 0s forwards;
+        }
+        .bar-2 {
+            animation: cross-bar 0.4s linear 0.5s forwards;
+        }
+    }
+}
+
+@keyframes cross-bar {
+    0% {
+        stroke-dashoffset: -9;
+    }
+    100% {
+        stroke-dashoffset: -18;
+    }
+}

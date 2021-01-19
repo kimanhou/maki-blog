@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import InstagramBanner from '../InstagramBanner/InstagramBanner';
 import LatestPosts from '../LatestPosts/LatestPosts';
 import './Home.scss';
 
@@ -11,6 +12,7 @@ const Home : React.FC<IHomeProps> = props => {
         <div className={`home`}>
             <Header />
             <LatestPosts />
+            <InstagramBanner />
             <Footer />
         </div>
     );

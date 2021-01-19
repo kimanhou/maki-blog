@@ -16,5 +16,72 @@
                 }
             }
         }
+        >.fade-in {
+            >.post-text {
+                margin-bottom: var(--size-margin-80);
+                line-height: 1.4;
+                a {
+                    &:hover {
+                        color: var(--color-yellow);
+                    }
+                }
+                .italic {
+                    font-style: italic;
+                }
+                >.step-title {
+                    font-size: var(--size-font-size-preview-title);
+                }
+                >.p-separator {
+                    height: 1rem;
+                }
+                >.section-separator {
+                    height: 2rem;
+                }
+                >.code-sample {
+                    background-color: #1c1e21;
+                    border: 1px solid #8d949e;
+                    color: var(--color-white);
+                    padding: 10px;
+                    margin: 20px 0;
+                }
+                .color-green {
+                    color: var(--color-green);
+                }
+                .color-fluo-green {
+                    color: var(--color-fluo-green);
+                }
+                .color-fluo-blue {
+                    color: var(--color-fluo-blue);
+                }
+                .nbsp {
+                    margin-right: var(--size-margin-20);
+                }
+                >img {
+                    max-width: 100%;
+                    margin: var(--size-margin-20) 0 var(--size-margin-30);
+                    &.width-50 {
+                        width: 50%;
+                        margin-left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .post {
+        >.main-wrapper {
+            >.fade-in {
+                >.post-text {
+                    >img {
+                        &.width-50 {
+                            width: unset;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

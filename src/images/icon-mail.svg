@@ -13,7 +13,7 @@
    version="1.1"
    id="svg3114"
    inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
-   sodipodi:docname="icon-mail-1.svg">
+   sodipodi:docname="icon-mail.svg">
   <defs
      id="defs3108" />
   <sodipodi:namedview
@@ -31,7 +31,7 @@
      inkscape:document-rotation="0"
      showgrid="false"
      units="px"
-     inkscape:window-width="1252"
+     inkscape:window-width="1439"
      inkscape:window-height="775"
      inkscape:window-x="0"
      inkscape:window-y="23"
@@ -57,12 +57,12 @@
        transform="matrix(0.29044405,0,0,0.28333449,-0.39511166,0.24268701)"
        style="stroke:#000000;stroke-opacity:1">
       <path
-         style="fill:none;stroke:#feffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#3c3c41;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 7,12 C 6.9306375,9.331303 6.9567726,9.4522813 9,9.5 h 14 c 1.80157,0.088167 1.973832,0.506519 2,2.5 v 8 c 0.03662,2.141789 -0.06887,2.520127 -2,2.5 H 9 C 7.0085712,22.467506 6.9235286,22.275394 7,20 Z"
          id="path3104"
          sodipodi:nodetypes="ccccccccc" />
       <path
-         style="fill:none;stroke:#feffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#3c3c41;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 7,12 9,5 9,-5"
          id="path3106"
          sodipodi:nodetypes="ccc" />
