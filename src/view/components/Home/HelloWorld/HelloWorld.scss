@@ -1,0 +1,29 @@
+.hello-world {
+    font-family: Dawning;
+    font-size: 200px;
+    text-align: center;
+    margin: 0 calc(var(--size-main-margin) * (-1));
+    >g {
+        >.hello-world-path {
+            stroke: var(--color-off-black);
+            stroke-dasharray: 883.43408203125;
+            stroke-dashoffset: -883.43408203125;
+        } 
+    }
+    &.animate {
+        >g {
+            >path {
+                animation: hello-world-animation 5s linear 0s forwards;
+            }
+        }
+    }
+}
+
+@keyframes hello-world-animation {
+    0% {
+        stroke-dashoffset: -883.43408203125;
+    }
+    100% {
+        stroke-dashoffset: -1766.86816;
+    }
+}
