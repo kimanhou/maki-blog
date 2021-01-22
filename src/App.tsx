@@ -6,6 +6,7 @@ import Blog from './view/components/Blog/Blog';
 import Home from './view/components/Home/Home';
 import ScrollToTop from './view/components/ScrollToTop/ScrollToTop';
 import LocalContext from './view/components/LocalisationContext/LocalContext';
+import About from './view/components/About/About';
 
 const App : React.FunctionComponent = props => {
 
@@ -15,6 +16,9 @@ const App : React.FunctionComponent = props => {
                 <LocalContext>
                     <ScrollToTop />
                     <Switch>
+                        <Route exact path={["/about"]}>
+                            <About />
+                        </Route>
                         <Route exact path={["/"]}>
                             <Home />
                         </Route>

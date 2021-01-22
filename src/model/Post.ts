@@ -44,6 +44,11 @@ export default class Post {
         return all.slice(0, numberOfposts);
     }
 
+    static getPostById = (id : number) => {
+        const posts = Post.getAllPosts();
+        return posts.find(t => t.id == id);
+    }
+
     getDateFormat = (localisation : Local) => {
         var mm = '';
         switch (localisation) {

@@ -1,0 +1,15 @@
+.about-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    >.figure-left, >.figure-right {
+        height: 50vh;
+        width: 100px;
+    }
+    >.figure-left {
+        background-color: darkcyan;
+    }
+    >.figure-right {
+        background-color: palevioletred;
+    }
+}
