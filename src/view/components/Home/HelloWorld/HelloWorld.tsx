@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DoubleGradient from '../DoubleGradient/DoubleGradient';
 import './HelloWorld.scss';
 
@@ -6,12 +6,21 @@ interface IHomeProps {}
 
 const HelloWorld : React.FC<IHomeProps> = props => {
     const introPicture = require(`../../../../images/intro-bg.jpg`);
+    const [viewBoxHeight, setViewBoxHeight] = useState(Math.min(210000 / window.innerWidth, 284));
+
+    useEffect(() => {
+        const onResize = () => {
+            setViewBoxHeight(Math.min(210000 / window.innerWidth, 284));
+        }
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, []);
 
     return (
         <div className={`hello-world`}>
             <div className={`hello-world-placeholder`}/>
             <div className={`hello-world-absolute`}>
-                <svg className={`hello-world-svg animate`} viewBox="0 0 357.1069 239.81743" >
+                <svg className={`hello-world-svg animate`} viewBox={`0 0 357.1069 ${viewBoxHeight}`} >
                     <defs >
                         <clipPath clipPathUnits="userSpaceOnUse" id="clip-path-2">
                             <path
