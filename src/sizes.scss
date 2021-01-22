@@ -24,6 +24,7 @@
 
     // HOME
     --size-intro-max-width: 500px;
+    --size-double-gradient-height: 300px;
 
     // SECTION HEADER
     --size-section-header-subtitle-margin-left: 50%;
@@ -39,11 +40,19 @@
 
     --size-main-wrapper-max-width: 1400px;
     --size-gutter: 20px;
+
+    // POST
     --size-post-hero-image-height: 110vh;
+    --size-post-button-width: 180px;
+    --size-post-button-margin: 3px;
+
+    // POST PREVIEW
     --size-zig-zag-height: 10px;
 
     --size-blog-categories-max-width: 500px;
 
+
+    // INSTAGRAM
     --size-insta-banner-height: 350px;
     --size-insta-photo-height: 200px;
 }
