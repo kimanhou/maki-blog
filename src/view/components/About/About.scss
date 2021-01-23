@@ -1,1 +1,12 @@
-.about {}
+.about {
+    height: 10000vh;
+    >.about-intro-fixed {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        >.header {
+            width: 100vw;
+        }
+    }
+}

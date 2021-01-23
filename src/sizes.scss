@@ -51,10 +51,14 @@
 
     --size-blog-categories-max-width: 500px;
 
-
     // INSTAGRAM
     --size-insta-banner-height: 350px;
     --size-insta-photo-height: 200px;
+
+    // ABOUT
+    --size-about-intro-text-initial-top: 120vh;
+    --size-about-intro-figure-height: 60vh;
+    --size-about-intro-figure-width: 30vh;
 }
 
 @media screen and (max-width: 600px) {
