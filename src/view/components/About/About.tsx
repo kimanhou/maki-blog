@@ -5,6 +5,7 @@ import SectionHeader from '../SectionHeader/SectionHeader';
 import './About.scss';
 import AboutIntro from './AboutIntro/AboutIntro';
 import AboutIntroText from './AboutIntro/AboutIntroText';
+import Mark from './Mark/Mark';
 
 const About : React.FC = props => {
     const [fixed, setFixed] = useState(false);
@@ -17,6 +18,8 @@ const About : React.FC = props => {
     const [rkOpacity, setRkOpacity] = useState(0);
     const [manhRight, setManhRight] = useState(0);
     const [kiRight, setKiRight] = useState(0);
+
+    const introMarkInitialTop = window.innerHeight * 1.8 + 30 + (window.innerWidth / 2) - 150 - 70 + 30 + 30 + 314 + 70 + 500;
 
     useEffect(() => {
         const onScroll = () => {
@@ -63,7 +66,7 @@ const About : React.FC = props => {
                             middleSeparation={distanceBetweenMaki} 
                             rkLeft={rkLeft} rkOpacity={rkOpacity}
                             manhRight={manhRight} kiRight={kiRight} />
-            
+            <Mark initialTop={introMarkInitialTop}/>
         </div>
     );
 }

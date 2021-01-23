@@ -1,0 +1,49 @@
+.intro-mark {
+    background-color: var(--color-dark-green);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh; // temp
+    width: 100vw; // temp
+    >.intro-mark-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        margin: 0 auto;
+        >.intro-mark-left {
+            transform: translateX(20px);
+            position: relative;
+            >.intro-mark-photo {
+                height: 74vh;
+                width: 37vh;
+                background-image: url(../../../../images/about/mark.jpg);
+                background-position: center;
+                background-size: 100%;
+            }
+            >.intro-mark-image-cover {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                position: absolute;
+                background-color: var(--color-green);
+                transition: height 1s 2s;
+            }
+        }
+        >.intro-mark-right {
+            background-color: var(--color-white);
+            border: solid 2px var(--color-yellow);
+            transform: translateX(-20px);
+            padding: 10px;
+        }
+        &.active {
+            >.intro-mark-left {
+                >.intro-mark-image-cover {
+                    height: 0;
+                }
+            }
+        }
+    }
+}
