@@ -4,6 +4,7 @@ import useScroll from '../../hooks/UseScroll';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Text from '../LocalisationContext/Text';
+import BackToTop from '../Post/PostTemplate/TemplateComponents/BackToTop';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import './About.scss';
 import AboutIntro from './AboutIntro/AboutIntro';
@@ -93,7 +94,7 @@ const About : React.FC = props => {
     }, [ fixed ]);
 
     return (
-        <div className={`about`} style={{ height: aboutTotalHeight }}>
+        <div className={`about`} style={{ height: aboutTotalHeight }} id={`top`}>
             <div className={`about-intro-fixed`}>
                 <Header/>
                 <SectionHeader title={new TextModel('About', 'À propos')} subtitle={new TextModel('us', 'de nous')} />
@@ -117,15 +118,16 @@ const About : React.FC = props => {
             </AboutIntroScrollable>
 
             <AboutIntroScrollable scrollPosition={introScrollableScrollPosition3} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop3}>
-                <Text english='We are nomads,' french='Nous sommes nomades,'/>
+                <Text english='We are minimalists,' french='Nous sommes minimalistes,'/>
                 <br></br>
-                <Text english='but we are often in Paris.' french='souvent à Paris.'/>
+                <Text english='in everything we do.' french='dans ce que nous faisons.'/>
             </AboutIntroScrollable>
 
             <div className={`about-mark-and-kim-anh`} style={{ top: markAndKimAnhInitialTop, backgroundColor: `rgb(${red}, ${green}, ${blue})` }} >
                 <Mark />
                 <BackgroundTransition/>
                 <KimAnh />
+                <BackToTop />
                 <Footer noMarginTop />
             </div>
         </div>

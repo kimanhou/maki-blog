@@ -9,6 +9,7 @@
         position: absolute;
         height: var(--size-about-intro-figure-height);
         width: var(--size-about-intro-figure-width);
+        cursor: pointer;
     }
     >.figure-left {
         background-image: url(../../../../images/about/mark.jpg);

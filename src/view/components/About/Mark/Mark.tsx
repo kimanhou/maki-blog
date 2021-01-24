@@ -18,7 +18,7 @@ const Mark : React.FC<IMarkProps> = props => {
 
 
     return (
-        <div className={`about-mark`}>
+        <div className={`about-mark`} id={`mark`}>
             <SectionHeader title={new Text('Meet Mark', 'à la rencontre')} subtitle={new Text('back-end developer', 'de Mark')} isColorWhite/>
             <div className={`about-mark-container ${onActiveClassname}`}>
                 <ScreenDetector className={`screen-detector-about-mark-image`} onActive={onActive} onUnactive={onUnactive}/>

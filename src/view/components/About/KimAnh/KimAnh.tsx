@@ -18,7 +18,7 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
 
 
     return (
-        <div className={`about-kim-anh`}>
+        <div className={`about-kim-anh`} id={`kim-anh`}>
             <SectionHeader title={new Text('Meet Kim Anh', 'à la rencontre')} subtitle={new Text('back-end developer', 'de Kim Anh')} />
             <div className={`about-kim-anh-container ${onActiveClassname}`}>
                 <ScreenDetector className={`screen-detector-about-kim-anh-image`} onActive={onActive} onUnactive={onUnactive}/>

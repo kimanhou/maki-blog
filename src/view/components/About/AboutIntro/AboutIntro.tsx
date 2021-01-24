@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { myScrollTo } from '../../../../Util';
 import './AboutIntro.scss';
 
 const AboutIntro : React.FC = props => {
@@ -15,10 +16,13 @@ const AboutIntro : React.FC = props => {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
+    const onClickMark = () => { myScrollTo('mark'); }
+    const onClickKimAnh = () => { myScrollTo('kim-anh'); }
+
     return (
         <div className={`about-intro`}>
-            <div className={`figure-left`} style={{ right: offset }}></div>
-            <div className={`figure-right`} style={{ left: offset }}></div>
+            <div className={`figure-left`} style={{ right: offset }} onClick={onClickMark}></div>
+            <div className={`figure-right`} style={{ left: offset }} onClick={onClickKimAnh}></div>
         </div>
     );
 }

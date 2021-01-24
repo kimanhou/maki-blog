@@ -9,10 +9,6 @@ interface IButtonProps {
 }
 
 const Button : React.FC<IButtonProps> = props => {
-    const onClickTldr = () => {
-        myScrollTo('tldr');
-    }
-    
     return(
         <FadeIn noDelay>
             <div className={`button ${props.classname}`} onClick={props.onClick}>

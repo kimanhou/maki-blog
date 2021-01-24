@@ -3,7 +3,6 @@ import ScreenDetector from '../ScreenDetector/screenDetector';
 import './FadeIn.scss';
 
 interface IFadeInProps {
-    // aboutRef : HTMLDivElement | null;
     inline ?: boolean;
     noDelay ?: boolean;
 }

@@ -11,5 +11,10 @@
     >.about-mark-and-kim-anh {
         position: absolute;
         padding-top: var(--size-about-scrollabl-padding-top);
+        >.fade-in {
+            >.back-to-top {
+                margin-left: var(--size-main-margin);
+            }
+        }
     }
 }
