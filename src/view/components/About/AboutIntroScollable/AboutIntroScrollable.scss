@@ -1,0 +1,7 @@
+.about-intro-scrollable {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--size-about-intro-scrollable-font-size);
+    text-align: center;
+}
