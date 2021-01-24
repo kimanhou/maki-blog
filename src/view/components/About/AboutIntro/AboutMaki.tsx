@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutIntroText.scss'
+import './AboutMaki.scss'
 
 interface IAboutIntroTextProps {
     fixedClassname : string;
@@ -14,8 +14,8 @@ interface IAboutIntroTextProps {
 const AboutIntroText : React.FC<IAboutIntroTextProps> = props => {
  
     return (
-        <div className={`about-intro-text ${props.fixedClassname}`} style={{ opacity: props.opacity }}>
-            <div className={`about-intro-text-ma`} style={{ marginRight: `${props.middleSeparation}px` }}>
+        <div className={`about-maki ${props.fixedClassname}`} style={{ opacity: props.opacity }}>
+            <div className={`about-maki-ma`} style={{ marginRight: `${props.middleSeparation}px` }}>
                 <div className={`ma`}>
                     ma
                 </div>
@@ -23,7 +23,7 @@ const AboutIntroText : React.FC<IAboutIntroTextProps> = props => {
                     rk
                 </div>
             </div>
-            <div className={`about-intro-text-ki`} style={{ marginLeft: `${props.middleSeparation}px` }}>
+            <div className={`about-maki-ki`} style={{ marginLeft: `${props.middleSeparation}px` }}>
                 <div className={`ki`} style={{ right: `${props.kiRight}px` }}>
                     ki
                 </div>

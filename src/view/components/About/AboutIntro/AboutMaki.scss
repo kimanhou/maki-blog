@@ -1,6 +1,6 @@
-.about-intro-text {
+.about-maki {
     position: absolute;
-    top: var(--size-about-intro-text-initial-top);
+    top: var(--size-about-maki-initial-top);
     left: 50%;
     transform: translateX(-50%);
     text-transform: uppercase;
@@ -13,10 +13,10 @@
         position: fixed;
         top: 40%;
     }
-    >.about-intro-text-ma, >.about-intro-text-ki {
+    >.about-maki-ma, >.about-maki-ki {
         position: relative;
     }
-    >.about-intro-text-ma {
+    >.about-maki-ma {
         >.ma {
             position: relative;
             z-index: 1;
@@ -26,7 +26,7 @@
             top: 0;
         }
     }
-    >.about-intro-text-ki {
+    >.about-maki-ki {
         >.ki {
             position: relative;
             z-index: 1;
