@@ -1,47 +1,62 @@
-.intro-mark {
-    background-color: var(--color-dark-green);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100vh; // temp
+.about-mark {
+    min-height: 100vh; // temp
     width: 100vw; // temp
-    >.intro-mark-container {
+    >.about-mark-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         max-width: 70%;
         margin: 0 auto;
-        >.intro-mark-left {
-            transform: translateX(20px);
+        >.about-mark-left {
+            transform: translateX(var(--size-about-photo-text-offset));
             position: relative;
-            >.intro-mark-photo {
-                height: 74vh;
-                width: 37vh;
+            >.about-mark-photo {
+                height: var(--size-about-photo-height);
+                width: calc(var(--size-about-photo-height) / 2);
                 background-image: url(../../../../images/about/mark.jpg);
                 background-position: center;
                 background-size: 100%;
             }
-            >.intro-mark-image-cover {
+            >.about-mark-image-cover {
                 left: 0;
                 right: 0;
                 bottom: 0;
                 height: 100%;
                 position: absolute;
                 background-color: var(--color-green);
-                transition: height 1s 2s;
+                transition: height 1s 1s;
             }
         }
-        >.intro-mark-right {
-            background-color: var(--color-white);
-            border: solid 2px var(--color-yellow);
-            transform: translateX(-20px);
-            padding: 10px;
+        >.about-mark-right {
+            position: relative;
+            transform: translateX(calc(var(--size-about-photo-text-offset) * (-1)));
+            >.about-mark-corner {
+                background-color: var(--color-green);
+                right: calc(var(--size-about-photo-text-offset) * (-2));
+                top: calc(var(--size-about-photo-text-offset) * (-2));
+                height: var(--size-about-photo-corner-height);
+                width: var(--size-about-photo-corner-height);
+                position: absolute;
+                z-index: -1;
+                transition: opacity 1s;
+                opacity: 0;
+            }
+            >.about-mark-text {
+                background-color: var(--color-white);
+                border: solid 2px var(--color-green);
+                padding: var(--size-margin-10);
+            }
         }
         &.active {
-            >.intro-mark-left {
-                >.intro-mark-image-cover {
+            >.about-mark-left {
+                >.about-mark-image-cover {
                     height: 0;
+                }
+            }
+            >.about-mark-right {
+                >.about-mark-corner {
+                    opacity: 1;
                 }
             }
         }

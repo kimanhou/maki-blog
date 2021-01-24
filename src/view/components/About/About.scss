@@ -1,5 +1,4 @@
 .about {
-    height: 10000vh;
     >.about-intro-fixed {
         min-height: 100vh;
         display: flex;
@@ -8,5 +7,9 @@
         >.header {
             width: 100vw;
         }
+    }
+    >.about-scrollable {
+        position: absolute;
+        padding-top: var(--size-about-scrollabl-padding-top);
     }
 }
