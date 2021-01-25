@@ -9,7 +9,7 @@ const AboutIntro : React.FC = props => {
         const onScroll = () => {
             var scrollTop = window.scrollY;
             var maxOffset = window.innerWidth / 2 - window.innerHeight * 3 / 10 - 70; // half width - figure width - main-margin
-            var finalOffset = Math.min(scrollTop, maxOffset);
+            var finalOffset = Math.min(Math.max(scrollTop - 10, 0), maxOffset);
             setOffset(`calc(50% + ${finalOffset}px)`);
         };
         window.addEventListener('scroll', onScroll);

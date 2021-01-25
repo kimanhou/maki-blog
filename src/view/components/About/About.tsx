@@ -8,6 +8,7 @@ import BackToTop from '../Post/PostTemplate/TemplateComponents/BackToTop';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import './About.scss';
 import AboutIntro from './AboutIntro/AboutIntro';
+import AboutIntroBackground from './AboutIntro/AboutIntroBackground';
 import AboutMaki from './AboutIntro/AboutMaki';
 import Scroll from './AboutIntro/Scroll';
 import AboutIntroScrollable from './AboutIntroScollable/AboutIntroScrollable';
@@ -101,6 +102,7 @@ const About : React.FC = props => {
                 <SectionHeader title={new TextModel('About us', 'À propos')} subtitle={new TextModel('', 'de nous')} />
                 <AboutIntro/>
                 <Scroll />
+                <AboutIntroBackground />
             </div>
             <AboutMaki fixedClassname={fixedClassname} opacity={makiOpacity} 
                             middleSeparation={distanceBetweenMaki} 

@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import Text from '../../LocalisationContext/Text';
-import './Scroll.scss';
+import './AboutIntroBackground.scss';
 
-const Scroll : React.FC = props => {
+const AboutIntroBackground : React.FC = props => {
     const [active, setActive] = useState(false);
     const activeClassName = active ? 'active' : '';
 
     useEffect(() => {
         const onScroll = () => {
             var scrollTop = window.scrollY;
-            if (scrollTop <= 10) {
+            if (scrollTop == 0) {
                 setActive(false);
             }
-            if (scrollTop > 10) {
+            if (scrollTop > 0) {
                 setActive(true);
             }
         };
@@ -21,11 +20,9 @@ const Scroll : React.FC = props => {
     }, []);
     
     return (
-        <div className={`about-intro-scroll ${activeClassName}`}>
-            <span><Text english='scroll' french='faites défiler' /></span>
-            <span className={`arrow-down`}>⌄</span>
+        <div className={`about-intro-background ${activeClassName}`}>
         </div>
     );
 }
 
-export default Scroll;
+export default AboutIntroBackground;
