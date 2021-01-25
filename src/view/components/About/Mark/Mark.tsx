@@ -3,6 +3,7 @@ import Text from '../../../../model/Text';
 import ScreenDetector from '../../ScreenDetector/screenDetector';
 import SectionHeader from '../../SectionHeader/SectionHeader';
 import './Mark.scss';
+import UnderlinedTitle from '../UnderlinedTitle/UnderlinedTitle';
 
 interface IMarkProps {
 }
@@ -29,6 +30,7 @@ const Mark : React.FC<IMarkProps> = props => {
                 <div className={`about-mark-right`}>
                     <div className={`about-mark-corner`}></div>
                     <div className={`about-mark-text`}>
+                        <UnderlinedTitle line1={new Text('Back-end', 'Développeur')} line2={new Text('developer', 'back-end')}/>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus molestie lorem ac malesuada. 
                         Etiam in faucibus mi. Ut tincidunt luctus efficitur. Donec semper sapien quam, at cursus odio ornare ut. 
                         Mauris ac scelerisque velit, vel tempor magna. Duis non libero at massa mattis sodales. 

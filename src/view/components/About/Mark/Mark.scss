@@ -26,6 +26,7 @@
                 position: absolute;
                 background-color: var(--color-green);
                 transition: height 1s 1s;
+                transition-timing-function: cubic-bezier(1,0,0,1);
             }
         }
         >.about-mark-right {

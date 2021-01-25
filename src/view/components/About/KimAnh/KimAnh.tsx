@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Text from '../../../../model/Text';
 import ScreenDetector from '../../ScreenDetector/screenDetector';
 import SectionHeader from '../../SectionHeader/SectionHeader';
+import UnderlinedTitle from '../UnderlinedTitle/UnderlinedTitle';
 import './KimAnh.scss';
 
 interface IKimAnhProps {
@@ -25,6 +26,7 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
                 <div className={`about-kim-anh-left`}>
                     <div className={`about-kim-anh-corner`}></div>
                     <div className={`about-kim-anh-text`}>
+                        <UnderlinedTitle line1={new Text('Front-end', 'Développeur')} line2={new Text('developer', 'front-end')}/>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus molestie lorem ac malesuada. 
                         Etiam in faucibus mi. Ut tincidunt luctus efficitur. Donec semper sapien quam, at cursus odio ornare ut. 
                         Mauris ac scelerisque velit, vel tempor magna. Duis non libero at massa mattis sodales. 

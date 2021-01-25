@@ -47,6 +47,7 @@
                 position: absolute;
                 background-color: var(--color-yellow);
                 transition: height 1s 1s;
+                transition-timing-function: cubic-bezier(1,0,0,1);
             }
         }
         &.active {
