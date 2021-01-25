@@ -1,0 +1,30 @@
+.about-intro-scroll {
+    position: absolute;
+    left: 50%;
+    top: calc(100vh - 30px);
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    transition: opacity 1s;
+    color: var(--color-white);
+    >.arrow-down {
+        display: inline-block;
+        margin-left: var(--size-margin-10);
+        animation: arrow-down-animation 2s linear 0s infinite;
+    }
+    &.active {
+        opacity: 0;
+    }
+}
+
+@keyframes arrow-down-animation {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}

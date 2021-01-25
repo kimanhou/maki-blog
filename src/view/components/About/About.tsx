@@ -9,6 +9,7 @@ import SectionHeader from '../SectionHeader/SectionHeader';
 import './About.scss';
 import AboutIntro from './AboutIntro/AboutIntro';
 import AboutMaki from './AboutIntro/AboutMaki';
+import Scroll from './AboutIntro/Scroll';
 import AboutIntroScrollable from './AboutIntroScollable/AboutIntroScrollable';
 import BackgroundTransition from './BackgroundTransition/BackgroundTransition';
 import KimAnh from './KimAnh/KimAnh';
@@ -97,8 +98,9 @@ const About : React.FC = props => {
         <div className={`about`} style={{ height: aboutTotalHeight }} id={`top`}>
             <div className={`about-intro-fixed`}>
                 <Header/>
-                <SectionHeader title={new TextModel('About', 'À propos')} subtitle={new TextModel('us', 'de nous')} />
+                <SectionHeader title={new TextModel('About us', 'À propos')} subtitle={new TextModel('', 'de nous')} />
                 <AboutIntro/>
+                <Scroll />
             </div>
             <AboutMaki fixedClassname={fixedClassname} opacity={makiOpacity} 
                             middleSeparation={distanceBetweenMaki} 
