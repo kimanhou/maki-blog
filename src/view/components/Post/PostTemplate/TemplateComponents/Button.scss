@@ -1,0 +1,97 @@
+.fade-in {
+    margin: var(--size-margin-30) 0;
+    >.button {
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        width: var(--size-post-button-width);
+        margin-left: var(--size-post-button-margin);
+        &:hover {
+            font-style: italic;
+            >.button-border, >.button-yellow {
+                top: 0;
+                left: 0;
+            }
+            >.button-border {
+                animation: button-border-animation 0.4s linear 0s forwards;
+            }
+        }
+        >.button-container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 2rem;
+            align-items: center;
+            justify-content: center;
+            >.arrow-down {
+                margin-left: var(--size-margin-10);
+                animation: arrow-down-animation 2s linear 0s infinite;
+            }
+            >.arrow-up {
+                margin-left: var(--size-margin-10);
+                animation: arrow-up-animation 2s linear 0s infinite;
+            }
+        }
+        >.button-yellow, >.button-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2rem;
+            transition: top 0.4s, left 0.4s;
+        }
+        >.button-border {
+            border: solid 1px var(--color-off-black);
+            top: calc(var(--size-post-button-margin) * (-1));
+            left: calc(var(--size-post-button-margin) * (-1));
+            transition: top 0.4s, left 0.4s;
+        }
+        >.button-yellow {
+            background-color: var(--color-yellow);
+            top: var(--size-post-button-margin);
+            left: var(--size-post-button-margin);
+        }
+    }
+}
+
+@keyframes arrow-down-animation {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes arrow-up-animation {
+    0% {
+        transform: translateY(-2px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes button-border-animation {
+    0% {
+        border: solid 1px var(--color-off-black);
+    }
+    100% {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fade-in {
+        >.button {
+            margin: 0 auto;
+        }
+    }
+}

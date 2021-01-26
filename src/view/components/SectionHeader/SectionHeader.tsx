@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
+import TextModel from '../../../model/Text';
 import Local from '../LocalisationContext/Local';
 import { LocalValueContext } from '../LocalisationContext/LocalContext';
 import Text from '../LocalisationContext/Text';
@@ -6,10 +7,8 @@ import ScreenDetector from '../ScreenDetector/screenDetector';
 import './SectionHeader.scss';
 
 interface ISectionHeaderProps {
-    englishTitle : string;
-    frenchTitle : string;
-    englishSubtitle : string;
-    frenchSubtitle : string;
+    title : TextModel;
+    subtitle : TextModel;
     isColorWhite ?: boolean;
 }
 
@@ -17,11 +16,8 @@ const SectionHeader : React.FunctionComponent<ISectionHeaderProps> = props => {
     const colorWhiteClassName = props.isColorWhite ? 'color-white' : '';
 
     var localisation = useContext(LocalValueContext);
-    const isEnglish = localisation == Local.EN;
-    const isFrench = localisation == Local.FR;
-    
-    const formatTitle = (title : string) => {
-        return title.split('').map((t, index) => {
+    const formatTitle = (text : TextModel) => {
+        return text.getText(localisation).split('').map((t, index) => {
             if (index % 2) {
                 return <span className={`up`}>
                             {t}
@@ -47,13 +43,12 @@ const SectionHeader : React.FunctionComponent<ISectionHeaderProps> = props => {
     return (
         <div className={`section-header ${colorWhiteClassName}`} ref={ref}>
             <div className={`section-header-title`}>
-                    {isEnglish && formatTitle(props.englishTitle)}
-                    {isFrench && formatTitle(props.frenchTitle)}
+                    {formatTitle(props.title)}
             </div>
-            {props.englishSubtitle !== "" && props.frenchSubtitle !== "" &&
+            {props.subtitle.getText(localisation) !== "" &&
                 <div className={`section-header-subtitle`}>
                     <div className={`section-header-subtitle-text`}>
-                        <Text english={props.englishSubtitle} french={props.frenchSubtitle}/>
+                        <Text english={props.subtitle.english} french={props.subtitle.french}/>
                     </div>
                 </div>
             }

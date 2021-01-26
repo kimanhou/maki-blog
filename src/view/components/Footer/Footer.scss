@@ -1,5 +1,11 @@
 .footer {
     height: var(--size-footer-height);
+    background-color: var(--color-white);
+    &.no-margin-top {
+        >.fade-in {
+            margin-top: 0;
+        }
+    }
     >.fade-in {
         >.main-wrapper {
             display: flex;

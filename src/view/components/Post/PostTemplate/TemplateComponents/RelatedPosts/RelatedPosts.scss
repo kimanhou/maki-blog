@@ -1,0 +1,25 @@
+.related-posts {
+    >.fade-in {
+        >.posts {
+            display: flex;
+            flex-direction: row;
+            margin: 0 calc(var(--size-gutter) * (-1));
+            >.post-preview {
+                max-width: 33.33%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .related-posts {
+        >.fade-in {
+            >.posts {
+                flex-direction: column;
+                >.post-preview {
+                    max-width: unset;
+                }
+            }
+        }
+    }
+}

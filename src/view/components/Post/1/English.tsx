@@ -49,7 +49,8 @@ const English : React.FC<IPostContentProps> = props => {
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`one`}
-                    tldr={tldr}>
+                    tldr={tldr}
+                    relatedPosts={[]}>
             <p>This step-by-step guide is for websites and applications without a backend server. If your app relies on a backend server, the process will differ from step 4, you will need to use an App Access Token instead of a Client Access Token when accessing the oEmbed endpoint.</p>
             
             <div className={`section-separator`}></div>

@@ -1,0 +1,20 @@
+.about {
+    >.about-intro-fixed {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        >.header {
+            width: 100vw;
+        }
+    }
+    >.about-mark-and-kim-anh {
+        position: absolute;
+        padding-top: var(--size-about-scrollabl-padding-top);
+        >.fade-in {
+            >.back-to-top {
+                margin-left: var(--size-main-margin);
+            }
+        }
+    }
+}

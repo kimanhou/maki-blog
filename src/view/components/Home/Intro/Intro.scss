@@ -1,0 +1,24 @@
+.intro {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    text-align: center;
+    max-width: var(--size-intro-max-width);
+    font-size: var(--size-font-size-navigation);
+    color: var(--color-off-black);
+    opacity: 0;
+    transition: opacity 2s;
+    z-index: 1;
+    margin-top: 5vw;
+    &.active {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .intro {
+        margin: 0 var(--size-main-margin);
+    }
+}

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import Filters from '../../../business/Filters';
 import Category from '../../../model/Category';
+import Text from '../../../model/Text';
 import { useQueryParams } from '../../hooks/UseQueryParams';
 import FadeIn from '../FadeIn/FadeIn';
 import Footer from '../Footer/Footer';
@@ -56,7 +57,7 @@ const Blog : React.FC<IBlogProps> = props => {
         <div className={`blog`}>
             <Header />
             <div className={`main-wrapper`}>
-                <SectionHeader englishTitle='The blog' englishSubtitle='' frenchTitle='Le blog' frenchSubtitle='' />
+                <SectionHeader title={new Text('The log', 'Le blog')} subtitle={new Text('', '')} />
                 <div className={`blog-categories`}>
                     <div className={`blog-categories-container`}>
                         {allCategories.map(t => <BlogCategory category={t} isSelected={isCategorySelected(t)} onClick={() => onCategoryClick(t)}/>)}

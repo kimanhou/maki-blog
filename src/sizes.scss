@@ -20,6 +20,11 @@
     --size-maki-logo-width: 140px;
     --size-maki-logo-subtitle-margin-top: -15px;
     --size-header-height: 200px;
+    --size-navigation-height: 24px;
+
+    // HOME
+    --size-intro-max-width: 500px;
+    --size-double-gradient-height: 300px;
 
     // SECTION HEADER
     --size-section-header-subtitle-margin-left: 50%;
@@ -35,13 +40,32 @@
 
     --size-main-wrapper-max-width: 1400px;
     --size-gutter: 20px;
+
+    // POST
     --size-post-hero-image-height: 110vh;
+    --size-post-button-width: 180px;
+    --size-post-button-margin: 3px;
+
+    // POST PREVIEW
     --size-zig-zag-height: 10px;
 
     --size-blog-categories-max-width: 500px;
 
+    // INSTAGRAM
     --size-insta-banner-height: 350px;
     --size-insta-photo-height: 200px;
+
+    // ABOUT
+    --size-about-maki-initial-top: 120vh;
+    --size-about-intro-figure-height: 60vh;
+    --size-about-intro-figure-width: 30vh;
+    --size-about-photo-height: 74vh;
+    --size-about-photo-text-offset: 20px;
+    --size-about-photo-corner-height: 100px;
+    --size-about-background-transition-height: 90vh;
+    --size-about-scrollabl-padding-top: 100px;
+    --size-about-intro-maki-font-size: 60px;
+    --size-about-intro-scrollable-font-size: 30px;
 }
 
 @media screen and (max-width: 600px) {
@@ -52,6 +76,9 @@
 
         --size-main-margin: 30px;
 
+        --size-header-height: 330px;
+
+        // SECTION HEADER
         --size-section-header-subtitle-margin-left: 0;
         --size-section-header-subtitle-margin-left-animation: 0;
 

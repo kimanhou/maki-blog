@@ -1,0 +1,41 @@
+.about-maki {
+    position: absolute;
+    top: var(--size-about-maki-initial-top);
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: var(--size-about-intro-maki-font-size);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0;
+    &.fixed {
+        position: fixed;
+        top: 40%;
+    }
+    >.about-maki-ma, >.about-maki-ki {
+        position: relative;
+    }
+    >.about-maki-ma {
+        >.ma {
+            position: relative;
+            z-index: 1;
+        }
+        >.rk {
+            position: absolute;
+            top: 0;
+        }
+    }
+    >.about-maki-ki {
+        >.ki {
+            position: relative;
+            z-index: 1;
+        }
+        >.manh {
+            position: absolute;
+            top: 0;
+            white-space: nowrap;
+            transform: translateX(calc(100% + 70px));
+        }
+    }
+}

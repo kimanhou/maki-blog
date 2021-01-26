@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { IPostContentProps } from '../../../../model/Post';
+import Post, { IPostContentProps } from '../../../../model/Post';
 import PostTemplate from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
@@ -14,37 +14,41 @@ const French : React.FC<IPostContentProps> = props => {
         <Cross/><span>Récupérer la réponse et l'utiliser dans votre code</span>
     </>;
 
-const url = 'https://www.instagram.com/p/CKMKlIzs5CG/';
-const [postHtml, setPostHtml] = useState<string | null>(null);
-const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
-useEffect(() => {
-    fetch(`https://graph.facebook.com/v9.0/instagram_oembed?url=${url}&access_token=857325501713225|f2b27b7ab1af66fad966fe773ffcaaf3&omitscript=true`)
-        .then(resp => {
-            if(resp.ok){
-                return resp.json();
-            }
-            throw new Error(resp.statusText);
-        })
-        .then(json => {
-            setThumbnailUrl(json["thumbnail_url"]);
-            setPostHtml(json["html"]);
-            setTimeout(() => {
-                (window as any).instgrm.Embeds.process()
-            }, 50);
-        })
-}, []);
+    const url = 'https://www.instagram.com/p/CKMKlIzs5CG/';
+    const [postHtml, setPostHtml] = useState<string | null>(null);
+    const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
+    useEffect(() => {
+        fetch(`https://graph.facebook.com/v9.0/instagram_oembed?url=${url}&access_token=857325501713225|f2b27b7ab1af66fad966fe773ffcaaf3&omitscript=true`)
+            .then(resp => {
+                if(resp.ok){
+                    return resp.json();
+                }
+                throw new Error(resp.statusText);
+            })
+            .then(json => {
+                setThumbnailUrl(json["thumbnail_url"]);
+                setPostHtml(json["html"]);
+                setTimeout(() => {
+                    (window as any).instgrm.Embeds.process()
+                }, 50);
+            })
+    }, []);
 
 
-const getImageSrc = (pictureName : string) => {
-    return require(`./images/${pictureName}.jpg`);
-}
+    const getImageSrc = (pictureName : string) => {
+        return require(`./images/${pictureName}.jpg`);
+    }
+
+    const relatedPost = Post.getPostById(0);
+    const relatedPosts = relatedPost == undefined ? [] : [ relatedPost ];
 
     return (
         <PostTemplate title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`one`}
-                    tldr={tldr}>
+                    tldr={tldr}
+                    relatedPosts={ relatedPosts }>
             <p>Ce tutoriel est destiné aux sites et applications qui n'ont pas de serveur back-end. Si votre application a un serveur back-end, la procédure reste la même jusqu'à l'étape 4, où il faudra alors utiliser un token d’accès d’app au lieu d'un token d’accès client lors de la communication avec le point de terminaison oEmbed.</p>
             
             <div className={`section-separator`}></div>

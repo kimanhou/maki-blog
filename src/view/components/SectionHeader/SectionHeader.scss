@@ -10,6 +10,11 @@
                 }
             }
         }
+        >.section-header-subtitle {
+            >.section-header-subtitle-text {
+                color: var(--color-white);
+            }
+        }
     }
     &.animate {
         >.section-header-title {

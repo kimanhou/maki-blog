@@ -11,7 +11,8 @@ const French : React.FC<IPostContentProps> = props => {
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`two`}
-                    tldr={tldr}>
+                    tldr={tldr}
+                    relatedPosts={[]}>
             <p>Créer / Utiliser un compte Facebook</p>
             <p>Le transformer en compte développeur</p>
             <p>Créer une application</p>

@@ -18,7 +18,8 @@ const English : React.FC<IPostContentProps> = props => {
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`two`}
-                    tldr={tldr}>
+                    tldr={tldr}
+                    relatedPosts={[]}>
             <p>Colors</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie lectus vitae accumsan volutpat. Mauris eleifend neque nulla, vel pellentesque metus mattis et. Sed pharetra lorem tortor, condimentum eleifend purus cursus in. Ut dignissim sollicitudin ornare. Sed nulla nulla, dapibus id cursus sit amet, blandit vitae ligula. Nunc condimentum ullamcorper odio id dapibus. Nulla venenatis erat arcu, vel eleifend enim tristique in. Etiam sollicitudin venenatis felis non sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie cursus enim, ac rhoncus felis vulputate egestas. Integer eget semper sem.</p>
             <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis mi arcu, malesuada vitae arcu non, consequat tempus diam. Aenean at fermentum purus, sit amet ultrices lacus. Mauris sit amet vehicula diam. Quisque eget sem neque. Maecenas sed augue eros. Suspendisse facilisis tortor id sem posuere, nec molestie augue tincidunt. Suspendisse dignissim velit augue, ac aliquam turpis feugiat ac. Vivamus eget odio eu lacus dignissim condimentum. Etiam sit amet justo volutpat, cursus augue id, finibus magna. Nullam cursus sollicitudin ligula ac tempor.</p>

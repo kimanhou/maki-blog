@@ -1,0 +1,65 @@
+.about-kim-anh {
+    min-height: 100vh; // temp
+    width: 100vw; // temp
+    >.about-kim-anh-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        margin: 0 auto;
+        >.about-kim-anh-left {
+            transform: translateX(var(--size-about-photo-text-offset));
+            position: relative;
+            z-index: 1;
+            >.about-kim-anh-corner {
+                background-color: var(--color-yellow);
+                left: calc(var(--size-about-photo-text-offset) * (-2));
+                top: calc(var(--size-about-photo-text-offset) * (-2));
+                height: var(--size-about-photo-corner-height);
+                width: var(--size-about-photo-corner-height);
+                position: absolute;
+                z-index: -1;
+                transition: opacity 1s;
+                opacity: 0;
+            }
+            >.about-kim-anh-text {
+                background-color: var(--color-white);
+                padding: var(--size-margin-10);
+            }
+        }
+        >.about-kim-anh-right {
+            position: relative;
+            transform: translateX(calc(var(--size-about-photo-text-offset) * (-1)));
+            >.about-kim-anh-photo {
+                height: var(--size-about-photo-height);
+                width: calc(var(--size-about-photo-height) / 2);
+                background-image: url(../../../../images/about/kim-anh.png);
+                background-position: center;
+                background-size: 100%;
+            }
+            >.about-kim-anh-image-cover {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                position: absolute;
+                background-color: var(--color-yellow);
+                transition: height 1s 1s;
+                transition-timing-function: cubic-bezier(1,0,0,1);
+            }
+        }
+        &.active {
+            >.about-kim-anh-left {
+                >.about-kim-anh-corner {
+                    opacity: 1;
+                }
+            }
+            >.about-kim-anh-right {
+                >.about-kim-anh-image-cover {
+                    height: 0;
+                }
+            }
+        }
+    }
+}

@@ -7,11 +7,14 @@ import './Footer.scss';
 import FooterSocial from './FooterSocial';
 import Languages from './Languages/Languages';
 
-interface IFooterProps {}
+interface IFooterProps {
+    noMarginTop ?: boolean;
+}
 
 const Footer : React.FC<IFooterProps> = props => {
+    const noMarginTopClassname = props.noMarginTop ? 'no-margin-top' : ''
     return (
-        <div className={`footer`}>
+        <div className={`footer ${noMarginTopClassname}`}>
             <FadeIn noDelay>
                 <div className={`main-wrapper`}>
                     <div className={`footer-left`}>

@@ -1,0 +1,57 @@
+.hello-world {
+    position: relative;
+    >.hello-world-placeholder{
+        width: 100%;
+        height: 20vw;
+    }
+    >.hello-world-absolute {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        font-size: 0;
+        >.hello-world-svg {
+            font-family: Dawning;
+            font-size: 200px;
+            text-align: center;
+            width: 100%;
+            >g {
+                >.hello-world-path {
+                    stroke: var(--color-off-black);
+                    stroke-dasharray: 888.43408203125;
+                    stroke-dashoffset: -888.43408203125;
+                } 
+            }
+            &.animate {
+                >g {
+                    >path {
+                        animation: hello-world-animation 5s linear 4s forwards;
+                    }
+                }
+            }
+        }
+    }
+    >.home-image {
+        opacity: 0;
+        transition: opacity 2s;
+        animation: home-image-animation 4s linear 9s forwards;
+    }
+}
+
+@keyframes hello-world-animation {
+    0% {
+        stroke-dashoffset: -888.43408203125;
+    }
+    100% {
+        stroke-dashoffset: -1776.86816;
+    }
+}
+
+@keyframes home-image-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

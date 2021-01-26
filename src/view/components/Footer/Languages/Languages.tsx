@@ -33,8 +33,8 @@ const Languages : React.FC<ILanguagesProps> = props => {
                 <Text english="Language" french="Langue"/>
             </div>
             
-            {currentLanguage.getShortName() == 'EN' && <img src={imageEn} />}
-            {currentLanguage.getShortName() == 'FR' && <img src={imageFr} />}
+            {currentLanguage.getShortName() == 'EN' && <img src={imageEn} alt='Change language'/>}
+            {currentLanguage.getShortName() == 'FR' && <img src={imageFr} alt='Changer la langue'/>}
         </div>
     );
 }

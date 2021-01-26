@@ -1,0 +1,66 @@
+.about-mark {
+    min-height: 100vh; // temp
+    width: 100vw; // temp
+    margin-bottom: 90vh;
+    >.about-mark-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        margin: 0 auto;
+        >.about-mark-left {
+            transform: translateX(var(--size-about-photo-text-offset));
+            position: relative;
+            >.about-mark-photo {
+                height: var(--size-about-photo-height);
+                width: calc(var(--size-about-photo-height) / 2);
+                background-image: url(../../../../images/about/mark.png);
+                background-position: center;
+                background-size: 100%;
+            }
+            >.about-mark-image-cover {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                position: absolute;
+                background-color: var(--color-green);
+                transition: height 1s 1s;
+                transition-timing-function: cubic-bezier(1,0,0,1);
+            }
+        }
+        >.about-mark-right {
+            position: relative;
+            transform: translateX(calc(var(--size-about-photo-text-offset) * (-1)));
+            >.about-mark-corner {
+                background-color: var(--color-green);
+                right: calc(var(--size-about-photo-text-offset) * (-2));
+                top: calc(var(--size-about-photo-text-offset) * (-2));
+                height: var(--size-about-photo-corner-height);
+                width: var(--size-about-photo-corner-height);
+                position: absolute;
+                z-index: -1;
+                transition: opacity 1s;
+                opacity: 0;
+            }
+            >.about-mark-text {
+                color: var(--color-white);
+                padding: var(--size-margin-10);
+                background-color: var(--color-dark-green);
+            }
+        }
+        &.active {
+            >.about-mark-left {
+                >.about-mark-image-cover {
+                    height: 0;
+                }
+            }
+            >.about-mark-right {
+                >.about-mark-corner {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
