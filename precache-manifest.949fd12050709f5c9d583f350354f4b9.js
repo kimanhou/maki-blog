@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "75df950f425b41cd4d3b",
-    "url": "./static/css/main.ed25e257.chunk.css"
+    "revision": "bc4a95b261f4d883491a",
+    "url": "./static/css/main.c150999e.chunk.css"
   },
   {
-    "revision": "75df950f425b41cd4d3b",
-    "url": "./static/js/main.75df950f.chunk.js"
+    "revision": "bc4a95b261f4d883491a",
+    "url": "./static/js/main.bc4a95b2.chunk.js"
   },
   {
     "revision": "11ce2e26e74ad37109c3",
@@ -28,14 +28,6 @@ self.__precacheManifest = [
     "url": "./static/media/hero-image.097e2a33.jpg"
   },
   {
-    "revision": "d254f533d9bb6fe4e84b07f21062381c",
-    "url": "./static/media/AnticDidone-Regular.d254f533.woff"
-  },
-  {
-    "revision": "e917b5a9dcd9a24157425a9aee6da804",
-    "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
-  },
-  {
     "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
     "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
@@ -44,12 +36,20 @@ self.__precacheManifest = [
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
-    "revision": "6e364b16fabc20a96b70031e54219834",
-    "url": "./static/media/icon-mail.6e364b16.svg"
+    "revision": "d254f533d9bb6fe4e84b07f21062381c",
+    "url": "./static/media/AnticDidone-Regular.d254f533.woff"
+  },
+  {
+    "revision": "e917b5a9dcd9a24157425a9aee6da804",
+    "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
   },
   {
     "revision": "cb98ad493e1cc9426a8346fa288e7bce",
     "url": "./static/media/icon-instagram.cb98ad49.svg"
+  },
+  {
+    "revision": "6e364b16fabc20a96b70031e54219834",
+    "url": "./static/media/icon-mail.6e364b16.svg"
   },
   {
     "revision": "c72a90c42b86b9a4860f082568fd9eb9",
@@ -96,15 +96,15 @@ self.__precacheManifest = [
     "url": "./static/media/intro-bg.e756d17d.png"
   },
   {
-    "revision": "107c247006e7b9c4d944d9f44b86afd7",
-    "url": "./static/media/mark.107c2470.png"
-  },
-  {
     "revision": "1e3a8997d54ed65bd2da6c951aa40188",
     "url": "./static/media/kim-anh.1e3a8997.png"
   },
   {
-    "revision": "c511b8c2256674d7b9861788561c2ba1",
+    "revision": "107c247006e7b9c4d944d9f44b86afd7",
+    "url": "./static/media/mark.107c2470.png"
+  },
+  {
+    "revision": "6fd27b687422adf5aba3524f769764cf",
     "url": "./index.html"
   }
 ];
