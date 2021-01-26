@@ -10,10 +10,20 @@
     }
     >.about-mark-and-kim-anh {
         position: absolute;
-        padding-top: var(--size-about-scrollabl-padding-top);
+        padding-top: var(--size-about-scrollable-padding-top);
         >.fade-in {
             >.back-to-top {
                 margin-left: var(--size-main-margin);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        >.about-intro-fixed {
+            >.header {
+                margin-bottom: 0;
             }
         }
     }

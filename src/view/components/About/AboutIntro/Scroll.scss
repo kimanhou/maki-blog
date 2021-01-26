@@ -1,11 +1,12 @@
 .about-intro-scroll {
     position: absolute;
     left: 50%;
-    top: calc(100vh - 30px);
+    top: calc(100vh - var(--size-margin-30));
     transform: translateX(-50%);
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     transition: opacity 1s;
+    white-space: nowrap;
     >.arrow-down {
         display: inline-block;
         margin-left: var(--size-margin-10);
