@@ -1,9 +1,0 @@
-.double-gradient {
-    opacity: 0;
-    transition: opacity 2s;
-    animation: home-image-animation 2s linear 9s forwards;
-    width: 100%;
-    height: var(--size-double-gradient-height);
-    background-image: linear-gradient(to bottom, transparent, #efebea, transparent);
-    transform: translateY(-50%);
-}

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import DoubleGradient from '../DoubleGradient/DoubleGradient';
+import HomeImage from '../HomeImage';
+import Intro from '../Intro/Intro';
 import './HelloWorld.scss';
 
 interface IHomeProps {}
 
 const HelloWorld : React.FC<IHomeProps> = props => {
-    const introPicture = require(`../../../../images/intro-bg.jpg`);
     const [viewBoxHeight, setViewBoxHeight] = useState(Math.min(210000 / window.innerWidth, 284));
 
     useEffect(() => {
@@ -16,29 +16,19 @@ const HelloWorld : React.FC<IHomeProps> = props => {
         return () => window.removeEventListener('resize', onResize);
     }, []);
 
+
     return (
         <div className={`hello-world`}>
             <div className={`hello-world-placeholder`}/>
             <div className={`hello-world-absolute`}>
-                <svg className={`hello-world-svg animate`} viewBox={`0 0 357.1069 ${viewBoxHeight}`} >
+                <svg className={`hello-world-svg animate`} viewBox={`0 0 357.1069 70`} >
                     <defs >
-                        <clipPath clipPathUnits="userSpaceOnUse" id="clip-path-2">
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clip-path">
                             <path
                                 d="M 356.97441,56.773858 C 326.04319,56.422655 281.97588,39.173605 260.303,56.280984 c -7.72173,4.95826 -9.8284,-0.450519 -9.20034,-7.557426 v 0 c -1.35939,8.455303 -11.07934,14.189665 -12.0577,8.921713 v 0 c -0.12987,1.278284 -7.44097,5.357733 -11.65504,-0.665943 v 0 c -11.53924,6.305698 -7.8326,-2.280441 -7.14424,-8.912937 l -7.25874,1.314334 v 0 c -3.47914,3.64953 -6.88033,5.132313 -12.41864,6.095812 v 0 c -7.9027,9.995715 -15.41165,-2.063332 -2.62841,-8.560184 -5.24941,2.091648 -8.72191,9.462839 -12.48618,2.792958 -1.26744,13.712899 -5.57891,11.320052 -5.58592,-1.642917 -5.26332,17.648949 -10.13417,13.681485 -7.88601,-3.450127 -9.66733,3.87677 -21.34094,10.245291 -34.66558,11.007558 v 0 c -0.8141,1.047869 -1.9544,1.794682 -3.12155,2.464345 -2.9219,1.681914 -5.19593,1.960129 -6.26302,-0.376708 -7.9e-4,-0.0087 0,0 0,0 v 0 c -2.59148,2.65866 -11.06289,4.907777 -11.48049,-3.349342 v 0 c -2.3951,9.482955 -11.32319,7.458276 -12.97907,-0.709832 0.0136,-0.09131 0.0131,-0.185571 0.0408,-0.272958 l -0.0408,0.272958 c -5.615308,6.446345 -13.030798,8.115858 -15.93632,3.778713 -0.709512,-0.70095 -0.821449,-2.464377 -0.821449,-2.464377 v 0 c 0,0 -2.235499,2.201791 -4.600181,3.61442 -1.588148,0.680974 -3.176299,0.692499 -4.764458,-0.328586 -3.06642,-1.841516 0.643959,-7.89105 -1.613019,-10.041734 C 70.7405,46.310092 68.170502,53.789043 65.520652,59.073918 L 68.1775,46.549585 v 0 c 0,0 -6.030066,14.593136 -17.935988,14.495836 -17.77696,-0.356529 -34.94308,-2.036546 -50.10902,-8.0503 L -4e-6,423.03251 H 356.97401 V 56.773858"
                             />
                         </clipPath>
                     </defs>
-                    <g className={`home-image`}>
-                        <image
-                            width="357.23901"
-                            height="239.28894"
-                            preserveAspectRatio="none"
-                            href={introPicture}
-                            id="image8653"
-                            x="0.132496"
-                            y="44.528481"
-                            clip-path="url(#clip-path-2)" />
-                    </g>
                     <g transform="translate(14.918766,-20.279011)">
                         <path className={`hello-world-path`}
                             style={{ fill: 'none',
@@ -51,8 +41,9 @@ const HelloWorld : React.FC<IHomeProps> = props => {
                         />
                     </g>
                 </svg>
-                <DoubleGradient />
             </div>
+            <Intro/>
+            <HomeImage/>
         </div>
         
     );

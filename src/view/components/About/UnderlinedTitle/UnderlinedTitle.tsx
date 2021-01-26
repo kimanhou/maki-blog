@@ -7,9 +7,11 @@ import './UnderlinedTitle.scss';
 interface IUnderlinedTitleProps {
     line1 : Text;
     line2 : Text;
+    colorWhite ?: boolean;
 }
 
 const UnderlinedTitle : React.FC<IUnderlinedTitleProps> = props => {
+    const colorWhiteClassname = props.colorWhite ? 'white' : '';
     var localisation = useContext(LocalValueContext);
     var [onActiveClassname, setOnActiveClassname] = useState("");
     const onActive = () => {
@@ -21,7 +23,7 @@ const UnderlinedTitle : React.FC<IUnderlinedTitleProps> = props => {
     }
 
     return (
-        <div className={`underlined-title ${onActiveClassname}`}>
+        <div className={`underlined-title ${onActiveClassname} ${colorWhiteClassname}`}>
             <div className={`underlined-title-line-1`}>
                 {props.line1.getText(localisation)}
                 <div className={`underlined-title-underline-1`}></div>

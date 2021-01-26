@@ -37,4 +37,9 @@
             }
         }
     }
+    &.white {
+        .underlined-title-underline-1, .underlined-title-underline-2 {
+            background-color: var(--color-white);
+        }
+    }
 }

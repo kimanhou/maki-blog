@@ -1,6 +1,7 @@
 .about-mark {
     min-height: 100vh; // temp
     width: 100vw; // temp
+    margin-bottom: 90vh;
     >.about-mark-container {
         display: flex;
         flex-direction: row;
@@ -14,7 +15,7 @@
             >.about-mark-photo {
                 height: var(--size-about-photo-height);
                 width: calc(var(--size-about-photo-height) / 2);
-                background-image: url(../../../../images/about/mark.jpg);
+                background-image: url(../../../../images/about/mark.png);
                 background-position: center;
                 background-size: 100%;
             }
@@ -44,9 +45,9 @@
                 opacity: 0;
             }
             >.about-mark-text {
-                background-color: var(--color-white);
-                border: solid 2px var(--color-green);
+                color: var(--color-white);
                 padding: var(--size-margin-10);
+                background-color: var(--color-dark-green);
             }
         }
         &.active {

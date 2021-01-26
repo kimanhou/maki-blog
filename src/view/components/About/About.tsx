@@ -12,7 +12,6 @@ import AboutIntroBackground from './AboutIntro/AboutIntroBackground';
 import AboutMaki from './AboutIntro/AboutMaki';
 import Scroll from './AboutIntro/Scroll';
 import AboutIntroScrollable from './AboutIntroScollable/AboutIntroScrollable';
-import BackgroundTransition from './BackgroundTransition/BackgroundTransition';
 import KimAnh from './KimAnh/KimAnh';
 import Mark from './Mark/Mark';
 
@@ -129,7 +128,6 @@ const About : React.FC = props => {
 
             <div className={`about-mark-and-kim-anh`} style={{ top: markAndKimAnhInitialTop, backgroundColor: `rgb(${red}, ${green}, ${blue})` }} >
                 <Mark />
-                <BackgroundTransition/>
                 <KimAnh />
                 <BackToTop />
                 <Footer noMarginTop />

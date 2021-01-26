@@ -6,11 +6,7 @@ import PostPreview from '../PostPreview/PostPreview';
 import FadeIn from '../FadeIn/FadeIn';
 import Text from '../../../model/Text';
 
-interface ILatestPostsProps {
-
-}
-
-const LatestPosts : React.FC<ILatestPostsProps> = props => {
+const LatestPosts : React.FC = props => {
     const posts = Post.getLatestposts(3);
 
     return (

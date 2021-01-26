@@ -10,14 +10,15 @@
         height: var(--size-about-intro-figure-height);
         width: var(--size-about-intro-figure-width);
         cursor: pointer;
+        margin-bottom: var(--size-margin-30);
     }
     >.figure-left {
-        background-image: url(../../../../images/about/mark.jpg);
+        background-image: url(../../../../images/about/mark.png);
         background-position: center;
         background-size: 100%;
     }
     >.figure-right {
-        background-image: url(../../../../images/about/kim-anh.jpg);
+        background-image: url(../../../../images/about/kim-anh.png);
         background-position: center;
         background-size: 100%;
     }
