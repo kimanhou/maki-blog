@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TextModel from '../../../model/Text';
+import { isMobile } from '../../hooks/UseMediaQuery';
 import useScroll from '../../hooks/UseScroll';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -16,10 +17,10 @@ import KimAnh from './KimAnh/KimAnh';
 import Mark from './Mark/Mark';
 
 const About : React.FC = props => {
-    const mainMargin = 70;
-    const maWidth = 89;
-    const manhWidth = 188;
-    const footerHeight = 150;
+    const mainMargin = isMobile() ? 30 : 70;
+    const maWidth = isMobile() ? 59 : 89;
+    const manhWidth = isMobile() ? 125.5 : 188;
+    const footerHeight = isMobile() ? 220 : 150;
 
     var fixedStart = window.innerHeight * 0.6; // --size-about-intro-text-initial-top (120vh) - figure height (60vh)
     

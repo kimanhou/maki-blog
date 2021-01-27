@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { myScrollTo } from '../../../../Util';
+import { isMobile } from '../../../hooks/UseMediaQuery';
 import './AboutIntro.scss';
 
 const AboutIntro : React.FC = props => {
     const [offset, setOffset] = useState('50%');
 
+    const mainMargin = isMobile() ? 30 : 70;
+
     useEffect(() => {
         const onScroll = () => {
             var scrollTop = window.scrollY;
-            var maxOffset = window.innerWidth / 2 - window.innerHeight * 3 / 10 - 70; // half width - figure width - main-margin
+            var maxOffset = window.innerWidth / 2 - window.innerHeight * 3 / 10 - mainMargin; // half width - figure width - main-margin
             var finalOffset = Math.min(Math.max(scrollTop - 10, 0), maxOffset);
             setOffset(`calc(50% + ${finalOffset}px)`);
         };
