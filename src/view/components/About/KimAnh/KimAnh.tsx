@@ -9,20 +9,30 @@ interface IKimAnhProps {
 }
 
 const KimAnh : React.FC<IKimAnhProps> = props => {
-    var [onActiveClassname, setOnActiveClassname] = useState('');
-    const onActive = () => {
-        setOnActiveClassname("active");
+    var [onActiveLeftClassname, setOnActiveLeftClassname] = useState('');
+    var [onActiveRightClassname, setOnActiveRightClassname] = useState('');
+    
+    const onActiveLeft = () => {
+        setOnActiveLeftClassname("active");
     }
-    const onUnactive = () => {
-        setOnActiveClassname("");
+    const onUnactiveLeft = () => {
+        setOnActiveLeftClassname("");
+    }
+
+    const onActiveRight = () => {
+        setOnActiveRightClassname("active");
+    }
+    const onUnactiveRight = () => {
+        setOnActiveRightClassname("");
     }
 
 
     return (
         <div className={`about-kim-anh`} id={`kim-anh`}>
             <SectionHeader title={new Text('Meet Kim Anh', 'à la rencontre')} subtitle={new Text('front-end developer', 'de Kim Anh')} />
-            <div className={`about-kim-anh-container ${onActiveClassname}`}>
-                <div className={`about-kim-anh-left`}>
+            <div className={`about-kim-anh-container`}>
+                <div className={`about-kim-anh-left ${onActiveLeftClassname}`}>
+                    <ScreenDetector className={`screen-detector-about-kim-anh-left`} onActive={onActiveLeft} onUnactive={onUnactiveLeft}/> 
                     <div className={`about-kim-anh-corner`}></div>
                     <div className={`about-kim-anh-text`}>
                         <UnderlinedTitle line1={new Text('Front-end', 'Développeur')} line2={new Text('developer', 'front-end')}/>
@@ -39,8 +49,8 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
                         Proin sagittis massa nec arcu rutrum vulputate.
                     </div>
                 </div>
-                <div className={`about-kim-anh-right`}>
-                    <ScreenDetector className={`screen-detector-about-kim-anh-image`} onActive={onActive} onUnactive={onUnactive}/> 
+                <div className={`about-kim-anh-right ${onActiveRightClassname}`}>
+                    <ScreenDetector className={`screen-detector-about-kim-anh-right`} onActive={onActiveRight} onUnactive={onUnactiveRight}/> 
                     <div className={`about-kim-anh-photo`}></div>
                     <div className={`about-kim-anh-image-cover`}></div>
                 </div>             

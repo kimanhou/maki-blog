@@ -50,13 +50,15 @@
                 background-color: var(--color-dark-green);
             }
         }
-        &.active {
-            >.about-mark-left {
+        >.about-mark-left {
+            &.active {
                 >.about-mark-image-cover {
                     height: 0;
                 }
             }
-            >.about-mark-right {
+        }
+        >.about-mark-right {
+            &.active {
                 >.about-mark-corner {
                     opacity: 1;
                 }
