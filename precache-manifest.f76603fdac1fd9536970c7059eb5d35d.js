@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bc4a95b261f4d883491a",
-    "url": "./static/css/main.c150999e.chunk.css"
+    "revision": "e190052fb2f9f9a74eaa",
+    "url": "./static/css/main.c0bccb2f.chunk.css"
   },
   {
-    "revision": "bc4a95b261f4d883491a",
-    "url": "./static/js/main.bc4a95b2.chunk.js"
+    "revision": "e190052fb2f9f9a74eaa",
+    "url": "./static/js/main.e190052f.chunk.js"
   },
   {
     "revision": "11ce2e26e74ad37109c3",
@@ -28,14 +28,6 @@ self.__precacheManifest = [
     "url": "./static/media/hero-image.097e2a33.jpg"
   },
   {
-    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
-    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
-  },
-  {
-    "revision": "b09b73eedd02abbcff717b574512e61c",
-    "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
-  },
-  {
     "revision": "d254f533d9bb6fe4e84b07f21062381c",
     "url": "./static/media/AnticDidone-Regular.d254f533.woff"
   },
@@ -44,12 +36,20 @@ self.__precacheManifest = [
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
   },
   {
-    "revision": "cb98ad493e1cc9426a8346fa288e7bce",
-    "url": "./static/media/icon-instagram.cb98ad49.svg"
+    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
+    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
+  },
+  {
+    "revision": "b09b73eedd02abbcff717b574512e61c",
+    "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
     "revision": "6e364b16fabc20a96b70031e54219834",
     "url": "./static/media/icon-mail.6e364b16.svg"
+  },
+  {
+    "revision": "cb98ad493e1cc9426a8346fa288e7bce",
+    "url": "./static/media/icon-instagram.cb98ad49.svg"
   },
   {
     "revision": "c72a90c42b86b9a4860f082568fd9eb9",
@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "./static/media/mark.107c2470.png"
   },
   {
-    "revision": "6fd27b687422adf5aba3524f769764cf",
+    "revision": "b09869f0ed320de2453a28fcac894749",
     "url": "./index.html"
   }
 ];
