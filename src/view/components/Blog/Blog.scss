@@ -35,3 +35,13 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .blog {
+        >.main-wrapper {
+            >.posts {
+                flex-direction: column;
+            }
+        }
+    }
+}

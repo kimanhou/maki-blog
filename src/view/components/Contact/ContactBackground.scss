@@ -1,0 +1,55 @@
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80vh;
+    z-index: 1;
+    animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2.8s forwards;
+    >.contact-background-element {
+        position: absolute;
+        height: 100%;
+        width: calc(100% / 8);
+        background-color: var(--color-light-yellow);
+        &.one {
+            animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2s forwards;
+        }
+        &.two {
+            animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2.6s forwards;
+            left: calc(100% / 8);
+        }
+        &.three {
+            animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2.3s forwards;
+            left: calc(2 * 100% / 8);
+        }
+        &.four {
+            animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2.4s forwards;
+            left: calc(3 * 100% / 8);
+        }
+        &.five {
+            animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2.2s forwards;
+            left: calc(4 * 100% / 8);
+        }
+        &.six {
+            animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2.1s forwards;
+            left: calc(5 * 100% / 8);
+        }
+        &.seven {
+            animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2.7s forwards;
+            left: calc(6 * 100% / 8);
+        }
+        &.eight {
+            animation: contact-background-animation 1s cubic-bezier(1,0,0,1) 2.5s forwards;
+            left: calc(7 * 100% / 8);
+        }
+    }
+}
+
+@keyframes contact-background-animation {
+    0% {
+        height: 80vh;
+    }
+    100% {
+        height: 0;
+    }
+}

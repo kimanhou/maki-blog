@@ -1,4 +1,9 @@
 .contact {
+    position: relative;
+    >.section-header, >.header {
+        position: relative;
+        z-index: 2;
+    }
     >.contact-content {
         height: calc(100vh - 137px - 71px); // 137 height of header and 71 height of section header
         display: flex;
@@ -8,12 +13,19 @@
         text-transform: uppercase;
         letter-spacing: 0.5rem;
         position: relative;
+        z-index: 0;
+        // opacity: 0;
+        // animation: contact-content-animation 1s ease-in 3.5s forwards;
         >.contact-item {
             margin-bottom: var(--size-margin-30);
             cursor: pointer;
             transition: color 0.4s;
             &:hover {
-                color: var(--color-yellow);
+                >.contact-item-relative {
+                    >a {
+                        color: var(--color-yellow);
+                    }
+                }
                 >.contact-big-item {
                     opacity: 1;
                 }
@@ -34,15 +46,35 @@
                 letter-spacing: normal;
                 font-weight: bold;
                 &.email {
-                    font-size: 7.8vw;
+                    font-size: 16vw;
+                    font-weight: normal;
+                    >.mark-kim-anh {
+                        line-height: 0;
+                        font-size: 15vw;
+                    }
                 }
                 &.tel {
                     font-size: 20vw;
                 }
                 &.instagram {
                     font-size: 11.8vw;
+                    top: 57%;
+                    >.this-is {
+                        font-weight: normal;
+                        line-height: 0;
+                        font-size: 24vw;
+                    }
                 }
             }
         }
+    }
+}
+
+@keyframes contact-content-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

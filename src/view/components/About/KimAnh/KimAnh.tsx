@@ -22,7 +22,6 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
         <div className={`about-kim-anh`} id={`kim-anh`}>
             <SectionHeader title={new Text('Meet Kim Anh', 'à la rencontre')} subtitle={new Text('front-end developer', 'de Kim Anh')} />
             <div className={`about-kim-anh-container ${onActiveClassname}`}>
-                <ScreenDetector className={`screen-detector-about-kim-anh-image`} onActive={onActive} onUnactive={onUnactive}/>
                 <div className={`about-kim-anh-left`}>
                     <div className={`about-kim-anh-corner`}></div>
                     <div className={`about-kim-anh-text`}>
@@ -41,9 +40,10 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
                     </div>
                 </div>
                 <div className={`about-kim-anh-right`}>
+                    <ScreenDetector className={`screen-detector-about-kim-anh-image`} onActive={onActive} onUnactive={onUnactive}/> 
                     <div className={`about-kim-anh-photo`}></div>
                     <div className={`about-kim-anh-image-cover`}></div>
-                </div>
+                </div>             
             </div>
         </div>
     );
