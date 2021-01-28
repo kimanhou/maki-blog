@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0417c64919aa1c8ccd64",
-    "url": "./static/css/main.ffb89598.chunk.css"
+    "revision": "0cd39dbc2dbc97437817",
+    "url": "./static/css/main.aec4b2d3.chunk.css"
   },
   {
-    "revision": "0417c64919aa1c8ccd64",
-    "url": "./static/js/main.0417c649.chunk.js"
+    "revision": "0cd39dbc2dbc97437817",
+    "url": "./static/js/main.0cd39dbc.chunk.js"
   },
   {
     "revision": "9685fb805230191638a8",
@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
-    "revision": "cb98ad493e1cc9426a8346fa288e7bce",
-    "url": "./static/media/icon-instagram.cb98ad49.svg"
-  },
-  {
     "revision": "6e364b16fabc20a96b70031e54219834",
     "url": "./static/media/icon-mail.6e364b16.svg"
+  },
+  {
+    "revision": "cb98ad493e1cc9426a8346fa288e7bce",
+    "url": "./static/media/icon-instagram.cb98ad49.svg"
   },
   {
     "revision": "c72a90c42b86b9a4860f082568fd9eb9",
@@ -104,15 +104,15 @@ self.__precacheManifest = [
     "url": "./static/media/intro-bg.e756d17d.png"
   },
   {
-    "revision": "1e3a8997d54ed65bd2da6c951aa40188",
-    "url": "./static/media/kim-anh.1e3a8997.png"
-  },
-  {
     "revision": "107c247006e7b9c4d944d9f44b86afd7",
     "url": "./static/media/mark.107c2470.png"
   },
   {
-    "revision": "a45a3314b1f7c6e8bc68ad7c9ba56e65",
+    "revision": "1e3a8997d54ed65bd2da6c951aa40188",
+    "url": "./static/media/kim-anh.1e3a8997.png"
+  },
+  {
+    "revision": "517d0ab67a529ede65eb9b6e1d7ab23d",
     "url": "./index.html"
   }
 ];
