@@ -37,7 +37,8 @@ const About : React.FC = props => {
     var kiDistance = manhWidth; 
 
     var gapBetweenEndOfIntroAndScrollable = 1000;
-    var thresholdBackgroundTransitionStart = kiStart + kiDistance + gapBetweenEndOfIntroAndScrollable + window.innerHeight * 1.5;
+    var markHeight = mobile ? window.innerHeight * 2.5 : window.innerHeight * 1.5;
+    var thresholdBackgroundTransitionStart = kiStart + kiDistance + gapBetweenEndOfIntroAndScrollable + markHeight;
     var thresholdBackgroundTransitionStop = window.innerHeight * 0.9;
 
     const [fixed, setFixed] = useState(false);
