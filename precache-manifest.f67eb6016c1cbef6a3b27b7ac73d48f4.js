@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0cd39dbc2dbc97437817",
-    "url": "./static/css/main.aec4b2d3.chunk.css"
+    "revision": "0fe92823b1453b353c56",
+    "url": "./static/css/main.f47e0847.chunk.css"
   },
   {
-    "revision": "0cd39dbc2dbc97437817",
-    "url": "./static/js/main.0cd39dbc.chunk.js"
+    "revision": "0fe92823b1453b353c56",
+    "url": "./static/js/main.0fe92823.chunk.js"
   },
   {
     "revision": "9685fb805230191638a8",
@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "./static/media/AnticDidone-Regular.d254f533.woff"
   },
   {
-    "revision": "e917b5a9dcd9a24157425a9aee6da804",
-    "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
-  },
-  {
     "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
     "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
+  },
+  {
+    "revision": "e917b5a9dcd9a24157425a9aee6da804",
+    "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
   },
   {
     "revision": "b09b73eedd02abbcff717b574512e61c",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "./static/media/kim-anh.1e3a8997.png"
   },
   {
-    "revision": "517d0ab67a529ede65eb9b6e1d7ab23d",
+    "revision": "2b3b474c80240578c93151bf249ee167",
     "url": "./index.html"
   }
 ];
