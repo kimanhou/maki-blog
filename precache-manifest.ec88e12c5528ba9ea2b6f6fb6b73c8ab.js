@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9b1a46787baaef3c8d23",
-    "url": "./static/css/main.9abc5690.chunk.css"
+    "revision": "7d0f857b3d03bd0bc321",
+    "url": "./static/css/main.ae0fb9a6.chunk.css"
   },
   {
-    "revision": "9b1a46787baaef3c8d23",
-    "url": "./static/js/main.9b1a4678.chunk.js"
+    "revision": "7d0f857b3d03bd0bc321",
+    "url": "./static/js/main.7d0f857b.chunk.js"
   },
   {
     "revision": "9685fb805230191638a8",
@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "./static/media/AnticDidone-Regular.d254f533.woff"
   },
   {
+    "revision": "b09b73eedd02abbcff717b574512e61c",
+    "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
+  },
+  {
     "revision": "e917b5a9dcd9a24157425a9aee6da804",
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
   },
   {
     "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
     "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
-  },
-  {
-    "revision": "b09b73eedd02abbcff717b574512e61c",
-    "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
     "revision": "6e364b16fabc20a96b70031e54219834",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "./static/media/mark.107c2470.png"
   },
   {
-    "revision": "09a7fb21f09ac328304b9c3630fc4663",
+    "revision": "6131fb106504bd8cce2992a1c692974a",
     "url": "./index.html"
   }
 ];
