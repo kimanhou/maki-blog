@@ -18,7 +18,7 @@
             margin-bottom: var(--size-margin-30);
             cursor: pointer;
             transition: color 0.4s;
-            &:hover {
+            &:hover, &.show {
                 >.contact-item-relative {
                     >a {
                         color: var(--color-yellow);
