@@ -21,7 +21,7 @@ const HelloWorld : React.FC<IHomeProps> = props => {
         <div className={`hello-world`}>
             <div className={`hello-world-placeholder`}/>
             <div className={`hello-world-absolute`}>
-                <svg className={`hello-world-svg animate`} viewBox={`0 0 357.1069 70`} >
+                <svg className={`hello-world-svg`} viewBox={`0 0 357.1069 70`} >
                     <defs >
                         <clipPath clipPathUnits="userSpaceOnUse" id="clip-path">
                             <path

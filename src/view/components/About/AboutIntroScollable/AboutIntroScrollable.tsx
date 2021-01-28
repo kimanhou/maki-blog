@@ -12,13 +12,10 @@ const AboutIntroScrollable : React.FC<IAboutIntroScrollableProps> = props => {
 
     const getOpacity = () => {
         const middle = props.figureHeight / 2;
-        console.log('Get opacity');
         if (props.scrollPosition >= 0 && props.scrollPosition <= middle) {
-            console.log('Get opacity 1');
             setOpacity((props.scrollPosition / middle) + 0.3)
         }
         else if (props.scrollPosition > middle) {
-            console.log('Get opacity 2');
             setOpacity(1 - (props.scrollPosition - middle) / middle);
         }
     }

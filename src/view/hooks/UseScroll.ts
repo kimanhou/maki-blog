@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useScroll = (start : number, distance : number) => {
+const useScroll = (start : number, distance : number, dependencies ?:  React.InputIdentityList) => {
     const [scrolledDistance, setScrolledDistance] = useState(0);
     useEffect(() => {
         const onScroll = () => {
@@ -8,7 +8,7 @@ const useScroll = (start : number, distance : number) => {
         }
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+    }, dependencies);
     return scrolledDistance;
 }
 export default useScroll;

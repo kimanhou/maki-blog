@@ -7,9 +7,9 @@ interface IMakiLogoProps {
 
 const MakiLogo : React.FC<IMakiLogoProps> = props => {
     const ref = useRef<SVGSVGElement>(null);
-
+    const mobile = isMobile();
     const onMouseEnter = () => {
-        if (!isMobile) {
+        if (!mobile) {
             setAnimation();
         }
     }

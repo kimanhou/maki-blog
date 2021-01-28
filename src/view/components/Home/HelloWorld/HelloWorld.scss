@@ -19,15 +19,9 @@
                 >.hello-world-path {
                     stroke: var(--color-off-black);
                     stroke-dasharray: 888.43408203125;
-                    stroke-dashoffset: -888.43408203125;
+                    stroke-dashoffset: 888.43408203125;
+                    animation: hello-world-animation 5s linear 4s forwards;
                 } 
-            }
-            &.animate {
-                >g {
-                    >path {
-                        animation: hello-world-animation 5s linear 4s forwards;
-                    }
-                }
             }
         }
     }
@@ -40,10 +34,10 @@
 
 @keyframes hello-world-animation {
     0% {
-        stroke-dashoffset: -888.43408203125;
+        stroke-dashoffset: 888.43408203125;
     }
     100% {
-        stroke-dashoffset: -1776.86816;
+        stroke-dashoffset: 0;
     }
 }
 

@@ -35,7 +35,7 @@
             position: absolute;
             top: 0;
             white-space: nowrap;
-            transform: translateX(calc(100% + 70px));
+            transform: translateX(calc(100% + var(--size-about-maki-manh-initial-position)));
         }
     }
 }

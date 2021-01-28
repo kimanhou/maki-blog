@@ -10,7 +10,7 @@
         height: var(--size-about-intro-figure-height);
         width: var(--size-about-intro-figure-width);
         cursor: pointer;
-        margin-bottom: var(--size-margin-30);
+        transform: translateY(-30px);
     }
     >.figure-left {
         background-image: url(../../../../images/about/mark.png);
