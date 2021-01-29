@@ -17,12 +17,12 @@
             margin: 0 calc(var(--size-gutter) * (-1));
             opacity: 1;
             transition: opacity 1s;
+            align-items: flex-start;
             >.posts-column {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 margin: 0 var(--size-gutter);
-                display: table;
                 >.fade-in {
                     >.post-preview {
                         margin: 0;

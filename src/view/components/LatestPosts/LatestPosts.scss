@@ -4,6 +4,7 @@
             >.posts {
                 display: flex;
                 flex-direction: row;
+                align-items: flex-start;
                 margin: 0 calc(var(--size-gutter) * (-1));
             }
         }
