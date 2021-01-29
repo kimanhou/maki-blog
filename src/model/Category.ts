@@ -68,5 +68,6 @@ export default class Category {
 
     static SOCIALMEDIA = new Category('SOCIALMEDIA', 'Social media', 'Réseaux sociaux');
     static WEBDESIGN = new Category('WEBDESIGN', 'Website design', 'Conception web');
+    static UI = new Category('UI', 'User interface', 'Interface utilisateur');
     static ALL = new Category('ALL', 'All', 'Tous');
 }

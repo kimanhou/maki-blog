@@ -29,13 +29,13 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
 
     return (
         <div className={`about-kim-anh`} id={`kim-anh`}>
-            <SectionHeader title={new Text('Meet Kim Anh', 'à la rencontre')} subtitle={new Text('front-end developer', 'de Kim Anh')} />
+            <SectionHeader title={new Text('Meet Kim Anh', 'Portrait')} subtitle={new Text('', 'de Kim Anh')} />
             <div className={`about-kim-anh-container`}>
                 <div className={`about-kim-anh-left ${onActiveLeftClassname}`}>
                     <ScreenDetector className={`screen-detector-about-kim-anh-left`} onActive={onActiveLeft} onUnactive={onUnactiveLeft}/> 
                     <div className={`about-kim-anh-corner`}></div>
                     <div className={`about-kim-anh-text`}>
-                        <UnderlinedTitle line1={new Text('Front-end', 'Développeur')} line2={new Text('developer', 'front-end')}/>
+                        <UnderlinedTitle line1={new Text('Web designer and developer', 'Développeur')} line2={new Text('developer', 'front-end')}/>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus molestie lorem ac malesuada. 
                         Etiam in faucibus mi. Ut tincidunt luctus efficitur. Donec semper sapien quam, at cursus odio ornare ut. 
                         Mauris ac scelerisque velit, vel tempor magna. Duis non libero at massa mattis sodales. 
