@@ -27,7 +27,8 @@ const French : React.FC<IPostContentProps> = props => {
     }
 
     return (
-        <PostTemplate title={props.title} 
+        <PostTemplate postId={2}
+                    title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`two`}
