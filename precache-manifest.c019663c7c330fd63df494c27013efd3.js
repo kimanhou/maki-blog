@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "7d0f857b3d03bd0bc321",
-    "url": "./static/css/main.ae0fb9a6.chunk.css"
+    "revision": "b977cb5bf036d110958a",
+    "url": "./static/css/main.01270e5b.chunk.css"
   },
   {
-    "revision": "7d0f857b3d03bd0bc321",
-    "url": "./static/js/main.7d0f857b.chunk.js"
+    "revision": "b977cb5bf036d110958a",
+    "url": "./static/js/main.b977cb5b.chunk.js"
   },
   {
-    "revision": "9685fb805230191638a8",
-    "url": "./static/js/1.9685fb80.chunk.js"
+    "revision": "6717ac62c8e32706059a",
+    "url": "./static/js/1.6717ac62.chunk.js"
   },
   {
     "revision": "4a686d48d5a089750c49",
@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "./static/media/AnticDidone-Regular.d254f533.woff"
   },
   {
+    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
+    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
+  },
+  {
     "revision": "b09b73eedd02abbcff717b574512e61c",
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
     "revision": "e917b5a9dcd9a24157425a9aee6da804",
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
-  },
-  {
-    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
-    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
   {
     "revision": "6e364b16fabc20a96b70031e54219834",
@@ -92,27 +92,51 @@ self.__precacheManifest = [
     "url": "./static/media/8.c48a5c8f.jpg"
   },
   {
-    "revision": "8fa07287bc674dfb82c4997016a4d7b6",
-    "url": "./static/media/1.8fa07287.png"
+    "revision": "44568db2ff651056fa84ec94edb84364",
+    "url": "./static/media/1.44568db2.jpg"
   },
   {
-    "revision": "9a51cffc68e35c4e1900bda633108998",
-    "url": "./static/media/2.9a51cffc.jpg"
+    "revision": "8fa07287bc674dfb82c4997016a4d7b6",
+    "url": "./static/media/2.8fa07287.png"
+  },
+  {
+    "revision": "0dd22ff5ede725da4127407ba41dc485",
+    "url": "./static/media/3-french.0dd22ff5.jpg"
+  },
+  {
+    "revision": "6a29f0409851cce12b32c0e882647ea2",
+    "url": "./static/media/3.6a29f040.jpg"
+  },
+  {
+    "revision": "b5c63f6c438d41d3968fe4040916c8b9",
+    "url": "./static/media/4.b5c63f6c.jpg"
+  },
+  {
+    "revision": "5b5ad4c6ebf5e9daae06e54bfd8f0836",
+    "url": "./static/media/5.5b5ad4c6.jpg"
+  },
+  {
+    "revision": "3eecf51d0973901e6375b092dcc80957",
+    "url": "./static/media/6.3eecf51d.jpg"
+  },
+  {
+    "revision": "ea125ef8cf78246433b605d13a888b21",
+    "url": "./static/media/7.ea125ef8.jpg"
   },
   {
     "revision": "e756d17d586a75431ca96151d61c2aba",
     "url": "./static/media/intro-bg.e756d17d.png"
   },
   {
-    "revision": "1e3a8997d54ed65bd2da6c951aa40188",
-    "url": "./static/media/kim-anh.1e3a8997.png"
-  },
-  {
     "revision": "107c247006e7b9c4d944d9f44b86afd7",
     "url": "./static/media/mark.107c2470.png"
   },
   {
-    "revision": "6131fb106504bd8cce2992a1c692974a",
+    "revision": "1e3a8997d54ed65bd2da6c951aa40188",
+    "url": "./static/media/kim-anh.1e3a8997.png"
+  },
+  {
+    "revision": "340da59f4c12893406b132d93409db2f",
     "url": "./index.html"
   }
 ];
