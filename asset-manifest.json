@@ -1,7 +1,7 @@
 {
-  "main.css": "./static/css/main.5e900283.chunk.css",
-  "main.js": "./static/js/main.12c6fd4b.chunk.js",
-  "main.js.map": "./static/js/main.12c6fd4b.chunk.js.map",
+  "main.css": "./static/css/main.2ba4cc82.chunk.css",
+  "main.js": "./static/js/main.057899e7.chunk.js",
+  "main.js.map": "./static/js/main.057899e7.chunk.js.map",
   "static/js/1.6717ac62.chunk.js": "./static/js/1.6717ac62.chunk.js",
   "static/js/1.6717ac62.chunk.js.map": "./static/js/1.6717ac62.chunk.js.map",
   "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
@@ -9,7 +9,7 @@
   "static/media/PostPage.scss": "./static/media/hero-image.eaf460f2.jpg",
   "static/media/hero-image.jpg": "./static/media/hero-image.097e2a33.jpg",
   "static/media/App.scss": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf",
-  "static/media/FooterSocial.scss": "./static/media/icon-instagram.cb98ad49.svg",
+  "static/media/FooterSocial.scss": "./static/media/icon-mail.6e364b16.svg",
   "static/media/uk-flag.png": "./static/media/uk-flag.c72a90c4.png",
   "static/media/french-flag.png": "./static/media/french-flag.a43d9691.png",
   "static/media/1.jpg": "./static/media/1.44568db2.jpg",
@@ -23,10 +23,10 @@
   "static/media/2.png": "./static/media/2.8fa07287.png",
   "static/media/3-french.jpg": "./static/media/3-french.0dd22ff5.jpg",
   "static/media/intro-bg.png": "./static/media/intro-bg.e756d17d.png",
-  "static/media/KimAnh.scss": "./static/media/kim-anh.1e3a8997.png",
   "static/media/Mark.scss": "./static/media/mark.107c2470.png",
-  "static/css/main.5e900283.chunk.css.map": "./static/css/main.5e900283.chunk.css.map",
+  "static/media/KimAnh.scss": "./static/media/kim-anh.1e3a8997.png",
+  "static/css/main.2ba4cc82.chunk.css.map": "./static/css/main.2ba4cc82.chunk.css.map",
   "index.html": "./index.html",
-  "precache-manifest.c56865734a9d2472594d7c3d3b72bb13.js": "./precache-manifest.c56865734a9d2472594d7c3d3b72bb13.js",
+  "precache-manifest.a101a4ee04ee5ba7e3ad7b70b3baf25d.js": "./precache-manifest.a101a4ee04ee5ba7e3ad7b70b3baf25d.js",
   "service-worker.js": "./service-worker.js"
 }
