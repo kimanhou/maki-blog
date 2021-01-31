@@ -17,7 +17,7 @@ const NextPost : React.FC<INextPostProps> = props => {
             {props.post != null && 
                 <FadeIn noDelay>
                     <div className={`title`}>
-                        <SectionHeader title={new Text('Next', "Lire l'article")} subtitle={new Text('post', 'suivant')} />
+                        <SectionHeader title={new Text('Next', "L'article")} subtitle={new Text('post', 'suivant')} />
                     </div>
                     <PostPreview post={props.post}/>
                 </FadeIn>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IPostContentProps } from '../../../../model/Post';
+import Post, { IPostContentProps } from '../../../../model/Post';
 import PostTemplate from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';

@@ -17,7 +17,7 @@ const PreviousPost : React.FC<IPreviousPostProps> = props => {
             {props.post != null && 
                 <FadeIn noDelay>
                     <div className={`title`}>
-                        <SectionHeader title={new Text('Previous', "Lire l'article")} subtitle={new Text('post', 'précédent')} />
+                        <SectionHeader title={new Text('Previous', "L'article")} subtitle={new Text('post', 'précédent')} />
                     </div>
                     <PostPreview post={props.post}/>
                 </FadeIn>

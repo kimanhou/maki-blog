@@ -1,3 +1,4 @@
+import { exception } from "console";
 import Local from "../view/components/LocalisationContext/Local";
 import English1 from "../view/components/Post/1/English";
 import French1 from "../view/components/Post/1/French";
@@ -46,7 +47,11 @@ export default class Post {
 
     static getPostById = (id : number) => {
         const posts = Post.getAllPosts();
-        return posts.find(t => t.id == id);
+        const post = posts.find(t => t.id == id);
+        if (post != undefined) {
+            return post;
+        }
+        throw new Error(`GetPostById error : Post with id ${id} not found.`); 
     }
 
     getDateFormat = (localisation : Local) => {
