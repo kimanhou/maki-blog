@@ -50,16 +50,30 @@
                 background-color: var(--color-dark-green);
             }
         }
-        &.active {
-            >.about-mark-left {
+        >.about-mark-left {
+            &.active {
                 >.about-mark-image-cover {
                     height: 0;
                 }
             }
-            >.about-mark-right {
+        }
+        >.about-mark-right {
+            &.active {
                 >.about-mark-corner {
                     opacity: 1;
                 }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .about-mark {
+        >.about-mark-container {
+            flex-direction: column;
+            >.about-mark-left, >.about-mark-right {
+                transform: unset;
             }
         }
     }

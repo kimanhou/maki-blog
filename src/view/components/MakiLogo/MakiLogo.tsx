@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { isMobile } from '../../hooks/UseMediaQuery';
 import './MakiLogo.scss';
 
 interface IMakiLogoProps {
@@ -6,6 +7,13 @@ interface IMakiLogoProps {
 
 const MakiLogo : React.FC<IMakiLogoProps> = props => {
     const ref = useRef<SVGSVGElement>(null);
+    const mobile = isMobile();
+    const onMouseEnter = () => {
+        if (!mobile) {
+            setAnimation();
+        }
+    }
+
     const setAnimation = () => {
         if(ref.current != null){
             ref.current.classList.remove("animate");
@@ -23,7 +31,7 @@ const MakiLogo : React.FC<IMakiLogoProps> = props => {
     }, []);
     
     return (
-        <svg className={`maki-logo`} viewBox="0 0 219.60417 104.775" ref={ref} onMouseEnter={setAnimation}>
+        <svg className={`maki-logo`} viewBox="0 0 219.60417 104.775" ref={ref} onMouseEnter={onMouseEnter}>
             <g>
             <path className={`maki-logo-path`} 
                 style={{ fill: 'none',

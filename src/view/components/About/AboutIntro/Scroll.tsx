@@ -22,7 +22,7 @@ const Scroll : React.FC = props => {
     
     return (
         <div className={`about-intro-scroll ${activeClassName}`}>
-            <span><Text english='scroll' french='faites défiler' /></span>
+            <Text english='scroll' french='faites défiler' />
             <span className={`arrow-down`}>⌄</span>
         </div>
     );

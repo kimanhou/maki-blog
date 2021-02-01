@@ -7,6 +7,7 @@ import Home from './view/components/Home/Home';
 import ScrollToTop from './view/components/ScrollToTop/ScrollToTop';
 import LocalContext from './view/components/LocalisationContext/LocalContext';
 import About from './view/components/About/About';
+import Contact from './view/components/Contact/Contact';
 
 const App : React.FunctionComponent = props => {
 
@@ -18,6 +19,9 @@ const App : React.FunctionComponent = props => {
                     <Switch>
                         <Route exact path={["/about"]}>
                             <About />
+                        </Route>
+                        <Route exact path={["/contact"]}>
+                            <Contact />
                         </Route>
                         <Route exact path={["/"]}>
                             <Home />

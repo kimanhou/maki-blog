@@ -1,0 +1,22 @@
+.next-and-previous-posts {
+    display: flex;
+    flex-direction: row;
+    margin: 0 calc(var(--size-gutter) * (-1));
+    >.next-post, >.previous-post {
+        flex: 1;
+        margin: 0 var(--size-gutter);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .next-and-previous-posts {
+        flex-direction: column;
+        >.next-post, >.previous-post {
+            >.fade-in {
+                >.post-preview {
+                    max-width: unset;
+                }
+            }
+        }
+    }
+}

@@ -43,7 +43,8 @@ const French : React.FC<IPostContentProps> = props => {
     const relatedPosts = relatedPost == undefined ? [] : [ relatedPost ];
 
     return (
-        <PostTemplate title={props.title} 
+        <PostTemplate postId={1} 
+                    title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`one`}

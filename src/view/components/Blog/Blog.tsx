@@ -57,7 +57,7 @@ const Blog : React.FC<IBlogProps> = props => {
         <div className={`blog`}>
             <Header />
             <div className={`main-wrapper`}>
-                <SectionHeader title={new Text('The log', 'Le blog')} subtitle={new Text('', '')} />
+                <SectionHeader title={new Text('The blog', 'Le blog')} subtitle={new Text('', '')} />
                 <div className={`blog-categories`}>
                     <div className={`blog-categories-container`}>
                         {allCategories.map(t => <BlogCategory category={t} isSelected={isCategorySelected(t)} onClick={() => onCategoryClick(t)}/>)}

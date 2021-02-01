@@ -9,25 +9,34 @@ interface IMarkProps {
 }
 
 const Mark : React.FC<IMarkProps> = props => {
-    var [onActiveClassname, setOnActiveClassname] = useState('');
-    const onActive = () => {
-        setOnActiveClassname("active");
+    var [onActiveLeftClassname, setOnActiveLeftClassname] = useState('');
+    var [onActiveRightClassname, setOnActiveRightClassname] = useState('');
+    
+    const onActiveLeft = () => {
+        setOnActiveLeftClassname("active");
     }
-    const onUnactive = () => {
-        setOnActiveClassname("");
+    const onUnactiveLeft = () => {
+        setOnActiveLeftClassname("");
     }
 
+    const onActiveRight = () => {
+        setOnActiveRightClassname("active");
+    }
+    const onUnactiveRight = () => {
+        setOnActiveRightClassname("");
+    }
 
     return (
         <div className={`about-mark`} id={`mark`}>
-            <SectionHeader title={new Text('Meet Mark', 'à la rencontre')} subtitle={new Text('back-end developer', 'de Mark')} isColorWhite/>
-            <div className={`about-mark-container ${onActiveClassname}`}>
-                <ScreenDetector className={`screen-detector-about-mark-image`} onActive={onActive} onUnactive={onUnactive}/>
-                <div className={`about-mark-left`}>
+            <SectionHeader title={new Text('Meet Mark', 'Portrait')} subtitle={new Text('', 'de Mark')} isColorWhite/>
+            <div className={`about-mark-container`}>
+                <div className={`about-mark-left ${onActiveLeftClassname}`}>
+                    <ScreenDetector className={`screen-detector-about-mark-left`} onActive={onActiveLeft} onUnactive={onUnactiveLeft}/>
                     <div className={`about-mark-photo`}></div>
                     <div className={`about-mark-image-cover`}></div>
                 </div>
-                <div className={`about-mark-right`}>
+                <div className={`about-mark-right ${onActiveRightClassname}`}>
+                    <ScreenDetector className={`screen-detector-about-mark-right`} onActive={onActiveRight} onUnactive={onUnactiveRight}/>
                     <div className={`about-mark-corner`}></div>
                     <div className={`about-mark-text`}>
                         <UnderlinedTitle line1={new Text('Back-end', 'Développeur')} line2={new Text('developer', 'back-end')} colorWhite/>

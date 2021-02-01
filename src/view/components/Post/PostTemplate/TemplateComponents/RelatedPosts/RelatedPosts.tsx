@@ -14,7 +14,7 @@ const RelatedPosts : React.FC<IRelatedPostsProps> = props => {
 
     return (
         <div className={`related-posts`}>
-            {props.relatedPosts.length > 0 && 
+            {props.relatedPosts != undefined && props.relatedPosts.length > 0 && 
                 <FadeIn noDelay>
                     <div className={`title`}>
                         <SectionHeader title={new Text('Related posts', 'En lien')} subtitle={new Text('', 'avec cet article')} />

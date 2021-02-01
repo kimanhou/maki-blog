@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TextModel from '../../../model/Text';
+import { isMobile } from '../../hooks/UseMediaQuery';
 import useScroll from '../../hooks/UseScroll';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -16,16 +17,17 @@ import KimAnh from './KimAnh/KimAnh';
 import Mark from './Mark/Mark';
 
 const About : React.FC = props => {
-    const mainMargin = 70;
-    const maWidth = 89;
-    const manhWidth = 188;
-    const footerHeight = 150;
+    const mobile = isMobile();
+    const mainMargin = mobile ? 10 : 70;
+    const maWidth = mobile ? 59 : 89;
+    const manhWidth = mobile ? 126 : 188;
+    const footerHeight = mobile ? 220 : 150;
 
     var fixedStart = window.innerHeight * 0.6; // --size-about-intro-text-initial-top (120vh) - figure height (60vh)
     
     var makiStart = fixedStart + 30;
     var makiDistance = (window.innerWidth / 2) - maWidth - mainMargin + 18; // No idea where 18 comes from
-    
+
     var rkStart = makiStart + makiDistance + 30;
     var rkDistance = maWidth; 
 
@@ -35,7 +37,8 @@ const About : React.FC = props => {
     var kiDistance = manhWidth; 
 
     var gapBetweenEndOfIntroAndScrollable = 1000;
-    var thresholdBackgroundTransitionStart = kiStart + kiDistance + gapBetweenEndOfIntroAndScrollable + window.innerHeight * 1.5;
+    var markHeight = mobile ? window.innerHeight * 2.5 : window.innerHeight * 1.5;
+    var thresholdBackgroundTransitionStart = kiStart + kiDistance + gapBetweenEndOfIntroAndScrollable + markHeight;
     var thresholdBackgroundTransitionStop = window.innerHeight * 0.9;
 
     const [fixed, setFixed] = useState(false);
@@ -47,11 +50,11 @@ const About : React.FC = props => {
     const [introScrollableScrollPosition2, setIntroScrollableScrollPosition2] = useState(0);
     const [introScrollableScrollPosition3, setIntroScrollableScrollPosition3] = useState(0);
 
-    const distanceBetweenMaki = useScroll(makiStart, makiDistance);
-    const rkLeft = useScroll(rkStart, rkDistance);
+    const distanceBetweenMaki = useScroll(makiStart, makiDistance, [ mobile ]);
+    const rkLeft = useScroll(rkStart, rkDistance, [ mobile ]);
     const rkOpacity = rkLeft / rkDistance;
-    const manhRight = useScroll(rkStart, manhDistance);
-    const kiRight = useScroll(kiStart, kiDistance);
+    const manhRight = useScroll(rkStart, manhDistance, [ mobile ]);
+    const kiRight = useScroll(kiStart, kiDistance, [ mobile ]);
 
     const [red, setRed] = useState(0);
     const [green, setGreen] = useState(0);
@@ -92,7 +95,7 @@ const About : React.FC = props => {
         };
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
-    }, [ fixed ]);
+    }, [ fixed, mobile ]);
 
     return (
         <div className={`about`} style={{ height: aboutTotalHeight }} id={`top`}>

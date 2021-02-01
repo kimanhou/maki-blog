@@ -57,13 +57,14 @@
 
     // ABOUT
     --size-about-maki-initial-top: 120vh;
+    --size-about-maki-manh-initial-position: 70px;
     --size-about-intro-figure-height: 60vh;
     --size-about-intro-figure-width: 30vh;
     --size-about-photo-height: 74vh;
     --size-about-photo-text-offset: 20px;
     --size-about-photo-corner-height: 100px;
     --size-about-background-transition-height: 90vh;
-    --size-about-scrollabl-padding-top: 100px;
+    --size-about-scrollable-padding-top: 100px;
     --size-about-intro-maki-font-size: 60px;
     --size-about-intro-scrollable-font-size: 30px;
 }
@@ -79,11 +80,18 @@
         --size-header-height: 330px;
 
         // SECTION HEADER
+        --size-section-header-title-height: 33px;
+        --size-section-header-subtitle-margin-top: -20px;
         --size-section-header-subtitle-margin-left: 0;
         --size-section-header-subtitle-margin-left-animation: 0;
 
         --size-footer-height: 220px;
 
         --size-gutter: 10px;
+
+        // ABOUT
+        --size-about-intro-maki-font-size: 40px;
+        --size-about-intro-scrollable-font-size: 20px;
+        --size-about-maki-manh-initial-position: 10px;
     }
 }

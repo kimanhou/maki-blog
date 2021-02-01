@@ -1,3 +1,4 @@
+import { exception } from "console";
 import Local from "../view/components/LocalisationContext/Local";
 import English1 from "../view/components/Post/1/English";
 import French1 from "../view/components/Post/1/French";
@@ -46,7 +47,11 @@ export default class Post {
 
     static getPostById = (id : number) => {
         const posts = Post.getAllPosts();
-        return posts.find(t => t.id == id);
+        const post = posts.find(t => t.id == id);
+        if (post != undefined) {
+            return post;
+        }
+        throw new Error(`GetPostById error : Post with id ${id} not found.`); 
     }
 
     getDateFormat = (localisation : Local) => {
@@ -86,9 +91,27 @@ export default class Post {
         }
     }
 
-    static ONE = new Post(1, new Date('2021-01-12'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA, Category.WEBDESIGN ]);
-    static TWO = new Post(2, new Date('2021-01-31'), new LanguageVersion(English2, 'Post #2'), new LanguageVersion(French2, 'Post #2 en français'), [ Category.SOCIALMEDIA ]);
-    static THREE = new Post(3, new Date('2021-02-16'), new LanguageVersion(English3, 'Post #3'), new LanguageVersion(French3, 'Post #3 en français'), [ Category.WEBDESIGN ]);
+    static getNextPost = (id : number) => {
+        const allPosts = Post.getAllSortedPosts();
+        const myIndex = allPosts.findIndex(t => t.id == id);
+        if (myIndex == 0) {
+            return undefined;
+        }
+        return allPosts[myIndex - 1];
+    }
+
+    static getPreviousPost = (id : number) => {
+        const allPosts = Post.getAllSortedPosts();
+        const myIndex = allPosts.findIndex(t => t.id == id);
+        if (myIndex == allPosts.length - 1) {
+            return undefined;
+        }
+        return allPosts[myIndex + 1];
+    }
+
+    static ONE = new Post(1, new Date('2021-01-22'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA, Category.WEBDESIGN ]);
+    static TWO = new Post(2, new Date('2021-01-29'), new LanguageVersion(English2, '6 tips and tricks about color schemes'), new LanguageVersion(French2, '6 trucs et astuces sur les palettes de couleurs'), [ Category.WEBDESIGN, Category.UI ]);
+    static THREE = new Post(3, new Date('2021-02-16'), new LanguageVersion(English3, 'Post #3'), new LanguageVersion(French3, 'Post #3 en français'), [ Category.SOCIALMEDIA ]);
 }
 
 const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]

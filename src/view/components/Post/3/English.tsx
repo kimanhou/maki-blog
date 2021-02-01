@@ -7,7 +7,8 @@ const English : React.FC<IPostContentProps> = props => {
     const tldr = <p>TLDR #3</p>;
 
     return (
-        <PostTemplate title={props.title} 
+        <PostTemplate postId={3}
+                    title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`three`}

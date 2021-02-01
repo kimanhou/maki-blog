@@ -45,7 +45,8 @@ const English : React.FC<IPostContentProps> = props => {
     }
 
     return (
-        <PostTemplate title={props.title} 
+        <PostTemplate postId={1}
+                    title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`one`}
