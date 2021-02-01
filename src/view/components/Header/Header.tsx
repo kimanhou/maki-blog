@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import FadeIn from '../FadeIn/FadeIn';
-import MakiLogo from '../MakiLogo/MakiLogo';
 import MakiLogoWithNames from '../MakiLogo/MakiLogoWithNames';
 import Navigation from '../Navigation/Navigation';
 import './Header.scss';
