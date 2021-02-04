@@ -9,6 +9,7 @@ import GoToTldr from './TemplateComponents/GoToTldr';
 import NextAndPreviousPosts from './TemplateComponents/NextAndPreviousPosts/NextAndPreviousPosts';
 import PostHeroImage from './TemplateComponents/PostHeroImage';
 import PostTitleBottomLayer from './TemplateComponents/PostTitleBottomLayer';
+import ProgressionBar from './TemplateComponents/ProgressionBar/ProgressionBar';
 import RelatedPosts from './TemplateComponents/RelatedPosts/RelatedPosts';
 import Tldr from './TemplateComponents/Tldr';
 
@@ -31,6 +32,7 @@ const PostTemplate : React.FC<IPostTemplateProps> = props => {
                 <Header/>
                 <ArrowBack/>
                 <GoToTldr />
+                <ProgressionBar />
                 <FadeIn noDelay>
                     <div className={`post-text`}>
                         {props.children}

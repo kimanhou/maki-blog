@@ -1,0 +1,7 @@
+.sticky{
+    position: relative;
+    &.is-sticky {
+        position: fixed;
+        top: 0;
+    }
+}

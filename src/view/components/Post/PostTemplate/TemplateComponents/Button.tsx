@@ -1,5 +1,4 @@
 import React from 'react';
-import { myScrollTo } from '../../../../../Util';
 import FadeIn from '../../../FadeIn/FadeIn';
 import './Button.scss';
 

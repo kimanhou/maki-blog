@@ -31,3 +31,10 @@
         transform: translateX(10px);
     }
 }
+
+@media screen and (max-width: 600px) {
+    .arrow-back {
+        top: 181px;
+        margin-top: 0;
+    }
+}

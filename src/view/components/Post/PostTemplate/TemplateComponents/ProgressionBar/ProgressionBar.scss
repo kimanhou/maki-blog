@@ -1,0 +1,28 @@
+.progression-bar {
+    height: calc(var(--size-progression-bar-height) + var(--size-margin-30) * 2);
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    >.fade-in {
+        height: var(--size-progression-bar-height);
+        width: calc(100vw - var(--size-main-margin) * 2);
+        >.progression-bar-done, >.progression-bar-total {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 5px;
+        }
+        >.progression-bar-done {
+            background-color: var(--color-yellow);
+        }
+        >.progression-bar-done-percentage {
+            position: absolute;
+            transform: translateX(-50%) translateY(-20px);
+        }
+        >.progression-bar-total {
+            background-color: var(--color-yellow-transparent);
+            width: 100%;
+        }
+    }
+}
