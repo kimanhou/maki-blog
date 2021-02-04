@@ -39,7 +39,7 @@ const French : React.FC<IPostContentProps> = props => {
         return require(`./images/${pictureName}.jpg`);
     }
 
-    const relatedPost = Post.getPostById(0);
+    const relatedPost = Post.getPostById(1);
     const relatedPosts = relatedPost == undefined ? [] : [ relatedPost ];
 
     return (

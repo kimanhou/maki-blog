@@ -8,7 +8,7 @@ import ZigZag from '../ZigZag/ZigZag';
 import './PostPreview.scss';
 
 interface IPostPreviewProps {
-    post : Post
+    post : Post;
 }
 
 const PostPreview : React.FC<IPostPreviewProps> = props => {
@@ -17,7 +17,7 @@ const PostPreview : React.FC<IPostPreviewProps> = props => {
     var localisation = useContext(LocalValueContext);
 
     return (
-        <Link className={`post-preview`} to={`posts/${props.post.id}`}>
+        <Link className={`post-preview`} to={props.post.getLink()} replace>
             <div className={`image`}>
                 <div className={`hover-shadow`}></div>
                 <div className={`read-more`}>

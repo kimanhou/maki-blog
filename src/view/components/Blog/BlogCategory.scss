@@ -5,6 +5,8 @@
     transition: color 0.4s;
     z-index: 0;
     position: relative;
+    white-space: nowrap;
+    margin: var(--size-margin-10);
     >.blog-category-background {
         left: 0;
     }

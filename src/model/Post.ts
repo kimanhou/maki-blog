@@ -91,6 +91,10 @@ export default class Post {
         }
     }
 
+    getLink = () => {
+        return `/posts/${this.id}`;
+    }
+
     static getNextPost = (id : number) => {
         const allPosts = Post.getAllSortedPosts();
         const myIndex = allPosts.findIndex(t => t.id == id);

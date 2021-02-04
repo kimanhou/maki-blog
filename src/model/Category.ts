@@ -12,7 +12,7 @@ export default class Category {
     }
 
     static getAllCategories = () => {
-        return [ Category.ALL, Category.WEBDESIGN, Category.SOCIALMEDIA ];
+        return [ Category.ALL, Category.WEBDESIGN, Category.SOCIALMEDIA, Category.UI ];
     }
 
     getDescription = (localisation : Local) => {
