@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "d0f7482479053367da57",
-    "url": "./static/css/main.7ead8ede.chunk.css"
+    "revision": "fa52f7580e9694e58bb7",
+    "url": "./static/css/main.cc899d8e.chunk.css"
   },
   {
-    "revision": "d0f7482479053367da57",
-    "url": "./static/js/main.d0f74824.chunk.js"
+    "revision": "fa52f7580e9694e58bb7",
+    "url": "./static/js/main.fa52f758.chunk.js"
   },
   {
-    "revision": "6717ac62c8e32706059a",
-    "url": "./static/js/1.6717ac62.chunk.js"
+    "revision": "3a1d32936447bb0bbd68",
+    "url": "./static/js/1.3a1d3293.chunk.js"
   },
   {
     "revision": "4a686d48d5a089750c49",
@@ -36,6 +36,10 @@ self.__precacheManifest = [
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
   },
   {
+    "revision": "d9ab192896af1ab48c760f3368842b79",
+    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
+  },
+  {
     "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
     "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
@@ -44,12 +48,12 @@ self.__precacheManifest = [
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
-    "revision": "6e364b16fabc20a96b70031e54219834",
-    "url": "./static/media/icon-mail.6e364b16.svg"
-  },
-  {
     "revision": "cb98ad493e1cc9426a8346fa288e7bce",
     "url": "./static/media/icon-instagram.cb98ad49.svg"
+  },
+  {
+    "revision": "6e364b16fabc20a96b70031e54219834",
+    "url": "./static/media/icon-mail.6e364b16.svg"
   },
   {
     "revision": "c72a90c42b86b9a4860f082568fd9eb9",
@@ -128,15 +132,15 @@ self.__precacheManifest = [
     "url": "./static/media/intro-bg.e756d17d.png"
   },
   {
-    "revision": "1e3a8997d54ed65bd2da6c951aa40188",
-    "url": "./static/media/kim-anh.1e3a8997.png"
-  },
-  {
     "revision": "107c247006e7b9c4d944d9f44b86afd7",
     "url": "./static/media/mark.107c2470.png"
   },
   {
-    "revision": "406fd990cae1ed7325ca6bceefcf98f0",
+    "revision": "1e3a8997d54ed65bd2da6c951aa40188",
+    "url": "./static/media/kim-anh.1e3a8997.png"
+  },
+  {
+    "revision": "d73544cb1567c95b02a26dbd318fd4da",
     "url": "./index.html"
   }
 ];
