@@ -39,8 +39,8 @@ const French : React.FC<IPostContentProps> = props => {
         return require(`./images/${pictureName}.jpg`);
     }
 
-    const relatedPost = Post.getPostById(1);
-    const relatedPosts = relatedPost == undefined ? [] : [ relatedPost ];
+    // const relatedPost = Post.getPostById(1);
+    // const relatedPosts = relatedPost == undefined ? [] : [ relatedPost ];
 
     return (
         <PostTemplate postId={1} 
@@ -49,7 +49,7 @@ const French : React.FC<IPostContentProps> = props => {
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`one`}
                     tldr={tldr}
-                    relatedPosts={ relatedPosts }>
+                    relatedPosts={ [] }>
             <p>Ce tutoriel est destiné aux sites et applications qui n'ont pas de serveur back-end. Si votre application a un serveur back-end, la procédure reste la même jusqu'à l'étape 4, où il faudra alors utiliser un token d’accès d’app au lieu d'un token d’accès client lors de la communication avec le point de terminaison oEmbed.</p>
             
             <div className={`section-separator`}></div>

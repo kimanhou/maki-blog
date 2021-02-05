@@ -19,7 +19,7 @@
         >.fade-in {
             >.post-text {
                 margin-bottom: var(--size-margin-80);
-                line-height: 1.4;
+                line-height: 1.5;
                 a {
                     &:hover {
                         color: var(--color-yellow);
@@ -43,6 +43,31 @@
                     color: var(--color-white);
                     padding: 10px;
                     margin: 20px 0;
+                    font-family: 'Hack';
+                    .color-vs-dark-blue {
+                        color: var(--color-vs-dark-blue);
+                    }
+                    .color-vs-light-blue {
+                        color: var(--color-vs-light-blue);
+                    }
+                    .color-vs-orange {
+                        color: var(--color-vs-orange);
+                    }
+                    .color-vs-yellow {
+                        color: var(--color-vs-yellow);
+                    }
+                    .color-vs-green {
+                        color: var(--color-vs-green);
+                    }
+                    .color-vs-light-green {
+                        color: var(--color-vs-light-green);
+                    }
+                    .color-vs-purple {
+                        color: var(--color-vs-purple);
+                    }
+                    .color-vs-grey {
+                        color: var(--color-vs-grey);
+                    }
                 }
                 .color-green {
                     color: var(--color-green);

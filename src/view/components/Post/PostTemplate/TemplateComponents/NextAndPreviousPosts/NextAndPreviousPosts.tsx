@@ -13,8 +13,8 @@ const NextAndPreviousPosts : React.FC<INextAndPreviousPostsProps> = props => {
 
     return (
         <div className={`next-and-previous-posts`}>
-            <NextPost post={props.nextPost}/>
-            <PreviousPost post={props.previousPost}/>
+            {props.nextPost != undefined && <NextPost post={props.nextPost}/>}
+            {props.previousPost != undefined && <PreviousPost post={props.previousPost}/>}
         </div>
     );
 }
