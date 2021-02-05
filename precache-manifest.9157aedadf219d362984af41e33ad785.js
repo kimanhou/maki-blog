@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "668f4ce1eadd91e1bacb",
-    "url": "./static/css/main.29da7fb3.chunk.css"
+    "revision": "9edb800ce69a70bdb572",
+    "url": "./static/css/main.92bd3e00.chunk.css"
   },
   {
-    "revision": "668f4ce1eadd91e1bacb",
-    "url": "./static/js/main.668f4ce1.chunk.js"
+    "revision": "9edb800ce69a70bdb572",
+    "url": "./static/js/main.9edb800c.chunk.js"
   },
   {
     "revision": "3a1d32936447bb0bbd68",
@@ -28,24 +28,24 @@ self.__precacheManifest = [
     "url": "./static/media/hero-image.097e2a33.jpg"
   },
   {
-    "revision": "d254f533d9bb6fe4e84b07f21062381c",
-    "url": "./static/media/AnticDidone-Regular.d254f533.woff"
-  },
-  {
     "revision": "e917b5a9dcd9a24157425a9aee6da804",
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
   },
   {
-    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
-    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
+    "revision": "d254f533d9bb6fe4e84b07f21062381c",
+    "url": "./static/media/AnticDidone-Regular.d254f533.woff"
+  },
+  {
+    "revision": "b09b73eedd02abbcff717b574512e61c",
+    "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
     "revision": "d9ab192896af1ab48c760f3368842b79",
     "url": "./static/media/Hack-Regular.d9ab1928.ttf"
   },
   {
-    "revision": "b09b73eedd02abbcff717b574512e61c",
-    "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
+    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
+    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
   {
     "revision": "6e364b16fabc20a96b70031e54219834",
@@ -132,15 +132,15 @@ self.__precacheManifest = [
     "url": "./static/media/intro-bg.e756d17d.png"
   },
   {
-    "revision": "7cedc493ad6fd75c7034bed31a4e398f",
-    "url": "./static/media/mark.7cedc493.png"
+    "revision": "b56a6263ec02930a23ad15e296d672c2",
+    "url": "./static/media/mark.b56a6263.png"
   },
   {
-    "revision": "689e2783fc1ed1c5a3ffee5741a44e8e",
-    "url": "./static/media/kim-anh.689e2783.png"
+    "revision": "e1c9542735b0f5ae961487549e0826a1",
+    "url": "./static/media/kim-anh.e1c95427.png"
   },
   {
-    "revision": "425b4676ae3351273831d988842c3565",
+    "revision": "96acacf7d101bca4f58d0cc21af91d85",
     "url": "./index.html"
   }
 ];
