@@ -1,6 +1,6 @@
 import React from 'react';
 import Post, { IPostContentProps } from '../../../../model/Post';
-import PostTemplate from '../PostTemplate/PostTemplate';
+import PostTemplate, { getImageSrc } from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
 
@@ -21,10 +21,6 @@ const French : React.FC<IPostContentProps> = props => {
         <br></br>
         <Cross/><span>Intégrer l'image de marque dans la palette de couleurs du site. Utiliser la photographie et les illustrations pour la consolider.</span>
     </>;
-
-    const getImageSrc = (pictureName : string) => {
-        return require(`./images/${pictureName}`);
-    }
 
     return (
         <PostTemplate postId={2}

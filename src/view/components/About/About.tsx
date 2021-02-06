@@ -112,21 +112,21 @@ const About : React.FC = props => {
                             manhRight={manhRight} kiRight={kiRight} />
             
             <AboutIntroScrollable scrollPosition={introScrollableScrollPosition} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop}>
-                <Text english='We are developers,' french='Nous sommes développeurs,'/>
+                <Text english='We are web designers and developers,' french='Nous sommes designers web et développeurs,'/>
                 <br></br>
                 <Text english='a bit British and a bit French.' french='un peu anglais et un peu français.'/>
             </AboutIntroScrollable>
 
             <AboutIntroScrollable scrollPosition={introScrollableScrollPosition2} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop2}>
-                <Text english='We are nomads,' french='Nous sommes nomades,'/>
+                <Text english='We learned by making every possible mistake,' french='Nous avons appris en commettant toutes les erreurs possibles,'/>
                 <br></br>
-                <Text english='but we are often in Paris.' french='souvent à Paris.'/>
+                <Text english='but we write here what we took from it.' french='mais nous écrivons ici ce que nous en retenons.'/>
             </AboutIntroScrollable>
 
             <AboutIntroScrollable scrollPosition={introScrollableScrollPosition3} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop3}>
-                <Text english='We are minimalists,' french='Nous sommes minimalistes,'/>
+                <Text english='We try inproving our skills every day,' french='Nous essayons de nous améliorer tous les jours,'/>
                 <br></br>
-                <Text english='in everything we do.' french='dans ce que nous faisons.'/>
+                <Text english='and we hope to inspire you to design your own website.' french='et nous espérons vous inspirer à créer votre propre site web.'/>
             </AboutIntroScrollable>
 
             <div className={`about-mark-and-kim-anh`} style={{ top: markAndKimAnhInitialTop, backgroundColor: `rgb(${red}, ${green}, ${blue})` }} >

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { IPostContentProps } from '../../../../model/Post';
-import PostTemplate from '../PostTemplate/PostTemplate';
+import PostTemplate, { getImageSrc } from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
 
@@ -39,11 +39,6 @@ const English : React.FC<IPostContentProps> = props => {
             })
     }, []);
 
-
-    const getImageSrc = (pictureName : string) => {
-        return require(`./images/${pictureName}.jpg`);
-    }
-
     return (
         <PostTemplate postId={1}
                     title={props.title} 
@@ -67,13 +62,13 @@ const English : React.FC<IPostContentProps> = props => {
             <p className={`step-title`}>2. Create a registered Facebook App</p>
             <p className={`italic`}>Where ? <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <Cross/><span>On Facebook for developers website, go to your <a href='https://developers.facebook.com/apps' target='_blank'>Apps panel</a>.</span>
-            <img src={getImageSrc('1')}/>
+            <img src={getImageSrc('1.jpg')}/>
             <Cross/><span>Click on “Create an app”.</span>
-            <img src={getImageSrc('2')}/>
+            <img src={getImageSrc('2.jpg')}/>
             <Cross/><span>Choose your app type, you will need to pick one that has oEmbed for Instagram in its list of Available products. You can read about app types <a href='https://developers.facebook.com/docs/development/create-an-app/app-dashboard/app-types' target='_blank'>here</a>. For example, for this blog I chose “Build connected experiences”.</span>
-            <img src={getImageSrc('3')} className={`width-50`}/>
+            <img src={getImageSrc('3.jpg')} className={`width-50`}/>
             <Cross/><span>Fill in the app name and the email address.</span>
-            <img src={getImageSrc('4')} className={`width-50`}/>
+            <img src={getImageSrc('4.jpg')} className={`width-50`}/>
             <Cross/><span>The following security check doesn't seem to work on Chrome, so I hope you have another web browser.</span>
             
             <div className={`section-separator`}></div>
@@ -81,9 +76,9 @@ const English : React.FC<IPostContentProps> = props => {
             <p className={`step-title`}>3. Add oEmbed product</p>
             <p className={`italic`}>Where ? Still on <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <Cross/><span>You now need to add oEmbed Product to your app. In order to do this, go to your app dashboard, scroll down to the section called “Add Products to Your App” and locate oEmbed. Click on the “Set up” button.</span>
-            <img src={getImageSrc('5')}/>
+            <img src={getImageSrc('5.jpg')}/>
             <Cross/><span>Confirm the acceptance of oEmbed. When you get back to your app dashboard, you should see oEmbed in “My Products” section.</span>
-            <img src={getImageSrc('6')}/>
+            <img src={getImageSrc('6.jpg')}/>
             
             <div className={`section-separator`}></div>
 
@@ -91,9 +86,9 @@ const English : React.FC<IPostContentProps> = props => {
             <p className={`italic`}>Where ? Still on <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <p>The Instagram oEmbed endpoint requires either an App Access Token or a Client Access Token. As mentioned in the introduction, we deal here with applications without a backend server so we use the Client Access Token, which consists in the App ID and the Client token, separated by a pipe symbol.</p>
             <Cross/><span>On your app dashboard, the <b>App ID</b> is the 16-digit number located at the top of your screen, next to the app name.</span>
-            <img src={getImageSrc('7')}/>
+            <img src={getImageSrc('7.jpg')}/>
             <Cross/><span>To get your <b>client token</b>, go to <b>Settings &#62; Advanced &#62; Security &#62; Client token</b>.</span>
-            <img src={getImageSrc('8')}/>
+            <img src={getImageSrc('8.jpg')}/>
             <Cross/><span>Your Client Access Token is : <b className={`color-green`}>&#123;app-id&#125;|&#123;client-token&#125;</b>.
             <br></br>For example : access_token = 1234567891011121|1234a56b78cd91e0f1g2h3jik4l5m678</span>
 

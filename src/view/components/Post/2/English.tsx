@@ -1,6 +1,6 @@
 import React from 'react';
 import { IPostContentProps } from '../../../../model/Post';
-import PostTemplate from '../PostTemplate/PostTemplate';
+import PostTemplate, { getImageSrc } from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
 
@@ -21,10 +21,6 @@ const English : React.FC<IPostContentProps> = props => {
             <br></br>
             <Cross/><span>Integrate your branding in your color scheme. Use photography and illustrations to solidify it.</span>
         </>;
-
-    const getImageSrc = (pictureName : string) => {
-        return require(`./images/${pictureName}`);
-    }
 
     return (
         <PostTemplate postId={2}

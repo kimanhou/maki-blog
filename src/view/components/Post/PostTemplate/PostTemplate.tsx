@@ -20,6 +20,10 @@ interface IPostTemplateProps extends IPostContentProps {
     relatedPosts : Post[];
 }
 
+export const getImageSrc = (pictureName : string) => {
+    return require(`./images/${pictureName}`);
+}
+
 const PostTemplate : React.FC<IPostTemplateProps> = props => {
     const nextPost = Post.getNextPost(props.postId);
     const previousPost = Post.getPreviousPost(props.postId);
