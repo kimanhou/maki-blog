@@ -7,16 +7,12 @@ import './PostPage.scss';
 const French : React.FC<IPostContentProps> = props => {
     const tldr = 
     <>
-        <Cross/><span>La méthode simple et évidente</span>
+        <Cross/><span>La méthode simple et évidente : un changement de couleur dans la propriété <span className={`code-element`}>hover</span> avec une transition</span>
         <br></br>
         <Cross/><span>Pour les plus pointilleux : on superpose deux <span className={`code-element`}>div</span>, l'un ayant une largeur de 0 et on fait varier sa largeur quand la souris survole l'élément</span>
         <br></br>
         <Cross/><span>Pour les perfectionnistes : on place chaque lettre dans un <span className={`code-element`}>span</span> et on ajoute un décalage grâce à la propriété <span className={`code-element`}>transition-delay</span></span>
     </>;
-
-    const getImageSrc = (pictureName : string) => {
-        return require(`./images/${pictureName}`);
-    }
 
     const formatText = (text : string) => {
         return text.split('').map((t, index) => {
@@ -38,7 +34,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <Cross/><span className={`step-title`}>1. La méthode simple et évidente</span>
             <p>
-                Dans le fichier css, on change la couleur du texte dans le sélecteur <span className={`italic`}>hover</span> avec une petite transition pour que le changement ne soit pas trop brusque.
+                Dans le fichier CSS, on change la couleur du texte dans le sélecteur <span className={`italic`}>hover</span> avec une petite transition pour que le changement ne soit pas trop brusque.
             </p>
             <span className={`code-title`}>HTML</span>
             <div className={`code-sample`}>
@@ -110,8 +106,7 @@ const French : React.FC<IPostContentProps> = props => {
             </div>
             <p>
                 <span className={`italic`}>Le problème ?</span><span className={`nbsp`}/>
-                Comme précédemment, cette méthode fonctionne si le texte est assez court pour que l'on soit sûr qu'il rentre sur une ligne sur n'importe quel media. S'il est sur deux lignes, tout le bloc changera de couleur en même temps.<br></br>
-                L'effet est plus sympa mais ce n'est pas encore parfait.
+                La couleur glisse pour un effet plus sympa. Cependant, changer la hauteur ou la largeur d'un <span className={`code-element`}>div</span> n'est la transition la plus performante.
             </p>
 
             <div className={`section-separator`}></div>
@@ -158,7 +153,7 @@ const French : React.FC<IPostContentProps> = props => {
             <p>
                 Cette méthode fonctionne pour tous les types de texte et l'effet visuel est garanti. Il est extrêmement fastidieux d'écrire le HTML, on va évidemment préférer utiliser une méthode générique pour formatter le texte.
             </p>
-            <span className={`code-title`}>En React</span>
+            <span className={`code-title`}>React</span>
             <div className={`code-sample`}>
                 <span className={`color-vs-dark-blue`}>const</span> <span className={`color-vs-yellow`}>formatText</span> = (<span className={`color-vs-dark-blue`}>text</span> : <span className={`color-vs-green`}>string</span>) <span className={`color-vs-dark-blue`}>=&gt;</span> &#123;<br></br>
                 <span className={`nbsp`}/><span className={`color-vs-purple`}>return</span> <span className={`color-vs-light-blue`}>text</span>.<span className={`color-vs-yellow`}>split</span>(<span className={`color-vs-orange`}>''</span>).<span className={`color-vs-yellow`}>map</span>((<span className={`color-vs-light-blue`}>t</span>, <span className={`color-vs-light-blue`}>index</span>) <span className={`color-vs-dark-blue`}>=&gt;</span> &#123;<br></br>

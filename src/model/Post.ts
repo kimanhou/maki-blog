@@ -115,7 +115,7 @@ export default class Post {
 
     static ONE = new Post(1, new Date('2021-01-22'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA ]);
     static TWO = new Post(2, new Date('2021-01-29'), new LanguageVersion(English2, '6 tips and tricks about color schemes'), new LanguageVersion(French2, '6 trucs et astuces sur les palettes de couleurs'), [ Category.UI ]);
-    static THREE = new Post(3, new Date('2021-02-04'), new LanguageVersion(English3, 'DIY: change text color on hover'), new LanguageVersion(French3, "DIY : changer la couleur d'un texte quand la souris passe dessus"), [ Category.DIY ]);
+    static THREE = new Post(3, new Date('2021-02-04'), new LanguageVersion(English3, 'DIY: 3 ways to animate the color of a text on hover'), new LanguageVersion(French3, "DIY : 3 manières d'animer la couleur d'un texte quand la souris passe dessus"), [ Category.DIY ]);
 }
 
 const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]
