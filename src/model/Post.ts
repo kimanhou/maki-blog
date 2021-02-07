@@ -21,13 +21,15 @@ export default class Post {
     readonly english : LanguageVersion;
     readonly french : LanguageVersion;
     readonly categories : Category[];
+    readonly isHeroVideo ?: boolean;
 
-    constructor(id : number, date : Date, english : LanguageVersion, french : LanguageVersion, categories : Category[]) {
+    constructor(id : number, date : Date, english : LanguageVersion, french : LanguageVersion, categories : Category[], isHeroVideo ?: boolean) {
         this.id = id;
         this.date = date;
         this.english = english;
         this.french = french;
-        this.categories = categories
+        this.categories = categories;
+        this.isHeroVideo = isHeroVideo;
     }
 
     static getAllSortedPosts = () => {
@@ -115,7 +117,7 @@ export default class Post {
 
     static ONE = new Post(1, new Date('2021-01-22'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA ]);
     static TWO = new Post(2, new Date('2021-01-29'), new LanguageVersion(English2, '6 tips and tricks about color schemes'), new LanguageVersion(French2, '6 trucs et astuces sur les palettes de couleurs'), [ Category.UI ]);
-    static THREE = new Post(3, new Date('2021-02-04'), new LanguageVersion(English3, 'DIY: 3 ways to animate the color of a text on hover'), new LanguageVersion(French3, "DIY : 3 manières d'animer la couleur d'un texte quand la souris passe dessus"), [ Category.DIY ]);
+    static THREE = new Post(3, new Date('2021-02-04'), new LanguageVersion(English3, 'DIY: 3 ways to animate the color of a text on hover'), new LanguageVersion(French3, "DIY : 3 manières d'animer la couleur d'un texte quand la souris passe dessus"), [ Category.DIY ], true);
 }
 
 const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]

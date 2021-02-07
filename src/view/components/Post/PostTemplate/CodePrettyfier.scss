@@ -1,0 +1,51 @@
+.prettyprint {
+    background-color: #1c1e21;
+    border: 1px solid #8d949e;
+    color: var(--color-white);
+    padding: 10px;
+    margin: 20px 0;
+    font-family: 'Hack';
+    >code {
+        font-family: 'Hack';
+        &.language-html {
+            .tag {
+                color: var(--color-vs-dark-blue);
+            }
+            .atn {
+                color: var(--color-vs-light-blue);
+            }
+            .atv {
+                color: var(--color-vs-orange);
+            }
+            .pun {
+                color: var(--color-white);
+            }
+            .pln {
+                color: var(--color-white);
+            }
+            .lit {
+                color: var(--color-vs-light-green);
+            }
+        }
+        &.language-css {
+            .tag {
+                color: var(--color-vs-dark-blue);
+            }
+            .atn {
+                color: var(--color-vs-light-blue);
+            }
+            .atv {
+                color: var(--color-vs-orange);
+            }
+            .pun {
+                color: var(--color-vs-dark-blue);
+            }
+            .pln {
+                color: var(--color-vs-light-blue);
+            }
+            .lit {
+                color: var(--color-vs-light-green);
+            }
+        }
+    }
+}

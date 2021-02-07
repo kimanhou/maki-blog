@@ -12,6 +12,7 @@ import PostTitleBottomLayer from './TemplateComponents/PostTitleBottomLayer';
 import ProgressionBar from './TemplateComponents/ProgressionBar/ProgressionBar';
 import RelatedPosts from './TemplateComponents/RelatedPosts/RelatedPosts';
 import Tldr from './TemplateComponents/Tldr';
+import './CodePrettyfier.scss';
 
 interface IPostTemplateProps extends IPostContentProps {
     postId : number;

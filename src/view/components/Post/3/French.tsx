@@ -38,11 +38,13 @@ const French : React.FC<IPostContentProps> = props => {
                 Dans le fichier CSS, on change la couleur du texte dans le sélecteur <span className={`italic`}>hover</span> avec une petite transition pour que le changement ne soit pas trop brusque.
             </p>
             <span className={`code-title`}>HTML</span>
-            <div className={`code-sample`}>
-                <span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>div</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'my-div'</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/>Hello world<br></br>
-                <span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/div</span><span className={`color-vs-grey`}>&gt;</span>
-            </div>
+            <pre className={`code-sample prettyprint`}>
+                <code className="language-html">
+                    &lt;div class='my-div'&gt;<br></br>
+                    <span className={`nbsp`}/>Hello world<br></br>
+                    &lt;/div&gt;
+                </code>
+            </pre>
             <span className={`code-title`}>CSS</span>
             <div className={`code-sample`}>
                 <span className={`color-vs-orange`}>.my-div</span> &#123;<br></br>
@@ -70,12 +72,14 @@ const French : React.FC<IPostContentProps> = props => {
                 On superpose deux blocs : l'un en noir et l'autre en rose. Le bloc contenant le texte rose a une largeur de 0 et n'est donc pas visible. Lorsque la souris passe dessus, la largeur est mise à 100% avec une transition pour un effet agréable.
             </p>
             <span className={`code-title`}>HTML</span>
-            <div className={`code-sample`}>
-                <span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>div</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'my-div'</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>div</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'text'</span><span className={`color-vs-grey`}>&gt;</span>Hello world<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/div</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>div</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'text pink'</span><span className={`color-vs-grey`}>&gt;</span>Hello world<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/div</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/div</span><span className={`color-vs-grey`}>&gt;</span>
-            </div>
+            <pre className={`code-sample prettyprint`}>
+                <code className="language-html">
+                    &lt;div class='my-div'&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;div class='text'&gt;Hello world&lt;/div&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;div class='text pink'&gt;Hello world&lt;/div&gt;<br></br>
+                    &lt;/div&gt;
+                </code>
+            </pre>
             <span className={`code-title`}>CSS</span>
             <div className={`code-sample`}>
                 <span className={`color-vs-orange`}>.my-div</span> &#123;<br></br>
@@ -117,21 +121,23 @@ const French : React.FC<IPostContentProps> = props => {
                 On reprend la méthode 1 mais on place chaque lettre dans un <span className={`code-element`}>span</span> et on ajoute un décalage grâce à la propriété <span className={`code-element`}>transition-delay</span> sur chaque lettre individuellement.
             </p>
             <span className={`code-title`}>HTML</span>
-            <div className={`code-sample`}>
-                <span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>div</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'my-div'</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0s;"</span><span className={`color-vs-grey`}>&gt;</span>H<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.05s;"</span><span className={`color-vs-grey`}>&gt;</span>e<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.1s;"</span><span className={`color-vs-grey`}>&gt;</span>l<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.15s;"</span><span className={`color-vs-grey`}>&gt;</span>l<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.2s;"</span><span className={`color-vs-grey`}>&gt;</span>o<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.25s;"</span><span className={`color-vs-grey`}>&gt;</span> <span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.3s;"</span><span className={`color-vs-grey`}>&gt;</span>w<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.35s;"</span><span className={`color-vs-grey`}>&gt;</span>o<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.4s;"</span><span className={`color-vs-grey`}>&gt;</span>r<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.45s;"</span><span className={`color-vs-grey`}>&gt;</span>l<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`nbsp`}/><span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>span</span> <span className={`color-vs-light-blue`}>class</span>=<span className={`color-vs-orange`}>'char'</span> <span className={`color-vs-light-blue`}>style</span>=<span className={`color-vs-orange`}>"transition-delay: 0.5s;"</span><span className={`color-vs-grey`}>&gt;</span>d<span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/span</span><span className={`color-vs-grey`}>&gt;</span><br></br>
-                <span className={`color-vs-grey`}>&lt;</span><span className={`color-vs-dark-blue`}>/div</span><span className={`color-vs-grey`}>&gt;</span>
-            </div>
+            <pre className={`code-sample prettyprint`}>
+                <code className="language-html">
+                    &lt;div class='my-div'&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0s;&quot;&gt;H&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.05s;&quot;&gt;e&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.1s;&quot;&gt;l&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.15s;&quot;&gt;l&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.2s;&quot;&gt;o&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.25s;&quot;&gt; &lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.3s;&quot;&gt;w&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.35s;&quot;&gt;o&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.4s;&quot;&gt;r&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.45s;&quot;&gt;l&lt;/span&gt;<br></br>
+                    <span className={`nbsp`}/>&lt;span class='char' style=&quot;transition-delay: 0.5s;&quot;&gt;d&lt;/span&gt;<br></br>
+                    &lt;/div&gt;
+                </code>
+            </pre>
             <span className={`code-title`}>CSS</span>
             <div className={`code-sample`}>
                 <span className={`color-vs-orange`}>.my-div</span> &#123;<br></br>
@@ -168,6 +174,15 @@ const French : React.FC<IPostContentProps> = props => {
                 <span className={`nbsp`}/>&#125;);<br></br>
                 &#125;
             </div>
+
+
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent:'center', height: '100vh'}}>
+
+            <div className={`my-div-3 font-size-big`}>
+                {formatText('Hello world')}
+            </div>
+                    </div>
+
         </PostTemplate>
     );
 }
