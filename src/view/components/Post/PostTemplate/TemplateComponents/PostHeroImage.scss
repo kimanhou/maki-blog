@@ -2,6 +2,7 @@
     height: var(--size-post-hero-image-height);
     overflow: hidden;
     padding: 0 var(--size-main-margin);
+    position: relative;
     >.post-title {
         &.top-layer {
             color: var(--color-white);

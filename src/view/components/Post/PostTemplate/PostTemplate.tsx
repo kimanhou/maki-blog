@@ -18,10 +18,13 @@ interface IPostTemplateProps extends IPostContentProps {
     postIdClassName : string;
     tldr : React.ReactNode;
     relatedPosts : Post[];
+    photoCreditName ?: string;
+    photoCreditUrl ?: string;
+    photoCreditWebsite ?: string;
 }
 
-export const getImageSrc = (pictureName : string) => {
-    return require(`./images/${pictureName}`);
+export const getImageSrc = (postId : number, pictureName : string) => {
+    return require(`../${postId}/images/${pictureName}`);
 }
 
 const PostTemplate : React.FC<IPostTemplateProps> = props => {
@@ -30,7 +33,7 @@ const PostTemplate : React.FC<IPostTemplateProps> = props => {
 
     return (
         <div className={`post ${props.postIdClassName}`}>
-            <PostHeroImage title={props.title} titleTopLayerRef={props.titleTopLayerRef} />
+            <PostHeroImage title={props.title} titleTopLayerRef={props.titleTopLayerRef} photoCreditName={props.photoCreditName} photoCreditUrl={props.photoCreditUrl} photoCreditWebsite={props.photoCreditWebsite} />
             <div className={`main-wrapper`} id={`top`}>
                 <PostTitleBottomLayer title={props.title} titleBottomLayerRef={props.titleBottomLayerRef} />
                 <Header/>

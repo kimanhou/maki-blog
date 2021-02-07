@@ -5,6 +5,7 @@ import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
 
 const English : React.FC<IPostContentProps> = props => {
+    const postId = 2;
     const tldr = 
         <>
             <Cross/><span>Keep it simple: do not have too many colors. A color in a dark and a light shade is enough.</span>
@@ -23,7 +24,7 @@ const English : React.FC<IPostContentProps> = props => {
         </>;
 
     return (
-        <PostTemplate postId={2}
+        <PostTemplate postId={postId}
                     title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
@@ -49,7 +50,7 @@ const English : React.FC<IPostContentProps> = props => {
                 Usually a color in a dark shade and in a light shade would be enough.
             </p>
             <p>As an example, here is the color scheme of Maki blog :</p>
-            <img src={getImageSrc('1.jpg')}/>
+            <img src={getImageSrc(postId, '1.jpg')}/>
             <p>The colors are: yellow and its lighter brother, dark slate gray (echoes the color of a tree) and its lighter counterpart and an off-white for the background.</p>
 
             <p>This color scheme has been created on a cool website called <a href='https://coolors.co/' target='_blank'><b>Coolors</b></a>. 
@@ -64,10 +65,10 @@ const English : React.FC<IPostContentProps> = props => {
                 Do not hesitate to try other colors than “neutral” greys, for which the values of rgb are all identical.
                 You should keep 100% black and 100% white to make certain things pop, like titles.</p>
             <p>Example: On <a href='https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread' target='_blank'>Ideo website</a>, the title of each article is written in pure white on a pure black background and it definitely pops. However, the body of the article is written in a off-black color on a off-white background.</p>
-            <img src={getImageSrc('2.png')}/>
+            <img src={getImageSrc(postId, '2.png')}/>
             <p>Please find below the colors of the title (first line), those of the body of the article (second line) and finally two “neutral” greys (third line).
                 One can clearly see that the body of the article is not a neutral grey but is rather blue, which makes the page feel more alive.</p>
-            <img src={getImageSrc('3.jpg')}/>
+            <img src={getImageSrc(postId, '3.jpg')}/>
 
             <div className={`section-separator`}></div>
 
@@ -77,9 +78,9 @@ const English : React.FC<IPostContentProps> = props => {
                 If you picked the colors of you website individually, put them side by side to get the look and feel of the color scheme as a whole. 
                 Do not hesitate to tweak and make adjustments if needed.</p>
             <p>If you want to use various colors, use the same saturation for a consistent look. Google does it brilliantly.</p>
-            <img src={getImageSrc('4.jpg')}/>
+            <img src={getImageSrc(postId, '4.jpg')}/>
             <p>If you want to stick to a single color, vary the saturation to add depth.</p>
-            <img src={getImageSrc('5.jpg')}/>
+            <img src={getImageSrc(postId, '5.jpg')}/>
 
             <div className={`section-separator`}></div>
 
@@ -102,7 +103,7 @@ const English : React.FC<IPostContentProps> = props => {
                 As an example, the links of this article appear yellow when the mouse hovers them. 
                 The contrast ratio is really bad (1.72), but I found it acceptable as it is only in the case of a hover. 
                 On the other hand, the body of the article has a contrast ratio of 10.95, which is excellent.</p>
-            <img src={getImageSrc('6.jpg')}/>
+            <img src={getImageSrc(postId, '6.jpg')}/>
             
             <div className={`section-separator`}></div>
 
@@ -111,7 +112,7 @@ const English : React.FC<IPostContentProps> = props => {
                 If you have a logo, it’s a good base to create your color scheme. 
                 Working with an existing color palette is always easier.</p>
             <p>For a consistent look, photos and illustrations should also respect the chosen color scheme. They will help unify the page, as shown below on T mobile website.</p>
-            <img src={getImageSrc('7.jpg')}/>
+            <img src={getImageSrc(postId, '7.jpg')}/>
         
         </PostTemplate>
     );

@@ -5,6 +5,7 @@ import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
 
 const French : React.FC<IPostContentProps> = props => {
+    const postId = 2;
     const tldr = 
     <>
         <Cross/><span>Rester simple: ne pas avoir trop de couleurs différentes. Une couleur dans une teinte foncée et une teinte claire suffisent parfois.</span>
@@ -23,13 +24,14 @@ const French : React.FC<IPostContentProps> = props => {
     </>;
 
     return (
-        <PostTemplate postId={2}
+        <PostTemplate postId={postId}
                     title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`two`}
                     tldr={tldr}
-                    relatedPosts={[]}>
+                    relatedPosts={[]}
+                    photoCreditName='Jess Bailey' photoCreditUrl='https://unsplash.com/photos/l3N9Q27zULw' photoCreditWebsite='Unsplash'>
             <p>Les couleurs ont un impact immense sur l'attractivité d'un site internet. 
                 Elles peuvent même être, dans certains cas, plus importantes que le contenu car c'est la première chose que l'oeil capte lorsque l'utilisateur arrive sur une page. 
                 Une palette de couleurs cohérente et bien travaillée rendra le site plus attractif et notable. 
@@ -49,7 +51,7 @@ const French : React.FC<IPostContentProps> = props => {
                 En général, une couleur dans une teinte foncée et la même dans une teinte claire suffisent, en plus de la couleur de fond.
             </p>
             <p>Ci-dessous, la palette de couleurs du blog que vous êtes en train de lire : </p>
-            <img src={getImageSrc('1.jpg')}/>
+            <img src={getImageSrc(postId, '1.jpg')}/>
             <p>Les couleurs sont : jaune et sa teinte claire associée, un vert gris qui rappelle la couleur des sapins et sa teinte claire associée et un “faux” blanc en fond.</p>
 
             <p>Cette palette de couleurs a été créée sur <a href='https://coolors.co/' target='_blank'><b>Coolors</b></a>, un site sympa et bourré d'inspirations, qui permet d'expérimenter facilement avec les couleurs. 
@@ -63,10 +65,10 @@ const French : React.FC<IPostContentProps> = props => {
                 N'hésitez pas à sortir des gris “neutres”, pour lesquels les trois valeurs du rgb sont identiques.
                 Gardez le vrai noir et le vrai blanc pour faire ressortir certains éléments, comme par exemple les titres.</p>
             <p>Exemple: sur le <a href='https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread' target='_blank'>blog Ideo</a>, le titre de chaque article apparait en blanc sur fond noir, il saute aux yeux. À l'inverse, le corps de l'article est écrit en “faux” noir sur un fond faussement blanc.</p>
-            <img src={getImageSrc('2.png')}/>
+            <img src={getImageSrc(postId, '2.png')}/>
             <p>Ci-dessous, les couleurs du titre (première ligne), celle du corps de l'article (deuxième ligne) et des gris neutres proches des teintes utilisées dans le corps de l'article (troisième ligne). 
                 On voit clairement ici que le corps de l'article n'est pas un gris neutre mais a une teinte bleutée qui rend la page plus vivante.</p>
-            <img src={getImageSrc('3-french.jpg')}/>
+            <img src={getImageSrc(postId, '3-french.jpg')}/>
 
             <div className={`section-separator`}></div>
 
@@ -75,9 +77,9 @@ const French : React.FC<IPostContentProps> = props => {
                 Si vous choisissez individuellement les couleurs de votre site, nous vous conseillons de les placer les unes à côté des autres pour observer le ressenti qu'elles dégagent ensemble et ainsi mieux visualiser le résultat final. 
                 N'hésitez pas à faire des ajustements si nécessaires.</p>
             <p>Si vous voulez plusieurs couleurs différentes (pour différents goûts dans le cas d'une marque de boisson par exemple), utilisez la même saturation partout pour un effet consistent. Google le fait brillamment.</p>
-            <img src={getImageSrc('4.jpg')}/>
+            <img src={getImageSrc(postId, '4.jpg')}/>
             <p>Si vous voulez n'utiliser qu'une seule couleur, variez les saturations pour donner du relief.</p>
-            <img src={getImageSrc('5.jpg')}/>
+            <img src={getImageSrc(postId, '5.jpg')}/>
 
             <div className={`section-separator`}></div>
 
@@ -102,7 +104,7 @@ const French : React.FC<IPostContentProps> = props => {
                 Par exemple, les liens sur ce blog apparaissent en jaune quand la souris passe dessus.  
                 Le rapport de contraste est abominable (1,72), cependant j'ai considéré quue c'était acceptable car il ne s'agit que du cas où l'utilisateur pose sa souris sur un lien cliquable. 
                 Par ailleurs, le corps de l'article a un rapport de contraste de 10,95,  ce qui est excellent.</p>
-            <img src={getImageSrc('6.jpg')}/>
+            <img src={getImageSrc(postId, '6.jpg')}/>
 
             <div className={`section-separator`}></div>
 
@@ -112,7 +114,7 @@ const French : React.FC<IPostContentProps> = props => {
                 Travailler avec une base existante est toujours plus facile.</p>
             <p>Pour un rendu consistant, les photos et illustrations doivent également respecter la palette de couleurs choisie.
                 Elles aideront ainsi à unifier la page, comme le fait T-mobile sur son site.</p>
-            <img src={getImageSrc('7.jpg')}/>
+            <img src={getImageSrc(postId, '7.jpg')}/>
 
         </PostTemplate>
     );

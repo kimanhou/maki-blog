@@ -5,6 +5,7 @@ import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
 
 const French : React.FC<IPostContentProps> = props => {
+    const postId = 3;
     const tldr = 
     <>
         <Cross/><span>La méthode simple et évidente : un changement de couleur dans la propriété <span className={`code-element`}>hover</span> avec une transition</span>
@@ -21,7 +22,7 @@ const French : React.FC<IPostContentProps> = props => {
     }
 
     return (
-        <PostTemplate postId={3}
+        <PostTemplate postId={postId}
                     title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 

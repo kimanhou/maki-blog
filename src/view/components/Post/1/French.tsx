@@ -5,6 +5,7 @@ import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
 
 const French : React.FC<IPostContentProps> = props => {
+    const postId = 1;
     const tldr = <>
         <Cross/><span>Créer / Utiliser un compte de développeur Facebook</span><br></br>
         <Cross/><span>Créer une application Facebook enregistrée</span><br></br>
@@ -39,7 +40,7 @@ const French : React.FC<IPostContentProps> = props => {
     // const relatedPosts = relatedPost == undefined ? [] : [ relatedPost ];
 
     return (
-        <PostTemplate postId={1} 
+        <PostTemplate postId={postId} 
                     title={props.title} 
                     titleTopLayerRef={props.titleTopLayerRef} 
                     titleBottomLayerRef={props.titleBottomLayerRef} 
@@ -61,13 +62,13 @@ const French : React.FC<IPostContentProps> = props => {
             <p className={`step-title`}>2. Créer une application Facebook enregistrée</p>
             <p className={`italic`}>Où ça ? Sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <Cross/><span>Sur le site de Facebook pour développeurs, rendez-vous sur le <a href='https://developers.facebook.com/apps' target='_blank'>panneau des applications</a> en cliquand sur “Mes applications”.</span>
-            <img src={getImageSrc('1.jpg')}/>
+            <img src={getImageSrc(postId, '1.jpg')}/>
             <Cross/><span>Cliquez sur “Créer une app”.</span>
-            <img src={getImageSrc('2.jpg')}/>
+            <img src={getImageSrc(postId, '2.jpg')}/>
             <Cross/><span>Choisissez un type d'app, il faut que oEmbed pour Instagram fasse partie des produits disponibles du type d'app choisi. Vous pouvez en savoir plus sur les types d'apps <a href='https://developers.facebook.com/docs/development/create-an-app/app-dashboard/app-types' target='_blank'>ici</a>. Par exemple, pour ce blog, j'ai choisi “Créer des expériences partagées”.</span>
-            <img src={getImageSrc('3.jpg')} className={`width-50`}/>
+            <img src={getImageSrc(postId, '3.jpg')} className={`width-50`}/>
             <Cross/><span>Renseignez le nom de l'application et l'adresse e-mail.</span>
-            <img src={getImageSrc('4.jpg')} className={`width-50`}/>
+            <img src={getImageSrc(postId, '4.jpg')} className={`width-50`}/>
             <Cross/><span>La vérification de sécurité qui suit n'a pas l'air de fonctionner sous Chrome, donc j'espère que vous disposez d'un autre navigateur.</span>
             
             <div className={`section-separator`}></div>
@@ -75,9 +76,9 @@ const French : React.FC<IPostContentProps> = props => {
             <p className={`step-title`}>3. Ajouter le produit oEmbed à l'application</p>
             <p className={`italic`}>Où ça ? Toujours sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <Cross/><span>Vous devez maintenant ajouter le produit oEmbed à votre application. Pour cela, rendez-vous sur le tableau de bord, faites défiler jusqu'à la section “Ajouter des produits à votre app” et repérez oEmbed. Cliquez sur le bouton “Configurer”.</span>
-            <img src={getImageSrc('5.jpg')}/>
+            <img src={getImageSrc(postId, '5.jpg')}/>
             <Cross/><span>Confirmez. De retour sur le tableau de bord, vous devriez voir oEmbed dans la rubrique “Mes Produits”.</span>
-            <img src={getImageSrc('6.jpg')}/>
+            <img src={getImageSrc(postId, '6.jpg')}/>
             
             <div className={`section-separator`}></div>
 
@@ -85,9 +86,9 @@ const French : React.FC<IPostContentProps> = props => {
             <p className={`italic`}>Où ça ? Toujours sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <p>Le point de terminaison d'oEmbed pour Instagram requiert soit un token d’accès d’app, soit un token d’accès client. Comme mentionné dans l'introduction de cet article, nous traitons ici les applications qui n'ont pas de serveur back-end, c'est pourquoi nous allons utiliser le token d'accès client, qui se compose de l'ID d'app et du token client, séparés par une barre verticale.</p>
             <Cross/><span>Sur le tableau de bord de l'application, <b>l'ID d'app</b> est le nombre à 16 chiffres situé en haut de votre écran, à côté du nom de l'application.</span>
-            <img src={getImageSrc('7.jpg')}/>
+            <img src={getImageSrc(postId, '7.jpg')}/>
             <Cross/><span>Pour obtenir le <b>token client</b>, allez dans <b>Paramètres &#62; Avancé &#62; Sécurité &#62; Token client</b>.</span>
-            <img src={getImageSrc('8.jpg')}/>
+            <img src={getImageSrc(postId, '8.jpg')}/>
             <Cross/><span>Votre token d'accès client est : <b className={`color-green`}>&#123;app-id&#125;|&#123;token-client&#125;</b>.
             <br></br>Par exemple : access_token = 1234567891011121|1234a56b78cd91e0f1g2h3jik4l5m678</span>
 

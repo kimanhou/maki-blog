@@ -1,0 +1,9 @@
+.photo-credits {
+    position: absolute;
+    right: var(--size-margin-20);
+    bottom: var(--size-margin-10);
+    text-align: right;
+    >a {
+        color: var(--color-white);
+    }
+}
