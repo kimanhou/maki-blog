@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e686ce1f36ef7f516433",
-    "url": "./static/css/main.2277e1d7.chunk.css"
+    "revision": "bd50d2b1615761d104cc",
+    "url": "./static/css/main.0d2502d6.chunk.css"
   },
   {
-    "revision": "e686ce1f36ef7f516433",
-    "url": "./static/js/main.e686ce1f.chunk.js"
+    "revision": "bd50d2b1615761d104cc",
+    "url": "./static/js/main.bd50d2b1.chunk.js"
   },
   {
     "revision": "1616bbb6dd97db47349d",
@@ -32,6 +32,10 @@ self.__precacheManifest = [
     "url": "./static/media/hero-video.a5332dbc.mp4"
   },
   {
+    "revision": "d254f533d9bb6fe4e84b07f21062381c",
+    "url": "./static/media/AnticDidone-Regular.d254f533.woff"
+  },
+  {
     "revision": "e917b5a9dcd9a24157425a9aee6da804",
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
   },
@@ -40,52 +44,48 @@ self.__precacheManifest = [
     "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
   {
-    "revision": "d254f533d9bb6fe4e84b07f21062381c",
-    "url": "./static/media/AnticDidone-Regular.d254f533.woff"
-  },
-  {
     "revision": "b09b73eedd02abbcff717b574512e61c",
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
-  },
-  {
-    "revision": "d9ab192896af1ab48c760f3368842b79",
-    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
-  },
-  {
-    "revision": "55d813485cb08db0bd387414e85b6d30",
-    "url": "./static/media/Hack-Italic.55d81348.woff"
-  },
-  {
-    "revision": "35551b8d1b88cf393999571f58b358ae",
-    "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
   },
   {
     "revision": "4974bcafa29be08f5e4593961c0dfb85",
     "url": "./static/media/Hack-Regular.4974bcaf.woff"
   },
   {
+    "revision": "55d813485cb08db0bd387414e85b6d30",
+    "url": "./static/media/Hack-Italic.55d81348.woff"
+  },
+  {
     "revision": "b21e6092b451f66197ba0f362446e643",
     "url": "./static/media/Hack-Italic.b21e6092.ttf"
   },
   {
-    "revision": "95882b264569d98007a23a4b6572f1f4",
-    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
+    "revision": "35551b8d1b88cf393999571f58b358ae",
+    "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
   },
   {
     "revision": "6b0746de67ed6613779825741f7746ce",
     "url": "./static/media/Hack-Bold.6b0746de.woff"
   },
   {
+    "revision": "95882b264569d98007a23a4b6572f1f4",
+    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
+  },
+  {
     "revision": "67bf8301130ac16bb1b0fff12bd181b3",
     "url": "./static/media/Hack-Bold.67bf8301.ttf"
   },
   {
-    "revision": "cb98ad493e1cc9426a8346fa288e7bce",
-    "url": "./static/media/icon-instagram.cb98ad49.svg"
+    "revision": "d9ab192896af1ab48c760f3368842b79",
+    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
   },
   {
     "revision": "6e364b16fabc20a96b70031e54219834",
     "url": "./static/media/icon-mail.6e364b16.svg"
+  },
+  {
+    "revision": "cb98ad493e1cc9426a8346fa288e7bce",
+    "url": "./static/media/icon-instagram.cb98ad49.svg"
   },
   {
     "revision": "c72a90c42b86b9a4860f082568fd9eb9",
@@ -172,7 +172,7 @@ self.__precacheManifest = [
     "url": "./static/media/mark.f8d3c955.png"
   },
   {
-    "revision": "f56f0f4e5faf577b82c2dbf486029f14",
+    "revision": "06b197613f270f4a007519d579f135d3",
     "url": "./index.html"
   }
 ];
