@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "9077e0f1a4fe308dc1c7",
-    "url": "./static/css/main.da65babb.chunk.css"
+    "revision": "88bee1a688a8d232d487",
+    "url": "./static/css/main.2277e1d7.chunk.css"
   },
   {
-    "revision": "9077e0f1a4fe308dc1c7",
-    "url": "./static/js/main.9077e0f1.chunk.js"
+    "revision": "88bee1a688a8d232d487",
+    "url": "./static/js/main.88bee1a6.chunk.js"
   },
   {
-    "revision": "6717ac62c8e32706059a",
-    "url": "./static/js/1.6717ac62.chunk.js"
+    "revision": "1616bbb6dd97db47349d",
+    "url": "./static/js/1.1616bbb6.chunk.js"
   },
   {
     "revision": "4a686d48d5a089750c49",
@@ -20,12 +20,16 @@ self.__precacheManifest = [
     "url": "./static/media/hero-image.2776246d.jpg"
   },
   {
-    "revision": "eaf460f27372be05ef5031eff06e4b42",
-    "url": "./static/media/hero-image.eaf460f2.jpg"
+    "revision": "d9abfe6717eae0f366232ceab48b500f",
+    "url": "./static/media/hero-image.d9abfe67.jpg"
   },
   {
-    "revision": "097e2a33a866d1f8a902408653341e71",
-    "url": "./static/media/hero-image.097e2a33.jpg"
+    "revision": "dc67316a3431566872506d1d0e23d747",
+    "url": "./static/media/hero-image.dc67316a.jpg"
+  },
+  {
+    "revision": "a5332dbccea3646198c7584342ea7103",
+    "url": "./static/media/hero-video.a5332dbc.mp4"
   },
   {
     "revision": "d254f533d9bb6fe4e84b07f21062381c",
@@ -40,12 +44,40 @@ self.__precacheManifest = [
     "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
   {
+    "revision": "d9ab192896af1ab48c760f3368842b79",
+    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
+  },
+  {
     "revision": "b09b73eedd02abbcff717b574512e61c",
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
-    "revision": "d9ab192896af1ab48c760f3368842b79",
-    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
+    "revision": "b21e6092b451f66197ba0f362446e643",
+    "url": "./static/media/Hack-Italic.b21e6092.ttf"
+  },
+  {
+    "revision": "4974bcafa29be08f5e4593961c0dfb85",
+    "url": "./static/media/Hack-Regular.4974bcaf.woff"
+  },
+  {
+    "revision": "95882b264569d98007a23a4b6572f1f4",
+    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
+  },
+  {
+    "revision": "55d813485cb08db0bd387414e85b6d30",
+    "url": "./static/media/Hack-Italic.55d81348.woff"
+  },
+  {
+    "revision": "35551b8d1b88cf393999571f58b358ae",
+    "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
+  },
+  {
+    "revision": "6b0746de67ed6613779825741f7746ce",
+    "url": "./static/media/Hack-Bold.6b0746de.woff"
+  },
+  {
+    "revision": "67bf8301130ac16bb1b0fff12bd181b3",
+    "url": "./static/media/Hack-Bold.67bf8301.ttf"
   },
   {
     "revision": "6e364b16fabc20a96b70031e54219834",
@@ -132,15 +164,15 @@ self.__precacheManifest = [
     "url": "./static/media/intro-bg.e756d17d.png"
   },
   {
-    "revision": "8d43bbe65195345d788812ac418e03c7",
-    "url": "./static/media/kim-anh.8d43bbe6.png"
+    "revision": "28da1a35ed24b1dbe7acae09e3cf932f",
+    "url": "./static/media/kim-anh.28da1a35.png"
   },
   {
-    "revision": "d6427b72eab6194cbf727d400d074624",
-    "url": "./static/media/mark.d6427b72.png"
+    "revision": "f8d3c9557d2b23c607a0fba84f89634c",
+    "url": "./static/media/mark.f8d3c955.png"
   },
   {
-    "revision": "45c94bb0a2c0b87ca0cc3d44ff59fa67",
+    "revision": "9f6bc929d361e36ffeaf26e1566503e5",
     "url": "./index.html"
   }
 ];
