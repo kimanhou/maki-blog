@@ -1,5 +1,5 @@
 .insta-photo {
-    height: calc(var(--size-insta-photo-height));
+    height: var(--size-insta-photo-height);
     width: var(--size-insta-photo-height);
     background-size: cover;
     background-position: center;

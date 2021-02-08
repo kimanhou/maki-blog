@@ -17,7 +17,7 @@ interface IBlogProps {}
 const Blog : React.FC<IBlogProps> = props => {
     const queryParams = useQueryParams();
     let categoriesString = queryParams['categories'];
-    let categories : Category[] = [];
+    let categories : Category[] = [Category.ALL];
     if (categoriesString != undefined) {
         categories = (JSON.parse(categoriesString) as string[]).map(Category.deserialize);
     }
@@ -31,7 +31,7 @@ const Blog : React.FC<IBlogProps> = props => {
     const location = useLocation();
     const setSelectedCategories = (categories : Category[]) => {
         const {categories : tagsParams, ...otherQueryParams} = queryParams;
-        const search = Object.keys(otherQueryParams).map(key => `${key}=${encodeURIComponent(queryParams[key]!)}`);
+        const search = Object.keys(otherQueryParams).map(key => `${key}=${encodeURIComponent(queryParams[key]!)}`).join("&");
         history.push(`${location.pathname}?${Category.toQueryParam(categories)}${search}`)
     }
 

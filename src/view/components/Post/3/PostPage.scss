@@ -7,5 +7,46 @@
             -o-background-size: cover;
             background-size: cover;
         }
+        .my-div-1 {
+            transition: color .4s;
+            display: inline-block;
+            &:hover {
+                color: pink;
+            }
+        }
+        .my-div-2 {
+            position: relative;
+            display: inline-block;
+            >.text {
+                &.pink {
+                    color: pink;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    overflow: hidden;
+                    transition: width 1s;
+                    white-space: nowrap;
+                }
+            }
+            &:hover {
+                >.text {
+                    &.pink {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .my-div-3 {
+            display: inline-block;
+            >.char {
+                transition: color .4s;
+            }
+            &:hover {
+                >.char {
+                    color: pink;
+                }
+            }
+        }
     }
 }

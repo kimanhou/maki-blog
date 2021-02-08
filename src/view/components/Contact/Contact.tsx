@@ -73,14 +73,6 @@ const Contact : React.FC = props => {
                         <a href='mailto:mark.kimanh@gmail.com'><Text english='By email' french='Par email' /></a>
                     </div>
                 </div>
-                <div className={`contact-item tel ${showPhoneClassname}`}>
-                    <div className={`contact-big-item tel`}>
-                        0123456789
-                    </div>
-                    <div className={`contact-item-relative`}>
-                        <a href='tel:0123456789'><Text english='By telephone' french='Par téléphone' /></a>
-                    </div>
-                </div>
                 <div className={`contact-item instagram ${showInstagramClassname}`}>
                     <div className={`contact-big-item instagram`}>
                         <span className={`this-is`}>thisis</span><br></br><span>makiworld</span>

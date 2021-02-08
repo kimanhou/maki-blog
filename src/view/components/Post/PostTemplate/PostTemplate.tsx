@@ -9,14 +9,23 @@ import GoToTldr from './TemplateComponents/GoToTldr';
 import NextAndPreviousPosts from './TemplateComponents/NextAndPreviousPosts/NextAndPreviousPosts';
 import PostHeroImage from './TemplateComponents/PostHeroImage';
 import PostTitleBottomLayer from './TemplateComponents/PostTitleBottomLayer';
+import ProgressionBar from './TemplateComponents/ProgressionBar/ProgressionBar';
 import RelatedPosts from './TemplateComponents/RelatedPosts/RelatedPosts';
 import Tldr from './TemplateComponents/Tldr';
+import './CodePrettyfier.scss';
 
 interface IPostTemplateProps extends IPostContentProps {
     postId : number;
     postIdClassName : string;
     tldr : React.ReactNode;
     relatedPosts : Post[];
+    photoCreditName ?: string;
+    photoCreditUrl ?: string;
+    photoCreditWebsite ?: string;
+}
+
+export const getImageSrc = (postId : number, pictureName : string) => {
+    return require(`../${postId}/images/${pictureName}`);
 }
 
 const PostTemplate : React.FC<IPostTemplateProps> = props => {
@@ -25,12 +34,13 @@ const PostTemplate : React.FC<IPostTemplateProps> = props => {
 
     return (
         <div className={`post ${props.postIdClassName}`}>
-            <PostHeroImage title={props.title} titleTopLayerRef={props.titleTopLayerRef} />
+            <PostHeroImage title={props.title} titleTopLayerRef={props.titleTopLayerRef} photoCreditName={props.photoCreditName} photoCreditUrl={props.photoCreditUrl} photoCreditWebsite={props.photoCreditWebsite} />
             <div className={`main-wrapper`} id={`top`}>
                 <PostTitleBottomLayer title={props.title} titleBottomLayerRef={props.titleBottomLayerRef} />
                 <Header/>
                 <ArrowBack/>
                 <GoToTldr />
+                <ProgressionBar />
                 <FadeIn noDelay>
                     <div className={`post-text`}>
                         {props.children}

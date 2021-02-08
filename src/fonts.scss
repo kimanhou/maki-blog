@@ -11,3 +11,34 @@
     src: url('./fonts/DawningofaNewDay-Regular.woff') format('woff'),
          url('./fonts/DawningofaNewDay-Regular.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: Hack;
+    font-display: swap;
+    src: url('./fonts/Hack-Regular.woff') format('woff'),
+         url('./fonts/Hack-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Hack;
+    font-display: swap;
+    font-style: italic;
+    src: url('./fonts/Hack-Italic.woff') format('woff'),
+         url('./fonts/Hack-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Hack;
+    font-display: swap;
+    font-style: bolditalic;
+    src: url('./fonts/Hack-BoldItalic.woff') format('woff'),
+         url('./fonts/Hack-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Hack;
+    font-display: swap;
+    font-style: bold;
+    src: url('./fonts/Hack-Bold.woff') format('woff'),
+         url('./fonts/Hack-Bold.ttf') format('truetype');
+}

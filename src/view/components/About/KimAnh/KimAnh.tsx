@@ -35,7 +35,7 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
                     <ScreenDetector className={`screen-detector-about-kim-anh-left`} onActive={onActiveLeft} onUnactive={onUnactiveLeft}/> 
                     <div className={`about-kim-anh-corner`}></div>
                     <div className={`about-kim-anh-text`}>
-                        <UnderlinedTitle line1={new Text('Web designer and developer', 'Développeur')} line2={new Text('developer', 'front-end')}/>
+                        <UnderlinedTitle line1={new Text('Web designer and developer', 'Le design')} line2={new Text('', '')}/>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus molestie lorem ac malesuada. 
                         Etiam in faucibus mi. Ut tincidunt luctus efficitur. Donec semper sapien quam, at cursus odio ornare ut. 
                         Mauris ac scelerisque velit, vel tempor magna. Duis non libero at massa mattis sodales. 
@@ -46,7 +46,7 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
                         Proin sodales, neque nec sollicitudin laoreet, ex nibh tempor nibh, ac viverra massa diam vel enim. 
                         Fusce vitae ex imperdiet, scelerisque purus faucibus, rhoncus metus. Aenean eget commodo lorem, ac congue mauris. 
                         Praesent venenatis, urna accumsan posuere rutrum, nisl nibh iaculis dolor, eu cursus felis ante eu lorem. 
-                        Proin sagittis massa nec arcu rutrum vulputate.
+                        Proin sagittis massa nec arcu rutrum vulputate.le tout saupoudré d'une vision artistique
                     </div>
                 </div>
                 <div className={`about-kim-anh-right ${onActiveRightClassname}`}>

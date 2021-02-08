@@ -1,11 +1,11 @@
 import React from 'react';
-import { myScrollTo } from '../../../../../Util';
+import { myScrollToWithOffset } from '../../../../../Util';
 import Text from '../../../LocalisationContext/Text';
 import Button from './Button';
 
 const GoToTldr : React.FC = props => {
     const onClickTldr = () => {
-        myScrollTo('tldr');
+        myScrollToWithOffset('tldr', -190);
     }
     
     return(

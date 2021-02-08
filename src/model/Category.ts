@@ -12,17 +12,15 @@ export default class Category {
     }
 
     static getAllCategories = () => {
-        return [ Category.ALL, Category.WEBDESIGN, Category.SOCIALMEDIA ];
+        return [ Category.ALL, Category.DIY, Category.SOCIALMEDIA, Category.UI ];
     }
 
     getDescription = (localisation : Local) => {
         switch (localisation) {
             case Local.FR:
                 return this.descriptionFr;
-            break;
             case Local.EN:
                 return this.descriptionEn;
-            break;
         }
     }
 
@@ -67,7 +65,7 @@ export default class Category {
     }
 
     static SOCIALMEDIA = new Category('SOCIALMEDIA', 'Social media', 'Réseaux sociaux');
-    static WEBDESIGN = new Category('WEBDESIGN', 'Website design', 'Conception web');
+    static DIY = new Category('DIY', 'DIY', 'DIY');
     static UI = new Category('UI', 'User interface', 'Interface utilisateur');
     static ALL = new Category('ALL', 'All', 'Tous');
 }

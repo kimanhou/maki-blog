@@ -5,5 +5,9 @@
             font-size: var(--size-font-size-preview-title);
             margin-bottom: var(--size-margin-10);
         }
+        .code-element {
+            font-family: 'Hack';
+            background-color: var(--color-very-light-yellow);
+        }
     }
 }
