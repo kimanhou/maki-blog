@@ -17,8 +17,19 @@ const Intro : React.FC = props => {
 
     return (
         <div className={`intro ${activeClassName}`}>
-            <p><Text english='We talk about web design, coding and stuff.' french="On parle de conception web, de code et autre." /></p>
-            <p><Text english='We believe in minimalist designs, clean code and constant improvement.' french="On aime les concepts minimalistes et le code propre." /></p>
+            <p>
+                <Text english='We believe that simple designs are powerful,' 
+                french="Nous pensons que les designs simples sont puissants," />
+                <br></br>
+                <Text english="that web design is a form of art" 
+                    french="que le web design est une forme d'art" />
+                <br></br>
+                <Text english="and that anyone can find beauty in a website." 
+                    french="et que chacun peut trouver une beauté dans un site web." />
+            </p>
+            
+            <p><Text english='On this blog, we talk about web design, coding and stuff.' 
+                french="Sur ce blog, nous parlons de conception web, de code et autre." /></p>
         </div>
     );
 }
