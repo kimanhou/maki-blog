@@ -18,6 +18,14 @@
                 background-image: url(../../../../images/about/mark.png);
                 background-position: center;
                 background-size: 100%;
+                position: relative;
+                >.about-mark-photo-signature {
+                    position: absolute;
+                    bottom: calc(var(--size-margin-20) * (-1));
+                    left: 0;
+                    font-size: var(--size-font-size-small);
+                    color: var(--color-white);
+                }
             }
             >.about-mark-image-cover {
                 left: 0;
@@ -84,6 +92,11 @@
             flex-direction: column;
             >.about-mark-left, >.about-mark-right {
                 transform: unset;
+            }
+            >.about-mark-left {
+                >.about-mark-photo {
+                    margin-bottom: var(--size-margin-20);
+                }
             }
         }
     }

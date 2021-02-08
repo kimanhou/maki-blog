@@ -57,7 +57,11 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
                 </div>
                 <div className={`about-kim-anh-right ${onActiveRightClassname}`}>
                     <ScreenDetector className={`screen-detector-about-kim-anh-right`} onActive={onActiveRight} onUnactive={onUnactiveRight}/> 
-                    <div className={`about-kim-anh-photo`}></div>
+                    <div className={`about-kim-anh-photo`}>
+                        <div className={`about-kim-anh-photo-signature`}>
+                            <Text english='Drawing by Magali Pham' french='Dessin de Magali Pham' />
+                        </div>
+                    </div>
                     <div className={`about-kim-anh-image-cover`}></div>
                 </div>             
             </div>

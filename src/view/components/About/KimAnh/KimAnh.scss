@@ -47,6 +47,13 @@
                 background-image: url(../../../../images/about/kim-anh.png);
                 background-position: center;
                 background-size: 100%;
+                position: relative;
+                >.about-kim-anh-photo-signature {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: var(--size-font-size-small);
+                }
             }
             >.about-kim-anh-image-cover {
                 left: 0;

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import Text from '../../../../model/Text';
+import TextModel from '../../../../model/Text';
 import ScreenDetector from '../../ScreenDetector/screenDetector';
 import SectionHeader from '../../SectionHeader/SectionHeader';
 import './Mark.scss';
 import UnderlinedTitle from '../UnderlinedTitle/UnderlinedTitle';
 import BigCharacter from '../BigCharacter/BigCharacter';
+import Text from '../../LocalisationContext/Text';
 
 interface IMarkProps {
 }
@@ -29,20 +30,24 @@ const Mark : React.FC<IMarkProps> = props => {
 
     return (
         <div className={`about-mark`} id={`mark`}>
-            <SectionHeader title={new Text('Meet Mark', 'Portrait')} subtitle={new Text('', 'de Mark')} isColorWhite/>
+            <SectionHeader title={new TextModel('Meet Mark', 'Portrait')} subtitle={new TextModel('', 'de Mark')} isColorWhite/>
             <div className={`about-mark-container`}>
                 <div className={`about-mark-left ${onActiveLeftClassname}`}>
                     <ScreenDetector className={`screen-detector-about-mark-left`} onActive={onActiveLeft} onUnactive={onUnactiveLeft}/>
-                    <div className={`about-mark-photo`}></div>
+                    <div className={`about-mark-photo`}>
+                        <div className={`about-mark-photo-signature`}>
+                            <Text english='Drawing by Magali Pham' french='Dessin de Magali Pham' />
+                        </div>
+                    </div>
                     <div className={`about-mark-image-cover`}></div>
                 </div>
                 <div className={`about-mark-right ${onActiveRightClassname}`}>
                     <ScreenDetector className={`screen-detector-about-mark-right`} onActive={onActiveRight} onUnactive={onUnactiveRight}/>
                     <div className={`about-mark-corner`}></div>
                     <div className={`about-mark-text`}>
-                        <UnderlinedTitle line1={new Text('Web developer', 'Développeur')} line2={new Text('and designer', 'et designer')} colorWhite/>
+                        <UnderlinedTitle line1={new TextModel('Web developer', 'Développeur')} line2={new TextModel('and designer', 'et designer')} colorWhite/>
                         <div className={`about-mark-text-body`}>
-                            <BigCharacter character={new Text('G', 'B')} />
+                            <BigCharacter character={new TextModel('G', 'B')} />
                             <p>reetings!
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus molestie lorem ac malesuada. 
                             Etiam in faucibus mi. Ut tincidunt luctus efficitur. Donec semper sapien quam, at cursus odio ornare ut. 
