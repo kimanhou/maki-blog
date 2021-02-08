@@ -174,15 +174,6 @@ const French : React.FC<IPostContentProps> = props => {
                 <span className={`nbsp`}/>&#125;);<br></br>
                 &#125;
             </div>
-
-
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent:'center', height: '100vh'}}>
-
-            <div className={`my-div-3 font-size-big`}>
-                {formatText('Hello world')}
-            </div>
-                    </div>
-
         </PostTemplate>
     );
 }
