@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3a7d05c8c08578d636c8",
-    "url": "./static/css/main.cf2e38dc.chunk.css"
+    "revision": "9af2f4efca894aff54ea",
+    "url": "./static/css/main.835f481d.chunk.css"
   },
   {
-    "revision": "3a7d05c8c08578d636c8",
-    "url": "./static/js/main.3a7d05c8.chunk.js"
+    "revision": "9af2f4efca894aff54ea",
+    "url": "./static/js/main.9af2f4ef.chunk.js"
   },
   {
     "revision": "1616bbb6dd97db47349d",
@@ -52,12 +52,12 @@ self.__precacheManifest = [
     "url": "./static/media/Hack-Regular.4974bcaf.woff"
   },
   {
-    "revision": "d9ab192896af1ab48c760f3368842b79",
-    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
-  },
-  {
     "revision": "55d813485cb08db0bd387414e85b6d30",
     "url": "./static/media/Hack-Italic.55d81348.woff"
+  },
+  {
+    "revision": "d9ab192896af1ab48c760f3368842b79",
+    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
   },
   {
     "revision": "b21e6092b451f66197ba0f362446e643",
@@ -172,7 +172,7 @@ self.__precacheManifest = [
     "url": "./static/media/kim-anh.28da1a35.png"
   },
   {
-    "revision": "1f1c5c141302c0c2a9ebd45b82997c04",
+    "revision": "c86ed627284c9ed1c8557ec52cbe5bd7",
     "url": "./index.html"
   }
 ];
