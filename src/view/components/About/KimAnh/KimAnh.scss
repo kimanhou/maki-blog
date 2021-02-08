@@ -26,6 +26,16 @@
             >.about-kim-anh-text {
                 background-color: var(--color-white);
                 padding: var(--size-margin-10);
+                >.about-kim-anh-text-body {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    >p {
+                        flex: 1;
+                        margin-block-start: 0.5rem;
+                        margin-left: var(--size-margin-5);
+                    }
+                }
             }
         }
         >.about-kim-anh-right {

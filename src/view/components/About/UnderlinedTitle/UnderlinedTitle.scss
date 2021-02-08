@@ -16,11 +16,19 @@
         transition-timing-function: cubic-bezier(1,0,0,1);
     }
     >.underlined-title-line-1 {
+        >.text-1 {
+            margin-left: calc(var(--size-margin-50) * (-1));
+        }
         >.underlined-title-underline-1 {
             left: 0;
         }
     }
     >.underlined-title-line-2 {
+        >.text-2 {
+            font-family: Dawning;
+            font-size: 1.5rem;
+            margin-left: var(--size-margin-50);
+        }
         >.underlined-title-underline-2 {
             right: 0;
         }

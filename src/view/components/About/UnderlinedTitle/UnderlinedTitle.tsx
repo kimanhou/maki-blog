@@ -25,11 +25,15 @@ const UnderlinedTitle : React.FC<IUnderlinedTitleProps> = props => {
     return (
         <div className={`underlined-title ${onActiveClassname} ${colorWhiteClassname}`}>
             <div className={`underlined-title-line-1`}>
-                {props.line1.getText(localisation)}
+                <div className={`text-1`}>
+                    {props.line1.getText(localisation)}
+                </div>
                 <div className={`underlined-title-underline-1`}></div>
             </div>
             <div className={`underlined-title-line-2`}>
-                {props.line2.getText(localisation)}
+                <div className={`text-2`}>
+                    {props.line2.getText(localisation)}
+                </div>
                 <div className={`underlined-title-underline-2`}></div>
             </div>
             <ScreenDetector onActive={onActive} onUnactive={onUnactive} />
