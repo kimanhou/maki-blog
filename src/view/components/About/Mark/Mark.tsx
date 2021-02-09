@@ -47,19 +47,16 @@ const Mark : React.FC<IMarkProps> = props => {
                     <div className={`about-mark-text`}>
                         <UnderlinedTitle line1={new TextModel('Web developer', 'Développeur')} line2={new TextModel('and designer', 'et designer')} colorWhite/>
                         <div className={`about-mark-text-body`}>
-                            <BigCharacter character={new TextModel('G', 'B')} />
-                            <p>reetings!
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus molestie lorem ac malesuada. 
-                            Etiam in faucibus mi. Ut tincidunt luctus efficitur. Donec semper sapien quam, at cursus odio ornare ut. 
-                            Mauris ac scelerisque velit, vel tempor magna. Duis non libero at massa mattis sodales. 
-                            Praesent nec sapien finibus, accumsan orci vitae, aliquet velit. 
-                            Donec semper iaculis turpis, vestibulum congue quam varius eu. 
-                            Aenean dui nisl, laoreet at tellus ac, placerat maximus nulla. 
-                            Nunc tristique tortor eu arcu volutpat, nec cursus nulla aliquet. 
-                            Proin sodales, neque nec sollicitudin laoreet, ex nibh tempor nibh, ac viverra massa diam vel enim. 
-                            Fusce vitae ex imperdiet, scelerisque purus faucibus, rhoncus metus. Aenean eget commodo lorem, ac congue mauris. 
-                            Praesent venenatis, urna accumsan posuere rutrum, nisl nibh iaculis dolor, eu cursus felis ante eu lorem. 
-                            Proin sagittis massa nec arcu rutrum vulputate.
+                            <BigCharacter character={new TextModel('G', 'S')} />
+                            <p>
+                                <Text english="reetings!  I am a full-stack dev with a few years of experience. 
+                                    I am passionate about building and bringing my ideas to life. 
+                                    I am an entrepreneur at heart and I always have a project in the works. 
+                                    Whether it's a new kind of app or a simple web game, I am always committed at 200%."
+                                    french="alut ! Je suis un dev full-stack avec quelques année d'expérience sous le coude. 
+                                    Ma passion à moi, c'est de construire et donner vie à mes idées. 
+                                    Je suis entrepreneur dans l'âme et j'ai toujours un projet en court de dévelopement. 
+                                    Que ce soit une appli d'un nouveau genre ou un simple jeu web qui me tient a coeur, je me donne toujours à 200%."/>
                             </p>
                         </div>
                     </div>
