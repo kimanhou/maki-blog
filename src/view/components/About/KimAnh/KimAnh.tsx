@@ -37,14 +37,16 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
                     <ScreenDetector className={`screen-detector-about-kim-anh-left`} onActive={onActiveLeft} onUnactive={onUnactiveLeft}/> 
                     <div className={`about-kim-anh-corner`}></div>
                     <div className={`about-kim-anh-text`}>
-                        <UnderlinedTitle line1={new TextModel('SQL guru', 'Guru en SQL')} line2={new TextModel('and Git master', 'et maître git')}/>
+                        <UnderlinedTitle line1={new TextModel('SQL guru', 'Guru en SQL')} line2={new TextModel('and git master', 'et maître git')}/>
                         <div className={`about-kim-anh-text-body`}>
                             <BigCharacter character={new TextModel('H', 'B')} />
                             <p>
                                 <Text english='i there! I am a web designer and developer with 4 years of experience. 
-                                I am a fan of clean code and pure CSS animations, sprinkled with an artistic eye.' 
+                                I am a fan of clean code and pure CSS animations, sprinkled with an artistic eye. 
+                                I love creating simple and elegant websites with a memorable look and feel.' 
                                 french="onjour ! Je suis designer web et développeure avec 4 ans d'expérience. 
-                                J'aime le code propre et les animations toutes en CSS, le tout saupoudré d'une vision artistique."/> <br></br>
+                                J'aime le code propre et les animations toutes en CSS, le tout saupoudré d'une vision artistique. 
+                                J'adore créer des sites simples et élégants qui laissent une impression mémorable."/> <br></br><br></br>
                                 <Text english='I am a tiny house enthusiast and a nomad. 
                                 Pianist since childhood, I took pottery classes as a kid, before hipsters declared it was cool.
                                 When I am not browsing Instagram for inspiration, I am trying new recipes of homemade lip balm.' 
