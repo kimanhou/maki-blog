@@ -45,7 +45,7 @@ const Mark : React.FC<IMarkProps> = props => {
                     <ScreenDetector className={`screen-detector-about-mark-right`} onActive={onActiveRight} onUnactive={onUnactiveRight}/>
                     <div className={`about-mark-corner`}></div>
                     <div className={`about-mark-text`}>
-                        <UnderlinedTitle line1={new TextModel('Web developer', 'Développeur')} line2={new TextModel('and designer', 'et designer')} colorWhite/>
+                        <UnderlinedTitle line1={new TextModel('Full-stack engineer', 'Ingénieur full-stack')} line2={new TextModel('and project creator', 'et créateur de projets')} colorWhite/>
                         <div className={`about-mark-text-body`}>
                             <BigCharacter character={new TextModel('G', 'S')} />
                             <p>
