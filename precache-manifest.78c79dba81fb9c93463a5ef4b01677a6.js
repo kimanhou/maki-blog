@@ -36,56 +36,56 @@ self.__precacheManifest = [
     "url": "./static/media/AnticDidone-Regular.d254f533.woff"
   },
   {
-    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
-    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
-  },
-  {
     "revision": "e917b5a9dcd9a24157425a9aee6da804",
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
+  },
+  {
+    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
+    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
   {
     "revision": "b09b73eedd02abbcff717b574512e61c",
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
-    "revision": "55d813485cb08db0bd387414e85b6d30",
-    "url": "./static/media/Hack-Italic.55d81348.woff"
+    "revision": "4974bcafa29be08f5e4593961c0dfb85",
+    "url": "./static/media/Hack-Regular.4974bcaf.woff"
   },
   {
-    "revision": "b21e6092b451f66197ba0f362446e643",
-    "url": "./static/media/Hack-Italic.b21e6092.ttf"
+    "revision": "55d813485cb08db0bd387414e85b6d30",
+    "url": "./static/media/Hack-Italic.55d81348.woff"
   },
   {
     "revision": "d9ab192896af1ab48c760f3368842b79",
     "url": "./static/media/Hack-Regular.d9ab1928.ttf"
   },
   {
-    "revision": "4974bcafa29be08f5e4593961c0dfb85",
-    "url": "./static/media/Hack-Regular.4974bcaf.woff"
-  },
-  {
     "revision": "35551b8d1b88cf393999571f58b358ae",
     "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
   },
   {
-    "revision": "95882b264569d98007a23a4b6572f1f4",
-    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
+    "revision": "b21e6092b451f66197ba0f362446e643",
+    "url": "./static/media/Hack-Italic.b21e6092.ttf"
   },
   {
     "revision": "6b0746de67ed6613779825741f7746ce",
     "url": "./static/media/Hack-Bold.6b0746de.woff"
   },
   {
+    "revision": "95882b264569d98007a23a4b6572f1f4",
+    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
+  },
+  {
     "revision": "67bf8301130ac16bb1b0fff12bd181b3",
     "url": "./static/media/Hack-Bold.67bf8301.ttf"
   },
   {
-    "revision": "6e364b16fabc20a96b70031e54219834",
-    "url": "./static/media/icon-mail.6e364b16.svg"
-  },
-  {
     "revision": "cb98ad493e1cc9426a8346fa288e7bce",
     "url": "./static/media/icon-instagram.cb98ad49.svg"
+  },
+  {
+    "revision": "6e364b16fabc20a96b70031e54219834",
+    "url": "./static/media/icon-mail.6e364b16.svg"
   },
   {
     "revision": "c72a90c42b86b9a4860f082568fd9eb9",
@@ -172,7 +172,7 @@ self.__precacheManifest = [
     "url": "./static/media/kim-anh.28da1a35.png"
   },
   {
-    "revision": "49cd03a9fac56bec3ca5d21d3cd9417f",
+    "revision": "79d0e1288b0ee7b622a70f7a943b7223",
     "url": "./index.html"
   }
 ];
