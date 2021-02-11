@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IPostContentProps } from '../../../../model/Post';
+import ScreenDetector from '../../ScreenDetector/screenDetector';
 import PostTemplate, { getImageSrc } from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
@@ -14,8 +15,19 @@ const English : React.FC<IPostContentProps> = props => {
         <br></br>
         <Cross/><span>User interface design is part of the greater user experience design universe. UI is the visual manifestation of UX thinking.</span>
         <br></br>
-        <Cross/><span>UI/UX can shape how the user experience the content. Some use these practices to trick the user, but most try to make life easier.</span>
+        <Cross/><span>UI/UX can shape how the user experiences the content. Some use these practices to trick the user, but most try to make life easier.</span>
     </>;
+
+    const formatText = (text : string) => {
+        return text.split('').map(t => {
+            return (<span>{t}</span>);
+        });
+    }
+
+    const [active, setActive] = useState(false);
+    const activeClassname = active ? 'active' : '';
+    const onActive = () => { setActive(true) }
+    const onUnactive = () => { setActive(false) }
 
     return (
         <PostTemplate postId={postId}
@@ -51,6 +63,12 @@ const English : React.FC<IPostContentProps> = props => {
                 In the real world, you can think of a book being the interface between the reader and the story. 
                 While the book is printed on paper, what the reader/user experiences is the novel or the story itself.
             </p>
+            <div className={`illustration-ui-bridge flex-row ${activeClassname}`}>
+                <ScreenDetector className={`screen-detector-illustation-ui-bridge`} onActive={onActive} onUnactive={onUnactive} />
+                <div className={`illustration-ui-bridge-user`}>user</div>
+                <div className={`illustration-ui-bridge-interface flex-column`}>{formatText('interface')}</div>
+                <div className={`illustration-ui-bridge-content`}>content</div>
+            </div>
             <p>
                 While <i>UI</i> is the term used to talk about the interface itself, the <b>UI designer</b> is the person who gets the material / content and has to turn it into an app or a website. 
                 The content originally doesn't actually have any form, so the UI designer is the one who looks at that content and has to figure out what is the best structure for that particular content.
@@ -119,10 +137,10 @@ const English : React.FC<IPostContentProps> = props => {
             </p>
             <div className={`flex-row`}>
                 <div>
-                    <img src={getImageSrc(postId, '1.jpeg')} className={`width-50`}/>
+                    <img src={getImageSrc(postId, '2.jpeg')} className={`width-50`}/>
                 </div>
                 <div>
-                    <img src={getImageSrc(postId, '2.jpeg')} className={`width-50`}/>
+                    <img src={getImageSrc(postId, '3.jpeg')} className={`width-50`}/>
                 </div>
                 
             </div>
@@ -137,9 +155,9 @@ const English : React.FC<IPostContentProps> = props => {
                 The sentence becomes 'I don't want to receive the newsletter' and the checkbox needs to be ticked if you don't want to sign up for it.
                 Here is a screenshot of what happens when you book a train ticket on Oui Sncf website :
             </p>
-            <img src={getImageSrc(postId, '3.png')}/>
+            <img src={getImageSrc(postId, '4.png')}/>
             <p>
-                These tricsk are called “<i><b>dark patterns</b></i>” and there is <a href='https://www.darkpatterns.org/' target='_blank'>a dedicated website</a> to help you recognize them.
+                These tricks are called “<i><b>dark patterns</b></i>” and there is <a href='https://www.darkpatterns.org/' target='_blank'>a dedicated website</a> to help you recognize them.
             </p>
             <p>
                 Hopefully, not all UI/UX designers are malicious. 
@@ -150,7 +168,7 @@ const English : React.FC<IPostContentProps> = props => {
             <div className={`section-separator`}></div>
 
             <p>
-                In conlcusion, it's important to understand how UI and UX are being different because they often appeal to different kinds of people, who do different kinds of jobs.
+                In conclusion, it's important to understand how UI and UX are being different because they often appeal to different kinds of people, who do different kinds of jobs.
                 But of course, these two things overlap. 
                 We talk about a UI/UX designer as somebody who does both of these things. 
                 But in truth, a UI designer tends to focus more on UI with a little bit of UX and a UX designer tends to focus more on UX with a little bit of UI. 
