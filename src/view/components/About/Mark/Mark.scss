@@ -18,6 +18,16 @@
                 background-image: url(../../../../images/about/mark.png);
                 background-position: center;
                 background-size: 100%;
+                position: relative;
+                >.about-mark-photo-signature {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: var(--size-font-size-small);
+                    color: var(--color-white);
+                    transform: rotate(-90deg) translateY(100%);
+                    transform-origin: bottom left;
+                }
             }
             >.about-mark-image-cover {
                 left: 0;
@@ -48,6 +58,16 @@
                 color: var(--color-white);
                 padding: var(--size-margin-10);
                 background-color: var(--color-dark-green);
+                >.about-mark-text-body {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    >p {
+                        flex: 1;
+                        margin-block-start: 0.5rem;
+                        margin-left: var(--size-margin-5);
+                    }
+                }
             }
         }
         >.about-mark-left {

@@ -49,6 +49,7 @@ const About : React.FC = props => {
     const [introScrollableScrollPosition, setIntroScrollableScrollPosition] = useState(0);
     const [introScrollableScrollPosition2, setIntroScrollableScrollPosition2] = useState(0);
     const [introScrollableScrollPosition3, setIntroScrollableScrollPosition3] = useState(0);
+    const [introScrollableScrollPosition4, setIntroScrollableScrollPosition4] = useState(0);
 
     const distanceBetweenMaki = useScroll(makiStart, makiDistance, [ mobile ]);
     const rkLeft = useScroll(rkStart, rkDistance, [ mobile ]);
@@ -60,10 +61,11 @@ const About : React.FC = props => {
     const [green, setGreen] = useState(0);
     const [blue, setBlue] = useState(0);
 
-    const aboutIntroScrollableHeight = 150;
+    const aboutIntroScrollableHeight = 100;
     const aboutIntroScrollableInitialTop = window.innerHeight * 1.8 + 30 + (window.innerWidth / 2) - maWidth - mainMargin + 18 + 30 + manhWidth + mainMargin ;
     const aboutIntroScrollableInitialTop2 = aboutIntroScrollableInitialTop + aboutIntroScrollableHeight;
-    const aboutIntroScrollableInitialTop3 = aboutIntroScrollableInitialTop2 + aboutIntroScrollableHeight;
+    const aboutIntroScrollableInitialTop3 = aboutIntroScrollableInitialTop2 + aboutIntroScrollableHeight * 1.5;
+    const aboutIntroScrollableInitialTop4 = aboutIntroScrollableInitialTop3 + aboutIntroScrollableHeight;
     const markAndKimAnhInitialTop = aboutIntroScrollableInitialTop + gapBetweenEndOfIntroAndScrollable;
 
     const fixedHeight = markAndKimAnhInitialTop;
@@ -92,6 +94,7 @@ const About : React.FC = props => {
             setIntroScrollableScrollPosition(Math.min(Math.max(scrollTop + window.innerHeight - aboutIntroScrollableInitialTop, 0), window.innerHeight * 0.6));
             setIntroScrollableScrollPosition2(Math.min(Math.max(scrollTop + window.innerHeight - aboutIntroScrollableInitialTop2, 0), window.innerHeight * 0.6));
             setIntroScrollableScrollPosition3(Math.min(Math.max(scrollTop + window.innerHeight - aboutIntroScrollableInitialTop3, 0), window.innerHeight * 0.6));
+            setIntroScrollableScrollPosition4(Math.min(Math.max(scrollTop + window.innerHeight - aboutIntroScrollableInitialTop4, 0), window.innerHeight * 0.6));
         };
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
@@ -112,21 +115,26 @@ const About : React.FC = props => {
                             manhRight={manhRight} kiRight={kiRight} />
             
             <AboutIntroScrollable scrollPosition={introScrollableScrollPosition} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop}>
-                <Text english='We are web designers and developers,' french='Nous sommes designers web et développeurs,'/>
-                <br></br>
-                <Text english='a bit British and a bit French.' french='un peu anglais et un peu français.'/>
+                <Text english='We are freelance web designers and developers.' 
+                    french='Nous sommes designers web et développeurs auto-entrepreneurs.'/>
             </AboutIntroScrollable>
 
             <AboutIntroScrollable scrollPosition={introScrollableScrollPosition2} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop2}>
-                <Text english='We learned by making every possible mistake,' french='Nous avons appris en commettant toutes les erreurs possibles,'/>
+                <Text english='We have honed our skills for years working for big companies,' 
+                    french='Nous avons perfectionné nos compétences depuis des années au service de grandes entreprises,'/>
                 <br></br>
-                <Text english='but we write here what we took from it.' french='mais nous écrivons ici ce que nous en retenons.'/>
+                <Text english='and decided to take a break from that hectic lifestyle to travel the world and build out our own projects.' 
+                    french='avant de quitter ce style de vie harassant pour parcourir le monde et construire nos propres projets.'/>
             </AboutIntroScrollable>
 
             <AboutIntroScrollable scrollPosition={introScrollableScrollPosition3} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop3}>
-                <Text english='We try inproving our skills every day,' french='Nous essayons de nous améliorer tous les jours,'/>
-                <br></br>
-                <Text english='and we hope to inspire you to design your own website.' french='et nous espérons vous inspirer à créer votre propre site web.'/>
+                <Text english='Since then we have launched websites, web games, learned web design, infrastructure and much more.' 
+                    french="Depuis lors, nous avons lancé des sites, des jeux, appris le web design, l'infrastructure et bien plus encore."/>
+            </AboutIntroScrollable>
+
+            <AboutIntroScrollable scrollPosition={introScrollableScrollPosition4} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop4}>
+                <Text english="It's a long, ongoing but very rewarding journey and we have decided to share what we learn along the way." 
+                    french="C'est un long et très enrichissant voyage et nous avons décidé de vous partager ici ce que nous apprenons en chemin."/>
             </AboutIntroScrollable>
 
             <div className={`about-mark-and-kim-anh`} style={{ top: markAndKimAnhInitialTop, backgroundColor: `rgb(${red}, ${green}, ${blue})` }} >

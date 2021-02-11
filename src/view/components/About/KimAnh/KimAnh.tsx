@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import Text from '../../../../model/Text';
+import TextModel from '../../../../model/Text';
 import ScreenDetector from '../../ScreenDetector/screenDetector';
 import SectionHeader from '../../SectionHeader/SectionHeader';
 import UnderlinedTitle from '../UnderlinedTitle/UnderlinedTitle';
+import BigCharacter from '../BigCharacter/BigCharacter';
 import './KimAnh.scss';
+import Text from '../../LocalisationContext/Text';
 
 interface IKimAnhProps {
 }
@@ -29,29 +31,39 @@ const KimAnh : React.FC<IKimAnhProps> = props => {
 
     return (
         <div className={`about-kim-anh`} id={`kim-anh`}>
-            <SectionHeader title={new Text('Meet Kim Anh', 'Portrait')} subtitle={new Text('', 'de Kim Anh')} />
+            <SectionHeader title={new TextModel('Meet Kim Anh', 'Portrait')} subtitle={new TextModel('', 'de Kim Anh')} />
             <div className={`about-kim-anh-container`}>
                 <div className={`about-kim-anh-left ${onActiveLeftClassname}`}>
                     <ScreenDetector className={`screen-detector-about-kim-anh-left`} onActive={onActiveLeft} onUnactive={onUnactiveLeft}/> 
                     <div className={`about-kim-anh-corner`}></div>
                     <div className={`about-kim-anh-text`}>
-                        <UnderlinedTitle line1={new Text('Web designer and developer', 'Le design')} line2={new Text('', '')}/>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus molestie lorem ac malesuada. 
-                        Etiam in faucibus mi. Ut tincidunt luctus efficitur. Donec semper sapien quam, at cursus odio ornare ut. 
-                        Mauris ac scelerisque velit, vel tempor magna. Duis non libero at massa mattis sodales. 
-                        Praesent nec sapien finibus, accumsan orci vitae, aliquet velit. 
-                        Donec semper iaculis turpis, vestibulum congue quam varius eu. 
-                        Aenean dui nisl, laoreet at tellus ac, placerat maximus nulla. 
-                        Nunc tristique tortor eu arcu volutpat, nec cursus nulla aliquet. 
-                        Proin sodales, neque nec sollicitudin laoreet, ex nibh tempor nibh, ac viverra massa diam vel enim. 
-                        Fusce vitae ex imperdiet, scelerisque purus faucibus, rhoncus metus. Aenean eget commodo lorem, ac congue mauris. 
-                        Praesent venenatis, urna accumsan posuere rutrum, nisl nibh iaculis dolor, eu cursus felis ante eu lorem. 
-                        Proin sagittis massa nec arcu rutrum vulputate.le tout saupoudré d'une vision artistique
+                        <UnderlinedTitle line1={new TextModel('SQL guru', 'Guru en SQL')} line2={new TextModel('and git master', 'et maître git')}/>
+                        <div className={`about-kim-anh-text-body`}>
+                            <BigCharacter character={new TextModel('H', 'B')} />
+                            <p>
+                                <Text english='i there! I am a web designer and developer with 4 years of experience. 
+                                I am a fan of clean code and pure CSS animations, sprinkled with an artistic eye. 
+                                I love creating simple and elegant websites with a memorable look and feel.' 
+                                french="onjour ! Je suis designer web et développeure avec 4 ans d'expérience. 
+                                J'aime le code propre et les animations toutes en CSS, le tout saupoudré d'une vision artistique. 
+                                J'adore créer des sites simples et élégants qui laissent une impression mémorable."/> <br></br><br></br>
+                                <Text english='I am a tiny house enthusiast and a nomad. 
+                                Pianist since childhood, I took pottery classes as a kid, before hipsters declared it was cool.
+                                When I am not browsing Instagram for inspiration, I am trying new recipes of homemade lip balm.' 
+                                french="Je suis une fan de tiny house et de voyages au bout du monde. 
+                                Pianiste depuis l'enfance, j'ai aussi pris des cours de poterie avant que ça ne devienne cool.
+                                Quand je ne suis pas en train de chercher l'inspiration sur Instagram, je teste des recettes de baume à lèvres maison." />
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className={`about-kim-anh-right ${onActiveRightClassname}`}>
                     <ScreenDetector className={`screen-detector-about-kim-anh-right`} onActive={onActiveRight} onUnactive={onUnactiveRight}/> 
-                    <div className={`about-kim-anh-photo`}></div>
+                    <div className={`about-kim-anh-photo`}>
+                        <div className={`about-kim-anh-photo-signature`}>
+                            <Text english='Drawing by Magali Pham' french='Dessin de Magali Pham' />
+                        </div>
+                    </div>
                     <div className={`about-kim-anh-image-cover`}></div>
                 </div>             
             </div>

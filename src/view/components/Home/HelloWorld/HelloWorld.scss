@@ -32,6 +32,14 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .hello-world {
+        >.home-image {
+            animation-name: home-image-animation-mobile;
+        }
+    }
+}
+
 @keyframes hello-world-animation {
     0% {
         stroke-dashoffset: 888.43408203125;
@@ -47,5 +55,14 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes home-image-animation-mobile {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.7;
     }
 }
