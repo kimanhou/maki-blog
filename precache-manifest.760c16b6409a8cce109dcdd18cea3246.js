@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "740c5ffbbbd0745b350e",
-    "url": "./static/css/main.48167eb5.chunk.css"
+    "revision": "3a4b98c35ff860f36b6c",
+    "url": "./static/css/main.d6b22389.chunk.css"
   },
   {
-    "revision": "740c5ffbbbd0745b350e",
-    "url": "./static/js/main.740c5ffb.chunk.js"
+    "revision": "3a4b98c35ff860f36b6c",
+    "url": "./static/js/main.3a4b98c3.chunk.js"
   },
   {
     "revision": "b33a1b5381fe9ce67404",
@@ -32,6 +32,10 @@ self.__precacheManifest = [
     "url": "./static/media/hero-video.a5332dbc.mp4"
   },
   {
+    "revision": "e917b5a9dcd9a24157425a9aee6da804",
+    "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
+  },
+  {
     "revision": "d254f533d9bb6fe4e84b07f21062381c",
     "url": "./static/media/AnticDidone-Regular.d254f533.woff"
   },
@@ -40,28 +44,28 @@ self.__precacheManifest = [
     "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
   {
-    "revision": "e917b5a9dcd9a24157425a9aee6da804",
-    "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
-  },
-  {
     "revision": "b09b73eedd02abbcff717b574512e61c",
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
-  },
-  {
-    "revision": "4974bcafa29be08f5e4593961c0dfb85",
-    "url": "./static/media/Hack-Regular.4974bcaf.woff"
   },
   {
     "revision": "55d813485cb08db0bd387414e85b6d30",
     "url": "./static/media/Hack-Italic.55d81348.woff"
   },
   {
-    "revision": "35551b8d1b88cf393999571f58b358ae",
-    "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
+    "revision": "4974bcafa29be08f5e4593961c0dfb85",
+    "url": "./static/media/Hack-Regular.4974bcaf.woff"
   },
   {
     "revision": "d9ab192896af1ab48c760f3368842b79",
     "url": "./static/media/Hack-Regular.d9ab1928.ttf"
+  },
+  {
+    "revision": "b21e6092b451f66197ba0f362446e643",
+    "url": "./static/media/Hack-Italic.b21e6092.ttf"
+  },
+  {
+    "revision": "35551b8d1b88cf393999571f58b358ae",
+    "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
   },
   {
     "revision": "95882b264569d98007a23a4b6572f1f4",
@@ -74,10 +78,6 @@ self.__precacheManifest = [
   {
     "revision": "67bf8301130ac16bb1b0fff12bd181b3",
     "url": "./static/media/Hack-Bold.67bf8301.ttf"
-  },
-  {
-    "revision": "b21e6092b451f66197ba0f362446e643",
-    "url": "./static/media/Hack-Italic.b21e6092.ttf"
   },
   {
     "revision": "cb98ad493e1cc9426a8346fa288e7bce",
@@ -160,19 +160,35 @@ self.__precacheManifest = [
     "url": "./static/media/7.ea125ef8.jpg"
   },
   {
-    "revision": "8d7b94e4ebdeccea1514e07aa4d55aee",
-    "url": "./static/media/home-background.8d7b94e4.png"
+    "revision": "0f537860beb6aa6d84d033cc83ebb49f",
+    "url": "./static/media/1.0f537860.jpeg"
   },
   {
-    "revision": "f8d3c9557d2b23c607a0fba84f89634c",
-    "url": "./static/media/mark.f8d3c955.png"
+    "revision": "0aeff4727a8c9f6284ed9a1529f65226",
+    "url": "./static/media/2.0aeff472.jpeg"
+  },
+  {
+    "revision": "68fc0a582febf4571fdfbbcd7f28dbce",
+    "url": "./static/media/3-french.68fc0a58.png"
+  },
+  {
+    "revision": "62cf32e20ee7cc1aece06fb6291736c6",
+    "url": "./static/media/3.62cf32e2.png"
+  },
+  {
+    "revision": "8d7b94e4ebdeccea1514e07aa4d55aee",
+    "url": "./static/media/home-background.8d7b94e4.png"
   },
   {
     "revision": "28da1a35ed24b1dbe7acae09e3cf932f",
     "url": "./static/media/kim-anh.28da1a35.png"
   },
   {
-    "revision": "0971b1bf2877c2a6d64ab9ce2f7b04e0",
+    "revision": "f8d3c9557d2b23c607a0fba84f89634c",
+    "url": "./static/media/mark.f8d3c955.png"
+  },
+  {
+    "revision": "c6a6634c37554b0cacdb9c08fcb9b1d7",
     "url": "./index.html"
   }
 ];
