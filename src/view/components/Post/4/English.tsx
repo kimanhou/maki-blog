@@ -1,6 +1,6 @@
 import React from 'react';
 import { IPostContentProps } from '../../../../model/Post';
-import PostTemplate from '../PostTemplate/PostTemplate';
+import PostTemplate, { getImageSrc } from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import './PostPage.scss';
 
@@ -10,9 +10,11 @@ const English : React.FC<IPostContentProps> = props => {
     <>
         <Cross/><span>UI stands for “<i>user interface</i>”. It is the way the user gets to the content.</span>
         <br></br>
-        <Cross/><span>A UI designer is the person who .</span>
+        <Cross/><span>UX stands for “<i>user experience</i>”. It is the feeling that is left to the user while using a website.</span>
         <br></br>
         <Cross/><span>User interface design is part of the greater user experience design universe. UI is the visual manifestation of UX thinking.</span>
+        <br></br>
+        <Cross/><span>UI/UX can shape how the user experience the content. Some use these practices to trick the user, but most try to make life easier.</span>
     </>;
 
     return (
@@ -28,7 +30,7 @@ const English : React.FC<IPostContentProps> = props => {
                 If you've never heard of this name or if you don't know what it means, this article will enlighten you on this sweet matter.
             </p>
             <p>
-                First, let's examine those two terms separately in order to understand the differences between them.
+                First, let's examine those two terms separately in order to understand the differences between them and why they are always linked.
             </p>
             <p>Good reading !</p>
 
@@ -99,18 +101,56 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. </span>
+            <Cross/><span className={`step-title`}>3. UI/UX in your life</span>
             <p>
                 Nowadays, we get all our information from screens, be it a desktop, a laptop, a tablet or a phone. 
                 We are constantly looking at screens and learning how to interact with the world through them. 
                 Thanks to this constant interaction with screens, we understand how to access information. 
-                Moreover, there are certain conventions that we are used to, like buttons or menus. 
+                Moreover, there are <b>certain conventions</b> that we are used to, like buttons or menus. 
                 We know we have to scroll down to get content on a website or swipe from side to side on a phone. 
                 We have become used to those conventions but there are levels of flexibility within those rules that can shape the experience the user has with the content through the interface.  
             </p>
+            <p>
+                Certain people and companies turn these conventions to their advantage. Indeed, when you browse content on an Internet page, you don't read every word, you skim read and make assumptions.
+                If a company wants to trick you, they can take advantage of this and make you do things that you didn't mean to, like buying or signing up for something.
+                A common example is when games use a serie of green/blue buttons to make the player go through a repetitive process. 
+                When you lose, a pop up will appear with a button identical to the dozen you just clicked asking to spend money (virtual or real) to continue playing.
+                I personally experience it every day with Candy Crush :
+            </p>
+            <div className={`flex-row`}>
+                <div>
+                    <img src={getImageSrc(postId, '1.jpeg')} className={`width-50`}/>
+                </div>
+                <div>
+                    <img src={getImageSrc(postId, '2.jpeg')} className={`width-50`}/>
+                </div>
+                
+            </div>
+            <p>
+                The most obvious button here is flagrantly placed in the middle of the screen with a reassuring color. 
+                There is even a message to warn you that something bad will happen if you do not click on it.
+            </p>
+            <p>
+                Another common trick is to get you automatically signed up for the newsletter when you create an account. 
+                The check box 'I want to receive the newsletter' is ticked by default. 
+                However, as people are now used to this, some company turned the process around by just adding a tiny single world that anyone who does not specifically pays attention to that detail will easily miss.
+                The sentence becomes 'I don't want to receive the newsletter' and the checkbox needs to be ticked if you don't want to sign up for it.
+                Here is a screenshot of what happens when you book a train ticket on Oui Sncf website :
+            </p>
+            <img src={getImageSrc(postId, '3.png')}/>
+            <p>
+                These tricsk are called “<i><b>dark patterns</b></i>” and there is <a href='https://www.darkpatterns.org/' target='_blank'>a dedicated website</a> to help you recognize them.
+            </p>
+            <p>
+                Hopefully, not all UI/UX designers are malicious. 
+                Their initial goal is to make your life easier, so everytime you buy or book something on Internet without feeling frustrated, annoyed or confused, it means a victory for them.
+                Just to name two examples, I personally like the interface of Monzo app and Doctolib website because of their simplicity and the reassuring feeling I get when using them.
+            </p>
+
+            <div className={`section-separator`}></div>
 
             <p>
-                It's important to understand how UI and UX are being different because they often appeal to different kinds of people, who do different kinds of jobs.
+                In conlcusion, it's important to understand how UI and UX are being different because they often appeal to different kinds of people, who do different kinds of jobs.
                 But of course, these two things overlap. 
                 We talk about a UI/UX designer as somebody who does both of these things. 
                 But in truth, a UI designer tends to focus more on UI with a little bit of UX and a UX designer tends to focus more on UX with a little bit of UI. 
