@@ -55,7 +55,7 @@ const Mark : React.FC<IMarkProps> = props => {
                                     Whether it's a new kind of app or a simple web game, I am always committed at 200%."
                                     french="alut ! Je suis un dev full-stack avec quelques année d'expérience sous le coude. 
                                     Ma passion à moi, c'est de construire et donner vie à mes idées. 
-                                    Je suis entrepreneur dans l'âme et j'ai toujours un projet en court de dévelopement. 
+                                    Je suis entrepreneur dans l'âme et j'ai toujours un projet en court de développement. 
                                     Que ce soit une appli d'un nouveau genre ou un simple jeu web qui me tient a coeur, je me donne toujours à 200%."/>
                             </p>
                         </div>
