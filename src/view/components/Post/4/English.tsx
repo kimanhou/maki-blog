@@ -116,6 +116,7 @@ const English : React.FC<IPostContentProps> = props => {
                 The also deal with the navigation, the structure and the story of the whole cycle app.
                 When they get the content, the UX designer has to figure out how to get the user engaged with that content.
             </p>
+            <img src={getImageSrc(postId, '1.jpg')}/>
 
             <div className={`section-separator`}></div>
 
