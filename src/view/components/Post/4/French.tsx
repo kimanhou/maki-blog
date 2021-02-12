@@ -113,7 +113,7 @@ const French : React.FC<IPostContentProps> = props => {
                 Son travail fait partie du domain du non visuel et est souvent régi par les retours des utilisateurs.
                 Il s'agit pour lui de rechercher qui sont les utilisateurs, de planifier et de tester.
                 Il reçoit des commentaires des utilisateurs et se concentre sur ce que l'interface leur fait ressentir.
-                Il s'occupe également de la navigation, de la structure de l'application.
+                Il s'occupe également de la navigation et de la structure de l'application.
                 Lorsqu'il est face à un contenu, le designer UX doit déterminer comment susciter l'intérêt de l'utilisateur pour ce contenu.
             </p>
 
@@ -121,7 +121,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. UI/UX dans votre vie</span>
+            <Cross/><span className={`step-title`}>3. UI/UX dans votre vie quotidienne</span>
             <p>
                 De nos jours, nous obtenons toutes nos informations à partir d'écrans, que ce soit un ordinateur de bureau, un ordinateur portable, une tablette ou un téléphone.
                 Nous les regardons constamment et apprenons en permanence à interagir avec le monde à travers eux.
@@ -132,7 +132,7 @@ const French : React.FC<IPostContentProps> = props => {
             </p>
             <p>
                 Certaines personnes et entreprises exploitent ces conventions à leur avantage. 
-                En effet, lorsque vous parcourez du contenu d'une page Internet, vous ne lisez pas les mots un par un, vous survolez.
+                En effet, lorsque vous parcourez le contenu d'une page Internet, vous ne lisez pas les mots un par un, vous survolez.
                 Si une entreprise veut vous berner, elle peut en profiter pour vous faire faire des choses que vous ne vouliez pas, comme acheter ou vous inscrire à quelque chose.
                 Un exemple courant est lorsque les jeux utilisent une série de boutons verts / bleus pour obliger le joueur à passer par un processus répétitif.
                 Lorsque vous perdez, une fenêtre apparaît avec un bouton identique à la douzaine de boutons sur lesquels vous venez de cliquer pour demander de dépenser de l'argent (virtuel ou réel) afin continuer à jouer.
@@ -154,7 +154,7 @@ const French : React.FC<IPostContentProps> = props => {
             <p>
                 Une autre astuce courante consiste à vous inscrire automatiquement à la newsletter lorsque vous créez un compte.
                 La case «Je souhaite recevoir la newsletter» est cochée par défaut.
-                Cependant, comme les gens sont maintenant habitués à cela, certaines entreprises ont inversé le processus en ajoutant simplement un tout petit mot que n'importe qui qui ne prête pas particulièrement attention à ce détail manquera facilement.
+                Cependant, comme les gens sont maintenant habitués à cela, certaines entreprises ont inversé le processus en ajoutant simplement un tout petit mot, que quiconque ne prêtant pas particulièrement attention à ce détail, manquera facilement.
                 La phrase devient alors «Je ne veux pas recevoir la newsletter» et la case doit être cochée si vous ne souhaitez pas vous inscrire.
                 Voici une capture d'écran de ce qui se passe lorsque vous réservez un billet de train sur le site Oui Sncf:
             </p>
