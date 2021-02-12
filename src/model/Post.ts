@@ -39,7 +39,8 @@ export default class Post {
 
     static getAllPosts = () => {
         return [ 
-            Post.FOUR, Post.THREE, Post.TWO, Post.ONE,
+            // Post.FOUR, 
+            Post.THREE, Post.TWO, Post.ONE,
          ];
     }
 
