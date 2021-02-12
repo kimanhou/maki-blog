@@ -37,7 +37,8 @@ const French : React.FC<IPostContentProps> = props => {
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`four`}
                     tldr={tldr}
-                    relatedPosts={[]}>
+                    relatedPosts={[]}
+                    photoCreditName='Sigmund' photoCreditUrl='https://unsplash.com/photos/6jaBQAURBgI' photoCreditWebsite='Unsplash'>
             <p>
                 Les écrans sont indéniablement omniprésents dans notre quotidien. La façon dont nous interagissons avec eux est régie par un groupe obscur de personnes, nommés les designers UI/UX.
                 Si vous n'avez jamais entendu cette dénommination ou si vous ne savez pas ce qu'elle veut dire, cet article vous éclairera sur ce doux sujet.
