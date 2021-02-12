@@ -3,6 +3,7 @@ import { IPostContentProps } from '../../../../model/Post';
 import ScreenDetector from '../../ScreenDetector/screenDetector';
 import PostTemplate, { getImageSrc } from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
+import PhotoWithCredits from '../PostTemplate/TemplateComponents/PhotoWithCredits/PhotoWithCredits';
 import './PostPage.scss';
 
 const English : React.FC<IPostContentProps> = props => {
@@ -11,7 +12,7 @@ const English : React.FC<IPostContentProps> = props => {
     <>
         <Cross/><span>UI stands for “<i>user interface</i>”. It is the way the user gets to the content.</span>
         <br></br>
-        <Cross/><span>UX stands for “<i>user experience</i>”. It is the feeling that is left to the user while using a website.</span>
+        <Cross/><span>UX stands for “<i>user experience</i>”. It is the feeling that is left to the user while browsing a website.</span>
         <br></br>
         <Cross/><span>User interface design is part of the greater user experience design universe. UI is the visual manifestation of UX thinking.</span>
         <br></br>
@@ -100,7 +101,6 @@ const English : React.FC<IPostContentProps> = props => {
             </p>
             <p>
                 The experience is what is left on us, an impression, feeling, memory. An experience is often accompanied by adjectives, like 'amazing' or 'horrible' or 'frustrating'.
-                This definition also implies that a user experience has real-world consequences and effects on actual people. It can delight them, frustrate or annoy them.
                 If the experience is positive, then the website's goals are more likely to be fulfilled. 
                 The users will be happy and more inclined to buy something or sign up or spend time on your website. 
                 They are also more likely to return. 
@@ -113,10 +113,11 @@ const English : React.FC<IPostContentProps> = props => {
                 Their work is rooted in non-visual design practice and is often driven by the user's experience and by feedbacks from the user.
                 It involves research about who the users are, planning and testing.
                 They get feedbacks from users and concentrate on how the interface feels to them.
-                The also deal with the navigation, the structure and the story of the whole cycle app.
+                The also deal with the navigation and the structure of the whole app.
                 When they get the content, the UX designer has to figure out how to get the user engaged with that content.
             </p>
-            <img src={getImageSrc(postId, '1.jpg')}/>
+
+            <PhotoWithCredits imageUrl={getImageSrc(postId, '1.jpg')} text='Photo by UX Indonesia on Unsplash' url='https://unsplash.com/photos/qC2n6RQU4Vw' />
 
             <div className={`section-separator`}></div>
 
@@ -127,7 +128,7 @@ const English : React.FC<IPostContentProps> = props => {
                 Thanks to this constant interaction with screens, we understand how to access information. 
                 Moreover, there are <b>certain conventions</b> that we are used to, like buttons or menus. 
                 We know we have to scroll down to get content on a website or swipe from side to side on a phone. 
-                We have become used to those conventions but there are levels of flexibility within those rules that can shape the experience the user has with the content through the interface.  
+                We have become used to those conventions but there are levels of flexibility within those rules that can shape the experience the user has with the content through the interface.
             </p>
             <p>
                 Certain people and companies turn these conventions to their advantage. Indeed, when you browse content on an Internet page, you don't read every word, you skim read and make assumptions.
@@ -143,16 +144,16 @@ const English : React.FC<IPostContentProps> = props => {
                 <div>
                     <img src={getImageSrc(postId, '3.jpeg')} className={`width-50`}/>
                 </div>
-                
             </div>
             <p>
                 The most obvious button here is flagrantly placed in the middle of the screen with a reassuring color. 
-                There is even a message to warn you that something bad will happen if you do not click on it.
+                There is even a message to warn you that something bad will happen if you do not click on it. 
+                In the end, you need to click twice on the cross to close this window and not spend anything.
             </p>
             <p>
                 Another common trick is to get you automatically signed up for the newsletter when you create an account. 
                 The check box 'I want to receive the newsletter' is ticked by default. 
-                However, as people are now used to this, some company turned the process around by just adding a tiny single world that anyone who does not specifically pays attention to that detail will easily miss.
+                However, as people are now used to this, some company turned the process around by just adding a tiny single word that anyone who does not specifically pays attention to that detail will easily miss.
                 The sentence becomes 'I don't want to receive the newsletter' and the checkbox needs to be ticked if you don't want to sign up for it.
                 Here is a screenshot of what happens when you book a train ticket on Oui Sncf website :
             </p>
