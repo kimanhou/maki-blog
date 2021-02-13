@@ -59,6 +59,26 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .post {
+        &.four {
+            .illustration-ui-bridge {
+                transform: scale(0.3);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+    .post {
+        &.four {
+            .illustration-ui-bridge {
+                transform: scale(0.5);
+            }
+        }
+    }
+}
+
 @keyframes illustration-ui-bridge-interface-animation-i {
     0% {
         transform: unset;
