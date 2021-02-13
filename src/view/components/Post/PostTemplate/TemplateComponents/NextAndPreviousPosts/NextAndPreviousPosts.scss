@@ -13,11 +13,7 @@
     .next-and-previous-posts {
         flex-direction: column;
         >.next-post, >.previous-post {
-            >.fade-in {
-                >.post-preview {
-                    max-width: unset;
-                }
-            }
+            max-width: unset;
         }
     }
 }

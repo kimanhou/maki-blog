@@ -1,0 +1,278 @@
+.post {
+    &.four {
+        >.post-hero-image {
+            background: url('images/hero-image.jpg') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .illustration-ui-bridge {
+            text-transform: uppercase;
+            font-size: 3rem;
+            align-items: center;
+            >.illustration-ui-bridge-user {
+                margin-right: var(--size-margin-30);
+            }
+            >.illustration-ui-bridge-interface {
+                margin-right: var(--size-margin-30);
+                font-size: 2rem;
+            }
+            &.active {
+                >.illustration-ui-bridge-user {
+                    animation: illustration-ui-bridge-user-animation 20s linear 1s infinite;
+                }
+                >.illustration-ui-bridge-interface {
+                    :nth-child(1) {
+                        animation: illustration-ui-bridge-interface-animation-i 20s linear 1s infinite;
+                    }
+                    :nth-child(2) {
+                        animation: illustration-ui-bridge-interface-animation-n 20s linear 1s infinite;
+                    }
+                    :nth-child(3) {
+                        animation: illustration-ui-bridge-interface-animation-t 20s linear 1s infinite;
+                    }
+                    :nth-child(4) {
+                        animation: illustration-ui-bridge-interface-animation-e 20s linear 1s infinite;
+                    }
+                    :nth-child(5) {
+                        animation: illustration-ui-bridge-interface-animation-r 20s linear 1s infinite;
+                    }
+                    :nth-child(6) {
+                        animation: illustration-ui-bridge-interface-animation-f 20s linear 1s infinite;
+                    }
+                    :nth-child(7) {
+                        animation: illustration-ui-bridge-interface-animation-a 20s linear 1s infinite;
+                    }
+                    :nth-child(8) {
+                        animation: illustration-ui-bridge-interface-animation-c 20s linear 1s infinite;
+                    }
+                    :nth-child(9) {
+                        animation: illustration-ui-bridge-interface-animation-e2 20s linear 1s infinite;
+                    }
+                }
+                >.illustration-ui-bridge-content {
+                    animation: illustration-ui-bridge-content-animation 20s linear 1s infinite;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .post {
+        &.four {
+            .illustration-ui-bridge {
+                transform: scale(0.34);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+    .post {
+        &.four {
+            .illustration-ui-bridge {
+                transform: scale(0.5);
+            }
+        }
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-i {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(-30deg) translate(-206px, 53px);
+    }
+    50% {
+        transform: rotate(-30deg) translate(-206px, 53px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-n {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(-22.5deg) translate(-144px, 31px);
+    }
+    50% {
+        transform: rotate(-22.5deg) translate(-144px, 31px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-t {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(-15deg) translate(-87px, 2px);
+    }
+    50% {
+        transform: rotate(-15deg) translate(-87px, 2px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-e {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(-7.5deg) translate(-39px, -37px);
+    }
+    50% {
+        transform: rotate(-7.5deg) translate(-39px, -37px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-r {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(0deg) translate(0px, -81px);
+    }
+    50% {
+        transform: rotate(0deg) translate(0px, -81px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-f {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(7.5deg) translate(24px, -132px);
+    }
+    50% {
+        transform: rotate(7.5deg) translate(24px, -132px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-a {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(15deg) translate(34px, -182px);
+    }
+    50% {
+        transform: rotate(15deg) translate(34px, -182px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-c {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(22.5deg) translate(28px, -231px);
+    }
+    50% {
+        transform: rotate(22.5deg) translate(28px, -231px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-interface-animation-e2 {
+    0% {
+        transform: unset;
+    }
+    5% {
+        transform: rotate(30deg) translate(10px, -277px);
+    }
+    50% {
+        transform: rotate(30deg) translate(10px, -277px);
+    }
+    55% {
+        transform: unset;
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes illustration-ui-bridge-content-animation {
+    0% {
+        margin-left: 0;
+    }
+    5% {
+        margin-left: 100px;
+    }
+    50% {
+        margin-left: 100px;
+    }
+    55% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes illustration-ui-bridge-user-animation {
+    0% {
+        margin-right: var(--size-margin-30);
+    }
+    5% {
+        margin-right: 130px;
+    }
+    50% {
+        margin-right: 130px;
+    }
+    55% {
+        margin-right: var(--size-margin-30);
+    }
+    100% {
+        margin-right: var(--size-margin-30);
+    }
+}

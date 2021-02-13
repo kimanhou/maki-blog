@@ -1,0 +1,11 @@
+.photo-with-credits {
+    position: relative;
+    >.photo-with-credits-text {
+        position: absolute;
+        bottom: var(--size-margin-30);
+        right: 0;
+        font-size: var(--size-font-size-small);
+        transform: rotate(-90deg) translateX(100%) translateY(-100%);
+        transform-origin: top right;
+    }
+}

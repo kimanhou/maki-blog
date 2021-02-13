@@ -104,6 +104,15 @@ const English : React.FC<IPostContentProps> = props => {
                 &#125;<br></br>
             </div>
             <span className={`code-title`}>The result</span><br></br>
+            I added borders to make things clearer.<br></br>
+            <div className={`my-div-2 font-size-big`}>
+                <div className={`text`} style={{border: 'solid 1px var(--color-off-black)'}}>Hello world</div>
+                <div className={`text pink`} style={{border: 'solid 1px pink'}}>Hello world</div>
+            </div>
+
+            <div className={`section-separator`}></div>
+            
+            Without borders<br></br>
             <div className={`my-div-2 font-size-big`}>
                 <div className={`text`}>Hello world</div>
                 <div className={`text pink`}>Hello world</div>
