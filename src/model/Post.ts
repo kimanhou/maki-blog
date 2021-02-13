@@ -7,6 +7,8 @@ import English3 from "../view/components/Post/3/English";
 import French3 from "../view/components/Post/3/French";
 import English4 from "../view/components/Post/4/English";
 import French4 from "../view/components/Post/4/French";
+import English5 from "../view/components/Post/5/English";
+import French5 from "../view/components/Post/5/French";
 import Category from "./Category";
 import LanguageVersion from "./LanguageVersion";
 
@@ -39,8 +41,8 @@ export default class Post {
 
     static getAllPosts = () => {
         return [ 
-            Post.FOUR, 
-            Post.THREE, Post.TWO, Post.ONE,
+            Post.FIVE, 
+            Post.FOUR, Post.THREE, Post.TWO, Post.ONE,
          ];
     }
 
@@ -113,10 +115,11 @@ export default class Post {
         return allPosts[myIndex + 1];
     }
 
-    static ONE = new Post(1, new Date('2021-01-22'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA ]);
+    static ONE = new Post(1, new Date('2021-01-22'), new LanguageVersion(English1, 'How to add an Instagram post to your website'), new LanguageVersion(French1, 'Ajouter un post Instagram sur son site web'), [ Category.SOCIALMEDIA, Category.CODE ]);
     static TWO = new Post(2, new Date('2021-01-29'), new LanguageVersion(English2, '6 tips and tricks about color schemes'), new LanguageVersion(French2, '6 trucs et astuces sur les palettes de couleurs'), [ Category.UI ]);
-    static THREE = new Post(3, new Date('2021-02-05'), new LanguageVersion(English3, 'DIY: 3 ways to animate the color of a text on hover'), new LanguageVersion(French3, "DIY : 3 manières d'animer la couleur d'un texte quand la souris passe dessus"), [ Category.DIY ], true);
+    static THREE = new Post(3, new Date('2021-02-05'), new LanguageVersion(English3, 'DIY: 3 ways to animate the color of a text on hover'), new LanguageVersion(French3, "DIY : 3 manières d'animer la couleur d'un texte quand la souris passe dessus"), [ Category.DIY, Category.CODE ], true);
     static FOUR = new Post(4, new Date('2021-02-12'), new LanguageVersion(English4, 'UI/UX, what is it ?'), new LanguageVersion(French4, "UI/UX, qu'est-ce que c'est ?"), [ Category.UI ], true);
+    static FIVE = new Post(5, new Date('2021-02-19'), new LanguageVersion(English5, 'Flexbox cheatsheet'), new LanguageVersion(French5, "Flexbox cheatsheet"), [ Category.CODE ], true);
 }
 
 const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]

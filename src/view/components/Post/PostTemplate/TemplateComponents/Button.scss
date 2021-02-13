@@ -51,6 +51,9 @@
             background-color: var(--color-yellow);
             top: var(--size-post-button-margin);
             left: var(--size-post-button-margin);
+            &.unselected {
+                background-color: var(--color-yellow-transparent);
+            }
         }
     }
 }

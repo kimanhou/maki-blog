@@ -12,7 +12,7 @@ export default class Category {
     }
 
     static getAllCategories = () => {
-        return [ Category.ALL, Category.DIY, Category.SOCIALMEDIA, Category.UI ];
+        return [ Category.ALL, Category.DIY, Category.SOCIALMEDIA, Category.UI, Category.CODE ];
     }
 
     getDescription = (localisation : Local) => {
@@ -67,5 +67,6 @@ export default class Category {
     static SOCIALMEDIA = new Category('SOCIALMEDIA', 'Social media', 'Réseaux sociaux');
     static DIY = new Category('DIY', 'DIY', 'DIY');
     static UI = new Category('UI', 'User interface', 'Interface utilisateur');
+    static CODE = new Category('CODE', 'Coding', 'Code');
     static ALL = new Category('ALL', 'All', 'Tous');
 }

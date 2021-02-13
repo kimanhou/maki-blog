@@ -1,0 +1,79 @@
+.post {
+    &.five {
+        >.post-hero-image {
+            background: url('images/hero-image.jpg') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .post-text {
+            >p {
+                .flex-column {
+                    &.intro-list {
+                        align-items: start;
+                    }
+                }
+            }
+            .button {
+                &.demo-button {
+                    width: var(--size-post-5-demo-button-width);
+                    >.button-container {
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .flex-row {
+                &.demo-button-line-1 {
+                    :nth-child(1) {
+                        margin-right: var(--size-margin-50);
+                    }
+                }
+                &.demo-button-line-2, &.demo-button-line-3, &.demo-button-line-4 {
+                    :nth-child(1), :nth-child(2) {
+                        margin-right: var(--size-margin-20);
+                    }
+                }
+            }
+        }
+        .demo {
+            border: solid 1px var(--color-off-black);
+            border-radius: 10px;
+            height: 500px;
+            width: 700px;
+            display: flex;
+            margin: 0 auto;
+            &.row {
+                flex-direction: row;
+            }
+            &.column {
+                flex-direction: column;
+            }
+            >.demo-child {
+                border: solid 1px var(--color-dark-green);
+                border-radius: 10px;
+                font-size: 3rem;
+                &.one {
+                    width: 100px;
+                    height: 100px;
+                    background-color: var(--color-light-green);
+                    color: var(--color-dark-green);
+                }
+                &.two {
+                    width: 100px;
+                    height: 200px;
+                    background-color: var(--color-green);
+                    color: var(--color-white);
+                }
+                &.three {
+                    width: 200px;
+                    height: 100px;
+                    background-color: var(--color-dark-green);
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 600px) {}
