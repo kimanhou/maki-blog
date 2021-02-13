@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3eb0a2fc589c58a3b1d7",
-    "url": "./static/css/main.6a9d1123.chunk.css"
+    "revision": "89277e98f38a1d4bf08d",
+    "url": "./static/css/main.66fc5d71.chunk.css"
   },
   {
-    "revision": "3eb0a2fc589c58a3b1d7",
-    "url": "./static/js/main.3eb0a2fc.chunk.js"
+    "revision": "89277e98f38a1d4bf08d",
+    "url": "./static/js/main.89277e98.chunk.js"
   },
   {
     "revision": "fd96cfa39ee495865328",
@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "url": "./static/media/AnticDidone-Regular.d254f533.woff"
   },
   {
-    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
-    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
-  },
-  {
     "revision": "e917b5a9dcd9a24157425a9aee6da804",
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
+  },
+  {
+    "revision": "90f7a5ab173ec3da7c1364dd0ef2f00d",
+    "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
   {
     "revision": "b09b73eedd02abbcff717b574512e61c",
@@ -68,12 +68,12 @@ self.__precacheManifest = [
     "url": "./static/media/Hack-Italic.55d81348.woff"
   },
   {
-    "revision": "b21e6092b451f66197ba0f362446e643",
-    "url": "./static/media/Hack-Italic.b21e6092.ttf"
-  },
-  {
     "revision": "35551b8d1b88cf393999571f58b358ae",
     "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
+  },
+  {
+    "revision": "b21e6092b451f66197ba0f362446e643",
+    "url": "./static/media/Hack-Italic.b21e6092.ttf"
   },
   {
     "revision": "95882b264569d98007a23a4b6572f1f4",
@@ -200,7 +200,7 @@ self.__precacheManifest = [
     "url": "./static/media/mark.f8d3c955.png"
   },
   {
-    "revision": "88f8af3871c0ea03cc9b71af4c34d2b3",
+    "revision": "fddc782b08703a33eff310ef0b8f942c",
     "url": "./index.html"
   }
 ];
