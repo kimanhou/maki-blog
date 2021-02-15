@@ -17,14 +17,11 @@
                 }
             }
             .flex-row {
-                &.demo-button-line-1 {
-                    :nth-child(1) {
-                        margin-right: var(--size-margin-50);
-                    }
-                }
-                &.demo-button-line-2, &.demo-button-line-3, &.demo-button-line-4 {
-                    :nth-child(1), :nth-child(2) {
-                        margin-right: var(--size-margin-20);
+                &.demo-button-line {
+                    flex-wrap: wrap;
+                    padding: 0 calc(var(--size-margin-10) * (-1));
+                    >.fade-in {
+                        margin: var(--size-margin-10);
                     }
                 }
             }
@@ -54,6 +51,7 @@
                     }
                     >.example-1-button-text {
                         margin-right: var(--size-margin-10);
+                        white-space: nowrap;
                     }
                     >.example-1-button-column-number {
                         margin: 0 var(--size-margin-10);
@@ -76,7 +74,7 @@
             border: solid 1px var(--color-off-black);
             border-radius: 10px;
             margin: 0 auto;
-            width: calc(100% - 2px);
+            width: 80%;
             height: 400px;
             padding: 0 calc(var(--size-margin-10) * (-1));
             >.example-1-column {
@@ -87,13 +85,37 @@
                 font-size: 3rem;
             }
         }
+
+        .example-2 {
+            display: flex;
+            flex-direction: row;
+            border: solid 1px var(--color-off-black);
+            border-radius: 10px;
+            margin: var(--size-margin-30) auto 0;
+            width: 80%;
+            padding: 0 calc(var(--size-margin-10) * (-1));
+            flex-wrap: wrap;
+            // justify-content: center;
+            >.example-2-column {
+                // flex: 150px;
+                width: 150px;
+                margin: 0 var(--size-margin-10) var(--size-margin-10);
+                border: solid 1px var(--color-dark-green);
+                border-radius: 10px;
+                padding: var(--size-margin-10);
+                >.number {
+                    font-size: 3rem;
+                }
+            }
+        }
+
         .demo {
             border: solid 1px var(--color-off-black);
             border-radius: 10px;
-            height: 500px;
-            width: 700px;
+            height: 40vw;
+            width: 80%;
             display: flex;
-            margin: 0 auto;
+            margin: var(--size-margin-30) auto 0;
             &.row {
                 flex-direction: row;
             }
@@ -106,20 +128,20 @@
                 font-size: 3rem;
                 cursor: pointer;
                 &.one {
-                    width: 100px;
-                    height: 100px;
+                    width: 20%;
+                    height: 15%;
                     background-color: var(--color-light-green);
                     color: var(--color-dark-green);
                 }
                 &.two {
-                    width: 100px;
-                    height: 200px;
+                    width: 20%;
+                    height: 30%;
                     background-color: var(--color-green);
                     color: var(--color-white);
                 }
                 &.three {
-                    width: 200px;
-                    height: 100px;
+                    width: 30%;
+                    height: 15%;
                     background-color: var(--color-dark-green);
                     color: var(--color-white);
                 }
@@ -142,27 +164,45 @@
         &.five {
             .example-1-consignes {
                 >.example-1-buttons-circle {
+                    >.example-1-buttons {
+                        >.example-1-button-text {
+                            white-space: unset;
+                        }
+                    }
                     >.example-1-message {
                         top: calc(var(--size-margin-30) * (-1));
                         right: 0;
                     }
                 }
             }
+            .example-1 {
+                height: 200px;
+                width: calc(100% - 2px);
+                >.example-1-column {
+                    margin: 0 var(--size-margin-5);
+                }
+            }
+            .example-2 {
+                width: calc(100% - 2px);
+                >.example-2-column {
+                    flex: 80px;
+                }
+            }
             .fade-in {
                 .post-text {
                     .flex-row {
-                        flex-direction: column;
-                        &.demo-button-line-1 {
-                            :nth-child(1) {
-                                margin-right: 0;
-                            }
-                        }
-                        &.demo-button-line-2, &.demo-button-line-3, &.demo-button-line-4 {
-                            :nth-child(1), :nth-child(2) {
-                                margin-right: 0;
-                            }
+                        &.demo-button-line {
+                            flex-direction: column;
+                            margin-bottom: var(--size-margin-30);
                         }
                     }
+                }
+            }
+            .demo {
+                width: calc(100% - 2px);
+                height: 100vw;
+                >.demo-child {
+                    font-size: 2rem;
                 }
             }
         }
