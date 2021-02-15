@@ -13,6 +13,7 @@ import ProgressionBar from './TemplateComponents/ProgressionBar/ProgressionBar';
 import RelatedPosts from './TemplateComponents/RelatedPosts/RelatedPosts';
 import Tldr from './TemplateComponents/Tldr';
 import './CodePrettyfier.scss';
+import SkipToFun from './TemplateComponents/SkipToFun';
 
 interface IPostTemplateProps extends IPostContentProps {
     postId : number;
@@ -22,6 +23,7 @@ interface IPostTemplateProps extends IPostContentProps {
     photoCreditName ?: string;
     photoCreditUrl ?: string;
     photoCreditWebsite ?: string;
+    skipToFun ?: boolean;
 }
 
 export const getImageSrc = (postId : number, pictureName : string) => {
@@ -39,16 +41,18 @@ const PostTemplate : React.FC<IPostTemplateProps> = props => {
                 <PostTitleBottomLayer title={props.title} titleBottomLayerRef={props.titleBottomLayerRef} />
                 <Header/>
                 <ArrowBack/>
-                <GoToTldr />
+                {!props.skipToFun && <GoToTldr />}
+                {props.skipToFun && <SkipToFun />}
                 <ProgressionBar />
                 <FadeIn noDelay>
                     <div className={`post-text`}>
                         {props.children}
                     </div>
                 </FadeIn>
+                {!props.skipToFun && 
                 <Tldr>
                     {props.tldr}    
-                </Tldr>
+                </Tldr>}
                 <RelatedPosts relatedPosts={props.relatedPosts} />
                 <NextAndPreviousPosts nextPost={nextPost} previousPost={previousPost}/>
                 <BackToTop />

@@ -8,13 +8,6 @@
             background-size: cover;
         }
         .post-text {
-            >p {
-                .flex-column {
-                    &.intro-list {
-                        align-items: start;
-                    }
-                }
-            }
             .button {
                 &.demo-button {
                     width: var(--size-post-5-demo-button-width);
@@ -36,6 +29,64 @@
                 }
             }
         }
+
+        .example-1-consignes {
+            position: relative;
+            margin: var(--size-margin-30) 0 0;
+            text-align: center;
+            >.example-1-buttons-circle {
+                position: relative;
+                display: inline-block;
+                >img {
+                    height: 8rem;
+                }
+                >.example-1-buttons {
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    width: 100%;
+                    >.fade-in {
+                        >.button {
+                            width: 50px;
+                        }
+                    }
+                    >.example-1-button-text {
+                        margin-right: var(--size-margin-10);
+                    }
+                    >.example-1-button-column-number {
+                        margin: 0 var(--size-margin-10);
+                    }
+                }
+                >.example-1-message {
+                    position: absolute;
+                    font-family: Dawning;
+                    font-size: 1.5rem;
+                    transform: rotate(20deg);
+                    top: calc(var(--size-margin-20) * (-1));
+                    right: calc(var(--size-margin-50) * (-1));
+                }
+            }
+        }
+        
+        .example-1 {
+            display: flex;
+            flex-direction: row;
+            border: solid 1px var(--color-off-black);
+            border-radius: 10px;
+            margin: 0 auto;
+            width: calc(100% - 2px);
+            height: 400px;
+            padding: 0 calc(var(--size-margin-10) * (-1));
+            >.example-1-column {
+                flex: 1;
+                margin: 0 var(--size-margin-10);
+                border: solid 1px var(--color-dark-green);
+                border-radius: 10px;
+                font-size: 3rem;
+            }
+        }
         .demo {
             border: solid 1px var(--color-off-black);
             border-radius: 10px;
@@ -53,6 +104,7 @@
                 border: solid 1px var(--color-dark-green);
                 border-radius: 10px;
                 font-size: 3rem;
+                cursor: pointer;
                 &.one {
                     width: 100px;
                     height: 100px;
@@ -71,9 +123,48 @@
                     background-color: var(--color-dark-green);
                     color: var(--color-white);
                 }
+                >.demo-child-flex1 {
+                    opacity: 0;
+                    font-family: 'Hack';
+                    font-size: 1rem;
+                    transition: opacity .4s;
+                    &.active {
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 600px) {}
+@media screen and (max-width: 600px) {
+    .post {
+        &.five {
+            .example-1-consignes {
+                >.example-1-buttons-circle {
+                    >.example-1-message {
+                        top: calc(var(--size-margin-30) * (-1));
+                        right: 0;
+                    }
+                }
+            }
+            .fade-in {
+                .post-text {
+                    .flex-row {
+                        flex-direction: column;
+                        &.demo-button-line-1 {
+                            :nth-child(1) {
+                                margin-right: 0;
+                            }
+                        }
+                        &.demo-button-line-2, &.demo-button-line-3, &.demo-button-line-4 {
+                            :nth-child(1), :nth-child(2) {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

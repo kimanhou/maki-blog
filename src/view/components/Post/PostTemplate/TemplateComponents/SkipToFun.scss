@@ -1,0 +1,7 @@
+.fade-in {
+    >.button {
+        &.skip-to-fun {
+            width: var(--size-post-5-demo-button-width);
+        }
+    }
+}
