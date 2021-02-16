@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IPostContentProps } from '../../../../model/Post';
 import { myScrollToWithOffset } from '../../../../Util';
 import { isMobile } from '../../../hooks/UseMediaQuery';
@@ -12,16 +12,7 @@ import './PostPage.scss';
 const French : React.FC<IPostContentProps> = props => {
     const postId = 5;
     const mobile = isMobile();
-    const tldr = 
-    <>
-        <Cross/><span></span>
-        <br></br>
-        <Cross/><span></span>
-        <br></br>
-        <Cross/><span></span>
-        <br></br>
-        <Cross/><span></span>
-    </>;
+    const tldr = <></>;
 
     const [flexDirection, onClickFlexDirection] = useDemoFlexDirection();
     const [alignItems, onClickDemoAlignItemsStart, onClickDemoAlignItemsCenter, onClickDemoAlignItemsEnd] = useDemoAlignItems();
@@ -55,6 +46,15 @@ const French : React.FC<IPostContentProps> = props => {
     }, [mobile]);
 
     const example2flex = mobile ? 80 : 150;
+    const [example2FlexWidthSwitch, setExample2FlexWidthSwitch] = useState('flex');
+    const example2OnClickSwitch = () => {
+        if (example2FlexWidthSwitch == 'flex') {
+            setExample2FlexWidthSwitch('width');
+        }
+        else {
+            setExample2FlexWidthSwitch('flex');
+        }
+    }
 
 
     const goToDemo = () => {
@@ -132,10 +132,10 @@ const French : React.FC<IPostContentProps> = props => {
 
             <p>
                 Si on veut organiser ce <span className={`code-element`}>div</span> parent en lignes, c'est-à-dire le diviser en plusieurs lignes les unes au-dessus des autres, il faut lui attribuer une direction en colonne.
-                Les propriétés <i>align-items</i> et <i>justify-content</i> sont alors inversées car l'axe principal et l'axe secondaire est inversé : <i>align-items</i> contrôle alors l'alignement horizontal et <i>justify-content</i> l'alignement vertical.
+                Les propriétés <i>align-items</i> et <i>justify-content</i> sont alors inversées (car l'axe principal et l'axe secondaire est inversé) : <i>align-items</i> contrôle alors l'alignement horizontal et <i>justify-content</i> l'alignement vertical.
             </p>
             <p>
-                Pour plus de clarté, vous pouvez jouer avec <span onClick={goToDemo} className={`cursor-pointer`}>le module de démonstration</span>.
+                Pour plus de clarté, vous pouvez jouer avec <span onClick={goToDemo} className={`cursor-pointer`}>le module de démonstration</span> ci-dessous.
             </p>
             <div className={`code-sample`}>
                 <span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;<br></br>
@@ -146,7 +146,61 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>2. Les exemples courants</span><br></br>
+            <Cross/><span className={`step-title`} id={`fun`}>2. La démonstration</span>
+            <p>
+                Cliquer sur les boutons pour modifier les propiétés du <span className={`code-element`}>div</span> parent et cliquer sur les enfants pour contrôler leur taille grâce à la propritété <span className={`code-element`}>flex: 1;</span>.
+            </p>
+
+            <div className={`flex-row demo-button-line`}>
+                <Button onClick={onClickFlexDirection} classname={`demo-button`} isUnselected={flexDirection == 'row'}>
+                    flex-direction: column;
+                </Button>
+                <Button onClick={onClickFlexDirection} classname={`demo-button`} isUnselected={flexDirection == 'column'}>
+                    flex-direction: row;
+                </Button>
+            </div>
+            <div className={`flex-row demo-button-line`}>
+                <Button onClick={onClickDemoAlignItemsStart} classname={`demo-button`} isUnselected={alignItems != 'flex-start'}>
+                    align-items: flex-start;
+                </Button>
+                <Button onClick={onClickDemoAlignItemsCenter} classname={`demo-button`} isUnselected={alignItems != 'center'}>
+                    align-items: center;
+                </Button>
+                <Button onClick={onClickDemoAlignItemsEnd} classname={`demo-button`} isUnselected={alignItems != 'flex-end'}>
+                    align-items: flex-end;
+                </Button>
+            </div>
+            <div className={`flex-row demo-button-line`}>
+                <Button onClick={onClickDemoJustifyContentStart} classname={`demo-button`} isUnselected={justifyContent != 'flex-start'}>
+                    justify-content: flex-start;
+                </Button>
+                <Button onClick={onClickDemoJustifyContentCenter} classname={`demo-button`} isUnselected={justifyContent != 'center'}>
+                    justify-content: center;
+                </Button>
+                <Button onClick={onClickDemoJustifyContentEnd} classname={`demo-button`} isUnselected={justifyContent != 'flex-end'}>
+                    justify-content: flex-end;
+                </Button>
+            </div>
+            
+
+            <div className={`demo ${flexDirection}`} style={{ alignItems: alignItems, justifyContent: justifyContent }}>
+                <div className={`demo-child one`} style={{ flex: oneFlex1 }} onClick={onClickOneFlex1}>
+                    1
+                    <div className={`demo-child-flex1 ${demoChildFlex1ActiveClassname1}`}>flex: 1;</div>
+                </div>
+                <div className={`demo-child two`} style={{ flex: twoFlex1 }} onClick={onClickTwoFlex1}>
+                    2
+                    <div className={`demo-child-flex1 ${demoChildFlex1ActiveClassname2}`}>flex: 1;</div>
+                </div>
+                <div className={`demo-child three`} style={{ flex: threeFlex1 }} onClick={onClickThreeFlex1}>
+                    3
+                    <div className={`demo-child-flex1 ${demoChildFlex1ActiveClassname3}`}>flex: 1;</div>
+                </div>
+            </div>
+
+            <div className={`section-separator`}></div>
+
+            <Cross/><span className={`step-title`}>3. Les exemples courants</span><br></br>
             <br></br>
             <Cross/><span>
                 Diviser un <span className={`code-element`}>div</span> en colonnes de largeur égale et séparées entre elles par une marge, le tout centrer horizontalement.
@@ -210,8 +264,24 @@ const French : React.FC<IPostContentProps> = props => {
             <div className={`section-separator`}></div>
 
             <Cross/><span>
-                Ajouter des enfants dans un <span className={`code-element`}>div</span> parent sans déborder avec la propriété <i>flex-wrap</i>. Si les enfants ne rentrent pas sur une ligne, ils vont automatiquement se placer dans la ligne d'en dessous.
+                Réaliser une grille régulière avec la propriété <i>flex-wrap</i>.
             </span>
+            <p>
+                Cette dernière permet d'ajouter des enfants de taille variable sans que ceux-ci ne débordent du <span className={`code-element`}>div</span> parent.
+                Si les enfants ne rentrent pas sur une ligne, ils vont automatiquement se placer dans la ligne d'en dessous.
+            </p>
+            <p>
+                Ensuite, on peut contrôler la largeur de chaque enfant grâce à la propriété <i>flex</i> : 
+                si elle est égale à 1, le bloc enfant prendra toute la place disponible; 
+                si elle est égale à une valeur absolue en pixels, le bloc enfant aura une largeur supérieure ou égale à cette valeur.
+                Noter que les éléments de la dernière ligne sont tous plus larges pour occuper tout l'espace.
+            </p>
+            <p>
+                On peut également utiliser la propriété <i>width</i> : tous les enfants auront la même largeur prédéfinie.
+            </p>
+            <p>
+                Vous pouvez jouer avec le module suivant pour observer le rendu de ces deux possibilités.
+            </p>
             <div className={`example-1-consignes`}>
                 <div className={`example-1-buttons-circle`}>
                     <div className={`flex-row example-1-buttons`}>
@@ -228,19 +298,19 @@ const French : React.FC<IPostContentProps> = props => {
                     </div>
                 </div>
             </div>
-            <div className={`flex-row demo-button-line`}>
-                <Button onClick={onClickFlexDirection} classname={`demo-button`} isUnselected={flexDirection == 'row'}>
+            <div className={`flex-row demo-button-line example-2-buttons`}>
+                <Button onClick={example2OnClickSwitch} classname={`demo-button`} isUnselected={example2FlexWidthSwitch != 'flex'}>
                     flex: {example2flex}px;
                 </Button>
-                <Button onClick={onClickFlexDirection} classname={`demo-button`} isUnselected={flexDirection == 'column'}>
+                <Button onClick={example2OnClickSwitch} classname={`demo-button`} isUnselected={example2FlexWidthSwitch != 'width'}>
                     width: {example2flex}px;
                 </Button>
             </div>
-            <div className={`example-2`}>
+            <div className={`example-2 ${example2FlexWidthSwitch}`}>
                 {example2RenderColumns(example2ColumnNumber, sentences)}
             </div>
             <p>
-                Les enfants prennent toujours toute la place disponible au sein d'une ligne.
+                Voici le code CSS, il se met à jour suivant l'option choisie au-dessus.
             </p>
             <span className={`code-title`}>CSS</span>
             <div className={`code-sample`}>
@@ -248,14 +318,15 @@ const French : React.FC<IPostContentProps> = props => {
             <span className={`nbsp`}/><span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;<br></br>
             <span className={`nbsp`}/><span className={`color-vs-light-blue`}>flex-direction</span>: <span className={`color-vs-orange`}>row</span>;<br></br>
             <span className={`nbsp`}/><span className={`color-vs-light-blue`}>flex-wrap</span>: <span className={`color-vs-orange`}>wrap</span>;<br></br>
-            <span className={`nbsp`}/><span className={`color-vs-light-blue`}>justify-content</span>: <span className={`color-vs-orange`}>center</span>;<br></br>
+            {example2FlexWidthSwitch == 'flex' && <><span className={`nbsp`}/><span className={`color-vs-light-blue`}>justify-content</span>: <span className={`color-vs-orange`}>center</span>;<br></br></>}
             <span className={`nbsp`}/><span className={`color-vs-light-blue`}>border</span>: <span className={`color-vs-orange`}>solid</span> <span className={`color-vs-light-green`}>1px</span> <span className={`color-vs-orange`}>black</span>;<br></br>
             <span className={`nbsp`}/><span className={`color-vs-light-blue`}>border-radius</span>: <span className={`color-vs-light-green`}>10px</span>;<br></br>
             <span className={`nbsp`}/><span className={`color-vs-light-blue`}>margin</span>: <span className={`color-vs-light-green`}>0</span> <span className={`color-vs-orange`}>auto</span>;<br></br>
             <span className={`nbsp`}/><span className={`color-vs-light-blue`}>width</span>: <span className={`color-vs-light-green`}>80%</span>;<br></br>
             <span className={`nbsp`}/><span className={`color-vs-light-blue`}>padding</span>: <span className={`color-vs-light-green`}>0 -{gutter / 2}px</span>;<br></br>
             <span className={`nbsp`}/>&gt;<span className={`color-vs-light-orange`}>.div-enfant</span> &#123;<br></br>
-            <span className={`nbsp`}/><span className={`nbsp`}/><span className={`color-vs-light-blue`}>flex</span>: <span className={`color-vs-light-green`}>{example2flex}px</span>;<br></br>
+            {example2FlexWidthSwitch == 'flex' && <><span className={`nbsp`}/><span className={`nbsp`}/><span className={`color-vs-light-blue`}>flex</span>: <span className={`color-vs-light-green`}>{example2flex}px</span>;<br></br></>}
+            {example2FlexWidthSwitch == 'width' && <><span className={`nbsp`}/><span className={`nbsp`}/><span className={`color-vs-light-blue`}>width</span>: <span className={`color-vs-light-green`}>{example2flex}px</span>;<br></br></>}
             <span className={`nbsp`}/><span className={`nbsp`}/><span className={`color-vs-light-blue`}>margin</span>: <span className={`color-vs-light-green`}>0 {gutter / 2}px {gutter / 2}px</span>;<br></br>
             <span className={`nbsp`}/><span className={`nbsp`}/><span className={`color-vs-light-blue`}>border</span>: <span className={`color-vs-orange`}>solid</span> <span className={`color-vs-light-green`}>1px</span> <span className={`color-vs-orange`}>darkslategray</span>;<br></br>
             <span className={`nbsp`}/><span className={`nbsp`}/><span className={`color-vs-light-blue`}>border-radius</span>: <span className={`color-vs-light-green`}>10px</span>;<br></br>
@@ -266,59 +337,6 @@ const French : React.FC<IPostContentProps> = props => {
             &#125;
             </div>
 
-            <div className={`section-separator`}></div>
-
-            <Cross/><span className={`step-title`} id={`fun`}>3. La démonstration</span>
-            <p>
-                Cliquer sur les boutons pour modifier les propiétés du <span className={`code-element`}>div</span> parent et cliquer sur les enfants pour contrôler leur taille grâce à la propritété <span className={`code-element`}>flex: 1;</span>.
-            </p>
-
-            <div className={`flex-row demo-button-line`}>
-                <Button onClick={onClickFlexDirection} classname={`demo-button`} isUnselected={flexDirection == 'row'}>
-                    flex-direction: column;
-                </Button>
-                <Button onClick={onClickFlexDirection} classname={`demo-button`} isUnselected={flexDirection == 'column'}>
-                    flex-direction: row;
-                </Button>
-            </div>
-            <div className={`flex-row demo-button-line`}>
-                <Button onClick={onClickDemoAlignItemsStart} classname={`demo-button`} isUnselected={alignItems != 'flex-start'}>
-                    align-items: flex-start;
-                </Button>
-                <Button onClick={onClickDemoAlignItemsCenter} classname={`demo-button`} isUnselected={alignItems != 'center'}>
-                    align-items: center;
-                </Button>
-                <Button onClick={onClickDemoAlignItemsEnd} classname={`demo-button`} isUnselected={alignItems != 'flex-end'}>
-                    align-items: flex-end;
-                </Button>
-            </div>
-            <div className={`flex-row demo-button-line`}>
-                <Button onClick={onClickDemoJustifyContentStart} classname={`demo-button`} isUnselected={justifyContent != 'flex-start'}>
-                    justify-content: flex-start;
-                </Button>
-                <Button onClick={onClickDemoJustifyContentCenter} classname={`demo-button`} isUnselected={justifyContent != 'center'}>
-                    justify-content: center;
-                </Button>
-                <Button onClick={onClickDemoJustifyContentEnd} classname={`demo-button`} isUnselected={justifyContent != 'flex-end'}>
-                    justify-content: flex-end;
-                </Button>
-            </div>
-            
-
-            <div className={`demo ${flexDirection}`} style={{ alignItems: alignItems, justifyContent: justifyContent }}>
-                <div className={`demo-child one`} style={{ flex: oneFlex1 }} onClick={onClickOneFlex1}>
-                    1
-                    <div className={`demo-child-flex1 ${demoChildFlex1ActiveClassname1}`}>flex: 1;</div>
-                </div>
-                <div className={`demo-child two`} style={{ flex: twoFlex1 }} onClick={onClickTwoFlex1}>
-                    2
-                    <div className={`demo-child-flex1 ${demoChildFlex1ActiveClassname2}`}>flex: 1;</div>
-                </div>
-                <div className={`demo-child three`} style={{ flex: threeFlex1 }} onClick={onClickThreeFlex1}>
-                    3
-                    <div className={`demo-child-flex1 ${demoChildFlex1ActiveClassname3}`}>flex: 1;</div>
-                </div>
-            </div>
             
         </PostTemplate>
     );
