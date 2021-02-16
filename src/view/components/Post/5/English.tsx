@@ -92,7 +92,7 @@ const English : React.FC<IPostContentProps> = props => {
             <Cross/><span className={`step-title`}>1. The theory</span>
 
             <p>
-                The code snippet below designates a <i>flex container</i>. This is the parent <span className={`code-element`}>div</span>.
+                The code snippet below designates a <i>flex container</i>. This is the container <span className={`code-element`}>div</span>.
             </p>
             
             <div className={`code-sample`}>
@@ -100,7 +100,8 @@ const English : React.FC<IPostContentProps> = props => {
             </div>
 
             <p>
-                If you want to organize this parent <span className={`code-element`}>div</span> in columns, that is to say divide it into several columns next to each other, you must set the <i>flex-direction</i> to row.
+                If you want to organize this container <span className={`code-element`}>div</span> in columns, that is to say divide it into several columns next to each other, you must set the <i>flex-direction</i> to row.
+                This establishes the main-axis, thus defining the direction flex items are placed in the flex container.
             </p>
             <div className={`code-sample`}>
                 <span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;<br></br>
@@ -110,7 +111,9 @@ const English : React.FC<IPostContentProps> = props => {
             <img src={getImageSrc(postId, '1-en.png')}/>
 
             <p>
-                To <b>horizontally center</b> the children inside their parent, use the <i>justify-content</i> property.
+                To <b>horizontally center</b> the items inside their container, use the <i>justify-content</i> property.
+                This property defines the alignment along the <b>main axis</b>, which is in the case of a <i>flex-direction: row;</i> (and by default) <b>horizontal</b>.
+                The drawings below show the effect of this property for different values.
             </p>
             <div className={`code-sample`}>
                 <span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;<br></br>
@@ -118,10 +121,19 @@ const English : React.FC<IPostContentProps> = props => {
                 <span className={`color-vs-light-blue`}>justify-content</span>: <span className={`color-vs-orange`}>center</span>;
             </div>
 
-            <img src={getImageSrc(postId, '2-en.png')}/>
+            <div className={`flex-row`}>
+                <img src={getImageSrc(postId, '2-en.png')} style={{ width: '50%', alignSelf: 'flex-start'}} />
+                <img src={getImageSrc(postId, '3-en.png')} style={{ width: '50%', alignSelf: 'flex-start'}} />
+            </div>
+
+            <div className={`flex-row`}>
+                <img src={getImageSrc(postId, '4-en.png')} style={{ width: '50%', alignSelf: 'flex-start'}} />
+                <img src={getImageSrc(postId, '5-en.png')} style={{ width: '50%', alignSelf: 'flex-start'}} />
+            </div>
 
             <p>
-                To <b>vertically center</b> the children inside their parent, use the <i>align-items</i> property.
+                To <b>vertically center</b> the items inside their container, use the <i>align-items</i> property.
+                This property defines the alignment along the <b>secondary axis</b>, which is here <b>vertical</b>.
             </p>
             <div className={`code-sample`}>
                 <span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;<br></br>
@@ -129,7 +141,13 @@ const English : React.FC<IPostContentProps> = props => {
                 <span className={`color-vs-light-blue`}>align-items</span>: <span className={`color-vs-orange`}>center</span>;
             </div>
 
-            <img src={getImageSrc(postId, '3-en.png')}/>
+            <div className={`flex-row`}>
+                <img src={getImageSrc(postId, '6-en.png')} style={{ width: '50%', alignSelf: 'flex-start'}} />
+                <img src={getImageSrc(postId, '7-en.png')} style={{ width: '50%', alignSelf: 'flex-start'}} />
+            </div>
+            <div className={`flex-row`}>
+                <img src={getImageSrc(postId, '8-en.png')} style={{ width: '50%', alignSelf: 'flex-start'}} />
+            </div>
 
             <p>
                 If you want to organize the parent <span className={`code-element`}>div</span> into rows, that is to say divide it into several rows one above the other, you must give it a column direction. 
@@ -144,7 +162,7 @@ const English : React.FC<IPostContentProps> = props => {
                 <span className={`color-vs-light-blue`}>flex-direction</span>: <span className={`color-vs-orange`}>column</span>;
             </div>
 
-            <img src={getImageSrc(postId, '4-en.png')}/>
+            <img src={getImageSrc(postId, '9-en.png')}/>
 
 
             <div className={`section-separator`}></div>
