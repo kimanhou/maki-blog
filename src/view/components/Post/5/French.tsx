@@ -97,7 +97,8 @@ const French : React.FC<IPostContentProps> = props => {
             </div>
 
             <p>
-                Si on veut organiser ce <span className={`code-element`}>div</span> parent en colonnes, c'est-à-dire le diviser en plusieurs colonnes les une à côté des autres, il faut lui attribuer une direction en ligne.
+                Si on veut organiser ce <span className={`code-element`}>div</span> parent en colonnes, c'est-à-dire le diviser en plusieurs colonnes les une à côté des autres, il faut lui attribuer une direction en ligne grâce à la propriété <i>flex-direction</i>.
+                Celle-ci définit <b>l'axe principal</b>, qui est dans le cas d'un <i>flex-direction: row;</i> (et par défaut) <b>horizontal</b>.
             </p>
             <div className={`code-sample`}>
                 <span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;<br></br>
@@ -108,6 +109,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <p>
                 Pour centrer horizontalement les <span className={`code-element`}>div</span> enfants, utiliser la propriété <i>justify-content</i>.
+                Celle-ci contrôle l'alignement des enfants sur l'axe principal, qui est ici horizontal. Les schémas ci-dessous montrent l'effet de cette propriété selon différentes valeurs.
             </p>
             <div className={`code-sample`}>
                 <span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;<br></br>
@@ -115,11 +117,19 @@ const French : React.FC<IPostContentProps> = props => {
                 <span className={`color-vs-light-blue`}>justify-content</span>: <span className={`color-vs-orange`}>center</span>;
             </div>
 
-            <img src={getImageSrc(postId, '2.png')}/>
+            <div className={`flex-row`}>
+                <img src={getImageSrc(postId, '2.png')} style={{ width: '50%'}} />
+                <img src={getImageSrc(postId, '3.png')} style={{ width: '50%'}} />
+            </div>
 
+            <div className={`flex-row`}>
+                <img src={getImageSrc(postId, '4.png')} style={{ width: '50%'}} />
+                <img src={getImageSrc(postId, '5.png')} style={{ width: '50%'}} />
+            </div>
 
             <p>
                 Pour centrer verticalement les <span className={`code-element`}>div</span> enfants, utiliser la propriété <i>align-items</i>.
+                Cette propriété contrôle quant à elle l'alignement sur l'axe secondaire, qui est ici vertical.
             </p>
             <div className={`code-sample`}>
                 <span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;<br></br>
@@ -127,7 +137,13 @@ const French : React.FC<IPostContentProps> = props => {
                 <span className={`color-vs-light-blue`}>align-items</span>: <span className={`color-vs-orange`}>center</span>;
             </div>
 
-            <img src={getImageSrc(postId, '3.png')}/>
+            <div className={`flex-row`}>
+                <img src={getImageSrc(postId, '6.png')} style={{ width: '50%'}} />
+                <img src={getImageSrc(postId, '7.png')} style={{ width: '50%'}} />
+            </div>
+            <div className={`flex-row`}>
+                <img src={getImageSrc(postId, '8.png')} style={{ width: '50%'}} />
+            </div>
 
             <p>
                 Si on veut organiser ce <span className={`code-element`}>div</span> parent en lignes, c'est-à-dire le diviser en plusieurs lignes les unes au-dessus des autres, il faut lui attribuer une direction en colonne.
@@ -181,7 +197,7 @@ const French : React.FC<IPostContentProps> = props => {
                 </Button>
             </div>
             
-
+            <div style={{ height: '10vh'}}></div>
             <div className={`demo ${flexDirection}`} style={{ alignItems: alignItems, justifyContent: justifyContent }}>
                 <div className={`demo-child one`} style={{ flex: oneFlex1 }} onClick={onClickOneFlex1}>
                     1
@@ -196,7 +212,7 @@ const French : React.FC<IPostContentProps> = props => {
                     <div className={`demo-child-flex1 ${demoChildFlex1ActiveClassname3}`}>flex: 1;</div>
                 </div>
             </div>
-
+            <div style={{ height: '100vh'}}></div>
             <div className={`section-separator`}></div>
 
             <Cross/><span className={`step-title`}>3. Les exemples courants</span><br></br>
