@@ -56,7 +56,6 @@ const French : React.FC<IPostContentProps> = props => {
         }
     }
 
-
     const goToDemo = () => {
         myScrollToWithOffset('fun', -190);
     }
@@ -91,7 +90,7 @@ const French : React.FC<IPostContentProps> = props => {
             <Cross/><span className={`step-title`}>1. La théorie</span>
 
             <p>
-                Ceci désigne un <i>container flex</i>. C'est le <span className={`code-element`}>div</span> parent.
+                Le bout de code ci-dessous désigne un <i>container flex</i>. C'est le <span className={`code-element`}>div</span> parent.
             </p>
             <div className={`code-sample`}>
                 <span className={`color-vs-light-blue`}>display</span>: <span className={`color-vs-orange`}>flex</span>;
@@ -142,7 +141,7 @@ const French : React.FC<IPostContentProps> = props => {
                 <span className={`color-vs-light-blue`}>flex-direction</span>: <span className={`color-vs-orange`}>column</span>;
             </div>
 
-            <img src={getImageSrc(postId, 'temp.png')}/>
+            <img src={getImageSrc(postId, '4.png')}/>
 
             <div className={`section-separator`}></div>
 
@@ -203,7 +202,7 @@ const French : React.FC<IPostContentProps> = props => {
             <Cross/><span className={`step-title`}>3. Les exemples courants</span><br></br>
             <br></br>
             <Cross/><span>
-                Diviser un <span className={`code-element`}>div</span> en colonnes de largeur égale et séparées entre elles par une marge, le tout centrer horizontalement.
+                Diviser un <span className={`code-element`}>div</span> en colonnes de largeur égale et séparées entre elles par une marge, le tout centré horizontalement.
             </span>
             <p>Cliquer sur les boutons ci-dessous pour ajouter ou supprimer des colonnes (nombre maximal de colonnes : {columnNumberMax}).</p>
             
@@ -337,7 +336,16 @@ const French : React.FC<IPostContentProps> = props => {
             &#125;
             </div>
 
+            <div className={`section-separator`}></div>
             
+            <Cross/><span className={`step-title`}>Liens utiles</span>
+            <p>
+                <a href='https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox' target='_blank'>Documentation de Mozilla</a>
+            </p>
+            <p>
+                <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/' target='_blank'>Guide par CSS tricks</a>
+            </p>
+
         </PostTemplate>
     );
 }
