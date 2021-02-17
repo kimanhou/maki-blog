@@ -212,6 +212,17 @@
                         &.demo-button-line {
                             flex-direction: column;
                             margin-bottom: var(--size-margin-30);
+                            >.fade-in {
+                                margin: var(--size-margin-10) 3px;
+                                >.button {
+                                    &.demo-button {
+                                        width: unset;
+                                    }
+                                    &.font-size-smaller {
+                                        font-size: 0.9rem;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

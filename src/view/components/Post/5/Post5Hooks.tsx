@@ -121,7 +121,7 @@ export const useDemoFlex = () : [string, () => void] => {
     return [flex1, onClickFlex1];
 }
 
-export const useDemoAlignItems = () : [string, () => void, () => void, () => void] => {
+export const useDemoAlignItems = () : [string, () => void, () => void, () => void, () => void] => {
     const [alignItems, setAlignItems] = useState('unset');
     const onClickDemoAlignItemsStart = () => {
         if (alignItems == 'flex-start') {
@@ -149,5 +149,14 @@ export const useDemoAlignItems = () : [string, () => void, () => void, () => voi
             setAlignItems('flex-end');
         }
     }
-    return [alignItems, onClickDemoAlignItemsStart, onClickDemoAlignItemsCenter, onClickDemoAlignItemsEnd ];
+
+    const onClickDemoAlignItemsSpaceBetween = () => {
+        if (alignItems == 'space-between') {
+            setAlignItems('unset');
+        }
+        else {
+            setAlignItems('space-between');
+        }
+    }
+    return [alignItems, onClickDemoAlignItemsStart, onClickDemoAlignItemsCenter, onClickDemoAlignItemsEnd, onClickDemoAlignItemsSpaceBetween ];
 }

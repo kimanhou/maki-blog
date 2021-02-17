@@ -5,3 +5,13 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .fade-in {
+        >.button {
+            &.skip-to-fun {
+                width: calc(100% - 6px);
+            }
+        }
+    }
+}

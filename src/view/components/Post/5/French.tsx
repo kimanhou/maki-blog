@@ -16,7 +16,7 @@ const French : React.FC<IPostContentProps> = props => {
 
     const [flexDirection, onClickFlexDirection] = useDemoFlexDirection();
     const [alignItems, onClickDemoAlignItemsStart, onClickDemoAlignItemsCenter, onClickDemoAlignItemsEnd] = useDemoAlignItems();
-    const [justifyContent, onClickDemoJustifyContentStart, onClickDemoJustifyContentCenter, onClickDemoJustifyContentEnd] = useDemoAlignItems();
+    const [justifyContent, onClickDemoJustifyContentStart, onClickDemoJustifyContentCenter, onClickDemoJustifyContentEnd, onClickDemoJustifyContentSpaceBetween] = useDemoAlignItems();
     const [oneFlex1, onClickOneFlex1] = useDemoFlex();
     const demoChildFlex1ActiveClassname1 = oneFlex1 == '1' ? 'active' : '';
     const [twoFlex1, onClickTwoFlex1] = useDemoFlex();
@@ -118,14 +118,14 @@ const French : React.FC<IPostContentProps> = props => {
                 <span className={`color-vs-light-blue`}>justify-content</span>: <span className={`color-vs-orange`}>center</span>;
             </div>
 
-            <div className={`flex-row`}>
-                <img src={getImageSrc(postId, '2.png')} style={{ width: '50%'}} />
-                <img src={getImageSrc(postId, '3.png')} style={{ width: '50%'}} />
+            <div className={`flex-row mobile-column`}>
+                <img src={getImageSrc(postId, '2.png')} className={`width50Mobile100`} />
+                <img src={getImageSrc(postId, '3.png')} className={`width50Mobile100`} />
             </div>
 
-            <div className={`flex-row`}>
-                <img src={getImageSrc(postId, '4.png')} style={{ width: '50%'}} />
-                <img src={getImageSrc(postId, '5.png')} style={{ width: '50%'}} />
+            <div className={`flex-row mobile-column`}>
+                <img src={getImageSrc(postId, '4.png')} className={`width50Mobile100`} />
+                <img src={getImageSrc(postId, '5.png')} className={`width50Mobile100`} />
             </div>
 
             <p>
@@ -138,12 +138,12 @@ const French : React.FC<IPostContentProps> = props => {
                 <span className={`color-vs-light-blue`}>align-items</span>: <span className={`color-vs-orange`}>center</span>;
             </div>
 
-            <div className={`flex-row`}>
-                <img src={getImageSrc(postId, '6.png')} style={{ width: '50%'}} />
-                <img src={getImageSrc(postId, '7.png')} style={{ width: '50%'}} />
+            <div className={`flex-row mobile-column`}>
+                <img src={getImageSrc(postId, '6.png')} className={`width50Mobile100`} />
+                <img src={getImageSrc(postId, '7.png')} className={`width50Mobile100`} />
             </div>
-            <div className={`flex-row`}>
-                <img src={getImageSrc(postId, '8.png')} style={{ width: '50%'}} />
+            <div className={`flex-row mobile-column`}>
+                <img src={getImageSrc(postId, '8.png')} className={`width50Mobile100`} />
             </div>
 
             <p>
@@ -176,17 +176,6 @@ const French : React.FC<IPostContentProps> = props => {
                 </Button>
             </div>
             <div className={`flex-row demo-button-line`}>
-                <Button onClick={onClickDemoAlignItemsStart} classname={`demo-button`} isUnselected={alignItems != 'flex-start'}>
-                    align-items: flex-start;
-                </Button>
-                <Button onClick={onClickDemoAlignItemsCenter} classname={`demo-button`} isUnselected={alignItems != 'center'}>
-                    align-items: center;
-                </Button>
-                <Button onClick={onClickDemoAlignItemsEnd} classname={`demo-button`} isUnselected={alignItems != 'flex-end'}>
-                    align-items: flex-end;
-                </Button>
-            </div>
-            <div className={`flex-row demo-button-line`}>
                 <Button onClick={onClickDemoJustifyContentStart} classname={`demo-button`} isUnselected={justifyContent != 'flex-start'}>
                     justify-content: flex-start;
                 </Button>
@@ -195,6 +184,20 @@ const French : React.FC<IPostContentProps> = props => {
                 </Button>
                 <Button onClick={onClickDemoJustifyContentEnd} classname={`demo-button`} isUnselected={justifyContent != 'flex-end'}>
                     justify-content: flex-end;
+                </Button>
+                <Button onClick={onClickDemoJustifyContentSpaceBetween} classname={`demo-button font-size-smaller`} isUnselected={justifyContent != 'space-between'}>
+                    justify-content: space-between;
+                </Button>
+            </div>
+            <div className={`flex-row demo-button-line`}>
+                <Button onClick={onClickDemoAlignItemsStart} classname={`demo-button`} isUnselected={alignItems != 'flex-start'}>
+                    align-items: flex-start;
+                </Button>
+                <Button onClick={onClickDemoAlignItemsCenter} classname={`demo-button`} isUnselected={alignItems != 'center'}>
+                    align-items: center;
+                </Button>
+                <Button onClick={onClickDemoAlignItemsEnd} classname={`demo-button`} isUnselected={alignItems != 'flex-end'}>
+                    align-items: flex-end;
                 </Button>
             </div>
             
@@ -299,6 +302,7 @@ const French : React.FC<IPostContentProps> = props => {
             </p>
             <div className={`example-1-consignes`}>
                 <div className={`example-1-buttons-circle`}>
+                    <img src={getImageSrc(postId, 'circle.png')} style={{ opacity: 0 }}/>
                     <div className={`flex-row example-1-buttons`}>
                         <p className={`example-1-button-text`}>Nombre de colonnes : </p>
                         <Button onClick={example2RemoveColumn} classname={`demo-button`} isUnselected={example2ColumnNumber < 1}>
@@ -349,6 +353,29 @@ const French : React.FC<IPostContentProps> = props => {
             <span className={`nbsp`}/><span className={`nbsp`}/><span className={`nbsp`}/><span className={`color-vs-light-blue`}>font-size</span>: <span className={`color-vs-light-green`}>3rem</span>;<br></br>
             <span className={`nbsp`}/><span className={`nbsp`}/>&#125;<br></br>
             <span className={`nbsp`}/>&#125;<br></br>
+            &#125;
+            </div>
+
+            <div className={`section-separator`}></div>
+            
+            <Cross/><span className={`step-title`}>Trucs &amp; astuces</span><br></br>
+            <Cross/><span>Garder les proportions d'une image sous Safari</span>
+            <p>
+                Si vous devez utiliser une hauteur automatique et que le parent de l'image est configuré en <span className={`code-element`}>display: flex;</span>, cette astuce vous aidera. 
+                Lorsque vous définissez un parent en <span className={`code-element`}>display: flex;</span>, certaines propriétés sont automatiquement attribuées à ses enfants et contrairement à d'autres navigateurs, la valeur initiale des enfants pour <i>align-items</i> avec Safari est <i>stretch</i>, ce qui casse les proportions de l'image. 
+                C'est pourquoi vous devez préciser <span className={`code-element`}>align-self: flex-start;</span> sur l'image.
+            </p>
+            <div className={`code-sample`}>
+            <span className={`color-vs-light-orange`}>image</span> &#123;<br></br>
+            <span className={`nbsp`}/><span className={`color-vs-light-blue`}>align-self</span>: <span className={`color-vs-orange`}>flex-start</span>;<br></br>
+            &#125;
+            </div>
+            <p>
+                Si le parent de l'image est en <span className={`code-element`}>flex-direction: column;</span>, utiliser la propriété <i>justify-self</i>.
+            </p>
+            <div className={`code-sample`}>
+            <span className={`color-vs-light-orange`}>image</span> &#123;<br></br>
+            <span className={`nbsp`}/><span className={`color-vs-light-blue`}>justify-self</span>: <span className={`color-vs-orange`}>flex-start</span>;<br></br>
             &#125;
             </div>
 
