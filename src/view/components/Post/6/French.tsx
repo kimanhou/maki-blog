@@ -1,30 +1,24 @@
 import React, { useState } from 'react';
 import { IPostContentProps } from '../../../../model/Post';
+import { isMobile } from '../../../hooks/UseMediaQuery';
 import PostTemplate from '../PostTemplate/PostTemplate';
 import Button from '../PostTemplate/TemplateComponents/Button';
+import { renderGameRows } from './Post6Hooks';
 import './PostPage.scss';
 
 const French : React.FC<IPostContentProps> = props => {
     const postId = 6;
     const tldr = <></>;
 
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    const mobile = isMobile();
+    const isLandscape = windowWidth > windowHeight;
+    const mainMargin = mobile ? 30 : 70;
+    const gameMaxWidth = Math.min(windowHeight / 2, windowWidth - (mainMargin * 2) - 2);
+    const gameSize = isLandscape ? '75vh' : gameMaxWidth;
+
     const [size, setSize] = useState(4);
-
-    const renderGameCell = () => {
-        return <div className={`game-cell`}></div>;
-    }
-
-    const renderGameRow = (numberOfCells : number) => {
-        var foo = Array.from(Array(numberOfCells).keys());
-        return <div className={`game-row`}>
-            {foo.map(t => renderGameCell())}
-        </div>
-    }
-
-    const renderGameRows = (numberOfRows : number, numberOfCellsPerRow : number) => {
-        var foo = Array.from(Array(numberOfRows).keys());
-        return foo.map(t => renderGameRow(numberOfCellsPerRow))
-    }
 
     return (
         <PostTemplate postId={postId}
@@ -51,7 +45,7 @@ const French : React.FC<IPostContentProps> = props => {
                 </Button>
             </div>
 
-            <div className={`game`}>
+            <div className={`game`} style={{ height: gameSize, width: gameSize}}>
                 {renderGameRows(size, size)}
             </div>
             

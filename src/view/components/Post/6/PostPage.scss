@@ -27,8 +27,6 @@
                 }
             }
             .game {
-                width: 80%;
-                height: 80vh;
                 margin: 0 auto;
                 border: solid 1px var(--color-off-black);
                 display: flex;
@@ -52,8 +50,6 @@
         &.six {
             .post-text {
                 .game {
-                    width: calc(100% - 2px);
-                    height: 50vh;
                 }
             }
         }

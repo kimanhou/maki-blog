@@ -29,6 +29,7 @@ const getBackgroundColor = (distance : number, distanceTotale : number) => {
     }
     return `rgb(${calculateValueOfBackgroundColor(204, 47, distance, distanceTotale)}, ${calculateValueOfBackgroundColor(236, 79, distance, distanceTotale)}, ${calculateValueOfBackgroundColor(236, 79, distance, distanceTotale)})`;
 }
+
 const getColor = (rgb : string) => {
     const green = rgb.split(',')[1];
     if (parseInt(green) > 149) {
