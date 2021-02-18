@@ -19,6 +19,16 @@ const French : React.FC<IPostContentProps> = props => {
     const gameSize = isLandscape ? '75vh' : gameMaxWidth;
 
     const [size, setSize] = useState(4);
+    const [drawing16, setDrawing16] = useState('pokeball');
+    const active16ClassName = size == 16 ? 'active' : '';
+    const pokeballIsUnselectedClassname = drawing16 != 'pokeball' ? 'unselected' : '';
+    const charmanderIsUnselectedClassname = drawing16 != 'charmander' ? 'unselected' : '';
+    const getDrawing = () => {
+        if (size == 16) {
+            return drawing16;
+        }
+        return '';
+    } 
 
     return (
         <PostTemplate postId={postId}
@@ -45,8 +55,17 @@ const French : React.FC<IPostContentProps> = props => {
                 </Button>
             </div>
 
+            <div className={`flex-row button-line icon-16 ${active16ClassName}`}>
+                <div onClick={() => setDrawing16('pokeball')} className={`icon-button pokeball ${pokeballIsUnselectedClassname}`}>
+                    
+                </div>
+                <div onClick={() => setDrawing16('charmander')} className={`icon-button charmander ${charmanderIsUnselectedClassname}`}>
+                    
+                </div>
+            </div>
+
             <div className={`game`} style={{ height: gameSize, width: gameSize}}>
-                {renderGameRows(size, size)}
+                {renderGameRows(size, size, getDrawing())}
             </div>
             
         </PostTemplate>

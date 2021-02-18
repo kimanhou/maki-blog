@@ -5,16 +5,16 @@ const renderGameCellWithBackground = (gameRow : number, gameCellNumber : number,
     return <div className={`game-cell`} style={{ backgroundColor: getBackground(gameRow, gameCellNumber)}}></div>;
 }
 
-const renderGameRow = (gameRow : number, numberOfCells : number) => {
+const renderGameRow = (gameRow : number, numberOfCells : number, drawing : string) => {
     var foo = Array.from(Array(numberOfCells).keys());
     return <div className={`game-row`}>
-        {foo.map(t => renderGameCellWithBackground(gameRow, t, getBackgroundColorFunction(numberOfCells)))}
+        {foo.map(t => renderGameCellWithBackground(gameRow, t, getBackgroundColorFunction(numberOfCells, drawing)))}
     </div>
 }
 
-export const renderGameRows = (numberOfRows : number, numberOfCellsPerRow : number) => {
+export const renderGameRows = (numberOfRows : number, numberOfCellsPerRow : number, drawing : string) => {
     var foo = Array.from(Array(numberOfRows).keys());
-    return foo.map(t => renderGameRow(t, numberOfCellsPerRow))
+    return foo.map(t => renderGameRow(t, numberOfCellsPerRow, drawing))
 }
 
 // --color-super-light-green: rgb(204,236,236);
@@ -94,7 +94,7 @@ const getBackgroundColor16x16Pokeball = (x : number, y : number) => {
         {x : 11, y: 2}, {x : 11, y: 8}, {x : 11, y: 9}, {x : 11, y: 10}, {x : 11, y: 13},
         {x : 12, y: 3}, {x : 12, y: 12},
         {x : 13, y: 4}, {x : 13, y: 5}, {x : 13, y: 10}, {x : 13, y: 11},
-        {x : 14, y: 6}, {x : 14, y: 7}, {x : 14, y: 8}, {x : 14, y: 9},
+        {x : 14, y: 6}, {x : 14, y: 7}, {x : 14, y: 8}, {x : 14, y: 9}
     ];
 
     const whiteCoordinates = [ { x : 4, y : 5 }, { x : 5, y : 4 } ];
@@ -124,18 +124,96 @@ const getBackgroundColor16x16Pokeball = (x : number, y : number) => {
     return '';
 }
 
+const getBackgroundColor16x16Charmander = (x : number, y : number) => {
+    const blackCoordinates = [ 
+        {x : 0, y: 1}, {x : 0, y: 6}, {x : 0, y: 14},
+        {x : 1, y: 0}, {x : 1, y: 7}, {x : 1, y: 14},
+        {x : 2, y: 0}, {x : 2, y: 7}, {x : 2, y: 14},
+        {x : 3, y: 8}, {x : 3, y: 13},
+        {x : 4, y: 4}, {x : 4, y: 8}, {x : 4, y: 13},
+        {x : 5, y: 3}, {x : 5, y: 4}, {x : 5, y: 9}, {x : 5, y: 13},
+        {x : 6, y: 3}, {x : 6, y: 4}, {x : 6, y: 9}, {x : 6, y: 14},
+        {x : 7, y: 10}, {x : 7, y: 14},
+        {x : 8, y: 0}, {x : 8, y: 1}, {x : 8, y: 11}, {x : 8, y: 13},
+        {x : 9, y: 2}, {x : 9, y: 3}, {x : 9, y: 4}, {x : 9, y: 7}, {x : 9, y: 11}, {x : 9, y: 12}, {x : 9, y: 15},
+        {x : 10, y: 3}, {x : 10, y: 6}, {x : 10, y: 12}, {x : 10, y: 15},
+        {x : 11, y: 3}, {x : 11, y: 7}, {x : 11, y: 8}, {x : 11, y: 12}, {x : 11, y: 14},
+        {x : 12, y: 2}, {x : 12, y: 4}, {x : 12, y: 12}, {x : 12, y: 13},
+        {x : 13, y: 3}, {x : 13, y: 4}, {x : 13, y: 5}, {x : 13, y: 11}, {x : 13, y: 12},
+        {x : 14, y: 6}, {x : 14, y: 7}, {x : 14, y: 8}, {x : 14, y: 10}, {x : 14, y: 11},
+        {x : 15, y: 7}, {x : 15, y: 11}
+    ];
+
+    const orangeCoordinates = [ 
+        {x : 0, y: 2}, {x : 0, y: 3}, {x : 0, y: 4}, {x : 0, y: 5},
+        {x : 1, y: 1}, {x : 1, y: 2}, {x : 1, y: 3}, {x : 1, y: 4}, {x : 1, y: 5}, {x : 1, y: 6},
+        {x : 2, y: 1}, {x : 2, y: 2}, {x : 2, y: 3}, {x : 2, y: 4}, {x : 2, y: 5}, {x : 2, y: 6},
+        {x : 3, y: 0}, {x : 3, y: 1}, {x : 3, y: 2}, {x : 3, y: 3}, {x : 3, y: 4}, {x : 3, y: 5}, {x : 3, y: 6}, {x : 3, y: 7},
+        {x : 4, y: 0}, {x : 4, y: 1}, {x : 4, y: 2}, {x : 4, y: 5}, {x : 4, y: 6}, {x : 4, y: 7}, {x : 4, y: 15},
+        {x : 5, y: 0}, {x : 5, y: 1}, {x : 5, y: 2}, {x : 5, y: 5}, {x : 5, y: 6}, {x : 5, y: 7}, {x : 5, y: 8},
+        {x : 6, y: 0}, {x : 6, y: 1}, {x : 6, y: 2}, {x : 6, y: 5}, {x : 6, y: 6}, {x : 6, y: 7}, {x : 6, y: 8},
+        {x : 7, y: 0}, {x : 7, y: 1}, {x : 7, y: 2}, {x : 7, y: 3}, {x : 7, y: 4}, {x : 7, y: 5}, {x : 7, y: 6}, {x : 7, y: 7}, {x : 7, y: 8}, {x : 7, y: 9}, {x : 7, y: 15},
+        {x : 8, y: 2}, {x : 8, y: 3}, {x : 8, y: 4}, {x : 8, y: 5}, {x : 8, y: 6}, {x : 8, y: 7}, {x : 8, y: 8}, {x : 8, y: 9}, {x : 8, y: 10}, {x : 8, y: 14}, {x : 8, y: 15},
+        {x : 9, y: 5}, {x : 9, y: 6}, {x : 9, y: 8}, {x : 9, y: 9}, {x : 9, y: 10}, {x : 9, y: 13}, {x : 9, y: 14},
+        {x : 10, y: 7}, {x : 10, y: 8}, {x : 10, y: 9}, {x : 10, y: 10}, {x : 10, y: 11}, {x : 10, y: 13}, {x : 10, y: 14},
+        {x : 11, y: 9}, {x : 11, y: 10}, {x : 11, y: 11}, {x : 11, y: 13}, 
+        {x : 12, y: 8}, {x : 12, y: 9}, {x : 12, y: 10}, {x : 12, y: 11},
+        {x : 13, y: 8}, {x : 13, y: 9}, {x : 13, y: 10},
+        {x : 14, y: 9},
+        {x : 15, y: 9}
+    ];
+
+    const whiteCoordinates = [ { x : 4, y : 3 } ];
+    const yellowCoordinates = [ 
+        { x : 5, y : 15 }, 
+        { x : 6, y : 15 }, 
+        { x : 10, y : 4 }, { x : 10, y : 5 }, 
+        { x : 11, y : 4 }, { x : 11, y : 5 }, { x : 11, y : 6 },
+        { x : 12, y : 5 }, { x : 12, y : 6 }, { x : 12, y : 7 },
+        { x : 13, y : 6 }, { x : 13, y : 7 },
+    ];
+    const redCoordinates = [ 
+        { x : 0, y : 15 }, { x : 1, y : 15 }, { x : 2, y : 15 }, { x : 3, y : 15 },
+        { x : 3, y : 14 }, { x : 4, y : 14 }, { x : 5, y : 14 }
+    ];
+
+    if (isInList(x, y, whiteCoordinates)) {
+        return 'white';
+    }
+    if (isInList(x, y, yellowCoordinates)) {
+        return 'var(--color-yellow)';
+    }
+    if (isInList(x, y, redCoordinates)) {
+        return 'rgb(188,48,59)';
+    }
+    if (isInList(x, y, blackCoordinates)) {
+        return 'var(--color-off-black)';
+    }
+    if (isInList(x, y, orangeCoordinates)) {
+        return 'rgb(253,125,72)';
+    }
+    return '';
+}
+
 const getBackgroundColor32x32 = (x : number, y : number) => {
     return '';
 }
 
-const getBackgroundColorFunction = (size : number) : ((x : number, y : number) => string) => {
+const getBackgroundColorFunction = (size : number, drawing : string) : ((x : number, y : number) => string) => {
     switch (size) {
         case 4:
             return getBackgroundColor4x4;
         case 8:
             return getBackgroundColor8x8;
         case 16:
-            return getBackgroundColor16x16Pokeball;
+            switch (drawing) {
+                case 'pokeball' :
+                    return getBackgroundColor16x16Pokeball;
+                case 'charmander' :
+                    return getBackgroundColor16x16Charmander;
+                default:
+                    return getBackgroundColor16x16Pokeball;
+            }
         case 32:
             return getBackgroundColor32x32;
         default:

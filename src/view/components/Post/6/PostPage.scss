@@ -24,6 +24,34 @@
                     >.fade-in {
                         margin: var(--size-margin-10);
                     }
+                    >.icon-button {
+                        height: 100%;
+                        width: 100px;
+                        background-position: center;
+                        background-size: 100%;
+                        cursor: pointer;
+                        transition: filter .4s;
+                        &.pokeball {
+                            background-image: url(./images/pokeball-icon.png);
+                            margin-right: var(--size-margin-30);
+                        }
+                        &.charmander {
+                            background-image: url(./images/charmander-icon.png);
+                        }
+                        &.unselected {
+                            filter: brightness(50%);
+                        }
+                        &:hover {
+                            filter: brightness(100%);
+                        }
+                    }
+                    &.icon-16 {
+                        height: 0;
+                        transition: height 1s;
+                        &.active {
+                            height: 100px;
+                        }
+                    }
                 }
             }
             .game {

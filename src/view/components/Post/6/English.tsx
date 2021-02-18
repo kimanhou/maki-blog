@@ -46,7 +46,7 @@ const English : React.FC<IPostContentProps> = props => {
             </div>
 
             <div className={`game`} style={{ height: gameSize, width: gameSize}}>
-                {renderGameRows(size, size)}
+                {/* {renderGameRows(size, size)} */}
             </div>
             
         </PostTemplate>
