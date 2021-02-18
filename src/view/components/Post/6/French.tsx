@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IPostContentProps } from '../../../../model/Post';
 import PostTemplate from '../PostTemplate/PostTemplate';
-import Cross from '../PostTemplate/TemplateComponents/Cross';
+import Button from '../PostTemplate/TemplateComponents/Button';
 import './PostPage.scss';
 
 const French : React.FC<IPostContentProps> = props => {
     const postId = 6;
-    const tldr = 
-    <>
-        <Cross/><span></span>
-        <br></br>
-        <Cross/><span></span>
-        <br></br>
-        <Cross/><span></span>
-        <br></br>
-        <Cross/><span></span>
-    </>;
+    const tldr = <></>;
+
+    const [size, setSize] = useState(4);
+
+    const renderGameCell = () => {
+        return <div className={`game-cell`}></div>;
+    }
+
+    const renderGameRow = (numberOfCells : number) => {
+        var foo = Array.from(Array(numberOfCells).keys());
+        return <div className={`game-row`}>
+            {foo.map(t => renderGameCell())}
+        </div>
+    }
+
+    const renderGameRows = (numberOfRows : number, numberOfCellsPerRow : number) => {
+        var foo = Array.from(Array(numberOfRows).keys());
+        return foo.map(t => renderGameRow(numberOfCellsPerRow))
+    }
 
     return (
         <PostTemplate postId={postId}
@@ -24,35 +33,29 @@ const French : React.FC<IPostContentProps> = props => {
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`six`}
                     tldr={tldr}
-                    relatedPosts={[]}>
-            <p>
-                
-            </p>
+                    relatedPosts={[]}
+                    skipToFun removeProgressionBarAndSkipToFun>
+                        
+            <div className={`flex-row button-line`}>
+                <Button onClick={() => setSize(4)} classname={`size-button`} isUnselected={size != 4}>
+                    4 x 4
+                </Button>
+                <Button onClick={() => setSize(8)} classname={`size-button`} isUnselected={size != 8}>
+                    8 x 8
+                </Button>
+                <Button onClick={() => setSize(16)} classname={`size-button`} isUnselected={size != 16}>
+                    16 x 16
+                </Button>
+                <Button onClick={() => setSize(32)} classname={`size-button`} isUnselected={size != 32}>
+                    32 x 32
+                </Button>
+            </div>
 
-            <div className={`section-separator`}></div>
-
-            <Cross/><span className={`step-title`}></span>
-
-            <p>
-                
-            </p>
+            <div className={`game`}>
+                {renderGameRows(size, size)}
+            </div>
             
 
-            <div className={`section-separator`}></div>
-
-            <Cross/><span className={`step-title`}></span>
-            <p>
-                
-            </p>
-
-            {/* <PhotoWithCredits imageUrl={getImageSrc(postId, '1.jpg')} text='Photo by UX Indonesia on Unsplash' url='https://unsplash.com/photos/qC2n6RQU4Vw' /> */}
-
-            <div className={`section-separator`}></div>
-
-            <Cross/><span className={`step-title`}></span>
-            <p>
-                
-            </p>
             
         </PostTemplate>
     );

@@ -8,7 +8,41 @@
             background-size: cover;
         }
         .post-text {
-            
+            .button {
+                &.size-button {
+                    width: 100px;
+                    >.button-container {
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .flex-row {
+                &.button-line {
+                    flex-wrap: wrap;
+                    padding: 0 calc(var(--size-margin-10) * (-1));
+                    margin-bottom: var(--size-margin-30);
+                    >.fade-in {
+                        margin: var(--size-margin-10);
+                    }
+                }
+            }
+            .game {
+                width: 80%;
+                height: 80vh;
+                margin: 0 auto;
+                border: solid 1px var(--color-off-black);
+                display: flex;
+                flex-direction: column;
+                >.game-row {
+                    display: flex;
+                    flex-direction: row;
+                    flex: 1;
+                    >.game-cell {
+                        border: solid 1px var(--color-off-black);
+                        flex: 1;
+                    }
+                }
+            }
         }
     }
 }
@@ -16,6 +50,12 @@
 @media screen and (max-width: 600px) {
     .post {
         &.six {
+            .post-text {
+                .game {
+                    width: calc(100% - 2px);
+                    height: 50vh;
+                }
+            }
         }
     }
 }

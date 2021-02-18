@@ -24,6 +24,7 @@ interface IPostTemplateProps extends IPostContentProps {
     photoCreditUrl ?: string;
     photoCreditWebsite ?: string;
     skipToFun ?: boolean;
+    removeProgressionBarAndSkipToFun ?: boolean;
 }
 
 export const getImageSrc = (postId : number, pictureName : string) => {
@@ -42,8 +43,8 @@ const PostTemplate : React.FC<IPostTemplateProps> = props => {
                 <Header/>
                 <ArrowBack/>
                 {!props.skipToFun && <GoToTldr />}
-                {props.skipToFun && <SkipToFun />}
-                <ProgressionBar />
+                {!props.removeProgressionBarAndSkipToFun && props.skipToFun && <SkipToFun />}
+                {!props.removeProgressionBarAndSkipToFun && <ProgressionBar />}
                 <FadeIn noDelay>
                     <div className={`post-text`}>
                         {props.children}
