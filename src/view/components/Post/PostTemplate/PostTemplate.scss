@@ -50,6 +50,9 @@
                     .color-vs-light-blue {
                         color: var(--color-vs-light-blue);
                     }
+                    .color-vs-light-orange {
+                        color: var(--color-vs-light-orange);
+                    }
                     .color-vs-orange {
                         color: var(--color-vs-orange);
                     }
@@ -101,6 +104,10 @@
                         margin-left: 50%;
                         transform: translateX(-50%);
                     }
+                    &.width50Mobile100 {
+                        width: 50%;
+                        align-self: flex-start;
+                    }
                 }
                 .flex-row {
                     display: flex;
@@ -111,6 +118,12 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                }
+                .cursor-pointer {
+                    cursor: pointer;
+                    &:hover {
+                        color: var(--color-yellow);
+                    }
                 }
             }
         }
@@ -125,6 +138,16 @@
                     >img {
                         &.width-50 {
                             width: unset;
+                        }
+                    }
+                    img {
+                        &.width50Mobile100 {
+                            width: 100%;
+                        }
+                    }
+                    .flex-row {
+                        &.mobile-column {
+                            flex-direction: column;
                         }
                     }
                 }

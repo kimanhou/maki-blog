@@ -1,0 +1,17 @@
+.fade-in {
+    >.button {
+        &.skip-to-fun {
+            width: var(--size-post-5-demo-button-width);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fade-in {
+        >.button {
+            &.skip-to-fun {
+                width: calc(100% - 6px);
+            }
+        }
+    }
+}
