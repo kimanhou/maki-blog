@@ -1,33 +1,26 @@
 import React from 'react';
+import getBackgroundColor from '../../../hooks/UseBackgroundColor';
+import Game from './models/Game';
+import GameCell from './models/GameCell';
 
-
-const renderGameCellWithBackground = (gameRow : number, gameCellNumber : number, getBackground : (x : number, y : number) => string) => {
-    return <div className={`game-cell`} style={{ backgroundColor: getBackground(gameRow, gameCellNumber)}}></div>;
+const renderGameCell = (gameCell : GameCell) => {
+    return <div className={`game-cell`} style={{ backgroundColor: gameCell.backgroundColor }}></div>;
 }
 
-const renderGameRow = (gameRow : number, numberOfCells : number, drawing : string) => {
-    var foo = Array.from(Array(numberOfCells).keys());
-    return <div className={`game-row`}>
-        {foo.map(t => renderGameCellWithBackground(gameRow, t, getBackgroundColorFunction(numberOfCells, drawing)))}
-    </div>
+const renderGameRow = (gameCells : GameCell[]) => {
+    return (
+        <div className={`game-row`}>
+            {gameCells.map(t => renderGameCell(t))}
+        </div>
+    );
 }
 
-export const renderGameRows = (numberOfRows : number, numberOfCellsPerRow : number, drawing : string) => {
-    var foo = Array.from(Array(numberOfRows).keys());
-    return foo.map(t => renderGameRow(t, numberOfCellsPerRow, drawing))
-}
-
-// --color-super-light-green: rgb(204,236,236);
-// --color-dark-green: rgb(47,79,79);
-const calculateValueOfBackgroundColor = (from : number, to : number, distance : number, distanceTotale : number) => {
-    return from + (to - from) * (distance / distanceTotale);
-}
-
-const getBackgroundColor = (distance : number, distanceTotale : number) => {
-    if (distanceTotale == 0) {
-        return `rgb(204,236,236)`;
-    }
-    return `rgb(${calculateValueOfBackgroundColor(204, 47, distance, distanceTotale)}, ${calculateValueOfBackgroundColor(236, 79, distance, distanceTotale)}, ${calculateValueOfBackgroundColor(236, 79, distance, distanceTotale)})`;
+export const renderGame = (game : Game) => {
+    return (
+        <>
+            {game.cells.map(row => renderGameRow(row))}
+        </>
+    );
 }
 
 const getBackgroundColor4x4 = (x : number, y : number) => {
@@ -199,7 +192,7 @@ const getBackgroundColor32x32 = (x : number, y : number) => {
     return '';
 }
 
-const getBackgroundColorFunction = (size : number, drawing : string) : ((x : number, y : number) => string) => {
+export const getBackgroundColorFunction = (size : number, drawing : string) : ((x : number, y : number) => string) => {
     switch (size) {
         case 4:
             return getBackgroundColor4x4;

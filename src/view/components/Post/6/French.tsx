@@ -3,8 +3,15 @@ import { IPostContentProps } from '../../../../model/Post';
 import { isMobile } from '../../../hooks/UseMediaQuery';
 import PostTemplate from '../PostTemplate/PostTemplate';
 import Button from '../PostTemplate/TemplateComponents/Button';
-import { renderGameRows } from './Post6Hooks';
+import Game from './models/Game';
+import { getBackgroundColorFunction, renderGame } from './Post6Hooks';
 import './PostPage.scss';
+
+
+const game4x4 = Game.createGameFromCoordinates(4, getBackgroundColorFunction(4, ''));
+const game8x8 = Game.createGameFromCoordinates(8, getBackgroundColorFunction(8, ''));
+const game16x16Pokeball = Game.createGameFromCoordinates(16, getBackgroundColorFunction(16, 'pokeball'));
+const game16x16Charmander = Game.createGameFromCoordinates(16, getBackgroundColorFunction(16, 'charmander'));
 
 const French : React.FC<IPostContentProps> = props => {
     const postId = 6;
@@ -28,7 +35,9 @@ const French : React.FC<IPostContentProps> = props => {
             return drawing16;
         }
         return '';
-    } 
+    }
+
+    const [game, setGame] = useState(game4x4);
 
     return (
         <PostTemplate postId={postId}
@@ -65,7 +74,7 @@ const French : React.FC<IPostContentProps> = props => {
             </div>
 
             <div className={`game`} style={{ height: gameSize, width: gameSize}}>
-                {renderGameRows(size, size, getDrawing())}
+                {renderGame(Game.createGameFromCoordinates(size, getBackgroundColorFunction(size, getDrawing())))}
             </div>
             
         </PostTemplate>

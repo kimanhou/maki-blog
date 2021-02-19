@@ -3,7 +3,8 @@ import { IPostContentProps } from '../../../../model/Post';
 import { isMobile } from '../../../hooks/UseMediaQuery';
 import PostTemplate from '../PostTemplate/PostTemplate';
 import Button from '../PostTemplate/TemplateComponents/Button';
-import { renderGameRows } from './Post6Hooks';
+import Game from './models/Game';
+import { renderGame } from './Post6Hooks';
 import './PostPage.scss';
 
 const English : React.FC<IPostContentProps> = props => {
@@ -46,7 +47,7 @@ const English : React.FC<IPostContentProps> = props => {
             </div>
 
             <div className={`game`} style={{ height: gameSize, width: gameSize}}>
-                {/* {renderGameRows(size, size)} */}
+                {renderGame(new Game([]))}
             </div>
             
         </PostTemplate>
