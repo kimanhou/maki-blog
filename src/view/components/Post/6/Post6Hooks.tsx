@@ -189,6 +189,78 @@ const getBackgroundColor16x16Charmander = (x : number, y : number) => {
     return '';
 }
 
+const getBackgroundColor16x16AmongUs = (x : number, y : number) => {
+    const whiteCoordinates = [ { x : 7, y : 3 } ];
+
+    const lightBlueCoordinates = [ { x : 7, y : 2 }, { x : 7, y : 4 } ];
+
+    const darkBlueCoordinates = [ 
+        { x : 7, y : 5 }, 
+        { x : 8, y : 2 }, { x : 8, y : 3 }, { x : 8, y : 4 }, { x : 8, y : 5 }
+    ];
+
+    const blackCoordinates = [ 
+        {x : 3, y: 4}, {x : 3, y: 5}, {x : 3, y: 6}, {x : 3, y: 7}, {x : 3, y: 8},
+        {x : 4, y: 3}, {x : 4, y: 9},
+        {x : 5, y: 2}, {x : 5, y: 10},
+        {x : 6, y: 2}, {x : 6, y: 3}, {x : 6, y: 4}, {x : 6, y: 5}, {x : 6, y: 10}, {x : 6, y: 11}, {x : 6, y: 12},
+        {x : 7, y: 1}, {x : 7, y: 6}, {x : 7, y: 10}, {x : 7, y: 13},
+        {x : 8, y: 1}, {x : 8, y: 6}, {x : 8, y: 10}, {x : 8, y: 13},
+        {x : 9, y: 2}, {x : 9, y: 3}, {x : 9, y: 4}, {x : 9, y: 5}, {x : 9, y: 10}, {x : 9, y: 13},
+        {x : 10, y: 2}, {x : 10, y: 10}, {x : 10, y: 13},
+        {x : 11, y: 2}, {x : 11, y: 10}, {x : 11, y: 13},
+        {x : 12, y: 2}, {x : 12, y: 6}, {x : 12, y: 10}, {x : 12, y: 11}, {x : 12, y: 12},
+        {x : 13, y: 2}, {x : 13, y: 5}, {x : 13, y: 7}, {x : 13, y: 10},
+        {x : 14, y: 2}, {x : 14, y: 5}, {x : 14, y: 7}, {x : 14, y: 10}, 
+        {x : 15, y: 3}, {x : 15, y: 4}, {x : 15, y: 8}, {x : 15, y: 9}
+    ];
+
+    const redCoordinates = [ 
+        {x : 4, y: 4}, {x : 4, y: 5}, {x : 4, y: 6}, {x : 4, y: 7}, {x : 4, y: 8},
+        {x : 5, y: 3}, {x : 5, y: 4}, {x : 5, y: 5}, {x : 5, y: 6}, {x : 5, y: 7}, {x : 5, y: 8}, {x : 5, y: 9},
+        {x : 6, y: 6}, {x : 6, y: 7}, {x : 6, y: 8}, {x : 6, y: 9},
+        {x : 7, y: 7}, {x : 7, y: 8}, {x : 7, y: 9}, {x : 7, y: 11}, {x : 7, y: 12},
+        {x : 8, y: 7}, {x : 8, y: 8}, {x : 8, y: 9},
+        {x : 9, y: 6}, {x : 9, y: 7}, {x : 9, y: 8}, {x : 9, y: 9},
+        {x : 10, y: 5}, {x : 10, y: 6}, {x : 10, y: 7}
+    ];
+
+    const darkRedCoordinates = [ 
+        { x : 8, y : 11 }, { x : 8, y : 12 }, 
+        { x : 9, y : 11 }, { x : 9, y : 12 }, 
+        { x : 10, y : 3 }, { x : 10, y : 4 }, { x : 10, y : 8 }, { x : 10, y : 9 }, { x : 10, y : 11 }, { x : 10, y : 12 }, 
+        { x : 11, y : 3 }, { x : 11, y : 4 }, { x : 11, y : 5 }, { x : 11, y : 6 }, { x : 11, y : 7 }, { x : 11, y : 8 }, { x : 11, y : 9 },
+        { x : 12, y : 3 }, { x : 12, y : 4 }, { x : 12, y : 5 }, { x : 12, y : 7 }, { x : 12, y : 8 }, { x : 12, y : 9 },
+        { x : 13, y : 3 }, { x : 13, y : 4 }, { x : 13, y : 8 }, { x : 13, y : 9 },
+        { x : 14, y : 3 }, { x : 14, y : 4 }, { x : 14, y : 8 }, { x : 14, y : 9 },
+    ];
+
+    const veryDarkRedCoordinates = [ { x : 11, y : 11 }, { x : 11, y : 12 } ];
+
+    if (isInList(x, y, whiteCoordinates)) {
+        return 'white';
+    }
+    if (isInList(x, y, lightBlueCoordinates)) {
+        return 'rgb(58,206,255)';
+    }
+    if (isInList(x, y, darkBlueCoordinates)) {
+        return 'rgb(0,85,255)';
+    }
+    if (isInList(x, y, blackCoordinates)) {
+        return 'var(--color-off-black)';
+    }
+    if (isInList(x, y, redCoordinates)) {
+        return 'red';
+    }
+    if (isInList(x, y, darkRedCoordinates)) {
+        return 'rgb(207,1,1)';
+    }
+    if (isInList(x, y, veryDarkRedCoordinates)) {
+        return 'rgb(166,1,1)';
+    }
+    return '';
+}
+
 const getBackgroundColor32x32 = (x : number, y : number) => {
     return '';
 }
@@ -203,6 +275,8 @@ export const getBackgroundColorFunction = (drawing : Drawing) : ((x : number, y 
             return getBackgroundColor16x16Pokeball;
         case Drawing.SIXTEEN_CHARMANDER :
             return getBackgroundColor16x16Charmander;
+        case Drawing.SIXTEEN_AMONG_US :
+            return getBackgroundColor16x16AmongUs;
         case Drawing.THIRTYTWO :
             return getBackgroundColor32x32;
         default:
@@ -218,6 +292,7 @@ export const getSize = (drawing : Drawing) => {
             return 8;
         case Drawing.SIXTEEN_POKEBALL:
         case Drawing.SIXTEEN_CHARMANDER:
+        case Drawing.SIXTEEN_AMONG_US:
             return 16;
         case Drawing.THIRTYTWO:
             return 32;
