@@ -1,3 +1,5 @@
+import { Drawing } from "../French";
+import { getBackgroundColorFunction, getSize } from "../Post6Hooks";
 import GameCell from "./GameCell";
 
 export default class Game {
@@ -36,4 +38,11 @@ export default class Game {
         }
         return game;
     }
+
+    static createGameFromDrawing = (drawing : Drawing) => {
+        const size = getSize(drawing);
+        const backgroundFunction = getBackgroundColorFunction(drawing);
+        return Game.createGameFromCoordinates(size, backgroundFunction);
+    }
+
 }

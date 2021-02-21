@@ -24,32 +24,47 @@
                     >.fade-in {
                         margin: var(--size-margin-10);
                     }
-                    >.icon-button {
-                        height: 100%;
-                        width: 100px;
-                        background-position: center;
-                        background-size: 100%;
-                        cursor: pointer;
-                        transition: filter .4s;
-                        &.pokeball {
-                            background-image: url(./images/pokeball-icon.png);
-                            margin-right: var(--size-margin-30);
+                }
+            }
+            .drawing-icons-container {
+                margin-bottom: var(--size-margin-30);
+                >.flex-row {
+                    &.button-line {
+                        margin-bottom: 0;
+                        >.icon-button {
+                            height: 100%;
+                            width: 100px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            cursor: pointer;
+                            transition: filter .4s;
+                            &.pokeball {
+                                background-image: url(./images/pokeball-icon.png);
+                                margin-right: var(--size-margin-30);
+                            }
+                            &.charmander {
+                                background-image: url(./images/charmander-icon.png);
+                            }
+                            &.four {
+                                background-image: url(./images/four-icon.png);
+                            }
+                            &.pikachu {
+                                background-image: url(./images/pikachu-icon.png);
+                            }
+                            &.unselected {
+                                filter: brightness(50%);
+                            }
+                            &:hover {
+                                filter: brightness(100%);
+                            }
                         }
-                        &.charmander {
-                            background-image: url(./images/charmander-icon.png);
-                        }
-                        &.unselected {
-                            filter: brightness(50%);
-                        }
-                        &:hover {
-                            filter: brightness(100%);
-                        }
-                    }
-                    &.icon-16 {
-                        height: 0;
-                        transition: height 1s;
-                        &.active {
-                            height: 100px;
+                        &.icon-4, &.icon-8, &.icon-16 {
+                            height: 0;
+                            transition: height 1s;
+                            &.active {
+                                height: 100px;
+                            }
                         }
                     }
                 }

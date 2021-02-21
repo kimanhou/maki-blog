@@ -1,5 +1,6 @@
 import React from 'react';
 import getBackgroundColor from '../../../hooks/UseBackgroundColor';
+import { Drawing } from './French';
 import Game from './models/Game';
 import GameCell from './models/GameCell';
 
@@ -192,25 +193,36 @@ const getBackgroundColor32x32 = (x : number, y : number) => {
     return '';
 }
 
-export const getBackgroundColorFunction = (size : number, drawing : string) : ((x : number, y : number) => string) => {
-    switch (size) {
-        case 4:
+export const getBackgroundColorFunction = (drawing : Drawing) : ((x : number, y : number) => string) => {
+    switch (drawing) {
+        case Drawing.FOUR :
             return getBackgroundColor4x4;
-        case 8:
+        case Drawing.EIGHT_PIKACHU :
             return getBackgroundColor8x8;
-        case 16:
-            switch (drawing) {
-                case 'pokeball' :
-                    return getBackgroundColor16x16Pokeball;
-                case 'charmander' :
-                    return getBackgroundColor16x16Charmander;
-                default:
-                    return getBackgroundColor16x16Pokeball;
-            }
-        case 32:
+        case Drawing.SIXTEEN_POKEBALL :
+            return getBackgroundColor16x16Pokeball;
+        case Drawing.SIXTEEN_CHARMANDER :
+            return getBackgroundColor16x16Charmander;
+        case Drawing.THIRTYTWO :
             return getBackgroundColor32x32;
         default:
             return getBackgroundColor4x4;
+    }
+}
+
+export const getSize = (drawing : Drawing) => {
+    switch (drawing) {
+        case Drawing.FOUR:
+            return 4;
+        case Drawing.EIGHT_PIKACHU:
+            return 8;
+        case Drawing.SIXTEEN_POKEBALL:
+        case Drawing.SIXTEEN_CHARMANDER:
+            return 16;
+        case Drawing.THIRTYTWO:
+            return 32;
+        default:
+            return 4;
     }
 }
 
