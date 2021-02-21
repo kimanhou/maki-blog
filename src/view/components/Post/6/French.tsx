@@ -14,6 +14,7 @@ export enum Drawing {
     SIXTEEN_POKEBALL = 'pokeball',
     SIXTEEN_CHARMANDER = 'charmander',
     SIXTEEN_AMONG_US = 'among-us',
+    SIXTEEN_YOSHI = 'yoshi',
     THIRTYTWO = 'thirty-two'
 }
 
@@ -44,6 +45,7 @@ const French : React.FC<IPostContentProps> = props => {
     const pokeballIsUnselectedClassname = drawing != Drawing.SIXTEEN_POKEBALL ? 'unselected' : '';
     const charmanderIsUnselectedClassname = drawing != Drawing.SIXTEEN_CHARMANDER ? 'unselected' : '';
     const amongUsIsUnselectedClassname = drawing != Drawing.SIXTEEN_AMONG_US ? 'unselected' : '';
+    const yoshiIsUnselectedClassname = drawing != Drawing.SIXTEEN_YOSHI ? 'unselected' : '';
     const fourIsUnselectedClassname = drawing != Drawing.FOUR ? 'unselected' : '';
     const pikachuIsUnselectedClassname = drawing != Drawing.EIGHT_PIKACHU ? 'unselected' : '';
 
@@ -90,6 +92,7 @@ const French : React.FC<IPostContentProps> = props => {
                     <div onClick={() => onClickSizeDrawing(16, Drawing.SIXTEEN_POKEBALL)} className={`icon-button pokeball ${pokeballIsUnselectedClassname}`}/>
                     <div onClick={() => onClickSizeDrawing(16, Drawing.SIXTEEN_CHARMANDER)} className={`icon-button charmander ${charmanderIsUnselectedClassname}`}/>
                     <div onClick={() => onClickSizeDrawing(16, Drawing.SIXTEEN_AMONG_US)} className={`icon-button among-us ${amongUsIsUnselectedClassname}`}/>
+                    <div onClick={() => onClickSizeDrawing(16, Drawing.SIXTEEN_YOSHI)} className={`icon-button yoshi ${yoshiIsUnselectedClassname}`}/>
                 </div>
             </div>
 

@@ -49,6 +49,10 @@
                             }
                             &.among-us {
                                 background-image: url(./images/among-us-icon.png);
+                                margin-right: var(--size-margin-30);
+                            }
+                            &.yoshi {
+                                background-image: url(./images/yoshi-icon.png);
                             }
                             &.four {
                                 background-image: url(./images/four-icon.png);
