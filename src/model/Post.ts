@@ -122,7 +122,7 @@ export default class Post {
     static THREE = new Post(3, new Date('2021-02-05'), new LanguageVersion(English3, 'DIY: 3 ways to animate the color of a text on hover'), new LanguageVersion(French3, "DIY : 3 manières d'animer la couleur d'un texte quand la souris passe dessus"), [ Category.DIY, Category.CODE ], true);
     static FOUR = new Post(4, new Date('2021-02-12'), new LanguageVersion(English4, 'UI/UX, what is it ?'), new LanguageVersion(French4, "UI/UX, qu'est-ce que c'est ?"), [ Category.UI ], true);
     static FIVE = new Post(5, new Date('2021-02-19'), new LanguageVersion(English5, 'Flexbox cheatsheet'), new LanguageVersion(French5, "Flexbox cheatsheet"), [ Category.CODE ], true);
-    static SIX = new Post(6, new Date('2021-02-26'), new LanguageVersion(English6, 'Pixel art'), new LanguageVersion(French6, "Pixel art"), [ Category.GAME ], true);
+    static SIX = new Post(6, new Date('2021-02-26'), new LanguageVersion(English6, 'Pixel art'), new LanguageVersion(French6, "Pixel art"), [ Category.GAME ]);
 }
 
 const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]
