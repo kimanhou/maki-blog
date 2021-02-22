@@ -60,6 +60,9 @@
                             &.pikachu {
                                 background-image: url(./images/pikachu-icon.png);
                             }
+                            &.pikachu-32 {
+                                background-image: url(./images/pikachu-32-icon.png);
+                            }
                             &.unselected {
                                 filter: brightness(50%);
                             }
@@ -67,7 +70,7 @@
                                 filter: brightness(100%);
                             }
                         }
-                        &.icon-4, &.icon-8, &.icon-16 {
+                        &.icon-4, &.icon-8, &.icon-16, &.icon-32 {
                             height: 0;
                             transition: height 1s;
                             &.active {

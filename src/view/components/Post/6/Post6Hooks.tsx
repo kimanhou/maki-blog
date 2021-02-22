@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getBackgroundColor16x16AmongUs, getBackgroundColor16x16Charmander, getBackgroundColor16x16Pokeball, getBackgroundColor16x16Yoshi, getBackgroundColor32x32, getBackgroundColor4x4, getBackgroundColor8x8 } from './GetBackgroundColor';
+import { getBackgroundColor16x16AmongUs, getBackgroundColor16x16Charmander, getBackgroundColor16x16Pokeball, getBackgroundColor16x16Yoshi, getBackgroundColor32x32Pikachu, getBackgroundColor4x4, getBackgroundColor8x8 } from './GetBackgroundColor';
 import Game, { Drawing } from './models/Game';
 import GameCell from './models/GameCell';
 
@@ -52,7 +52,7 @@ export const getBackgroundColorFunction = (drawing : Drawing) : ((x : number, y 
         case Drawing.SIXTEEN_YOSHI :
             return getBackgroundColor16x16Yoshi;
         case Drawing.THIRTYTWO_PIKACHU :
-            return getBackgroundColor32x32;
+            return getBackgroundColor32x32Pikachu;
         default:
             return getBackgroundColor4x4;
     }

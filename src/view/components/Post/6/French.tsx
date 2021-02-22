@@ -39,6 +39,7 @@ const French : React.FC<IPostContentProps> = props => {
     const yoshiIsUnselectedClassname = drawing != Drawing.SIXTEEN_YOSHI ? 'unselected' : '';
     const fourIsUnselectedClassname = drawing != Drawing.FOUR ? 'unselected' : '';
     const pikachuIsUnselectedClassname = drawing != Drawing.EIGHT_PIKACHU ? 'unselected' : '';
+    const pikachu32IsUnselectedClassname = drawing != Drawing.THIRTYTWO_PIKACHU ? 'unselected' : '';
 
     const isWin = game.equals(Game.createGameFromDrawing(game.drawing));
 
@@ -86,7 +87,8 @@ const French : React.FC<IPostContentProps> = props => {
             <div className={`drawing-icons-container`}>
                 <div className={`flex-row button-line icon-4 ${active4ClassName}`}>
                     <div onClick={() => onClickSizeDrawing(Drawing.FOUR)} className={`icon-button four ${fourIsUnselectedClassname}`}/>
-                </div><div className={`flex-row button-line icon-8 ${active8ClassName}`}>
+                </div>
+                <div className={`flex-row button-line icon-8 ${active8ClassName}`}>
                     <div onClick={() => onClickSizeDrawing(Drawing.EIGHT_PIKACHU)} className={`icon-button pikachu ${pikachuIsUnselectedClassname}`}/>
                 </div>
                 <div className={`flex-row button-line icon-16 ${active16ClassName}`}>
@@ -94,6 +96,9 @@ const French : React.FC<IPostContentProps> = props => {
                     <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_CHARMANDER)} className={`icon-button charmander ${charmanderIsUnselectedClassname}`}/>
                     <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_AMONG_US)} className={`icon-button among-us ${amongUsIsUnselectedClassname}`}/>
                     <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_YOSHI)} className={`icon-button yoshi ${yoshiIsUnselectedClassname}`}/>
+                </div>
+                <div className={`flex-row button-line icon-32 ${active32ClassName}`}>
+                    <div onClick={() => onClickSizeDrawing(Drawing.THIRTYTWO_PIKACHU)} className={`icon-button pikachu-32 ${pikachu32IsUnselectedClassname}`}/>
                 </div>
             </div>
 
