@@ -85,7 +85,7 @@ const French : React.FC<IPostContentProps> = props => {
             </div>
 
             <div className={`game`} style={{ height: gameSize, width: gameSize}}>
-                {renderGame(game)}
+                {renderGame(game, setGame)}
             </div>
             
         </PostTemplate>

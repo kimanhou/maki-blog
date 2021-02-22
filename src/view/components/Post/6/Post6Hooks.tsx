@@ -1,24 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { getBackgroundColor16x16AmongUs, getBackgroundColor16x16Charmander, getBackgroundColor16x16Pokeball, getBackgroundColor16x16Yoshi, getBackgroundColor32x32, getBackgroundColor4x4, getBackgroundColor8x8 } from './GetBackgroundColor';
 import Game, { Drawing } from './models/Game';
 import GameCell from './models/GameCell';
 
-const renderGameCell = (gameCell : GameCell) => {
-    return <div className={`game-cell`} style={{ backgroundColor: gameCell.backgroundColor }}></div>;
+const renderGameCell = (gameCell : GameCell, game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
+    const onDragStart = () => {
+        setOriginCell(gameCell);
+    }
+
+    const onDrop = () => {
+        if (originCell != null) {
+            setGame(game.switchCells(originCell, gameCell));
+            setOriginCell(null);
+        }
+    }
+
+    return <div className={`game-cell`} onDrop={onDrop} onDragOver={e => e.preventDefault()}>
+                <div className={`game-cell-inside`} draggable onDragStart={onDragStart} style={{ backgroundColor: gameCell.backgroundColor }} ></div>
+            </div>;
 }
 
-const renderGameRow = (gameCells : GameCell[]) => {
+const renderGameRow = (gameCells : GameCell[], game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
     return (
         <div className={`game-row`}>
-            {gameCells.map(t => renderGameCell(t))}
+            {gameCells.map(t => renderGameCell(t, game, setGame, originCell, setOriginCell))}
         </div>
     );
 }
 
-export const renderGame = (game : Game) => {
+export const renderGame = (game : Game, setGame : (game : Game) => void) => {
+    const [originCell, setOriginCell] = useState<GameCell | null>(null);
     return (
         <>
-            {game.cells.map(row => renderGameRow(row))}
+            {game.cells.map(row => renderGameRow(row, game, setGame, originCell, setOriginCell))}
         </>
     );
 }

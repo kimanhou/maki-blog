@@ -60,4 +60,19 @@ export default class Game {
         return Game.createGameFromCoordinates(drawing, size, backgroundFunction);
     }
 
+    findCellCoordinates = (cell : GameCell) => {
+        const tmp = this.cells.map(x => x.findIndex(y => y === cell));
+        const x = tmp.findIndex(x => x > -1);
+        const y = tmp[x];
+        return {x, y};
+    }
+
+    switchCells = (originCell : GameCell, destinationCell : GameCell) => {
+        const originCellCoordinates = this.findCellCoordinates(originCell);
+        const destinationCellCoordinates = this.findCellCoordinates(destinationCell);
+        this.cells[destinationCellCoordinates.x][destinationCellCoordinates.y] = originCell;
+        this.cells[originCellCoordinates.x][originCellCoordinates.y] = destinationCell;
+        return new Game(this.cells, this.drawing);
+    }
+
 }
