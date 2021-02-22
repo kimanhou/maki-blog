@@ -108,6 +108,26 @@
                     }
                 }
             }
+            .victory-screen {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background-color: rgba(60, 60, 65, 0.5);
+                color: var(--color-yellow);
+                font-size: 20vw;
+                font-family: 'Dawning';
+                line-height: 81vh;
+                text-align: center;
+                opacity: 0;
+                display: none;
+                &.active {
+                    animation: victory-screen-animation 1s ease-in 0s forwards;
+                    pointer-events: unset;
+                    display: block;
+                }
+            }
         }
     }
 }
@@ -120,5 +140,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes victory-screen-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { IPostContentProps } from '../../../../model/Post';
 import { isMobile } from '../../../hooks/UseMediaQuery';
+import Text from '../../LocalisationContext/Text';
 import PostTemplate from '../PostTemplate/PostTemplate';
 import Button from '../PostTemplate/TemplateComponents/Button';
 import Game, { Drawing } from './models/Game';
@@ -42,6 +43,17 @@ const French : React.FC<IPostContentProps> = props => {
     const pikachu32IsUnselectedClassname = drawing != Drawing.THIRTYTWO_PIKACHU ? 'unselected' : '';
 
     const isWin = game.equals(Game.createGameFromDrawing(game.drawing));
+    const [victoryScreenActive, setVictoryScreenActive] = useState(false);
+    const victoryScreenActiveClassname = victoryScreenActive ? 'active' : '';
+    const isFirstTime = useRef(true);
+    useEffect(() => {
+        if (isWin && !isFirstTime.current) {
+            setVictoryScreenActive(true);
+        }
+        else {
+            isFirstTime.current = false;
+        }
+    }, [isWin]);
 
     const onClickSizeDrawing = (drawing : Drawing) => {
         setGame(Game.createGameFromDrawing(drawing));
@@ -63,9 +75,6 @@ const French : React.FC<IPostContentProps> = props => {
             <div className={`flex-row button-line`}>
                 <Button onClick={onShuffle} classname={`size-button`} isUnselected={false}>
                     shuffle
-                </Button>
-                <Button onClick={onShuffle} classname={`size-button`} isUnselected={!isWin}>
-                    win
                 </Button>
             </div>
                         
@@ -104,6 +113,10 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`game`} style={{ height: gameSize, width: gameSize}}>
                 {renderGame(game, setGame)}
+            </div>
+
+            <div className={`victory-screen ${victoryScreenActiveClassname}`} onClick={() => setVictoryScreenActive(false)}>
+                <Text english='Victory !' french='Victoire !'/>
             </div>
             
         </PostTemplate>
