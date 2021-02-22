@@ -75,4 +75,19 @@ export default class Game {
         return new Game(this.cells, this.drawing);
     }
 
+    randomise = () => {
+        const size = this.cells.length;
+        for(let i = 0; i < size * size; i++) {
+            const y = Math.floor(i / size);
+            const x = i % size;
+            const rndIdx = Math.floor(Math.random() * size * size);
+            const rndY = Math.floor(rndIdx / size);
+            const rndX = rndIdx % size;
+            const tmp = this.cells[rndY][rndX];
+            this.cells[rndY][rndX] = this.cells[y][x];
+            this.cells[y][x] = tmp;
+        }
+        return new Game(this.cells, this.drawing);
+    }
+
 }

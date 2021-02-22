@@ -40,9 +40,14 @@ const French : React.FC<IPostContentProps> = props => {
     const fourIsUnselectedClassname = drawing != Drawing.FOUR ? 'unselected' : '';
     const pikachuIsUnselectedClassname = drawing != Drawing.EIGHT_PIKACHU ? 'unselected' : '';
 
+    const isWin = game.equals(Game.createGameFromDrawing(game.drawing));
 
     const onClickSizeDrawing = (drawing : Drawing) => {
         setGame(Game.createGameFromDrawing(drawing));
+    }
+
+    const onShuffle = () => {
+        setGame(game.randomise());
     }
 
     return (
@@ -54,6 +59,14 @@ const French : React.FC<IPostContentProps> = props => {
                     tldr={tldr}
                     relatedPosts={[]}
                     skipToFun removeProgressionBarAndSkipToFun>
+            <div className={`flex-row button-line`}>
+                <Button onClick={onShuffle} classname={`size-button`} isUnselected={false}>
+                    shuffle
+                </Button>
+                <Button onClick={onShuffle} classname={`size-button`} isUnselected={!isWin}>
+                    win
+                </Button>
+            </div>
                         
             <div className={`flex-row button-line`}>
                 <Button onClick={() => onClickSizeDrawing(Drawing.FOUR)} classname={`size-button`} isUnselected={size != 4}>
