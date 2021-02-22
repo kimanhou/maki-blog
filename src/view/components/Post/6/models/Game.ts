@@ -1,12 +1,23 @@
-import { Drawing } from "../French";
 import { getBackgroundColorFunction, getSize } from "../Post6Hooks";
 import GameCell from "./GameCell";
 
+export enum Drawing {
+    FOUR = 'four',
+    EIGHT_PIKACHU = 'pikachu',
+    SIXTEEN_POKEBALL = 'pokeball',
+    SIXTEEN_CHARMANDER = 'charmander',
+    SIXTEEN_AMONG_US = 'among-us',
+    SIXTEEN_YOSHI = 'yoshi',
+    THIRTYTWO_PIKACHU = 'thirty-two-pikachu'
+}
+
 export default class Game {
     cells : GameCell[][];
+    readonly drawing : Drawing;
 
-    constructor(cells : GameCell[][]) {
+    constructor(cells : GameCell[][], drawing : Drawing) {
         this.cells = cells;
+        this.drawing = drawing;
     }
 
     equals = (game : Game) => {
@@ -26,8 +37,12 @@ export default class Game {
         return true;
     }
 
-    static createGameFromCoordinates = (size : number, getBackgroundColor : (x : number, y : number) => string ) => {
-        var game = new Game([]);
+    getSize = () => {
+        return this.cells.length;
+    }
+
+    static createGameFromCoordinates = (drawing : Drawing, size : number, getBackgroundColor : (x : number, y : number) => string ) => {
+        var game = new Game([], drawing);
         for (let i = 0; i < size; i ++) {
             var row : GameCell[] = [];
             for (let j = 0; j < size; j ++) {
@@ -42,7 +57,7 @@ export default class Game {
     static createGameFromDrawing = (drawing : Drawing) => {
         const size = getSize(drawing);
         const backgroundFunction = getBackgroundColorFunction(drawing);
-        return Game.createGameFromCoordinates(size, backgroundFunction);
+        return Game.createGameFromCoordinates(drawing, size, backgroundFunction);
     }
 
 }
