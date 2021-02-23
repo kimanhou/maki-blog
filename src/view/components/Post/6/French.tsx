@@ -117,6 +117,8 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`victory-screen ${victoryScreenActiveClassname}`} onClick={() => setVictoryScreenActive(false)}>
                 <Text english='Victory !' french='Victoire !'/>
+                <div className="before"></div>
+                <div className="after"></div>
             </div>
             
         </PostTemplate>
