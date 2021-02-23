@@ -93,7 +93,7 @@ const French : React.FC<IPostContentProps> = props => {
                 </Button>
             </div>
 
-            <div className={`drawing-icons-container`}>
+            {/* <div className={`drawing-icons-container`}>
                 <div className={`flex-row button-line icon-4 ${active4ClassName}`}>
                     <div onClick={() => onClickSizeDrawing(Drawing.FOUR)} className={`icon-button four ${fourIsUnselectedClassname}`}/>
                 </div>
@@ -109,10 +109,30 @@ const French : React.FC<IPostContentProps> = props => {
                 <div className={`flex-row button-line icon-32 ${active32ClassName}`}>
                     <div onClick={() => onClickSizeDrawing(Drawing.THIRTYTWO_PIKACHU)} className={`icon-button pikachu-32 ${pikachu32IsUnselectedClassname}`}/>
                 </div>
-            </div>
+            </div> */}
 
-            <div className={`game`} style={{ height: gameSize, width: gameSize}}>
-                {renderGame(game, setGame)}
+            <div className={`game-container`}>
+                <div className={`column drawing-icons-container`}>
+                    <div className={`flex-column button-column icon-4 ${active4ClassName}`} style={{ height: gameSize }}>
+                        <div onClick={() => onClickSizeDrawing(Drawing.FOUR)} className={`icon-button four ${fourIsUnselectedClassname}`}/>
+                    </div>
+                    <div className={`flex-column button-column icon-8 ${active8ClassName}`} style={{ height: gameSize }}>
+                        <div onClick={() => onClickSizeDrawing(Drawing.EIGHT_PIKACHU)} className={`icon-button pikachu ${pikachuIsUnselectedClassname}`}/>
+                    </div>
+                    <div className={`flex-column button-column icon-16 ${active16ClassName}`} style={{ height: gameSize }}>
+                        <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_POKEBALL)} className={`icon-button pokeball ${pokeballIsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_CHARMANDER)} className={`icon-button charmander ${charmanderIsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_AMONG_US)} className={`icon-button among-us ${amongUsIsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_YOSHI)} className={`icon-button yoshi ${yoshiIsUnselectedClassname}`}/>
+                    </div>
+                    <div className={`flex-column button-column icon-32 ${active32ClassName}`} style={{ height: gameSize }}>
+                        <div onClick={() => onClickSizeDrawing(Drawing.THIRTYTWO_PIKACHU)} className={`icon-button pikachu-32 ${pikachu32IsUnselectedClassname}`}/>
+                    </div>
+                </div>
+                <div className={`game`} style={{ height: gameSize, width: gameSize}}>
+                    {renderGame(game, setGame)}
+                </div>
+                <div className={`column`}></div>
             </div>
 
             <div className={`victory-screen ${victoryScreenActiveClassname}`} onClick={() => setVictoryScreenActive(false)}>

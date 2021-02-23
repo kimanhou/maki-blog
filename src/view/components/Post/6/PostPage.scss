@@ -42,84 +42,95 @@ $box-shadow2: ();
                     }
                 }
             }
-            .drawing-icons-container {
-                margin-bottom: var(--size-margin-30);
-                >.flex-row {
-                    &.button-line {
-                        margin-bottom: 0;
-                        >.icon-button {
-                            height: 100%;
-                            width: 100px;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-size: 100%;
-                            cursor: pointer;
-                            transition: filter .4s;
-                            &.pokeball {
-                                background-image: url(./images/pokeball-icon.png);
-                                margin-right: var(--size-margin-30);
-                            }
-                            &.charmander {
-                                background-image: url(./images/charmander-icon.png);
-                                margin-right: var(--size-margin-30);
-                            }
-                            &.among-us {
-                                background-image: url(./images/among-us-icon.png);
-                                margin-right: var(--size-margin-30);
-                            }
-                            &.yoshi {
-                                background-image: url(./images/yoshi-icon.png);
-                            }
-                            &.four {
-                                background-image: url(./images/four-icon.png);
-                            }
-                            &.pikachu {
-                                background-image: url(./images/pikachu-icon.png);
-                            }
-                            &.pikachu-32 {
-                                background-image: url(./images/pikachu-32-icon.png);
-                            }
-                            &.unselected {
-                                filter: brightness(50%);
-                            }
-                            &:hover {
-                                filter: brightness(100%);
-                            }
-                        }
-                        &.icon-4, &.icon-8, &.icon-16, &.icon-32 {
-                            height: 0;
-                            transition: height 1s;
-                            &.active {
-                                height: 100px;
+            .game-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                >.column {
+                    width: 100px;
+                    &.drawing-icons-container {
+                        position: relative;
+                        >.flex-column {
+                            &.button-column {
+                                margin-bottom: 0;
+                                width: 0;
+                                height: 100%;
+                                transition: width 1s;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                &.active {
+                                    width: 100%;
+                                }
+                                >.icon-button {
+                                    height: 100px;
+                                    width: 100%;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: 100%;
+                                    cursor: pointer;
+                                    transition: filter .4s;
+                                    margin-bottom: var(--size-margin-30);
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                    &.pokeball {
+                                        background-image: url(./images/pokeball-icon.png);
+                                    }
+                                    &.charmander {
+                                        background-image: url(./images/charmander-icon.png);
+                                    }
+                                    &.among-us {
+                                        background-image: url(./images/among-us-icon.png);
+                                    }
+                                    &.yoshi {
+                                        background-image: url(./images/yoshi-icon.png);
+                                    }
+                                    &.four {
+                                        background-image: url(./images/four-icon.png);
+                                    }
+                                    &.pikachu {
+                                        background-image: url(./images/pikachu-icon.png);
+                                    }
+                                    &.pikachu-32 {
+                                        background-image: url(./images/pikachu-32-icon.png);
+                                    }
+                                    &.unselected {
+                                        filter: brightness(50%);
+                                    }
+                                    &:hover {
+                                        filter: brightness(100%);
+                                    }
+                                }
                             }
                         }
                     }
                 }
-            }
-            .game {
-                margin: 0 auto;
-                border: solid 1px var(--color-off-black);
-                display: flex;
-                flex-direction: column;
-                >.game-row {
+                .game {
+                    margin: 0 auto;
+                    border: solid 1px var(--color-off-black);
                     display: flex;
-                    flex-direction: row;
-                    flex: 1;
-                    >.game-cell {
-                        border: solid 1px var(--color-off-black);
+                    flex-direction: column;
+                    >.game-row {
+                        display: flex;
+                        flex-direction: row;
                         flex: 1;
-                        cursor: move; /* fallback if grab cursor is unsupported */
-                        cursor: grab;
-                        cursor: -moz-grab;
-                        cursor: -webkit-grab;
-                        &:active {
-                            cursor: grabbing;
-                            cursor: -moz-grabbing;
-                            cursor: -webkit-grabbing;
-                        }
-                        >.game-cell-inside {
-                            height: 100%;
-                            width: 100%;
+                        >.game-cell {
+                            border: solid 1px var(--color-off-black);
+                            flex: 1;
+                            cursor: move; /* fallback if grab cursor is unsupported */
+                            cursor: grab;
+                            cursor: -moz-grab;
+                            cursor: -webkit-grab;
+                            &:active {
+                                cursor: grabbing;
+                                cursor: -moz-grabbing;
+                                cursor: -webkit-grabbing;
+                            }
+                            >.game-cell-inside {
+                                height: 100%;
+                                width: 100%;
+                            }
                         }
                     }
                 }
