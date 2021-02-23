@@ -48,7 +48,8 @@ const French : React.FC<IPostContentProps> = props => {
     const ghost8IsUnselectedClassname = drawing != Drawing.EIGHT_GHOST ? 'unselected' : '';
     const pikachu32IsUnselectedClassname = drawing != Drawing.THIRTYTWO_PIKACHU ? 'unselected' : '';
 
-    const isWin = game.equals(Game.createGameFromDrawing(game.drawing));
+    const finishedGame = Game.createGameFromDrawing(game.drawing);
+    const isWin = game.equals(finishedGame);
     const [victoryScreenActive, setVictoryScreenActive] = useState(false);
     const victoryScreenActiveClassname = victoryScreenActive ? 'active' : '';
     const [isFirstTime, setIsFirstTime] = useState(true);
@@ -96,6 +97,22 @@ const French : React.FC<IPostContentProps> = props => {
         }
     }, [launchCountDown])
 
+
+    const [cheating, setCheating] = useState(false);
+    const cheatingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const cheatingClassName = cheating ? 'active' : '';
+    const onCheat = () => {
+        setCheating(true);
+        if (cheatingTimeoutRef.current != null) {
+            clearTimeout(cheatingTimeoutRef.current);
+            cheatingTimeoutRef.current = null;
+        }
+        cheatingTimeoutRef.current = setTimeout(() => {
+            setCheating(false);
+            cheatingTimeoutRef.current = null;
+        }, 3000);
+    }
+
     return (
         <PostTemplate postId={postId}
                     title={props.title} 
@@ -108,6 +125,9 @@ const French : React.FC<IPostContentProps> = props => {
             <div className={`flex-row button-line`}>
                 <Button onClick={onShuffle} classname={`size-button`} isUnselected={false}>
                     <Text english='shuffle' french='mélanger'/>
+                </Button>
+                <Button onClick={onCheat} classname={`size-button`} isUnselected={false}>
+                    <Text english='cheat' french='tricher'/>
                 </Button>
             </div>
                         
@@ -150,8 +170,16 @@ const French : React.FC<IPostContentProps> = props => {
                         <div onClick={() => onClickSizeDrawing(Drawing.THIRTYTWO_PIKACHU)} className={`icon-button pikachu-32 ${pikachu32IsUnselectedClassname}`}/>
                     </div>
                 </div>
-                <div className={`game`} style={{ height: gameSize, width: gameSize}}>
-                    {renderGame(game, setGame)}
+                <div className={`game-container-2`}>
+                    <div className={`game`} style={{ height: gameSize, width: gameSize}}>
+                        {renderGame(game, setGame)}
+                    </div>
+                    <div className={`cheating-game-container ${cheatingClassName}`}>
+                        <div className={`cheating-game game`} style={{ height: gameSize, width: gameSize}}>
+                            {renderGame(finishedGame, () => {})}
+                        </div>
+                        <div className={`cheating-game-background`}></div>
+                    </div>
                 </div>
                 <div className={`column shuffle-in`}>
                     <div className={`shuffle-in-content ${countDownActiveClassname}`}>

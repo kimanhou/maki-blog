@@ -26,7 +26,7 @@ export const getBackgroundColor4x4Pacman = (x : number, y : number) => {
     if (isInList(x, y, yellowCoordinates)) {
         return 'var(--color-yellow)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor4x4SouthPark = (x : number, y : number) => {
@@ -55,7 +55,7 @@ export const getBackgroundColor4x4SouthPark = (x : number, y : number) => {
     if (isInList(x, y, redCoordinates)) {
         return 'red';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor4x4Tarzan = (x : number, y : number) => {
@@ -76,7 +76,7 @@ export const getBackgroundColor4x4Tarzan = (x : number, y : number) => {
     if (isInList(x, y, beigeCoordinates)) {
         return 'rgb(249,227,186)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor8x8Pikachu = (x : number, y : number) : string => {
@@ -121,7 +121,7 @@ export const getBackgroundColor8x8Pikachu = (x : number, y : number) : string =>
     if (isInList(x, y, darkYellowCoordinates)) {
         return 'rgb(253,152,39)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor8x8Kirby = (x : number, y : number) : string => {
@@ -165,7 +165,7 @@ export const getBackgroundColor8x8Kirby = (x : number, y : number) : string => {
     if (isInList(x, y, darkPinkCoordinates)) {
         return 'rgb(171,26,87)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor8x8SpaceInvader = (x : number, y : number) : string => {
@@ -198,7 +198,7 @@ export const getBackgroundColor8x8SpaceInvader = (x : number, y : number) : stri
     if (isInList(x, y, blackCoordinates)) {
         return 'var(--color-off-black)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor8x8Ghost = (x : number, y : number) : string => {
@@ -257,7 +257,7 @@ export const getBackgroundColor8x8Ghost = (x : number, y : number) : string => {
     if (isInList(x, y, redCoordinates)) {
         return 'rgb(252,16,81)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor16x16Pokeball = (x : number, y : number) => {
@@ -298,7 +298,7 @@ export const getBackgroundColor16x16Pokeball = (x : number, y : number) => {
     if (isInList(x, y, redCoordinates)) {
         return 'rgb(229,57,53)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor16x16Charmander = (x : number, y : number) => {
@@ -363,7 +363,7 @@ export const getBackgroundColor16x16Charmander = (x : number, y : number) => {
     if (isInList(x, y, orangeCoordinates)) {
         return 'rgb(253,125,72)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor16x16AmongUs = (x : number, y : number) => {
@@ -430,7 +430,7 @@ export const getBackgroundColor16x16AmongUs = (x : number, y : number) => {
     if (isInList(x, y, veryDarkRedCoordinates)) {
         return 'rgb(166,1,1)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor16x16Yoshi = (x : number, y : number) => {
@@ -473,7 +473,7 @@ export const getBackgroundColor16x16Yoshi = (x : number, y : number) => {
     if (isInList(x, y, greenCoordinates)) {
         return 'rgb(177,191,77)';
     }
-    return '';
+    return 'var(--color-white)';
 }
 
 export const getBackgroundColor32x32Pikachu = (x : number, y : number) => {
@@ -571,5 +571,5 @@ export const getBackgroundColor32x32Pikachu = (x : number, y : number) => {
     if (isInList(x, y, yellowCoordinates)) {
         return 'var(--color-yellow)';
     }
-    return '';
+    return 'var(--color-white)';
 }

@@ -137,31 +137,61 @@ $box-shadow2: ();
                         }
                     }
                 }
-                .game {
-                    margin: 0 auto;
-                    border: solid 1px var(--color-off-black);
-                    display: flex;
-                    flex-direction: column;
-                    >.game-row {
+                .game-container-2 {
+                    position: relative;
+                    .game {
+                        margin: 0 auto;
+                        border: solid 1px var(--color-off-black);
                         display: flex;
-                        flex-direction: row;
-                        flex: 1;
-                        >.game-cell {
-                            border: solid 1px var(--color-off-black);
+                        flex-direction: column;
+                        >.game-row {
+                            display: flex;
+                            flex-direction: row;
                             flex: 1;
-                            cursor: move; /* fallback if grab cursor is unsupported */
-                            cursor: grab;
-                            cursor: -moz-grab;
-                            cursor: -webkit-grab;
-                            &:active {
-                                cursor: grabbing;
-                                cursor: -moz-grabbing;
-                                cursor: -webkit-grabbing;
+                            >.game-cell {
+                                border: solid 1px var(--color-off-black);
+                                flex: 1;
+                                cursor: move; /* fallback if grab cursor is unsupported */
+                                cursor: grab;
+                                cursor: -moz-grab;
+                                cursor: -webkit-grab;
+                                &:active {
+                                    cursor: grabbing;
+                                    cursor: -moz-grabbing;
+                                    cursor: -webkit-grabbing;
+                                }
+                                >.game-cell-inside {
+                                    height: 100%;
+                                    width: 100%;
+                                }
                             }
-                            >.game-cell-inside {
-                                height: 100%;
-                                width: 100%;
-                            }
+                        }
+                    }
+                    >.cheating-game-container {
+                        opacity: 0;
+                        transition: opacity .4s;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        pointer-events: none;
+                        >.cheating-game {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                        }
+                        >.cheating-game-background {
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            background-color: rgba(60, 60, 65, 0.5);
+                        }
+                        &.active {
+                            opacity: 1;
                         }
                     }
                 }
