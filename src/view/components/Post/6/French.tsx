@@ -39,6 +39,9 @@ const French : React.FC<IPostContentProps> = props => {
     const amongUsIsUnselectedClassname = drawing != Drawing.SIXTEEN_AMONG_US ? 'unselected' : '';
     const yoshiIsUnselectedClassname = drawing != Drawing.SIXTEEN_YOSHI ? 'unselected' : '';
     const fourIsUnselectedClassname = drawing != Drawing.FOUR ? 'unselected' : '';
+    const fourPacmanIsUnselectedClassname = drawing != Drawing.FOUR_PACMAN ? 'unselected' : '';
+    const fourSouthParkIsUnselectedClassname = drawing != Drawing.FOUR_SOUTH_PARK ? 'unselected' : '';
+    const fourTarzanIsUnselectedClassname = drawing != Drawing.FOUR_TARZAN ? 'unselected' : '';
     const pikachuIsUnselectedClassname = drawing != Drawing.EIGHT_PIKACHU ? 'unselected' : '';
     const pikachu32IsUnselectedClassname = drawing != Drawing.THIRTYTWO_PIKACHU ? 'unselected' : '';
 
@@ -63,6 +66,22 @@ const French : React.FC<IPostContentProps> = props => {
         setGame(game.randomise());
     }
 
+    const [countDown, setCountDown] = useState(3);
+    const [launchCountDown, setLaunchCountDown] = useState(false);
+    const countDownActiveClassname = countDown == 0 ? 'inactive' : '';
+    const doCountDown = (countDown : number) => {
+        setCountDown(countDown);
+        if (countDown > 0) {
+            setTimeout(() => doCountDown(countDown - 1), 1000);
+        }
+        if (countDown == 0) {
+            onShuffle();
+        }
+    }
+    useEffect(() => {
+        doCountDown(3);
+    }, [])
+
     return (
         <PostTemplate postId={postId}
                     title={props.title} 
@@ -74,7 +93,7 @@ const French : React.FC<IPostContentProps> = props => {
                     skipToFun removeProgressionBarAndSkipToFun>
             <div className={`flex-row button-line`}>
                 <Button onClick={onShuffle} classname={`size-button`} isUnselected={false}>
-                    shuffle
+                    <Text english='shuffle' french='mélanger'/>
                 </Button>
             </div>
                         
@@ -93,28 +112,13 @@ const French : React.FC<IPostContentProps> = props => {
                 </Button>
             </div>
 
-            {/* <div className={`drawing-icons-container`}>
-                <div className={`flex-row button-line icon-4 ${active4ClassName}`}>
-                    <div onClick={() => onClickSizeDrawing(Drawing.FOUR)} className={`icon-button four ${fourIsUnselectedClassname}`}/>
-                </div>
-                <div className={`flex-row button-line icon-8 ${active8ClassName}`}>
-                    <div onClick={() => onClickSizeDrawing(Drawing.EIGHT_PIKACHU)} className={`icon-button pikachu ${pikachuIsUnselectedClassname}`}/>
-                </div>
-                <div className={`flex-row button-line icon-16 ${active16ClassName}`}>
-                    <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_POKEBALL)} className={`icon-button pokeball ${pokeballIsUnselectedClassname}`}/>
-                    <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_CHARMANDER)} className={`icon-button charmander ${charmanderIsUnselectedClassname}`}/>
-                    <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_AMONG_US)} className={`icon-button among-us ${amongUsIsUnselectedClassname}`}/>
-                    <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_YOSHI)} className={`icon-button yoshi ${yoshiIsUnselectedClassname}`}/>
-                </div>
-                <div className={`flex-row button-line icon-32 ${active32ClassName}`}>
-                    <div onClick={() => onClickSizeDrawing(Drawing.THIRTYTWO_PIKACHU)} className={`icon-button pikachu-32 ${pikachu32IsUnselectedClassname}`}/>
-                </div>
-            </div> */}
-
             <div className={`game-container`}>
                 <div className={`column drawing-icons-container`}>
                     <div className={`flex-column button-column icon-4 ${active4ClassName}`} style={{ height: gameSize }}>
                         <div onClick={() => onClickSizeDrawing(Drawing.FOUR)} className={`icon-button four ${fourIsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.FOUR_PACMAN)} className={`icon-button pacman ${fourPacmanIsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.FOUR_SOUTH_PARK)} className={`icon-button south-park ${fourSouthParkIsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.FOUR_TARZAN)} className={`icon-button tarzan ${fourTarzanIsUnselectedClassname}`}/>
                     </div>
                     <div className={`flex-column button-column icon-8 ${active8ClassName}`} style={{ height: gameSize }}>
                         <div onClick={() => onClickSizeDrawing(Drawing.EIGHT_PIKACHU)} className={`icon-button pikachu ${pikachuIsUnselectedClassname}`}/>
@@ -132,7 +136,14 @@ const French : React.FC<IPostContentProps> = props => {
                 <div className={`game`} style={{ height: gameSize, width: gameSize}}>
                     {renderGame(game, setGame)}
                 </div>
-                <div className={`column`}></div>
+                <div className={`column shuffle-in`}>
+                    <div className={`shuffle-in-content ${countDownActiveClassname}`}>
+                        <Text english='Shuffle in' french= "Mélange dans" />
+                        <div className={`count-down`}>
+                            {countDown}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className={`victory-screen ${victoryScreenActiveClassname}`} onClick={() => setVictoryScreenActive(false)}>

@@ -3,6 +3,9 @@ import GameCell from "./GameCell";
 
 export enum Drawing {
     FOUR = 'four',
+    FOUR_PACMAN = 'pacman',
+    FOUR_SOUTH_PARK = 'south-park',
+    FOUR_TARZAN = 'tarzan',
     EIGHT_PIKACHU = 'pikachu',
     SIXTEEN_POKEBALL = 'pokeball',
     SIXTEEN_CHARMANDER = 'charmander',

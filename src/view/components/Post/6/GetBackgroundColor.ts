@@ -11,6 +11,74 @@ export const getBackgroundColor4x4 = (x : number, y : number) => {
     return (getBackgroundColor(Math.min(x, y), 3));
 }
 
+export const getBackgroundColor4x4Pacman = (x : number, y : number) => {
+    const blackCoordinates = [ { x : 0, y : 2 }];
+    const yellowCoordinates = [
+        { x : 0, y : 1 }, { x : 0, y : 3 },
+        { x : 1, y : 0 }, { x : 1, y : 1 }, { x : 1, y : 2 }, { x : 1, y : 3 },
+        { x : 2, y : 0 }, { x : 2, y : 1 },
+        { x : 3, y : 1 }, { x : 3, y : 2 }, { x : 3, y : 3 },
+    ];
+
+    if (isInList(x, y, blackCoordinates)) {
+        return 'var(--color-off-black)';
+    }
+    if (isInList(x, y, yellowCoordinates)) {
+        return 'var(--color-yellow)';
+    }
+    return '';
+}
+
+export const getBackgroundColor4x4SouthPark = (x : number, y : number) => {
+    const blueCoordinates = [ { x : 0, y : 2 }];
+    const yellowCoordinates = [ { x : 0, y : 1 } ];
+    const brownCoordinates = [ { x : 3, y : 0 }, { x : 3, y : 3 } ];
+    const beigeCoordinates = [ { x : 1, y : 1 }, { x : 1, y : 2 } ];
+    const redCoordinates = [ 
+        { x : 1, y : 0 }, { x : 1, y : 3 },
+        { x : 2, y : 0 }, { x : 2, y : 1 }, { x : 2, y : 2 }, { x : 2, y : 3 },
+        { x : 3, y : 1 }, { x : 3, y : 2 },
+    ];
+
+    if (isInList(x, y, blueCoordinates)) {
+        return 'rgb(33,163,182)';
+    }
+    if (isInList(x, y, yellowCoordinates)) {
+        return 'var(--color-yellow)';
+    }
+    if (isInList(x, y, brownCoordinates)) {
+        return 'rgb(90,62,43)';
+    }
+    if (isInList(x, y, beigeCoordinates)) {
+        return 'rgb(249,227,186)';
+    }
+    if (isInList(x, y, redCoordinates)) {
+        return 'red';
+    }
+    return '';
+}
+
+export const getBackgroundColor4x4Tarzan = (x : number, y : number) => {
+    const yellowCoordinates = [ { x : 0, y : 1 }, { x : 0, y : 2 } ];
+    const brownCoordinates = [ { x : 1, y : 2 }, { x : 2, y : 1 }, { x : 2, y : 2 } ];
+    const beigeCoordinates = [ 
+        { x : 1, y : 0 }, { x : 1, y : 1 }, { x : 1, y : 3 },  
+        { x : 2, y : 0 }, { x : 2, y : 1 }, { x : 2, y : 2 }, { x : 2, y : 3 }, 
+        { x : 3, y : 1 }, { x : 3, y : 2 }
+    ];
+
+    if (isInList(x, y, yellowCoordinates)) {
+        return 'var(--color-yellow)';
+    }
+    if (isInList(x, y, brownCoordinates)) {
+        return 'rgb(90,62,43)';
+    }
+    if (isInList(x, y, beigeCoordinates)) {
+        return 'rgb(249,227,186)';
+    }
+    return '';
+}
+
 export const getBackgroundColor8x8 = (x : number, y : number) : string => {
     const redCoordinates = [ { x : 4, y : 3 } ];
     const blackCoordinates = [ { x : 3, y : 4 }, { x : 3, y : 7 } ];

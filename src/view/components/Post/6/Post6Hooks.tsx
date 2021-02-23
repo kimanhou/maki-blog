@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getBackgroundColor16x16AmongUs, getBackgroundColor16x16Charmander, getBackgroundColor16x16Pokeball, getBackgroundColor16x16Yoshi, getBackgroundColor32x32Pikachu, getBackgroundColor4x4, getBackgroundColor8x8 } from './GetBackgroundColor';
+import { getBackgroundColor16x16AmongUs, getBackgroundColor16x16Charmander, getBackgroundColor16x16Pokeball, getBackgroundColor16x16Yoshi, getBackgroundColor32x32Pikachu, getBackgroundColor4x4, getBackgroundColor4x4Pacman, getBackgroundColor4x4SouthPark, getBackgroundColor4x4Tarzan, getBackgroundColor8x8 } from './GetBackgroundColor';
 import Game, { Drawing } from './models/Game';
 import GameCell from './models/GameCell';
 
@@ -41,6 +41,12 @@ export const getBackgroundColorFunction = (drawing : Drawing) : ((x : number, y 
     switch (drawing) {
         case Drawing.FOUR :
             return getBackgroundColor4x4;
+        case Drawing.FOUR_PACMAN :
+            return getBackgroundColor4x4Pacman;
+        case Drawing.FOUR_SOUTH_PARK :
+            return getBackgroundColor4x4SouthPark;
+        case Drawing.FOUR_TARZAN :
+            return getBackgroundColor4x4Tarzan;
         case Drawing.EIGHT_PIKACHU :
             return getBackgroundColor8x8;
         case Drawing.SIXTEEN_POKEBALL :
@@ -61,6 +67,9 @@ export const getBackgroundColorFunction = (drawing : Drawing) : ((x : number, y 
 export const getSize = (drawing : Drawing) => {
     switch (drawing) {
         case Drawing.FOUR:
+        case Drawing.FOUR_PACMAN:
+        case Drawing.FOUR_SOUTH_PARK:
+        case Drawing.FOUR_TARZAN:
             return 4;
         case Drawing.EIGHT_PIKACHU:
             return 8;

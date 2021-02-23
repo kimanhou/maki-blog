@@ -89,6 +89,15 @@ $box-shadow2: ();
                                     &.four {
                                         background-image: url(./images/four-icon.png);
                                     }
+                                    &.pacman {
+                                        background-image: url(./images/pacman-4-icon.png);
+                                    }
+                                    &.south-park {
+                                        background-image: url(./images/south-park-4-icon.png);
+                                    }
+                                    &.tarzan {
+                                        background-image: url(./images/tarzan-4-icon.png);
+                                    }
                                     &.pikachu {
                                         background-image: url(./images/pikachu-icon.png);
                                     }
@@ -102,6 +111,19 @@ $box-shadow2: ();
                                         filter: brightness(100%);
                                     }
                                 }
+                            }
+                        }
+                    }
+                    &.shuffle-in {
+                        >.shuffle-in-content {
+                            font-family: Press_Start;
+                            font-size: 14px;
+                            text-align: center;
+                            >.count-down {
+                                font-size: 110px;
+                            }
+                            &.inactive {
+                                animation: shuffle-animation 1s ease-in 1s forwards;
                             }
                         }
                     }
@@ -191,6 +213,15 @@ $box-shadow2: ();
     100% {
         opacity: 1;
         font-size: 8vw;
+    }
+}
+
+@keyframes shuffle-animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
