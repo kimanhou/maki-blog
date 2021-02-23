@@ -43,6 +43,9 @@ const French : React.FC<IPostContentProps> = props => {
     const fourSouthParkIsUnselectedClassname = drawing != Drawing.FOUR_SOUTH_PARK ? 'unselected' : '';
     const fourTarzanIsUnselectedClassname = drawing != Drawing.FOUR_TARZAN ? 'unselected' : '';
     const pikachuIsUnselectedClassname = drawing != Drawing.EIGHT_PIKACHU ? 'unselected' : '';
+    const kirby8IsUnselectedClassname = drawing != Drawing.EIGHT_KIRBY ? 'unselected' : '';
+    const spaceInvader8IsUnselectedClassname = drawing != Drawing.EIGHT_SPACE_INVADER ? 'unselected' : '';
+    const ghost8IsUnselectedClassname = drawing != Drawing.EIGHT_GHOST ? 'unselected' : '';
     const pikachu32IsUnselectedClassname = drawing != Drawing.THIRTYTWO_PIKACHU ? 'unselected' : '';
 
     const isWin = game.equals(Game.createGameFromDrawing(game.drawing));
@@ -122,6 +125,9 @@ const French : React.FC<IPostContentProps> = props => {
                     </div>
                     <div className={`flex-column button-column icon-8 ${active8ClassName}`} style={{ height: gameSize }}>
                         <div onClick={() => onClickSizeDrawing(Drawing.EIGHT_PIKACHU)} className={`icon-button pikachu ${pikachuIsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.EIGHT_KIRBY)} className={`icon-button kirby ${kirby8IsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.EIGHT_SPACE_INVADER)} className={`icon-button space-invader ${spaceInvader8IsUnselectedClassname}`}/>
+                        <div onClick={() => onClickSizeDrawing(Drawing.EIGHT_GHOST)} className={`icon-button ghost ${ghost8IsUnselectedClassname}`}/>
                     </div>
                     <div className={`flex-column button-column icon-16 ${active16ClassName}`} style={{ height: gameSize }}>
                         <div onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_POKEBALL)} className={`icon-button pokeball ${pokeballIsUnselectedClassname}`}/>

@@ -79,7 +79,7 @@ export const getBackgroundColor4x4Tarzan = (x : number, y : number) => {
     return '';
 }
 
-export const getBackgroundColor8x8 = (x : number, y : number) : string => {
+export const getBackgroundColor8x8Pikachu = (x : number, y : number) : string => {
     const redCoordinates = [ { x : 4, y : 3 } ];
     const blackCoordinates = [ { x : 3, y : 4 }, { x : 3, y : 7 } ];
     const offBlackCoordinates = [ { x : 0, y : 1 }, { x : 0, y : 2 }, { x : 0, y : 7 } ];
@@ -120,6 +120,142 @@ export const getBackgroundColor8x8 = (x : number, y : number) : string => {
     }
     if (isInList(x, y, darkYellowCoordinates)) {
         return 'rgb(253,152,39)';
+    }
+    return '';
+}
+
+export const getBackgroundColor8x8Kirby = (x : number, y : number) : string => {
+    const blueCoordinates = [ { x : 4, y : 3 }, { x : 4, y : 5 } ];
+    const blackCoordinates = [ { x : 3, y : 3 }, { x : 3, y : 5 } ];
+    const pinkCoordinates = [ { x : 5, y : 2 }, { x : 5, y : 6 } ];
+    const mediumPinkCoordinates = [
+        { x : 3, y : 1 }, 
+        { x : 4, y : 0 }, { x : 4, y : 7 },
+        { x : 5, y : 0 }, { x : 5, y : 1 }, { x : 5, y : 7 },
+        { x : 6, y : 2 }, { x : 6, y : 3 }
+    ];
+    const lightPinkCoordinates = [
+        { x : 1, y : 2 }, { x : 1, y : 3 }, { x : 1, y : 4 }, { x : 1, y : 5 },
+        { x : 2, y : 1 }, { x : 2, y : 2 }, { x : 2, y : 3 }, { x : 2, y : 4 }, { x : 2, y : 5 }, { x : 2, y : 6 },
+        { x : 3, y : 2 }, { x : 3, y : 4 }, { x : 3, y : 6 },
+        { x : 4, y : 1 }, { x : 4, y : 2 }, { x : 4, y : 4 }, { x : 4, y : 6 },
+        { x : 5, y : 3 }, { x : 5, y : 4 }, { x : 5, y : 5 },
+        { x : 6, y : 4 }, { x : 6, y : 5 }
+    ];
+    const darkPinkCoordinates = [
+        { x : 6, y : 1 }, { x : 6, y : 6 },
+        { x : 7, y : 1 }, { x : 7, y : 2 }, { x : 7, y : 3 }, { x : 7, y : 5 }, { x : 7, y : 6 }
+    ];
+
+    if (isInList(x, y, blueCoordinates)) {
+        return 'rgb(27,39,124)';
+    }
+    if (isInList(x, y, blackCoordinates)) {
+        return 'var(--color-off-black)';
+    }
+    if (isInList(x, y, pinkCoordinates)) {
+        return 'rgb(238,100,146)';
+    }
+    if (isInList(x, y, mediumPinkCoordinates)) {
+        return 'rgb(242,144,177)';
+    }
+    if (isInList(x, y, lightPinkCoordinates)) {
+        return 'rgb(247,188,208)';
+    }
+    if (isInList(x, y, darkPinkCoordinates)) {
+        return 'rgb(171,26,87)';
+    }
+    return '';
+}
+
+export const getBackgroundColor8x8SpaceInvader = (x : number, y : number) : string => {
+    const blueCoordinates = [ 
+        { x : 1, y : 2 }, { x : 1, y : 3 }, { x : 1, y : 4 },
+        { x : 2, y : 1 }, { x : 2, y : 2 }, { x : 2, y : 3 }, { x : 2, y : 4 }, { x : 2, y : 5 },
+        { x : 3, y : 0 }, { x : 3, y : 1 }, { x : 3, y : 4 }, 
+        { x : 4, y : 0 }, { x : 4, y : 1 }, { x : 4, y : 4 }, 
+        { x : 5, y : 0 }, { x : 5, y : 1 }, { x : 5, y : 2 },{ x : 5, y : 3 }, { x : 5, y : 4 }, { x : 5, y : 5 }, 
+        { x : 6, y : 0 }, { x : 6, y : 1 }, { x : 6, y : 2 },{ x : 6, y : 3 }, { x : 6, y : 4 }, { x : 6, y : 5 }, 
+        { x : 7, y : 0 }, { x : 7, y : 2 },{ x : 7, y : 3 }, { x : 7, y : 5 }
+    ];
+    const darkBlueCoordinates = [ 
+        { x : 1, y : 5 }, 
+        { x : 2, y : 6 },
+        { x : 3, y : 7 },
+        { x : 4, y : 7 },
+        { x : 5, y : 6 }, { x : 5, y : 7 },
+        { x : 6, y : 6 }, { x : 6, y : 7 },
+        { x : 7, y : 6 }, { x : 7, y : 7 },
+    ];
+    const blackCoordinates = [ { x : 3, y : 2 }, { x : 3, y : 5 } ];
+
+    if (isInList(x, y, blueCoordinates)) {
+        return 'rgb(52,175,252)';
+    }
+    if (isInList(x, y, darkBlueCoordinates)) {
+        return 'rgb(30,44,82)';
+    }
+    if (isInList(x, y, blackCoordinates)) {
+        return 'var(--color-off-black)';
+    }
+    return '';
+}
+
+export const getBackgroundColor8x8Ghost = (x : number, y : number) : string => {
+    const lightBrownCoordinates = [ { x : 5, y : 4 }, { x : 5, y : 5 } ];
+    const brownCoordinates = [ { x : 5, y : 3 }, { x : 5, y : 6 } ];
+    const darkRedCoordinates = [ 
+        { x : 2, y : 1 },
+        { x : 5, y : 2 },
+        { x : 6, y : 1 }, { x : 6, y : 7 },
+    ];
+    const greyCoordinates = [ 
+        { x : 0, y : 6 },
+        { x : 1, y : 7 },
+        { x : 2, y : 7 }, 
+        { x : 3, y : 7 },
+    ];
+    const blackCoordinates = [ 
+        { x : 1, y : 4 }, { x : 1, y : 6 }, 
+        { x : 2, y : 4 }, { x : 2, y : 6 },
+        { x : 7, y : 1 }, { x : 7, y : 2 }, { x : 7, y : 3 }, { x : 7, y : 5 }, { x : 7, y : 6 }, { x : 7, y : 7 },
+    ];
+    const beigeCoordinates = [ 
+        { x : 0, y : 2 }, { x : 0, y : 3 }, { x : 0, y : 4 }, { x : 0, y : 5 },
+        { x : 1, y : 2 }, { x : 1, y : 3 }, { x : 1, y : 5 },
+        { x : 2, y : 2 }, { x : 2, y : 3 }, { x : 2, y : 5 },
+        { x : 3, y : 2 }, { x : 3, y : 3 }, { x : 3, y : 4 }, { x : 3, y : 5 }, { x : 3, y : 6 },
+        { x : 4, y : 3 }, { x : 4, y : 4 }, { x : 4, y : 5 }, { x : 4, y : 6 },
+    ];
+    const redCoordinates = [ 
+        { x : 0, y : 1 }, { x : 0, y : 1 },
+        { x : 1, y : 0 }, { x : 1, y : 1 },
+        { x : 3, y : 1 }, 
+        { x : 4, y : 1 }, { x : 4, y : 2 },
+        { x : 5, y : 0 }, { x : 5, y : 1 }, 
+        { x : 6, y : 0 }, { x : 6, y : 2 },{ x : 6, y : 3 }, { x : 6, y : 4 }, { x : 6, y : 5 }, { x : 6, y : 6 }, 
+    ];
+
+    if (isInList(x, y, lightBrownCoordinates)) {
+        return 'rgb(253,162,40)';
+    }
+    if (isInList(x, y, brownCoordinates)) {
+        return 'rgb(169,82,58)';
+    }
+    if (isInList(x, y, darkRedCoordinates)) {
+        return 'rgb(125,39,83)';
+    }
+    if (isInList(x, y, greyCoordinates)) {
+        return 'rgb(194,195,199)';
+    }
+    if (isInList(x, y, blackCoordinates)) {
+        return 'var(--color-off-black)';
+    }
+    if (isInList(x, y, beigeCoordinates)) {
+        return 'rgb(255,241,233)';
+    }
+    if (isInList(x, y, redCoordinates)) {
+        return 'rgb(252,16,81)';
     }
     return '';
 }
