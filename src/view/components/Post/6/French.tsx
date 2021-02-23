@@ -51,18 +51,20 @@ const French : React.FC<IPostContentProps> = props => {
     const isWin = game.equals(Game.createGameFromDrawing(game.drawing));
     const [victoryScreenActive, setVictoryScreenActive] = useState(false);
     const victoryScreenActiveClassname = victoryScreenActive ? 'active' : '';
-    const isFirstTime = useRef(true);
+    const [isFirstTime, setIsFirstTime] = useState(true);
     useEffect(() => {
-        if (isWin && !isFirstTime.current) {
+        if (isWin && !isFirstTime) {
             setVictoryScreenActive(true);
         }
         else {
-            isFirstTime.current = false;
+            setIsFirstTime(false);
         }
     }, [isWin]);
 
     const onClickSizeDrawing = (drawing : Drawing) => {
         setGame(Game.createGameFromDrawing(drawing));
+        setLaunchCountDown(true);
+        setIsFirstTime(true);
     }
 
     const onShuffle = () => {
@@ -70,20 +72,29 @@ const French : React.FC<IPostContentProps> = props => {
     }
 
     const [countDown, setCountDown] = useState(3);
-    const [launchCountDown, setLaunchCountDown] = useState(false);
+    const [launchCountDown, setLaunchCountDown] = useState(true);
     const countDownActiveClassname = countDown == 0 ? 'inactive' : '';
+    const countdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     const doCountDown = (countDown : number) => {
         setCountDown(countDown);
         if (countDown > 0) {
-            setTimeout(() => doCountDown(countDown - 1), 1000);
+            countdownTimeoutRef.current = setTimeout(() => doCountDown(countDown - 1), 1000);
         }
         if (countDown == 0) {
             onShuffle();
+            countdownTimeoutRef.current = null;
         }
     }
     useEffect(() => {
-        doCountDown(3);
-    }, [])
+        if(launchCountDown){
+            if(countdownTimeoutRef.current != null){
+                clearTimeout(countdownTimeoutRef.current);
+                countdownTimeoutRef.current = null;
+            }
+            doCountDown(3);
+            setLaunchCountDown(false);
+        }
+    }, [launchCountDown])
 
     return (
         <PostTemplate postId={postId}
