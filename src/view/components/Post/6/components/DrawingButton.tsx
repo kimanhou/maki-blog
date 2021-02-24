@@ -5,12 +5,14 @@ import './DrawingButton.scss';
 interface IDrawingButtonProps {
     drawing : Drawing
     className : string;
+    selectedDrawing : Drawing;
+    onClick : () => void;
 }
 
 const DrawingButton : React.FC<IDrawingButtonProps> = props => {
+    const isUnselected = props.selectedDrawing != props.drawing ? 'unselected' : '';
     return(
-        <div></div>
-        // <div onClick={() => onClickSizeDrawing(props.drawing)} className={`icon-button ${props.className} ${pokeballIsUnselectedClassname}`}/>
+        <div onClick={props.onClick} className={`icon-button ${props.className} ${isUnselected}`}/>
     );
 }
 

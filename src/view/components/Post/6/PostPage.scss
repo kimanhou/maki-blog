@@ -62,64 +62,6 @@ $box-shadow2: ();
                                 &.active {
                                     width: 100%;
                                 }
-                                >.icon-button {
-                                    height: 100px;
-                                    width: 100%;
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    cursor: pointer;
-                                    transition: filter .4s;
-                                    margin-bottom: var(--size-margin-30);
-                                    &:last-child {
-                                        margin-bottom: 0;
-                                    }
-                                    &.pokeball {
-                                        background-image: url(./images/pokeball-icon.png);
-                                    }
-                                    &.charmander {
-                                        background-image: url(./images/charmander-icon.png);
-                                    }
-                                    &.among-us {
-                                        background-image: url(./images/among-us-icon.png);
-                                    }
-                                    &.yoshi {
-                                        background-image: url(./images/yoshi-icon.png);
-                                    }
-                                    &.four {
-                                        background-image: url(./images/four-icon.png);
-                                    }
-                                    &.pacman {
-                                        background-image: url(./images/pacman-4-icon.png);
-                                    }
-                                    &.south-park {
-                                        background-image: url(./images/south-park-4-icon.png);
-                                    }
-                                    &.tarzan {
-                                        background-image: url(./images/tarzan-4-icon.png);
-                                    }
-                                    &.pikachu {
-                                        background-image: url(./images/pikachu-icon.png);
-                                    }
-                                    &.kirby {
-                                        background-image: url(./images/kirby-8-icon.png);
-                                    }
-                                    &.space-invader {
-                                        background-image: url(./images/space-invader-8-icon.png);
-                                    }
-                                    &.ghost {
-                                        background-image: url(./images/ghost-8-icon.png);
-                                    }
-                                    &.pikachu-32 {
-                                        background-image: url(./images/pikachu-32-icon.png);
-                                    }
-                                    &.unselected {
-                                        filter: brightness(50%);
-                                    }
-                                    &:hover {
-                                        filter: brightness(100%);
-                                    }
-                                }
                             }
                         }
                     }
@@ -229,6 +171,16 @@ $box-shadow2: ();
                     }
                 }
             }
+            .temp {
+                height: 500px;
+                width: 500px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                margin: 100px auto;
+                background-image: url(./images/four-icon.png);
+                animation: temp-animation 5s linear 5s infinite;
+            }
         }
     }
 }
@@ -241,6 +193,48 @@ $box-shadow2: ();
                 }
             }
         }
+    }
+}
+
+@keyframes temp-animation {
+    0%, 4.5% {
+        background-image: url(./images/four-icon.png);
+    }
+    5%, 9.5% {
+        background-image: url(./images/pacman-4-icon.png);
+    }
+    10%, 14.5% {
+        background-image: url(./images/south-park-4-icon.png);
+    }
+    15%, 19.5% {
+        background-image: url(./images/tarzan-4-icon.png);
+    }
+    20%, 24.9% {
+        background-image: url(./images/pikachu-icon.png);
+    }
+    25%, 29.5% {
+        background-image: url(./images/kirby-8-icon.png);
+    }
+    30%, 34.9% {
+        background-image: url(./images/space-invader-8-icon.png);
+    }
+    35%, 39.5% {
+        background-image: url(./images/ghost-8-icon.png);
+    }
+    40%, 44.5% {
+        background-image: url(./images/pokeball-icon.png);
+    }
+    45%, 49.5% {
+        background-image: url(./images/charmander-icon.png);
+    }
+    50%, 54.5% {
+        background-image: url(./images/among-us-icon.png);
+    }
+    55%, 59.5% {
+        background-image: url(./images/yoshi-icon.png);
+    }
+    60%, 100% {
+        background-image: url(./images/pikachu-32-icon.png);
     }
 }
 
