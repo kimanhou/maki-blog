@@ -50,20 +50,6 @@ $box-shadow2: ();
                     width: 100px;
                     &.drawing-icons-container {
                         position: relative;
-                        >.flex-column {
-                            &.button-column {
-                                margin-bottom: 0;
-                                width: 0;
-                                height: 100%;
-                                transition: width 1s;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                &.active {
-                                    width: 100%;
-                                }
-                            }
-                        }
                     }
                     &.shuffle-in {
                         >.shuffle-in-content {
@@ -189,7 +175,14 @@ $box-shadow2: ();
     .post {
         &.six {
             .post-text {
-                .game {
+                .game-container { 
+                    flex-direction: column;
+                    justify-content: unset;
+                    >.column {
+                        width: 100%;
+                        &.drawing-icons-container {
+                        }
+                    }
                 }
             }
         }

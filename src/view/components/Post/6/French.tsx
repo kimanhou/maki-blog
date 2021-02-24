@@ -5,6 +5,7 @@ import Text from '../../LocalisationContext/Text';
 import PostTemplate from '../PostTemplate/PostTemplate';
 import Button from '../PostTemplate/TemplateComponents/Button';
 import DrawingButton from './components/DrawingButton';
+import DrawingButtons from './components/DrawingButtons';
 import Game, { Drawing } from './models/Game';
 import { renderGame } from './Post6Hooks';
 import './PostPage.scss';
@@ -135,28 +136,28 @@ const French : React.FC<IPostContentProps> = props => {
             </div>
 
             <div className={`game-container`}>
-                <div className={`column drawing-icons-container`}>
-                    <div className={`flex-column button-column icon-4 ${active4ClassName}`} style={{ height: gameSize }}>
+                <div className={`column drawing-icons-container`}> 
+                    <DrawingButtons height={gameSize} size={4} selectedSize={size}>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.FOUR)} className='four' selectedDrawing={drawing} drawing={Drawing.FOUR}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.FOUR_PACMAN)} className='pacman' selectedDrawing={drawing} drawing={Drawing.FOUR_PACMAN}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.FOUR_SOUTH_PARK)} className='south-park' selectedDrawing={drawing} drawing={Drawing.FOUR_SOUTH_PARK}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.FOUR_TARZAN)} className='tarzan' selectedDrawing={drawing} drawing={Drawing.FOUR_TARZAN}/>
-                    </div>
-                    <div className={`flex-column button-column icon-8 ${active8ClassName}`} style={{ height: gameSize }}>
+                    </DrawingButtons>
+                    <DrawingButtons height={gameSize} size={8} selectedSize={size}>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.EIGHT_PIKACHU)} className='pikachu' selectedDrawing={drawing} drawing={Drawing.EIGHT_PIKACHU}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.EIGHT_KIRBY)} className='kirby' selectedDrawing={drawing} drawing={Drawing.EIGHT_KIRBY}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.EIGHT_SPACE_INVADER)} className='space-invader' selectedDrawing={drawing} drawing={Drawing.EIGHT_SPACE_INVADER}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.EIGHT_GHOST)} className='ghost' selectedDrawing={drawing} drawing={Drawing.EIGHT_GHOST}/>
-                    </div>
-                    <div className={`flex-column button-column icon-16 ${active16ClassName}`} style={{ height: gameSize }}>
+                    </DrawingButtons>
+                    <DrawingButtons height={gameSize} size={16} selectedSize={size}>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_POKEBALL)} className='pokeball' selectedDrawing={drawing} drawing={Drawing.SIXTEEN_POKEBALL}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_CHARMANDER)} className='charmander' selectedDrawing={drawing} drawing={Drawing.SIXTEEN_CHARMANDER}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_AMONG_US)} className='among-us' selectedDrawing={drawing} drawing={Drawing.SIXTEEN_AMONG_US}/>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_YOSHI)} className='yoshi' selectedDrawing={drawing} drawing={Drawing.SIXTEEN_YOSHI}/>
-                    </div>
-                    <div className={`flex-column button-column icon-32 ${active32ClassName}`} style={{ height: gameSize }}>
+                    </DrawingButtons>
+                    <DrawingButtons height={gameSize} size={32} selectedSize={size}>
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.THIRTYTWO_PIKACHU)} className='pikachu-32' selectedDrawing={drawing} drawing={Drawing.THIRTYTWO_PIKACHU}/>
-                    </div>
+                    </DrawingButtons>
                 </div>
                 <div className={`game-container-2`}>
                     <div className={`game`} style={{ height: gameSize, width: gameSize}}>

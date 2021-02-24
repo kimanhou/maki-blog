@@ -56,3 +56,10 @@
         filter: brightness(100%);
     }
 }
+
+@media screen and (max-width: 600px) {
+    .icon-button {
+        height: 100%;
+        width: 100px;
+    }
+}
