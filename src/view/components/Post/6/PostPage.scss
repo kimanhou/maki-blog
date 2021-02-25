@@ -1,19 +1,4 @@
 
-$particles: 200;
-$width: 2000;
-$height: 2000;
-
-// Create the explosion...
-$box-shadow: ();
-$box-shadow2: ();
-@for $i from 0 through $particles {
-  $box-shadow: $box-shadow,
-               random($width)-$width / 2 + px
-               random($height)-$height / 1.2 + px
-               hsl(random(360), 100, 50);
-  $box-shadow2: $box-shadow2, 0 0 #fff
-}
-
 .post {
     &.six {
         >.post-hero-image {
@@ -52,6 +37,7 @@ $box-shadow2: ();
                         position: relative;
                     }
                     &.shuffle-in {
+                        overflow: hidden;
                         >.shuffle-in-content {
                             font-family: Press_Start;
                             font-size: 14px;
@@ -59,13 +45,13 @@ $box-shadow2: ();
                             >.count-down {
                                 font-size: 110px;
                             }
-                            &.inactive {
-                                animation: shuffle-animation 1s ease-in 1s forwards;
-                            }
+                        }
+                        &.inactive {
+                            animation: shuffle-animation 1s ease-in 1s forwards;
                         }
                     }
                 }
-                .game-container-2 {
+                >.game-and-cheating-game {
                     position: relative;
                     .game {
                         margin: 0 auto;
@@ -124,39 +110,6 @@ $box-shadow2: ();
                     }
                 }
             }
-            .victory-screen {
-                position: fixed;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                background-color: rgba(60, 60, 65, 0.5);
-                color: var(--color-yellow);
-                font-size: 0;
-                font-family: Press_Start;
-                line-height: 81vh;
-                text-align: center;
-                opacity: 0;
-                display: none;
-                &.active {
-                    animation: victory-screen-animation 1s ease-in 0s forwards;
-                    pointer-events: unset;
-                    display: block;
-                    >.before, >.after {
-                        position: absolute;
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        box-shadow: $box-shadow2;
-                        animation: bang 1s ease-out infinite backwards, gravity 1s ease-in infinite backwards, position 5s  linear infinite backwards;
-                      }
-                          
-                    >.after {
-                        animation-delay: 1.25s, 1.25s, 1.25s;
-                        animation-duration: 1.25s, 1.25s, 6.25s;
-                    }
-                }
-            }
             .temp {
                 height: 500px;
                 width: 500px;
@@ -181,11 +134,29 @@ $box-shadow2: ();
                     >.column {
                         width: 100%;
                         &.drawing-icons-container {
+                            height: 100px;
                         }
+                        &.shuffle-in {
+                            order: 1;
+                        }
+                    }
+                    >.game-and-cheating-game {
+                        order: 2;
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes shuffle-animation {
+    0% {
+        opacity: 1;
+        max-height: 500px;
+    }
+    100% {
+        opacity: 0;
+        max-height: 0;
     }
 }
 
@@ -231,113 +202,6 @@ $box-shadow2: ();
     }
 }
 
-@keyframes victory-screen-animation {
-    0% {
-        opacity: 0;
-        font-size: 0;
-    }
-    100% {
-        opacity: 1;
-        font-size: 8vw;
-    }
-}
 
-@keyframes shuffle-animation {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
-@mixin keyframes ($animationName) {
-    @-webkit-keyframes #{$animationName} {
-        @content;
-    }
-
-    @-moz-keyframes #{$animationName} {
-        @content;
-    }
-
-    @-o-keyframes #{$animationName} {
-        @content;
-    }
-
-    @-ms-keyframes #{$animationName} {
-        @content;
-    }
-
-    @keyframes #{$animationName} {
-        @content;
-    }
-}
-
-@mixin animation-delay ($settings) {
-    -moz-animation-delay: $settings;
-    -webkit-animation-delay: $settings;
-    -o-animation-delay: $settings;
-    -ms-animation-delay: $settings;
-    animation-delay: $settings;
-}
-
-@mixin animation-duration ($settings) {
-    -moz-animation-duration: $settings;
-    -webkit-animation-duration: $settings;
-    -o-animation-duration: $settings;
-    -ms-animation-duration: $settings;
-    animation-duration: $settings;
-}
-
-@mixin animation ($settings) {
-    -moz-animation: $settings;
-    -webkit-animation: $settings;
-    -o-animation: $settings;
-    -ms-animation: $settings;
-    animation: $settings;
-}
-
-@mixin transform ($settings) {
-    transform: $settings;
-    -moz-transform: $settings;
-    -webkit-transform: $settings;
-    -o-transform: $settings;
-    -ms-transform: $settings;
-}
-        
-@include keyframes(bang) {
-  to {
-    box-shadow:$box-shadow;
-  }
-}
-    
-@include keyframes(gravity)  {
-  to {
-    @include transform(translateY(200px));
-    opacity: 0;
-  }
-}
-    
-@include keyframes(position) {
-  0%, 19.9% {
-    margin-top: 10%;
-    margin-left: 40%;
-  }
-  20%, 39.9% {
-    margin-top: 40%;
-    margin-left: 30%;
-  }
-  40%, 59.9% {  
-    margin-top: 20%;
-    margin-left: 70%
-  }
-  60%, 79.9% {  
-    margin-top: 30%;
-    margin-left: 20%;
-  }
-  80%, 99.9% {  
-    margin-top: 30%;
-    margin-left: 80%;
-  }
-}
 

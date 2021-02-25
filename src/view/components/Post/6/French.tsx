@@ -6,16 +6,13 @@ import PostTemplate from '../PostTemplate/PostTemplate';
 import Button from '../PostTemplate/TemplateComponents/Button';
 import DrawingButton from './components/DrawingButton';
 import DrawingButtons from './components/DrawingButtons';
+import VictoryScreen from './components/VictoryScreen';
 import Game, { Drawing } from './models/Game';
 import { renderGame } from './Post6Hooks';
 import './PostPage.scss';
 
 
 const game4x4 = Game.createGameFromDrawing(Drawing.FOUR);
-const game8x8 = Game.createGameFromDrawing(Drawing.EIGHT_PIKACHU);
-const game16x16Pokeball = Game.createGameFromDrawing(Drawing.SIXTEEN_POKEBALL);
-const game16x16Charmander = Game.createGameFromDrawing(Drawing.SIXTEEN_CHARMANDER);
-const game32x32 = Game.createGameFromDrawing(Drawing.THIRTYTWO_PIKACHU);
 
 const French : React.FC<IPostContentProps> = props => {
     const postId = 6;
@@ -31,16 +28,11 @@ const French : React.FC<IPostContentProps> = props => {
 
     const [game, setGame] = useState(game4x4);
     const size = game.getSize();
-    const active4ClassName = size == 4 ? 'active' : '';
-    const active8ClassName = size == 8 ? 'active' : '';
-    const active16ClassName = size == 16 ? 'active' : '';
-    const active32ClassName = size == 32 ? 'active' : '';
     const drawing = game.drawing;
 
     const finishedGame = Game.createGameFromDrawing(game.drawing);
     const isWin = game.equals(finishedGame);
     const [victoryScreenActive, setVictoryScreenActive] = useState(false);
-    const victoryScreenActiveClassname = victoryScreenActive ? 'active' : '';
     const [isFirstTime, setIsFirstTime] = useState(true);
     useEffect(() => {
         if (isWin && !isFirstTime) {
@@ -159,7 +151,7 @@ const French : React.FC<IPostContentProps> = props => {
                         <DrawingButton onClick={() => onClickSizeDrawing(Drawing.THIRTYTWO_PIKACHU)} className='pikachu-32' selectedDrawing={drawing} drawing={Drawing.THIRTYTWO_PIKACHU}/>
                     </DrawingButtons>
                 </div>
-                <div className={`game-container-2`}>
+                <div className={`game-and-cheating-game`}>
                     <div className={`game`} style={{ height: gameSize, width: gameSize}}>
                         {renderGame(game, setGame)}
                     </div>
@@ -170,8 +162,8 @@ const French : React.FC<IPostContentProps> = props => {
                         <div className={`cheating-game-background`}></div>
                     </div>
                 </div>
-                <div className={`column shuffle-in`}>
-                    <div className={`shuffle-in-content ${countDownActiveClassname}`}>
+                <div className={`column shuffle-in ${countDownActiveClassname}`}>
+                    <div className={`shuffle-in-content `}>
                         <Text english='Shuffle in' french= "Mélange dans" />
                         <div className={`count-down`}>
                             {countDown}
@@ -180,11 +172,7 @@ const French : React.FC<IPostContentProps> = props => {
                 </div>
             </div>
 
-            <div className={`victory-screen ${victoryScreenActiveClassname}`} onClick={() => setVictoryScreenActive(false)}>
-                <Text english='Victory !' french='Victoire !'/>
-                <div className="before"></div>
-                <div className="after"></div>
-            </div>
+            <VictoryScreen active={victoryScreenActive} onClick={() => setVictoryScreenActive(false)}/>
 
             {/* <div className={`temp`}></div> */}
             

@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile } from '../../../../hooks/UseMediaQuery';
 import './DrawingButtons.scss';
 
 interface IDrawingButtonsProps {
@@ -8,9 +9,22 @@ interface IDrawingButtonsProps {
 }
 
 const DrawingButtons : React.FC<IDrawingButtonsProps> = props => {
-    const activeClassname = props.selectedSize == props.size ? 'active' : '';
+    const isActive = props.selectedSize == props.size;
+    const activeClassname = isActive ? 'active' : '';
+    const mobile = isMobile();
+    const getHeight = () => {
+        if (mobile) {
+            if (isActive) {
+                return '100px';
+            }
+            else {
+                return 'unset';
+            }
+        }
+        return props.height;
+    }
     return (
-        <div className={`drawing-buttons ${activeClassname}`} style={{ height: props.height }}>
+        <div className={`drawing-buttons ${activeClassname}`} style={{ height: getHeight() }}>
             {props.children}
         </div>
     );
