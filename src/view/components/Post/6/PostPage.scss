@@ -62,23 +62,6 @@
                             display: flex;
                             flex-direction: row;
                             flex: 1;
-                            >.game-cell {
-                                border: solid 1px var(--color-off-black);
-                                flex: 1;
-                                cursor: move; /* fallback if grab cursor is unsupported */
-                                cursor: grab;
-                                cursor: -moz-grab;
-                                cursor: -webkit-grab;
-                                &:active {
-                                    cursor: grabbing;
-                                    cursor: -moz-grabbing;
-                                    cursor: -webkit-grabbing;
-                                }
-                                >.game-cell-inside {
-                                    height: 100%;
-                                    width: 100%;
-                                }
-                            }
                         }
                     }
                     >.cheating-game-container {

@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { isMobile } from '../../../hooks/UseMediaQuery';
+import GameCellDesktop from './components/GameCellDesktop';
+import GameCellMobile from './components/GameCellMobile';
 import { getBackgroundColor16x16AmongUs, getBackgroundColor16x16Charmander, getBackgroundColor16x16Pokeball, getBackgroundColor16x16Yoshi, getBackgroundColor32x32Pikachu, getBackgroundColor4x4, getBackgroundColor4x4Pacman, getBackgroundColor4x4SouthPark, getBackgroundColor4x4Tarzan, getBackgroundColor8x8Ghost, getBackgroundColor8x8Kirby, getBackgroundColor8x8Pikachu, getBackgroundColor8x8SpaceInvader } from './GetBackgroundColor';
 import Game, { Drawing } from './models/Game';
 import GameCell from './models/GameCell';
@@ -15,9 +18,24 @@ const renderGameCell = (gameCell : GameCell, game : Game, setGame : (game : Game
         }
     }
 
-    return <div className={`game-cell`} onDrop={onDrop} onDragOver={e => e.preventDefault()}>
-                <div className={`game-cell-inside`} draggable onDragStart={onDragStart} style={{ backgroundColor: gameCell.backgroundColor }} ></div>
-            </div>;
+    const isOriginCell = originCell != null && gameCell == originCell;
+    const onClickMobile = () => {
+        if (originCell != null) {
+            setGame(game.switchCells(originCell, gameCell));
+            setOriginCell(null);
+        }
+        else {
+            setOriginCell(gameCell);
+        }
+    }
+
+    const mobile = isMobile();
+    if (mobile) {
+        return <GameCellMobile background={gameCell.backgroundColor} onClick={onClickMobile} isOriginCell={isOriginCell}/>;
+    }
+    else {
+        return <GameCellDesktop onDrop={onDrop} onDragStart={onDragStart} background={gameCell.backgroundColor}/>;
+    }
 }
 
 const renderGameRow = (gameCells : GameCell[], game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {

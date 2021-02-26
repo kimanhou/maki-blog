@@ -1,0 +1,8 @@
+.game-cell-mobile {
+    border: solid 1px var(--color-off-black);
+    flex: 1;
+    &.selected {
+        border-color: red;
+    }
+    
+}
