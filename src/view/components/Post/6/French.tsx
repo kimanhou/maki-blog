@@ -161,7 +161,7 @@ const French : React.FC<IPostContentProps> = props => {
                         {/* <div className={`cheating-game game`} style={{ height: gameSize, width: gameSize}}>
                             {renderGame(finishedGame, () => {})}
                         </div> */}
-                        <GameComponent game={game} gameSize={gameSize} setGame={() => {}} classname='cheating-game'/>
+                        <GameComponent game={finishedGame} gameSize={gameSize} setGame={() => {}} classname='cheating-game'/>
                         <div className={`cheating-game-background`}></div>
                     </div>
                 </div>
