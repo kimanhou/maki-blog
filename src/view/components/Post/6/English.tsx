@@ -114,16 +114,16 @@ const English : React.FC<IPostContentProps> = props => {
                         
             <div className={`flex-row button-line`}>
                 <Button onClick={() => onClickSizeDrawing(Drawing.FOUR)} classname={`size-button`} isUnselected={size != 4}>
-                    4 x 4
+                    <Text english='Easy' french='Facile'/>
                 </Button>
                 <Button onClick={() => onClickSizeDrawing(Drawing.EIGHT_PIKACHU)} classname={`size-button`} isUnselected={size != 8}>
-                    8 x 8
+                    <Text english='Medium' french='Moyen'/>
                 </Button>
                 <Button onClick={() => onClickSizeDrawing(Drawing.SIXTEEN_POKEBALL)} classname={`size-button`} isUnselected={size != 16}>
-                    16 x 16
+                    <Text english='Hard' french='Difficile'/>
                 </Button>
                 <Button onClick={() => onClickSizeDrawing(Drawing.THIRTYTWO_PIKACHU)} classname={`size-button`} isUnselected={size != 32}>
-                    32 x 32
+                    <Text english='Expert' french='Expert'/>
                 </Button>
             </div>
 
