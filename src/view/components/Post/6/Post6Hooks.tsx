@@ -29,13 +29,14 @@ const renderGameCell = (gameCell : GameCell, game : Game, setGame : (game : Game
         }
     }
 
-    const mobile = isMobile();
-    if (mobile) {
-        return <GameCellMobile background={gameCell.backgroundColor} onClick={onClickMobile} isOriginCell={isOriginCell}/>;
-    }
-    else {
-        return <GameCellDesktop onDrop={onDrop} onDragStart={onDragStart} background={gameCell.backgroundColor}/>;
-    }
+    // const mobile = isMobile();
+    // if (mobile) {
+    //     return <GameCellMobile background={gameCell.backgroundColor} onClick={onClickMobile} isOriginCell={isOriginCell}/>;
+    // }
+    // else {
+    //     return <GameCellDesktop onDrop={onDrop} onDragStart={onDragStart} background={gameCell.backgroundColor}/>;
+    // }
+    return <GameCellDesktop onDrop={onDrop} onDragStart={onDragStart} background={gameCell.backgroundColor}/>;
 }
 
 const renderGameRow = (gameCells : GameCell[], game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
