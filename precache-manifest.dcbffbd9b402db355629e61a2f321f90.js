@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "53830b61f7a65e64060e",
-    "url": "./static/css/main.a4a98c84.chunk.css"
+    "revision": "94ad94e8b95a1392375c",
+    "url": "./static/css/main.4289ea54.chunk.css"
   },
   {
-    "revision": "53830b61f7a65e64060e",
-    "url": "./static/js/main.53830b61.chunk.js"
+    "revision": "94ad94e8b95a1392375c",
+    "url": "./static/js/main.94ad94e8.chunk.js"
   },
   {
     "revision": "ce9195cb0cd20c815237",
@@ -56,32 +56,32 @@ self.__precacheManifest = [
     "url": "./static/media/tarzan-4-icon.ae306e8f.png"
   },
   {
-    "revision": "beab02d8cfd9aba8952b611d27f14fa8",
-    "url": "./static/media/pikachu-icon.beab02d8.png"
-  },
-  {
     "revision": "11da73363cd9feefde82d471dacc9c48",
     "url": "./static/media/kirby-8-icon.11da7336.png"
-  },
-  {
-    "revision": "b3236e6ffa1c840d7c69ce08100941b4",
-    "url": "./static/media/ghost-8-icon.b3236e6f.png"
   },
   {
     "revision": "4f03ac37198d8e151572847c81590449",
     "url": "./static/media/space-invader-8-icon.4f03ac37.png"
   },
   {
-    "revision": "403c63cc8857f7f2c620c88502b7a4e5",
-    "url": "./static/media/charmander-icon.403c63cc.png"
+    "revision": "beab02d8cfd9aba8952b611d27f14fa8",
+    "url": "./static/media/pikachu-icon.beab02d8.png"
   },
   {
     "revision": "b3f89e74d2b672d8734fd7ccd7aa56e6",
     "url": "./static/media/pokeball-icon.b3f89e74.png"
   },
   {
+    "revision": "403c63cc8857f7f2c620c88502b7a4e5",
+    "url": "./static/media/charmander-icon.403c63cc.png"
+  },
+  {
     "revision": "b0538c44fae49134ec6c2b6a590dd44c",
     "url": "./static/media/among-us-icon.b0538c44.png"
+  },
+  {
+    "revision": "b3236e6ffa1c840d7c69ce08100941b4",
+    "url": "./static/media/ghost-8-icon.b3236e6f.png"
   },
   {
     "revision": "69b145ac64ba4e4e926879420949e867",
@@ -116,16 +116,12 @@ self.__precacheManifest = [
     "url": "./static/media/DawningofaNewDay-Regular.90f7a5ab.woff"
   },
   {
-    "revision": "4974bcafa29be08f5e4593961c0dfb85",
-    "url": "./static/media/Hack-Regular.4974bcaf.woff"
-  },
-  {
     "revision": "b09b73eedd02abbcff717b574512e61c",
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
-    "revision": "55d813485cb08db0bd387414e85b6d30",
-    "url": "./static/media/Hack-Italic.55d81348.woff"
+    "revision": "4974bcafa29be08f5e4593961c0dfb85",
+    "url": "./static/media/Hack-Regular.4974bcaf.woff"
   },
   {
     "revision": "d9ab192896af1ab48c760f3368842b79",
@@ -136,20 +132,24 @@ self.__precacheManifest = [
     "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
   },
   {
-    "revision": "6b0746de67ed6613779825741f7746ce",
-    "url": "./static/media/Hack-Bold.6b0746de.woff"
-  },
-  {
     "revision": "b21e6092b451f66197ba0f362446e643",
     "url": "./static/media/Hack-Italic.b21e6092.ttf"
   },
   {
-    "revision": "95882b264569d98007a23a4b6572f1f4",
-    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
+    "revision": "55d813485cb08db0bd387414e85b6d30",
+    "url": "./static/media/Hack-Italic.55d81348.woff"
   },
   {
     "revision": "39b73ba757992036751052f6202c2cd0",
     "url": "./static/media/PressStart2P-Regular.39b73ba7.woff"
+  },
+  {
+    "revision": "6b0746de67ed6613779825741f7746ce",
+    "url": "./static/media/Hack-Bold.6b0746de.woff"
+  },
+  {
+    "revision": "95882b264569d98007a23a4b6572f1f4",
+    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
   },
   {
     "revision": "2c404fd06cd67770807d242b2d2e5a16",
@@ -352,7 +352,7 @@ self.__precacheManifest = [
     "url": "./static/media/kim-anh.28da1a35.png"
   },
   {
-    "revision": "580f45536c870fcf398383295d3d3c17",
+    "revision": "e180ce809e8497a84089e808fcfbc670",
     "url": "./index.html"
   }
 ];
