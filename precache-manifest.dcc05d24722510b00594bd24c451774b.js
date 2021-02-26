@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "4299422d3ad63c4a8cb5",
-    "url": "./static/css/main.759a853e.chunk.css"
+    "revision": "6f9eeb8f56373166c655",
+    "url": "./static/css/main.d578c5cf.chunk.css"
   },
   {
-    "revision": "4299422d3ad63c4a8cb5",
-    "url": "./static/js/main.4299422d.chunk.js"
+    "revision": "6f9eeb8f56373166c655",
+    "url": "./static/js/main.6f9eeb8f.chunk.js"
   },
   {
-    "revision": "fa3989c0210c94fed450",
-    "url": "./static/js/1.fa3989c0.chunk.js"
+    "revision": "37f871964615a0fc857e",
+    "url": "./static/js/1.37f87196.chunk.js"
   },
   {
     "revision": "4a686d48d5a089750c49",
@@ -44,6 +44,10 @@ self.__precacheManifest = [
     "url": "./static/media/pacman-4-icon.ae20f19e.png"
   },
   {
+    "revision": "4eb1193158bb90e658ff794ddcafc46a",
+    "url": "./static/media/four-icon.4eb11931.png"
+  },
+  {
     "revision": "58ea29e940e655117a6b6bc93ed42cd4",
     "url": "./static/media/south-park-4-icon.58ea29e9.png"
   },
@@ -52,40 +56,36 @@ self.__precacheManifest = [
     "url": "./static/media/tarzan-4-icon.ae306e8f.png"
   },
   {
-    "revision": "4eb1193158bb90e658ff794ddcafc46a",
-    "url": "./static/media/four-icon.4eb11931.png"
-  },
-  {
-    "revision": "11da73363cd9feefde82d471dacc9c48",
-    "url": "./static/media/kirby-8-icon.11da7336.png"
+    "revision": "beab02d8cfd9aba8952b611d27f14fa8",
+    "url": "./static/media/pikachu-icon.beab02d8.png"
   },
   {
     "revision": "4f03ac37198d8e151572847c81590449",
     "url": "./static/media/space-invader-8-icon.4f03ac37.png"
   },
   {
-    "revision": "beab02d8cfd9aba8952b611d27f14fa8",
-    "url": "./static/media/pikachu-icon.beab02d8.png"
-  },
-  {
-    "revision": "b3f89e74d2b672d8734fd7ccd7aa56e6",
-    "url": "./static/media/pokeball-icon.b3f89e74.png"
+    "revision": "11da73363cd9feefde82d471dacc9c48",
+    "url": "./static/media/kirby-8-icon.11da7336.png"
   },
   {
     "revision": "b3236e6ffa1c840d7c69ce08100941b4",
     "url": "./static/media/ghost-8-icon.b3236e6f.png"
   },
   {
+    "revision": "b3f89e74d2b672d8734fd7ccd7aa56e6",
+    "url": "./static/media/pokeball-icon.b3f89e74.png"
+  },
+  {
     "revision": "403c63cc8857f7f2c620c88502b7a4e5",
     "url": "./static/media/charmander-icon.403c63cc.png"
   },
   {
-    "revision": "69b145ac64ba4e4e926879420949e867",
-    "url": "./static/media/yoshi-icon.69b145ac.png"
-  },
-  {
     "revision": "b0538c44fae49134ec6c2b6a590dd44c",
     "url": "./static/media/among-us-icon.b0538c44.png"
+  },
+  {
+    "revision": "69b145ac64ba4e4e926879420949e867",
+    "url": "./static/media/yoshi-icon.69b145ac.png"
   },
   {
     "revision": "f1115df9a69119f98c8f4de94d4409cc",
@@ -104,6 +104,10 @@ self.__precacheManifest = [
     "url": "./static/media/hero-video.5529c197.mp4"
   },
   {
+    "revision": "d254f533d9bb6fe4e84b07f21062381c",
+    "url": "./static/media/AnticDidone-Regular.d254f533.woff"
+  },
+  {
     "revision": "e917b5a9dcd9a24157425a9aee6da804",
     "url": "./static/media/AnticDidone-Regular.e917b5a9.ttf"
   },
@@ -120,6 +124,10 @@ self.__precacheManifest = [
     "url": "./static/media/Hack-Regular.4974bcaf.woff"
   },
   {
+    "revision": "d9ab192896af1ab48c760f3368842b79",
+    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
+  },
+  {
     "revision": "55d813485cb08db0bd387414e85b6d30",
     "url": "./static/media/Hack-Italic.55d81348.woff"
   },
@@ -128,28 +136,20 @@ self.__precacheManifest = [
     "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
   },
   {
-    "revision": "95882b264569d98007a23a4b6572f1f4",
-    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
-  },
-  {
-    "revision": "d254f533d9bb6fe4e84b07f21062381c",
-    "url": "./static/media/AnticDidone-Regular.d254f533.woff"
-  },
-  {
-    "revision": "d9ab192896af1ab48c760f3368842b79",
-    "url": "./static/media/Hack-Regular.d9ab1928.ttf"
-  },
-  {
     "revision": "b21e6092b451f66197ba0f362446e643",
     "url": "./static/media/Hack-Italic.b21e6092.ttf"
   },
   {
-    "revision": "39b73ba757992036751052f6202c2cd0",
-    "url": "./static/media/PressStart2P-Regular.39b73ba7.woff"
-  },
-  {
     "revision": "6b0746de67ed6613779825741f7746ce",
     "url": "./static/media/Hack-Bold.6b0746de.woff"
+  },
+  {
+    "revision": "95882b264569d98007a23a4b6572f1f4",
+    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
+  },
+  {
+    "revision": "39b73ba757992036751052f6202c2cd0",
+    "url": "./static/media/PressStart2P-Regular.39b73ba7.woff"
   },
   {
     "revision": "2c404fd06cd67770807d242b2d2e5a16",
@@ -344,15 +344,15 @@ self.__precacheManifest = [
     "url": "./static/media/home-background.8d7b94e4.png"
   },
   {
-    "revision": "28da1a35ed24b1dbe7acae09e3cf932f",
-    "url": "./static/media/kim-anh.28da1a35.png"
-  },
-  {
     "revision": "f8d3c9557d2b23c607a0fba84f89634c",
     "url": "./static/media/mark.f8d3c955.png"
   },
   {
-    "revision": "71afab9b3963fc52449c5797b6205721",
+    "revision": "28da1a35ed24b1dbe7acae09e3cf932f",
+    "url": "./static/media/kim-anh.28da1a35.png"
+  },
+  {
+    "revision": "441773398a9ef68b17138098170e644a",
     "url": "./index.html"
   }
 ];
