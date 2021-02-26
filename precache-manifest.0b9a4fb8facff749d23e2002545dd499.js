@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "2d5a8bbe4e94f2c880b0",
-    "url": "./static/css/main.0bc3f4a7.chunk.css"
+    "revision": "66fb8021347b1b13b334",
+    "url": "./static/css/main.980b33b7.chunk.css"
   },
   {
-    "revision": "2d5a8bbe4e94f2c880b0",
-    "url": "./static/js/main.2d5a8bbe.chunk.js"
+    "revision": "66fb8021347b1b13b334",
+    "url": "./static/js/main.66fb8021.chunk.js"
   },
   {
-    "revision": "9d9d50fdc9e492cdae4d",
-    "url": "./static/js/1.9d9d50fd.chunk.js"
+    "revision": "4e617097ed64e26e8670",
+    "url": "./static/js/1.4e617097.chunk.js"
   },
   {
     "revision": "4a686d48d5a089750c49",
@@ -52,32 +52,28 @@ self.__precacheManifest = [
     "url": "./static/media/south-park-4-icon.58ea29e9.png"
   },
   {
-    "revision": "beab02d8cfd9aba8952b611d27f14fa8",
-    "url": "./static/media/pikachu-icon.beab02d8.png"
-  },
-  {
-    "revision": "11da73363cd9feefde82d471dacc9c48",
-    "url": "./static/media/kirby-8-icon.11da7336.png"
-  },
-  {
     "revision": "ae306e8fdc2d97f89a061475cba3304c",
     "url": "./static/media/tarzan-4-icon.ae306e8f.png"
   },
   {
-    "revision": "4f03ac37198d8e151572847c81590449",
-    "url": "./static/media/space-invader-8-icon.4f03ac37.png"
+    "revision": "beab02d8cfd9aba8952b611d27f14fa8",
+    "url": "./static/media/pikachu-icon.beab02d8.png"
   },
   {
     "revision": "b3236e6ffa1c840d7c69ce08100941b4",
     "url": "./static/media/ghost-8-icon.b3236e6f.png"
   },
   {
+    "revision": "4f03ac37198d8e151572847c81590449",
+    "url": "./static/media/space-invader-8-icon.4f03ac37.png"
+  },
+  {
     "revision": "b3f89e74d2b672d8734fd7ccd7aa56e6",
     "url": "./static/media/pokeball-icon.b3f89e74.png"
   },
   {
-    "revision": "403c63cc8857f7f2c620c88502b7a4e5",
-    "url": "./static/media/charmander-icon.403c63cc.png"
+    "revision": "11da73363cd9feefde82d471dacc9c48",
+    "url": "./static/media/kirby-8-icon.11da7336.png"
   },
   {
     "revision": "b0538c44fae49134ec6c2b6a590dd44c",
@@ -86,6 +82,10 @@ self.__precacheManifest = [
   {
     "revision": "69b145ac64ba4e4e926879420949e867",
     "url": "./static/media/yoshi-icon.69b145ac.png"
+  },
+  {
+    "revision": "403c63cc8857f7f2c620c88502b7a4e5",
+    "url": "./static/media/charmander-icon.403c63cc.png"
   },
   {
     "revision": "f1115df9a69119f98c8f4de94d4409cc",
@@ -120,12 +120,16 @@ self.__precacheManifest = [
     "url": "./static/media/DawningofaNewDay-Regular.b09b73ee.ttf"
   },
   {
-    "revision": "55d813485cb08db0bd387414e85b6d30",
-    "url": "./static/media/Hack-Italic.55d81348.woff"
-  },
-  {
     "revision": "4974bcafa29be08f5e4593961c0dfb85",
     "url": "./static/media/Hack-Regular.4974bcaf.woff"
+  },
+  {
+    "revision": "35551b8d1b88cf393999571f58b358ae",
+    "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
+  },
+  {
+    "revision": "55d813485cb08db0bd387414e85b6d30",
+    "url": "./static/media/Hack-Italic.55d81348.woff"
   },
   {
     "revision": "d9ab192896af1ab48c760f3368842b79",
@@ -136,8 +140,16 @@ self.__precacheManifest = [
     "url": "./static/media/Hack-Italic.b21e6092.ttf"
   },
   {
-    "revision": "35551b8d1b88cf393999571f58b358ae",
-    "url": "./static/media/Hack-BoldItalic.35551b8d.woff"
+    "revision": "95882b264569d98007a23a4b6572f1f4",
+    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
+  },
+  {
+    "revision": "67bf8301130ac16bb1b0fff12bd181b3",
+    "url": "./static/media/Hack-Bold.67bf8301.ttf"
+  },
+  {
+    "revision": "6b0746de67ed6613779825741f7746ce",
+    "url": "./static/media/Hack-Bold.6b0746de.woff"
   },
   {
     "revision": "39b73ba757992036751052f6202c2cd0",
@@ -146,18 +158,6 @@ self.__precacheManifest = [
   {
     "revision": "2c404fd06cd67770807d242b2d2e5a16",
     "url": "./static/media/PressStart2P-Regular.2c404fd0.ttf"
-  },
-  {
-    "revision": "6b0746de67ed6613779825741f7746ce",
-    "url": "./static/media/Hack-Bold.6b0746de.woff"
-  },
-  {
-    "revision": "95882b264569d98007a23a4b6572f1f4",
-    "url": "./static/media/Hack-BoldItalic.95882b26.ttf"
-  },
-  {
-    "revision": "67bf8301130ac16bb1b0fff12bd181b3",
-    "url": "./static/media/Hack-Bold.67bf8301.ttf"
   },
   {
     "revision": "6e364b16fabc20a96b70031e54219834",
@@ -352,7 +352,7 @@ self.__precacheManifest = [
     "url": "./static/media/kim-anh.28da1a35.png"
   },
   {
-    "revision": "ca14505bb22ee098aaf6add04efaf81b",
+    "revision": "f9345f2f15a3af28017b1f06e2fe4883",
     "url": "./index.html"
   }
 ];
