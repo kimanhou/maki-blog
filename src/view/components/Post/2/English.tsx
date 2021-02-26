@@ -113,6 +113,17 @@ const English : React.FC<IPostContentProps> = props => {
                 Working with an existing color palette is always easier.</p>
             <p>For a consistent look, photos and illustrations should also respect the chosen color scheme. They will help unify the page, as shown below on T mobile website.</p>
             <img src={getImageSrc(postId, '7.jpg')}/>
+
+            <div className={`section-separator`}></div>
+
+            <Cross/><span className={`step-title`}>Bonus</span>
+            <p>
+                If you don't know where to start, <a href='https://picular.co/' target='_blank'>Picular</a> is a great place to start. 
+                It's a sort of Google for colors: you type in a word, like “summer”, and the website answers with colors that match your search. Simple and magical!
+            </p>
+            <video width="100%" autoPlay playsInline loop muted>
+                <source src={getImageSrc(postId, '8.mov')} type="video/mp4" />
+            </video>
         
         </PostTemplate>
     );
