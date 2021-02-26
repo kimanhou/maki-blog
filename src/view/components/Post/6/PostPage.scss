@@ -1,0 +1,207 @@
+
+.post {
+    &.six {
+        >.post-hero-image {
+            background: url('images/hero-image.jpg') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .post-text {
+            .button {
+                &.size-button {
+                    width: 100px;
+                    >.button-container {
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .flex-row {
+                &.button-line {
+                    flex-wrap: wrap;
+                    padding: 0 calc(var(--size-margin-10) * (-1));
+                    margin-bottom: var(--size-margin-30);
+                    >.fade-in {
+                        margin: var(--size-margin-10);
+                    }
+                }
+            }
+            .game-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                >.column {
+                    width: 100px;
+                    &.drawing-icons-container {
+                        position: relative;
+                    }
+                    &.shuffle-in {
+                        overflow: hidden;
+                        >.shuffle-in-content {
+                            font-family: Press_Start;
+                            font-size: 14px;
+                            text-align: center;
+                            >.count-down {
+                                font-size: 110px;
+                            }
+                        }
+                        &.inactive {
+                            animation: shuffle-animation 1s ease-in 1s forwards;
+                        }
+                    }
+                }
+                >.game-and-cheating-game {
+                    position: relative;
+                    .game {
+                        margin: 0 auto;
+                        border: solid 1px var(--color-off-black);
+                        display: flex;
+                        flex-direction: column;
+                        >.game-row {
+                            display: flex;
+                            flex-direction: row;
+                            flex: 1;
+                            >.game-cell {
+                                border: solid 1px var(--color-off-black);
+                                flex: 1;
+                                cursor: move; /* fallback if grab cursor is unsupported */
+                                cursor: grab;
+                                cursor: -moz-grab;
+                                cursor: -webkit-grab;
+                                &:active {
+                                    cursor: grabbing;
+                                    cursor: -moz-grabbing;
+                                    cursor: -webkit-grabbing;
+                                }
+                                >.game-cell-inside {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    >.cheating-game-container {
+                        opacity: 0;
+                        transition: opacity .4s;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        pointer-events: none;
+                        >.cheating-game {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                        }
+                        >.cheating-game-background {
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            background-color: rgba(60, 60, 65, 0.5);
+                        }
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .temp {
+                height: 500px;
+                width: 500px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                margin: 100px auto;
+                background-image: url(./images/four-icon.png);
+                animation: temp-animation 5s linear 5s infinite;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .post {
+        &.six {
+            .post-text {
+                .game-container { 
+                    flex-direction: column;
+                    justify-content: unset;
+                    >.column {
+                        width: 100%;
+                        &.drawing-icons-container {
+                            height: 100px;
+                        }
+                        &.shuffle-in {
+                            order: 1;
+                        }
+                    }
+                    >.game-and-cheating-game {
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes shuffle-animation {
+    0% {
+        opacity: 1;
+        max-height: 500px;
+    }
+    100% {
+        opacity: 0;
+        max-height: 0;
+    }
+}
+
+@keyframes temp-animation {
+    0%, 4.5% {
+        background-image: url(./images/four-icon.png);
+    }
+    5%, 9.5% {
+        background-image: url(./images/pacman-4-icon.png);
+    }
+    10%, 14.5% {
+        background-image: url(./images/south-park-4-icon.png);
+    }
+    15%, 19.5% {
+        background-image: url(./images/tarzan-4-icon.png);
+    }
+    20%, 24.9% {
+        background-image: url(./images/pikachu-icon.png);
+    }
+    25%, 29.5% {
+        background-image: url(./images/kirby-8-icon.png);
+    }
+    30%, 34.9% {
+        background-image: url(./images/space-invader-8-icon.png);
+    }
+    35%, 39.5% {
+        background-image: url(./images/ghost-8-icon.png);
+    }
+    40%, 44.5% {
+        background-image: url(./images/pokeball-icon.png);
+    }
+    45%, 49.5% {
+        background-image: url(./images/charmander-icon.png);
+    }
+    50%, 54.5% {
+        background-image: url(./images/among-us-icon.png);
+    }
+    55%, 59.5% {
+        background-image: url(./images/yoshi-icon.png);
+    }
+    60%, 100% {
+        background-image: url(./images/pikachu-32-icon.png);
+    }
+}
+
+
+
+

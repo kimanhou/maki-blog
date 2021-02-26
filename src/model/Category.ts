@@ -12,7 +12,7 @@ export default class Category {
     }
 
     static getAllCategories = () => {
-        return [ Category.ALL, Category.DIY, Category.SOCIALMEDIA, Category.UI, Category.CODE ];
+        return [ Category.ALL, Category.DIY, Category.SOCIALMEDIA, Category.UI, Category.CODE, Category.GAME ];
     }
 
     getDescription = (localisation : Local) => {
@@ -68,5 +68,6 @@ export default class Category {
     static DIY = new Category('DIY', 'DIY', 'DIY');
     static UI = new Category('UI', 'User interface', 'Interface utilisateur');
     static CODE = new Category('CODE', 'Coding', 'Code');
+    static GAME = new Category('GAME', 'Game', 'Jeu');
     static ALL = new Category('ALL', 'All', 'Tous');
 }

@@ -1,0 +1,65 @@
+.icon-button {
+    height: 100px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    transition: filter .4s;
+    margin-bottom: var(--size-margin-30);
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &.pokeball {
+        background-image: url(./../images/pokeball-icon.png);
+    }
+    &.charmander {
+        background-image: url(./../images/charmander-icon.png);
+    }
+    &.among-us {
+        background-image: url(./../images/among-us-icon.png);
+    }
+    &.yoshi {
+        background-image: url(./../images/yoshi-icon.png);
+    }
+    &.four {
+        background-image: url(./../images/four-icon.png);
+    }
+    &.pacman {
+        background-image: url(./../images/pacman-4-icon.png);
+    }
+    &.south-park {
+        background-image: url(./../images/south-park-4-icon.png);
+    }
+    &.tarzan {
+        background-image: url(./../images/tarzan-4-icon.png);
+    }
+    &.pikachu {
+        background-image: url(./../images/pikachu-icon.png);
+    }
+    &.kirby {
+        background-image: url(./../images/kirby-8-icon.png);
+    }
+    &.space-invader {
+        background-image: url(./../images/space-invader-8-icon.png);
+    }
+    &.ghost {
+        background-image: url(./../images/ghost-8-icon.png);
+    }
+    &.pikachu-32 {
+        background-image: url(./../images/pikachu-32-icon.png);
+    }
+    &.unselected {
+        filter: brightness(50%);
+    }
+    &:hover {
+        filter: brightness(100%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .icon-button {
+        height: 100%;
+        width: 100px;
+    }
+}
