@@ -6,55 +6,55 @@ import { getBackgroundColor16x16AmongUs, getBackgroundColor16x16Charmander, getB
 import Game, { Drawing } from './models/Game';
 import GameCell from './models/GameCell';
 
-const renderGameCell = (gameCell : GameCell, game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
-    const onDragStart = () => {
-        setOriginCell(gameCell);
-    }
+// const renderGameCell = (gameCell : GameCell, game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
+//     const onDragStart = () => {
+//         setOriginCell(gameCell);
+//     }
 
-    const onDrop = () => {
-        if (originCell != null) {
-            setGame(game.switchCells(originCell, gameCell));
-            setOriginCell(null);
-        }
-    }
+//     const onDrop = () => {
+//         if (originCell != null) {
+//             setGame(game.switchCells(originCell, gameCell));
+//             setOriginCell(null);
+//         }
+//     }
 
-    const isOriginCell = originCell != null && gameCell == originCell;
-    const onClickMobile = () => {
-        if (originCell != null) {
-            setGame(game.switchCells(originCell, gameCell));
-            setOriginCell(null);
-        }
-        else {
-            setOriginCell(gameCell);
-        }
-    }
+//     const isOriginCell = originCell != null && gameCell == originCell;
+//     const onClickMobile = () => {
+//         if (originCell != null) {
+//             setGame(game.switchCells(originCell, gameCell));
+//             setOriginCell(null);
+//         }
+//         else {
+//             setOriginCell(gameCell);
+//         }
+//     }
 
-    // const mobile = isMobile();
-    // if (mobile) {
-    //     return <GameCellMobile background={gameCell.backgroundColor} onClick={onClickMobile} isOriginCell={isOriginCell}/>;
-    // }
-    // else {
-    //     return <GameCellDesktop onDrop={onDrop} onDragStart={onDragStart} background={gameCell.backgroundColor}/>;
-    // }
-    return <GameCellDesktop onDrop={onDrop} onDragStart={onDragStart} background={gameCell.backgroundColor}/>;
-}
+//     // const mobile = isMobile();
+//     // if (mobile) {
+//     //     return <GameCellMobile background={gameCell.backgroundColor} onClick={onClickMobile} isOriginCell={isOriginCell}/>;
+//     // }
+//     // else {
+//     //     return <GameCellDesktop onDrop={onDrop} onDragStart={onDragStart} background={gameCell.backgroundColor}/>;
+//     // }
+//     return <GameCellDesktop onDrop={onDrop} onDragStart={onDragStart} background={gameCell.backgroundColor}/>;
+// }
 
-const renderGameRow = (gameCells : GameCell[], game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
-    return (
-        <div className={`game-row`}>
-            {gameCells.map(t => renderGameCell(t, game, setGame, originCell, setOriginCell))}
-        </div>
-    );
-}
+// const renderGameRow = (gameCells : GameCell[], game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
+//     return (
+//         <div className={`game-row`}>
+//             {gameCells.map(t => renderGameCell(t, game, setGame, originCell, setOriginCell))}
+//         </div>
+//     );
+// }
 
-export const renderGame = (game : Game, setGame : (game : Game) => void) => {
-    const [originCell, setOriginCell] = useState<GameCell | null>(null);
-    return (
-        <>
-            {game.cells.map(row => renderGameRow(row, game, setGame, originCell, setOriginCell))}
-        </>
-    );
-}
+// export const renderGame = (game : Game, setGame : (game : Game) => void) => {
+//     const [originCell, setOriginCell] = useState<GameCell | null>(null);
+//     return (
+//         <>
+//             {game.cells.map(row => renderGameRow(row, game, setGame, originCell, setOriginCell))}
+//         </>
+//     );
+// }
 
 export const getBackgroundColorFunction = (drawing : Drawing) : ((x : number, y : number) => string) => {
     switch (drawing) {

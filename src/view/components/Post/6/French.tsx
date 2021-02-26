@@ -6,9 +6,10 @@ import PostTemplate from '../PostTemplate/PostTemplate';
 import Button from '../PostTemplate/TemplateComponents/Button';
 import DrawingButton from './components/DrawingButton';
 import DrawingButtons from './components/DrawingButtons';
+import GameComponent from './components/GameComponent';
 import VictoryScreen from './components/VictoryScreen';
 import Game, { Drawing } from './models/Game';
-import { renderGame } from './Post6Hooks';
+// import { renderGame } from './Post6Hooks';
 import './PostPage.scss';
 
 
@@ -152,13 +153,15 @@ const French : React.FC<IPostContentProps> = props => {
                     </DrawingButtons>
                 </div>
                 <div className={`game-and-cheating-game`}>
-                    <div className={`game`} style={{ height: gameSize, width: gameSize}}>
+                    {/* <div className={`game`} style={{ height: gameSize, width: gameSize}}>
                         {renderGame(game, setGame)}
-                    </div>
+                    </div> */}
+                    <GameComponent game={game} gameSize={gameSize} setGame={setGame} classname=''/>
                     <div className={`cheating-game-container ${cheatingClassName}`}>
-                        <div className={`cheating-game game`} style={{ height: gameSize, width: gameSize}}>
+                        {/* <div className={`cheating-game game`} style={{ height: gameSize, width: gameSize}}>
                             {renderGame(finishedGame, () => {})}
-                        </div>
+                        </div> */}
+                        <GameComponent game={game} gameSize={gameSize} setGame={() => {}} classname='cheating-game'/>
                         <div className={`cheating-game-background`}></div>
                     </div>
                 </div>

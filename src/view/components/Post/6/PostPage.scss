@@ -53,17 +53,17 @@
                 }
                 >.game-and-cheating-game {
                     position: relative;
-                    .game {
-                        margin: 0 auto;
-                        border: solid 1px var(--color-off-black);
-                        display: flex;
-                        flex-direction: column;
-                        >.game-row {
-                            display: flex;
-                            flex-direction: row;
-                            flex: 1;
-                        }
-                    }
+                    // .game {
+                    //     margin: 0 auto;
+                    //     border: solid 1px var(--color-off-black);
+                    //     display: flex;
+                    //     flex-direction: column;
+                    //     >.game-row {
+                    //         display: flex;
+                    //         flex-direction: row;
+                    //         flex: 1;
+                    //     }
+                    // }
                     >.cheating-game-container {
                         opacity: 0;
                         transition: opacity .4s;

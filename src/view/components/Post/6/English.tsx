@@ -8,7 +8,6 @@ import DrawingButton from './components/DrawingButton';
 import DrawingButtons from './components/DrawingButtons';
 import VictoryScreen from './components/VictoryScreen';
 import Game, { Drawing } from './models/Game';
-import { renderGame } from './Post6Hooks';
 import './PostPage.scss';
 
 
@@ -153,11 +152,11 @@ const English : React.FC<IPostContentProps> = props => {
                 </div>
                 <div className={`game-and-cheating-game`}>
                     <div className={`game`} style={{ height: gameSize, width: gameSize}}>
-                        {renderGame(game, setGame)}
+                        {/* {renderGame(game, setGame)} */}
                     </div>
                     <div className={`cheating-game-container ${cheatingClassName}`}>
                         <div className={`cheating-game game`} style={{ height: gameSize, width: gameSize}}>
-                            {renderGame(finishedGame, () => {})}
+                            {/* {renderGame(finishedGame, () => {})} */}
                         </div>
                         <div className={`cheating-game-background`}></div>
                     </div>
