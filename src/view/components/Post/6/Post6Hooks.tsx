@@ -1,41 +1,5 @@
-import React, { useState } from 'react';
 import { getBackgroundColor16x16AmongUs, getBackgroundColor16x16Charmander, getBackgroundColor16x16Pokeball, getBackgroundColor16x16Yoshi, getBackgroundColor32x32Pikachu, getBackgroundColor4x4, getBackgroundColor4x4Pacman, getBackgroundColor4x4SouthPark, getBackgroundColor4x4Tarzan, getBackgroundColor8x8Ghost, getBackgroundColor8x8Kirby, getBackgroundColor8x8Pikachu, getBackgroundColor8x8SpaceInvader } from './GetBackgroundColor';
-import Game, { Drawing } from './models/Game';
-import GameCell from './models/GameCell';
-
-const renderGameCell = (gameCell : GameCell, game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
-    const onDragStart = () => {
-        setOriginCell(gameCell);
-    }
-
-    const onDrop = () => {
-        if (originCell != null) {
-            setGame(game.switchCells(originCell, gameCell));
-            setOriginCell(null);
-        }
-    }
-
-    return <div className={`game-cell`} onDrop={onDrop} onDragOver={e => e.preventDefault()}>
-                <div className={`game-cell-inside`} draggable onDragStart={onDragStart} style={{ backgroundColor: gameCell.backgroundColor }} ></div>
-            </div>;
-}
-
-const renderGameRow = (gameCells : GameCell[], game : Game, setGame : (game : Game) => void, originCell : GameCell | null, setOriginCell : (originCell : GameCell | null) => void) => {
-    return (
-        <div className={`game-row`}>
-            {gameCells.map(t => renderGameCell(t, game, setGame, originCell, setOriginCell))}
-        </div>
-    );
-}
-
-export const renderGame = (game : Game, setGame : (game : Game) => void) => {
-    const [originCell, setOriginCell] = useState<GameCell | null>(null);
-    return (
-        <>
-            {game.cells.map(row => renderGameRow(row, game, setGame, originCell, setOriginCell))}
-        </>
-    );
-}
+import { Drawing } from './models/Game';
 
 export const getBackgroundColorFunction = (drawing : Drawing) : ((x : number, y : number) => string) => {
     switch (drawing) {

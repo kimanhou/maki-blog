@@ -44,7 +44,12 @@ export default class Game {
     }
 
     getSize = () => {
-        return this.cells.length;
+        if (this.cells != null) {
+            return this.cells.length;
+        }
+        else {
+            return 0;
+        }
     }
 
     static createGameFromCoordinates = (drawing : Drawing, size : number, getBackgroundColor : (x : number, y : number) => string ) => {

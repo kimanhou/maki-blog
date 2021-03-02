@@ -53,34 +53,6 @@
                 }
                 >.game-and-cheating-game {
                     position: relative;
-                    .game {
-                        margin: 0 auto;
-                        border: solid 1px var(--color-off-black);
-                        display: flex;
-                        flex-direction: column;
-                        >.game-row {
-                            display: flex;
-                            flex-direction: row;
-                            flex: 1;
-                            >.game-cell {
-                                border: solid 1px var(--color-off-black);
-                                flex: 1;
-                                cursor: move; /* fallback if grab cursor is unsupported */
-                                cursor: grab;
-                                cursor: -moz-grab;
-                                cursor: -webkit-grab;
-                                &:active {
-                                    cursor: grabbing;
-                                    cursor: -moz-grabbing;
-                                    cursor: -webkit-grabbing;
-                                }
-                                >.game-cell-inside {
-                                    height: 100%;
-                                    width: 100%;
-                                }
-                            }
-                        }
-                    }
                     >.cheating-game-container {
                         opacity: 0;
                         transition: opacity .4s;

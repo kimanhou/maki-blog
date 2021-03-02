@@ -116,6 +116,17 @@ const French : React.FC<IPostContentProps> = props => {
                 Elles aideront ainsi à unifier la page, comme le fait T-mobile sur son site.</p>
             <img src={getImageSrc(postId, '7.jpg')}/>
 
+            <div className={`section-separator`}></div>
+
+            <Cross/><span className={`step-title`}>Bonus</span>
+            <p>
+                Si vous ne savez pas par où commencer, le site <a href='https://picular.co/' target='_blank'>Picular</a> est un excellent point de départ. 
+                Il s'agit d'une sorte de Google pour couleurs : vous tapez un mot, comme par exemple “summer”, et le site vous répond avec des couleurs correspondant à votre recherche. Simple et magique !
+            </p>
+            <video width="100%" autoPlay playsInline loop muted>
+                <source src={getImageSrc(postId, '8.mov')} type="video/mp4" />
+            </video>
+
         </PostTemplate>
     );
 }
