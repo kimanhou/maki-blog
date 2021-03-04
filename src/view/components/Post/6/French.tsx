@@ -9,7 +9,6 @@ import DrawingButtons from './components/DrawingButtons';
 import GameComponent from './components/GameComponent';
 import VictoryScreen from './components/VictoryScreen';
 import Game, { Drawing } from './models/Game';
-// import { renderGame } from './Post6Hooks';
 import './PostPage.scss';
 
 

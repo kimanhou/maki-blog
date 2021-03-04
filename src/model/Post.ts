@@ -11,6 +11,8 @@ import English5 from "../view/components/Post/5/English";
 import French5 from "../view/components/Post/5/French";
 import English6 from "../view/components/Post/6/English";
 import French6 from "../view/components/Post/6/French";
+import English7 from "../view/components/Post/7/English";
+import French7 from "../view/components/Post/7/French";
 import Category from "./Category";
 import LanguageVersion from "./LanguageVersion";
 
@@ -43,8 +45,8 @@ export default class Post {
 
     static getAllPosts = () => {
         return [ 
-            Post.SIX, 
-            Post.FIVE, Post.FOUR, Post.THREE, Post.TWO, Post.ONE,
+            Post.SEVEN, 
+            Post.SIX, Post.FIVE, Post.FOUR, Post.THREE, Post.TWO, Post.ONE,
          ];
     }
 
@@ -123,6 +125,7 @@ export default class Post {
     static FOUR = new Post(4, new Date('2021-02-12'), new LanguageVersion(English4, 'UI/UX, what is it ?'), new LanguageVersion(French4, "UI/UX, qu'est-ce que c'est ?"), [ Category.UI ], true);
     static FIVE = new Post(5, new Date('2021-02-19'), new LanguageVersion(English5, 'Flexbox cheatsheet'), new LanguageVersion(French5, "Flexbox cheatsheet"), [ Category.CODE ], true);
     static SIX = new Post(6, new Date('2021-02-26'), new LanguageVersion(English6, 'Pixel art'), new LanguageVersion(French6, "Pixel art"), [ Category.GAME ]);
+    static SEVEN = new Post(7, new Date('2021-03-05'), new LanguageVersion(English7, 'Typography'), new LanguageVersion(French7, "Typographie"), [ Category.UI ], true);
 }
 
 const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]
