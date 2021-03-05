@@ -125,7 +125,7 @@ export default class Post {
     static FOUR = new Post(4, new Date('2021-02-12'), new LanguageVersion(English4, 'UI/UX, what is it ?'), new LanguageVersion(French4, "UI/UX, qu'est-ce que c'est ?"), [ Category.UI ], true);
     static FIVE = new Post(5, new Date('2021-02-19'), new LanguageVersion(English5, 'Flexbox cheatsheet'), new LanguageVersion(French5, "Flexbox cheatsheet"), [ Category.CODE ], true);
     static SIX = new Post(6, new Date('2021-02-26'), new LanguageVersion(English6, 'Pixel art'), new LanguageVersion(French6, "Pixel art"), [ Category.GAME ]);
-    static SEVEN = new Post(7, new Date('2021-03-05'), new LanguageVersion(English7, 'Typography'), new LanguageVersion(French7, "Typographie"), [ Category.UI ], true);
+    static SEVEN = new Post(7, new Date('2021-03-05'), new LanguageVersion(English7, '5 essential questions to ask yourself before picking a typeface'), new LanguageVersion(French7, "5 questions essentielles à se poser avant de choisir une police"), [ Category.UI ], true);
 }
 
 const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]

@@ -28,7 +28,7 @@
                 .italic {
                     font-style: italic;
                 }
-                >.step-title {
+                .step-title {
                     font-size: var(--size-font-size-preview-title);
                 }
                 >.p-separator {
@@ -124,6 +124,9 @@
                     &:hover {
                         color: var(--color-yellow);
                     }
+                }
+                .text-align-center {
+                    text-align: center;
                 }
             }
         }
