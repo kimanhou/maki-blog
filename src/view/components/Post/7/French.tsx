@@ -1,5 +1,5 @@
 import React from 'react';
-import { IPostContentProps } from '../../../../model/Post';
+import Post, { IPostContentProps } from '../../../../model/Post';
 import PostTemplate, { getImageSrc } from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import PhotoWithCredits from '../PostTemplate/TemplateComponents/PhotoWithCredits/PhotoWithCredits';
@@ -18,7 +18,11 @@ const French : React.FC<IPostContentProps> = props => {
         <Cross/><span>Comment bien choisir une police d'affichage ? En déterminant l'atmosphère recherchée et en expérimentant plein de polices différentes jusqu'à trouver celle qui collera le mieux à la peau du projet.</span>
         <br></br>
         <Cross/><span>Quelles sont les polices les plus utilisées ? D'après Google Fonts Analytics, Roboto, Open Sans et Lato. N'hésitez pas à utiliser d'autres polices moins populaires pour vous démarquer.</span>
+        <div className={`section-separator`}></div>
     </>;
+    
+    const relatedPost = Post.getPostById(2);
+    const relatedPosts = relatedPost == undefined ? [] : [ relatedPost ];
 
     return (
         <PostTemplate postId={postId}
@@ -27,7 +31,7 @@ const French : React.FC<IPostContentProps> = props => {
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`seven`}
                     tldr={tldr}
-                    relatedPosts={[]}
+                    relatedPosts={relatedPosts}
                     photoCreditName='Florian Klauer' photoCreditUrl='https://unsplash.com/photos/1mTm3gH5_Wk' photoCreditWebsite='Unsplash'>
             <p>
                 Les polices sont les vêtements que portent les mots de votre site web. 

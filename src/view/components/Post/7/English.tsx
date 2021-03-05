@@ -1,5 +1,5 @@
 import React from 'react';
-import { IPostContentProps } from '../../../../model/Post';
+import Post, { IPostContentProps } from '../../../../model/Post';
 import PostTemplate, { getImageSrc } from '../PostTemplate/PostTemplate';
 import Cross from '../PostTemplate/TemplateComponents/Cross';
 import PhotoWithCredits from '../PostTemplate/TemplateComponents/PhotoWithCredits/PhotoWithCredits';
@@ -18,7 +18,11 @@ const English : React.FC<IPostContentProps> = props => {
         <Cross/><span>How to pick a typeface for display text? By determining the wanted atmosphere and experimenting with lots of different fonts until you find the one that best matches the project.</span>
         <br></br>
         <Cross/><span>What are the most used fonts? According to Google Fonts Analytics, Roboto, Open Sans and Lato. Feel free to use other less popular fonts to stand out.</span>
+        <div className={`section-separator`}></div>
     </>;
+
+    const relatedPost = Post.getPostById(2);
+    const relatedPosts = relatedPost == undefined ? [] : [ relatedPost ];
 
     return (
         <PostTemplate postId={postId}
@@ -27,7 +31,7 @@ const English : React.FC<IPostContentProps> = props => {
                     titleBottomLayerRef={props.titleBottomLayerRef} 
                     postIdClassName={`seven`}
                     tldr={tldr}
-                    relatedPosts={[]}
+                    relatedPosts={relatedPosts}
                     photoCreditName='Florian Klauer' photoCreditUrl='https://unsplash.com/photos/1mTm3gH5_Wk' photoCreditWebsite='Unsplash'>
             <p>
                 Fonts are the clothing the words on your website wear.
