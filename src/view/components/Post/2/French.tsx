@@ -102,8 +102,8 @@ const French : React.FC<IPostContentProps> = props => {
             <p>Pour une bonne lisibilité, <b>le rapport de contraste doit être supérieur à 5</b>. 
                 Cela ne signifique pas que tout sur votre site doit absolument respecter cette limite. En revanche, c'est un bon indicateur. 
                 Par exemple, les liens sur ce blog apparaissent en jaune quand la souris passe dessus.  
-                Le rapport de contraste est abominable (1,72), cependant j'ai considéré quue c'était acceptable car il ne s'agit que du cas où l'utilisateur pose sa souris sur un lien cliquable. 
-                Par ailleurs, le corps de l'article a un rapport de contraste de 10,95,  ce qui est excellent.</p>
+                Le rapport de contraste est abominable (1,72), cependant j'ai considéré quue c'était acceptable car il ne s'agit que du cas où l'utilisateur pose sa souris sur un lien cliquable <i>(mise à jour : les liens ne changent plus de couleur, à la place ils sont soulignés)</i>. 
+                Par ailleurs, le corps de l'article a un rapport de contraste de 10,95, ce qui est excellent.</p>
             <img src={getImageSrc(postId, '6.jpg')}/>
 
             <div className={`section-separator`}></div>
