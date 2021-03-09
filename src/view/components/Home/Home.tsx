@@ -16,9 +16,10 @@ const Home : React.FC<IHomeProps> = props => {
                 <Header />
                 <HelloWorld />
             </section>
-            
-            <LatestPosts />
-            <InstagramBanner />
+            <main>
+                <LatestPosts />
+                <InstagramBanner />
+            </main>
             <Footer />
         </div>
     );

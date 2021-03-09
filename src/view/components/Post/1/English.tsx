@@ -66,7 +66,7 @@ const English : React.FC<IPostContentProps> = props => {
             <img src={getImageSrc(postId, '1.jpg')}/>
             <Cross/><span>Click on “Create an app”.</span>
             <img src={getImageSrc(postId, '2.jpg')}/>
-            <Cross/><span>Choose your app type, you will need to pick one that has oEmbed for Instagram in its list of Available products. You can read about app types <a href='https://developers.facebook.com/docs/development/create-an-app/app-dashboard/app-types' target='_blank'>here</a>. For example, for this blog I chose “Build connected experiences”.</span>
+            <Cross/><span>Choose your app type, you will need to pick one that has oEmbed for Instagram in its list of Available products. You can read about <a href='https://developers.facebook.com/docs/development/create-an-app/app-dashboard/app-types' target='_blank'>app types here</a>. For example, for this blog I chose “Build connected experiences”.</span>
             <img src={getImageSrc(postId, '3.jpg')} className={`width-50`}/>
             <Cross/><span>Fill in the app name and the email address.</span>
             <img src={getImageSrc(postId, '4.jpg')} className={`width-50`}/>
