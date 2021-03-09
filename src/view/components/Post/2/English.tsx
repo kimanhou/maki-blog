@@ -42,7 +42,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. Keep it simple: do not have too many colors</span>
+            <Cross/><h2 className={`step-title`}>1. Keep it simple: do not have too many colors</h2>
             <p>Be there a splash of bright colors or natural colors with the use of earth tones or deepers hues, you should not have too many different colors.
                 A busy and complicated color scheme confuses the eye. 
                 Like in fashion, the rule of <b>no more than three colors</b> can be applied. 
@@ -59,7 +59,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>2. Try using off-blacks and off-whites</span>
+            <Cross/><h2 className={`step-title`}>2. Try using off-blacks and off-whites</h2>
             <p>Black text on white background can look quite stark and can create eye fatigue. 
                 Try using an off-black for the text on an off-white background to improve the reading experience. 
                 Do not hesitate to try other colors than “neutral” greys, for which the values of rgb are all identical.
@@ -72,7 +72,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. Certain colors work well together, others simply don’t</span>
+            <Cross/><h2 className={`step-title`}>3. Certain colors work well together, others simply don’t</h2>
             <p>Nail polish will look different on two people with different skin colors. 
                 A color on a website might look different than the exact same color on another website because of its surroundings. 
                 If you picked the colors of you website individually, put them side by side to get the look and feel of the color scheme as a whole. 
@@ -95,7 +95,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>5. Make sure the content is easy to read</span>
+            <Cross/><h2 className={`step-title`}>5. Make sure the content is easy to read</h2>
             <p>In a browser, open the inspector, select the element you want to check and look for its color in the style section.</p>
             <p>Click on the color filled square next to the HEX or rgb code. It will open a pop up with information about the color. This is where you will find the contrast ratio.</p>
             <p>For a good reading experience, <b>the contrast ratio should be above 5</b>. 
@@ -107,7 +107,7 @@ const English : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>6. Integrate your branding in your color scheme. Use photography and illustrations to solidify it</span>
+            <Cross/><h2 className={`step-title`}>6. Integrate your branding in your color scheme. Use photography and illustrations to solidify it</h2>
             <p>Chances are your brand already has certain colors associated with it. 
                 If you have a logo, it’s a good base to create your color scheme. 
                 Working with an existing color palette is always easier.</p>
@@ -116,7 +116,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>Bonus</span>
+            <Cross/><h2 className={`step-title`}>Bonus</h2>
             <p>
                 If you don't know where to start, <a href='https://picular.co/' target='_blank'>Picular</a> is a great place to start. 
                 It's a sort of Google for colors: you type in a word, like “summer”, and the website answers with colors that match your search. Simple and magical!

@@ -50,7 +50,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. What is UI and what does a UI designer do ?</span>
+            <Cross/><h2 className={`step-title`}>1. What is UI and what does a UI designer do ?</h2>
 
             <p>
                 UI stands for “<i>user interface</i>”. Let's break down the key components here, which are “<i>the user</i>” and “<i>the interface</i>”.
@@ -96,7 +96,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>2. What is UX and what does a UX designer do ?</span>
+            <Cross/><h2 className={`step-title`}>2. What is UX and what does a UX designer do ?</h2>
             <p>
                 UX stands for “<i>user experience</i>”. A definition can be : the experience a product or a service creates for people in the real world.
             </p>
@@ -122,7 +122,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. UI/UX in your life</span>
+            <Cross/><h2 className={`step-title`}>3. UI/UX in your life</h2>
             <p>
                 Nowadays, we get all our information from screens, be it a desktop, a laptop, a tablet or a phone. 
                 We are constantly looking at screens and learning how to interact with the world through them. 

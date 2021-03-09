@@ -33,7 +33,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. The simple and obvious method</span>
+            <Cross/><h2 className={`step-title`}>1. The simple and obvious method</h2>
 
             <p>
                 In the CSS file, create a <span className={`italic`}>hover</span> state with a different color and add a transition so that the change is not too aggressive to the eye.
@@ -67,7 +67,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>2. For the pickier</span>
+            <Cross/><h2 className={`step-title`}>2. For the pickier</h2>
             <p>
                 We overlay two <span className={`code-element`}>div</span>: one with the text in black and the other with the text in pink. The <span className={`code-element`}>div</span> with the text in pink has an original <span className={`code-element`}>width</span> (or <span className={`code-element`}>height</span>) of 0 and is therefore not visible. 
                 This <span className={`code-element`}>width</span> will change from 0 to 100% on <span className={`code-element`}>hover</span> with a transition for a smooth effect.
@@ -124,7 +124,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. For the perfectionist</span>
+            <Cross/><h2 className={`step-title`}>3. For the perfectionist</h2>
             <p>
                 We go back to the first technique but this time, each character is placed in <span className={`code-element`}>span</span> and we add an offset in the proprety <span className={`code-element`}>transition-delay</span> for each character individually.
             </p>

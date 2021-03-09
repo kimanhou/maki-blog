@@ -89,7 +89,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. The theory</span>
+            <Cross/><h2 className={`step-title`}>1. The theory</h2>
 
             <p>
                 The code snippet below designates a <i>flex container</i>. This is the container <span className={`code-element`}>div</span>.
@@ -167,7 +167,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`} id={`fun`}>2. The demo</span>
+            <Cross/><h2 className={`step-title`} id={`fun`}>2. The demo</h2>
             <p>
                 Click on the buttons to modify the properties of the container <span className={`code-element`}>div</span> and click on the children to control their size with the <span className={`code-element`}>flex: 1;</span> property.
             </p>
@@ -224,7 +224,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. Common examples</span><br></br>
+            <Cross/><h2 className={`step-title`}>3. Common examples</h2><br></br>
             <br></br>
             <Cross/><span>
                 Divide a <span className={`code-element`}>div</span> into columns of equal width and separated from each other by a gutter, all centered horizontally.
@@ -366,7 +366,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>Tips &amp; tricks</span><br></br>
+            <Cross/><h2 className={`step-title`}>Tips &amp; tricks</h2><br></br>
             <Cross/><span>Auto height image in Safari</span>
             <p>
                 If you need to use height auto and parent of image is set to <span className={`code-element`}>display: flex;</span>, this trick will help.
@@ -389,7 +389,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>Useful links</span>
+            <Cross/><h2 className={`step-title`}>Useful links</h2>
             <p>
                 <a href='https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox' target='_blank'>Mozilla's documentation</a>
             </p>

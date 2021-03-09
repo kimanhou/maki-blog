@@ -14,6 +14,12 @@
         color: var(--color-off-black);
         text-decoration: none;
     }
+    h1, h2, h3, h4, h5 {
+        font-weight: normal;
+        font-size: unset;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
 }
 
 @media screen and (min-width: 1540px) {

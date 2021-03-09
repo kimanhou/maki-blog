@@ -45,7 +45,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. Quelles sont les différentes catégories de police ?</span>
+            <Cross/><h2 className={`step-title`}>1. Quelles sont les différentes catégories de police ?</h2>
             <p>
                 Les deux principales catégories de polices sont :<br></br><br></br>
                 <span className={`nbsp`}></span><Cross/><b><i>Serif fonts</i></b>&nbsp; ou <b><i>polices avec empattement</i></b>&nbsp; : 
@@ -92,7 +92,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>2. Combien de polices différentes doit-on utiliser sur un site web ?</span>
+            <Cross/><h2 className={`step-title`}>2. Combien de polices différentes doit-on utiliser sur un site web ?</h2>
             <p>
                 Idéalement <b>2</b>. Évidemment, tout dépend du type de site, de sa taille, de son contenu, etc ...
                 Certains sites peuvent s'en sortir avec une seule police en jouant sur la taille, la capitalisation, le style (mettre en gras ou en italique), et l'espacement des lettres.
@@ -104,7 +104,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. Comment bien choisir une police de texte ?</span>
+            <Cross/><h2 className={`step-title`}>3. Comment bien choisir une police de texte ?</h2>
             <p>
                 La priorité numéro 1 ici est la <b>lisibilité</b>, surtout à petite taille.
                 Pour s'assurer qu'une police est lisible sur tout support, il existe 2 tests faciles :
@@ -123,7 +123,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>4. Comment bien choisir une police d'affichage ?</span>
+            <Cross/><h2 className={`step-title`}>4. Comment bien choisir une police d'affichage ?</h2>
             <p>
                 Le but ici est de trouver une police qui corresponde au projet. 
                 Il ne faut pas hésiter à expérimenter une multitude de polices différentes, et essayer des styles et poids variés.
@@ -138,7 +138,7 @@ const French : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>5. Quelles sont les polices les plus populaires ?</span>
+            <Cross/><h2 className={`step-title`}>5. Quelles sont les polices les plus populaires ?</h2>
             <p>
                 <a href='https://fonts.google.com/analytics' target='_blank'><b>La page Analytics de Google Fonts</b></a> répertorie les polices les plus utilisées sur Internet.
                 Les grands gagnants sont <b>Roboto</b>, <b>Open Sans</b> et <b>Lato</b>. <br></br>

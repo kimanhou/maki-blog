@@ -33,7 +33,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. La méthode simple et évidente</span>
+            <Cross/><h2 className={`step-title`}>1. La méthode simple et évidente</h2>
             <p>
                 Dans le fichier CSS, on change la couleur du texte dans le sélecteur <span className={`italic`}>hover</span> avec une petite transition pour que le changement ne soit pas trop brusque.
             </p>
@@ -67,7 +67,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>2. Pour les plus pointilleux</span>
+            <Cross/><h2 className={`step-title`}>2. Pour les plus pointilleux</h2>
             <p>
                 On superpose deux blocs : l'un en noir et l'autre en rose. Le bloc contenant le texte rose a une largeur de 0 et n'est donc pas visible. Lorsque la souris passe dessus, la largeur est mise à 100% avec une transition pour un effet agréable.
             </p>
@@ -125,7 +125,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. Pour les perfectionnistes</span>
+            <Cross/><h2 className={`step-title`}>3. Pour les perfectionnistes</h2>
             <p>
                 On reprend la méthode 1 mais on place chaque lettre dans un <span className={`code-element`}>span</span> et on ajoute un décalage grâce à la propriété <span className={`code-element`}>transition-delay</span> sur chaque lettre individuellement.
             </p>

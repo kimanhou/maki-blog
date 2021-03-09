@@ -52,7 +52,7 @@ const English : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
             
-            <p className={`step-title`}>1. Create / Have a Facebook developer account</p>
+            <h2 className={`step-title`}>1. Create / Have a Facebook developer account</h2>
             <p className={`italic`}>Where ? <a href='https://www.facebook.com/' target='_blank'>facebook.com</a></p>
             <Cross/><span>If you want to create a separate Facebook account from your personal account, log out from your personal account and <b>create a new Facebook account</b> from scratch. Confirm your email and log in into your new account.</span>
             <div className={`p-separator`}></div>
@@ -60,7 +60,7 @@ const English : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>2. Create a registered Facebook App</p>
+            <h2 className={`step-title`}>2. Create a registered Facebook App</h2>
             <p className={`italic`}>Where ? <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <Cross/><span>On Facebook for developers website, go to your <a href='https://developers.facebook.com/apps' target='_blank'>Apps panel</a>.</span>
             <img src={getImageSrc(postId, '1.jpg')}/>
@@ -74,7 +74,7 @@ const English : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>3. Add oEmbed product</p>
+            <h2 className={`step-title`}>3. Add oEmbed product</h2>
             <p className={`italic`}>Where ? Still on <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <Cross/><span>You now need to add oEmbed Product to your app. In order to do this, go to your app dashboard, scroll down to the section called “Add Products to Your App” and locate oEmbed. Click on the “Set up” button.</span>
             <img src={getImageSrc(postId, '5.jpg')}/>
@@ -83,7 +83,7 @@ const English : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>4. Get the App ID and the Client token</p>
+            <h2 className={`step-title`}>4. Get the App ID and the Client token</h2>
             <p className={`italic`}>Where ? Still on <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <p>The Instagram oEmbed endpoint requires either an App Access Token or a Client Access Token. As mentioned in the introduction, we deal here with applications without a backend server so we use the Client Access Token, which consists in the App ID and the Client token, separated by a pipe symbol.</p>
             <Cross/><span>On your app dashboard, the <b>App ID</b> is the 16-digit number located at the top of your screen, next to the app name.</span>
@@ -95,7 +95,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>5. Write the command curl</p>
+            <h2 className={`step-title`}>5. Write the command curl</h2>
             <p className={`italic`}>Where ? In your code, you can also test from a terminal or a browser.</p>
             <Cross/><span>You need to send a request to: </span>
             <div className={`code-sample`}>GET /instagram_oembed?url=&#123;url&#125;&amp;access_token=&#123;access-token&#125;</div>
@@ -123,7 +123,7 @@ const English : React.FC<IPostContentProps> = props => {
             </div>
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>6. Use the response from Facebook</p>
+            <h2 className={`step-title`}>6. Use the response from Facebook</h2>
             <p className={`italic`}>Where ? In your code.</p>
             <p>The response includes an embed HTML in the property <b>"html"</b>, which contains a reference to the Instagram embed.js JavaScript library. You might need to separately load this library before initializing the embed HTML (if you are using the field innerHtml for example as it blocks any script to be loaded). To do this, add the script in your index.html, include <span className={`color-green`}>omitscript=true</span> in your request, then call the <span className={`color-green`}>instgrm.Embeds.process()</span> function after loading the library.</p>
             <p>If you copy paste the <b>embed HTML</b> sent by Facebook into your code, you will get:</p>

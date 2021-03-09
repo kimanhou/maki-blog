@@ -13,9 +13,9 @@ interface IPostHeroImageProps {
 const PostHeroImage : React.FC<IPostHeroImageProps> = props => {
     return(
         <div className={`post-hero-image`}>
-            <div className={`post-title top-layer`} ref={props.titleTopLayerRef}>
+            <h1 className={`post-title top-layer`} ref={props.titleTopLayerRef}>
                 {props.title}
-            </div>
+            </h1>
             {props.photoCreditName != undefined && props.photoCreditUrl != undefined && props.photoCreditWebsite != undefined &&
             <PhotoCredits name={props.photoCreditName} url={props.photoCreditUrl} website={props.photoCreditWebsite} />}
         </div>

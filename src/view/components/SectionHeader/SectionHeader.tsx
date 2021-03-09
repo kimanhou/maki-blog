@@ -42,15 +42,15 @@ const SectionHeader : React.FunctionComponent<ISectionHeaderProps> = props => {
 
     return (
         <div className={`section-header ${colorWhiteClassName}`} ref={ref}>
-            <div className={`section-header-title`}>
+            <h1 className={`section-header-title`}>
                     {formatTitle(props.title)}
-            </div>
+            </h1>
             {props.subtitle.getText(localisation) !== "" &&
-                <div className={`section-header-subtitle`}>
+                <h2 className={`section-header-subtitle`}>
                     <div className={`section-header-subtitle-text`}>
                         <Text english={props.subtitle.english} french={props.subtitle.french}/>
                     </div>
-                </div>
+                </h2>
             }
             <ScreenDetector className={`screen-detector-section-header`} onActive={setAnimation} />
         </div>

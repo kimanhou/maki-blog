@@ -50,7 +50,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. UI, qu'est-ce que c'est ?</span>
+            <Cross/><h2 className={`step-title`}>1. UI, qu'est-ce que c'est ?</h2>
             <p>
                 <i>UI</i> signifie “<i>interface utilisateur</i>”. Décomposons les termes clés, qui sont ici “<i>utilisateur</i>” et “<i>interface</i>”. 
             </p>
@@ -93,7 +93,7 @@ const French : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>2. UX, qu'est-ce que c'est ?</span>
+            <Cross/><h2 className={`step-title`}>2. UX, qu'est-ce que c'est ?</h2>
             <p>
                 UX signifie “<i>expérience utilisateur</i>”. Une définition possible est : l'expérience qu'un produit ou un service fait vivre aux gens dans le monde réel.
             </p>
@@ -122,7 +122,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. UI/UX dans votre vie quotidienne</span>
+            <Cross/><h2 className={`step-title`}>3. UI/UX dans votre vie quotidienne</h2>
             <p>
                 De nos jours, nous obtenons toutes nos informations à partir d'écrans, que ce soit un ordinateur de bureau, un ordinateur portable, une tablette ou un téléphone.
                 Nous les regardons constamment et apprenons en permanence à interagir avec le monde à travers eux.

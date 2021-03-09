@@ -45,7 +45,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. What are the different categories of fonts ?</span>
+            <Cross/><h2 className={`step-title`}>1. What are the different categories of fonts ?</h2>
             <p>
                 The two main categories of fonts are: <br></br> <br></br>
                 <span className = {`nbsp`}> </span> <Cross /> <b> <i> Serif fonts </i> </b>&nbsp;:
@@ -92,7 +92,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>2. How many different fonts should you use on a website?</span>
+            <Cross/><h2 className={`step-title`}>2. How many different fonts should you use on a website?</h2>
             <p>
                 Ideally <b> 2 </b>. Obviously, it all depends on the type of site, its size, its content, etc...
                 Some sites can get by with a single font by adjusting the size, capitalization, style (bold or italics), and letter spacing.
@@ -104,7 +104,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. How to pick a typeface for body text?</span>
+            <Cross/><h2 className={`step-title`}>3. How to pick a typeface for body text?</h2>
             <p>
                 The number one priority here is <b>readability</b>, especially in small sizes.
                 To ensure that a font is readable on any medium, there are 2 easy tests:
@@ -124,7 +124,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>4. How to pick a typeface for display text?</span>
+            <Cross/><h2 className={`step-title`}>4. How to pick a typeface for display text?</h2>
             <p>
                 The goal here is to find a typeface that matches the project.
                 Don't be shy about experimenting with a multitude of different fonts, and trying out different styles and weights.
@@ -140,7 +140,7 @@ const English : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>5. What are the most used fonts?</span>
+            <Cross/><h2 className={`step-title`}>5. What are the most used fonts?</h2>
             <p>
                 <a href='https://fonts.google.com/analytics' target='_blank'><b>Google Fonts</b></a> has an analytics page that lists the most used fonts on the Internet.
                 The big winners are <b>Roboto</b>, <b>Open Sans</b> and <b>Lato</b>. <br></br>

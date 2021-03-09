@@ -43,7 +43,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. Rester simple: ne pas avoir trop de couleurs différentes</span>
+            <Cross/><h2 className={`step-title`}>1. Rester simple: ne pas avoir trop de couleurs différentes</h2>
             <p>Que ce soit un brin de couleurs vives ou des tons naturels ou des teintes sombres, il est recommandé de limiter le nombre de couleurs différentes. 
                 Une palette de couleurs compliquée embrouille l'oeil.
                 Comme en mode, la règle <b>“pas plus de trois couleurs”</b> peut s'appliquer. 
@@ -59,7 +59,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>Expérimenter avec des “faux” noirs et “faux” blancs</span>
+            <Cross/><h2 className={`step-title`}>Expérimenter avec des “faux” noirs et “faux” blancs</h2>
             <p>Un texte noir sur fond blanc peut paraitre un peu rigide et provoquer une fatigue oculaire de l'utilisateur. 
                 Expérimentez avec un “faux” noir pour le texte et un “faux” blanc pour le fond pour un effet plus doux, et ainsi améliorer l'expérience de lecture. 
                 N'hésitez pas à sortir des gris “neutres”, pour lesquels les trois valeurs du rgb sont identiques.
@@ -72,7 +72,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. Certaines couleurs vont bien ensemble, d'autres non</span>
+            <Cross/><h2 className={`step-title`}>3. Certaines couleurs vont bien ensemble, d'autres non</h2>
             <p>De la même façon qu'un vernis à ongle ne rend pas pareil sur deux personnes avec une teinte de peau différente, une couleur sur un site peut sembler totalement différente que l'exacte même teinte sur un autre site à cause de leur environnement. 
                 Si vous choisissez individuellement les couleurs de votre site, nous vous conseillons de les placer les unes à côté des autres pour observer le ressenti qu'elles dégagent ensemble et ainsi mieux visualiser le résultat final. 
                 N'hésitez pas à faire des ajustements si nécessaires.</p>
@@ -83,7 +83,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross /><span className={`step-title`}>4. Les couleurs ont des significations. Certaines sont universelles, d'autres culturelles</span>
+            <Cross /><h2 className={`step-title`}>4. Les couleurs ont des significations. Certaines sont universelles, d'autres culturelles</h2>
             <p>Les associations de couleurs sont très puissantes. Certaines sont universelles, comme le vert pour les plantes et la nature. 
                 D'autres sont culturelles : dans certaines parties du monde, le blanc est la couleur du deuil et est souvent portée aux funérailles, alors qu'ailleurs la couleur traditionnelle associée à la mort est le noir.</p>
             <p>Il n'est pas nécessaire d'être expert en psychologie des couleurs.
@@ -96,7 +96,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>5. Le contenu doit être lisible</span>
+            <Cross/><h2 className={`step-title`}>5. Le contenu doit être lisible</h2>
             <p>Dans un navigateur, ouvrez l'inspecteur, sélectionnez l'élément à analyser et repérez sa couleur dans la section “Style”.</p>
             <p>Cliquez sur le carré coloré à côté du code HEX ou rgb. Une pop-up contenant des informations sur la couleur s'ouvre. C'est dans cette dernière que vous trouverez le rapport de contraste.</p>
             <p>Pour une bonne lisibilité, <b>le rapport de contraste doit être supérieur à 5</b>. 
@@ -108,7 +108,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>6. Intégrer l'image de marque dans la palette de couleurs du site. Utiliser la photographie et les illustrations pour la consolider</span>
+            <Cross/><h2 className={`step-title`}>6. Intégrer l'image de marque dans la palette de couleurs du site. Utiliser la photographie et les illustrations pour la consolider</h2>
             <p>Il se peut que votre marque soit déjà associée à certaines couleurs. 
                 Si vous avez déjà un logo, il peut servir de base pour votre palette de couleurs. 
                 Travailler avec une base existante est toujours plus facile.</p>
@@ -118,7 +118,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>Bonus</span>
+            <Cross/><h2 className={`step-title`}>Bonus</h2>
             <p>
                 Si vous ne savez pas par où commencer, le site <a href='https://picular.co/' target='_blank'>Picular</a> est un excellent point de départ. 
                 Il s'agit d'une sorte de Google pour couleurs : vous tapez un mot, comme par exemple “summer”, et le site vous répond avec des couleurs correspondant à votre recherche. Simple et magique !

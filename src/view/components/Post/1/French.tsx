@@ -51,7 +51,7 @@ const French : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
             
-            <p className={`step-title`}>1. Créer / Utiliser un compte de développeur Facebook</p>
+            <h2 className={`step-title`}>1. Créer / Utiliser un compte de développeur Facebook</h2>
             <p className={`italic`}>Où ça ? Sur <a href='https://www.facebook.com/' target='_blank'>facebook.com</a></p>
             <Cross/><span>Si vous voulez utiliser un compte Facebook différent de votre compte personnel, déconnectez-vous de votre compte personnel et <b>créez un nouveau compte</b>. Confirmez l'adresse e-mail et connectez-vous avec le nouveau compte.</span>
             <div className={`p-separator`}></div>
@@ -59,7 +59,7 @@ const French : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>2. Créer une application Facebook enregistrée</p>
+            <h2 className={`step-title`}>2. Créer une application Facebook enregistrée</h2>
             <p className={`italic`}>Où ça ? Sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <Cross/><span>Sur le site de Facebook pour développeurs, rendez-vous sur le <a href='https://developers.facebook.com/apps' target='_blank'>panneau des applications</a> en cliquand sur “Mes applications”.</span>
             <img src={getImageSrc(postId, '1.jpg')}/>
@@ -73,7 +73,7 @@ const French : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>3. Ajouter le produit oEmbed à l'application</p>
+            <h2 className={`step-title`}>3. Ajouter le produit oEmbed à l'application</h2>
             <p className={`italic`}>Où ça ? Toujours sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <Cross/><span>Vous devez maintenant ajouter le produit oEmbed à votre application. Pour cela, rendez-vous sur le tableau de bord, faites défiler jusqu'à la section “Ajouter des produits à votre app” et repérez oEmbed. Cliquez sur le bouton “Configurer”.</span>
             <img src={getImageSrc(postId, '5.jpg')}/>
@@ -82,7 +82,7 @@ const French : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>4. Récupérer l'ID de l'application et le token client</p>
+            <h2 className={`step-title`}>4. Récupérer l'ID de l'application et le token client</h2>
             <p className={`italic`}>Où ça ? Toujours sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
             <p>Le point de terminaison d'oEmbed pour Instagram requiert soit un token d’accès d’app, soit un token d’accès client. Comme mentionné dans l'introduction de cet article, nous traitons ici les applications qui n'ont pas de serveur back-end, c'est pourquoi nous allons utiliser le token d'accès client, qui se compose de l'ID d'app et du token client, séparés par une barre verticale.</p>
             <Cross/><span>Sur le tableau de bord de l'application, <b>l'ID d'app</b> est le nombre à 16 chiffres situé en haut de votre écran, à côté du nom de l'application.</span>
@@ -94,7 +94,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>5. Écrire et envoyer la requête à Facebook</p>
+            <h2 className={`step-title`}>5. Écrire et envoyer la requête à Facebook</h2>
             <p className={`italic`}>Où ça ? Dans votre code, vous pouvez également faire des tests depuis un terminal ou un navigateur.</p>
             <Cross/><span>Vous devez envoyer une demande de type : </span>
             <div className={`code-sample`}>GET /instagram_oembed?url=&#123;url&#125;&amp;access_token=&#123;access-token&#125;</div>
@@ -122,7 +122,7 @@ const French : React.FC<IPostContentProps> = props => {
             </div>
             <div className={`section-separator`}></div>
 
-            <p className={`step-title`}>6. Récupérer la réponse et l'utiliser dans votre code</p>
+            <h2 className={`step-title`}>6. Récupérer la réponse et l'utiliser dans votre code</h2>
             <p className={`italic`}>Où ça ? Dans votre code.</p>
             <p>La réponse contient un code d'intégration HTML dans la propriété <b>"html"</b>. Celui-ci inclut une référence à la librairie JavaScript Instagram embed.js. Il se peut que vous devez charger séparément cette librairie avant d'initialiser le code d'intégration HTML (si vous utilisez un innerHtml par exemple car celui-ci bloque le chargement de tout script par mesure de sécurité). Pour cela, ajoutez le script dans votre index.html, incluez <span className={`color-green`}>omitscript=true</span> dans votre requête, puis appelez la fonction <span className={`color-green`}>instgrm.Embeds.process()</span> aprés avoir chargé la librairie.</p>
             <p>Si vous copiez collez le <b>code d'intégration HTML</b> envoyé par Facebook dans votre code, vous obtenez ceci : </p>

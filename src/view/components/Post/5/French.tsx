@@ -87,7 +87,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>1. La théorie</span>
+            <Cross/><h2 className={`step-title`}>1. La théorie</h2>
 
             <p>
                 Le bout de code ci-dessous désigne un <i>container flex</i>. C'est le <span className={`code-element`}>div</span> parent.
@@ -162,7 +162,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`} id={`fun`}>2. La démonstration</span>
+            <Cross/><h2 className={`step-title`} id={`fun`}>2. La démonstration</h2>
             <p>
                 Cliquer sur les boutons pour modifier les propiétés du <span className={`code-element`}>div</span> parent et cliquer sur les enfants pour contrôler leur taille grâce à la propritété <span className={`code-element`}>flex: 1;</span>.
             </p>
@@ -218,7 +218,7 @@ const French : React.FC<IPostContentProps> = props => {
             
             <div className={`section-separator`}></div>
 
-            <Cross/><span className={`step-title`}>3. Les exemples courants</span><br></br>
+            <Cross/><h2 className={`step-title`}>3. Les exemples courants</h2><br></br>
             <br></br>
             <Cross/><span>
                 Diviser un <span className={`code-element`}>div</span> en colonnes de largeur égale et séparées entre elles par une marge, le tout centré horizontalement.
@@ -358,7 +358,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
             
-            <Cross/><span className={`step-title`}>Trucs &amp; astuces</span><br></br>
+            <Cross/><h2 className={`step-title`}>Trucs &amp; astuces</h2><br></br>
             <Cross/><span>Garder les proportions d'une image sous Safari</span>
             <p>
                 Si vous devez utiliser une hauteur automatique et que le parent de l'image est configuré en <span className={`code-element`}>display: flex;</span>, cette astuce vous aidera. 
@@ -381,7 +381,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <div className={`section-separator`}></div>
             
-            <Cross/><span className={`step-title`}>Liens utiles</span>
+            <Cross/><h2 className={`step-title`}>Liens utiles</h2>
             <p>
                 <a href='https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox' target='_blank'>Documentation de Mozilla</a>
             </p>
