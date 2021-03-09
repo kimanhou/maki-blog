@@ -9,7 +9,7 @@ interface IInstagramBannerProps {}
 
 const InstagramBanner : React.FC<IInstagramBannerProps> = props => {
     return (
-        <div className={'instagram-banner'}>
+        <section className={'instagram-banner'}>
             <FadeIn noDelay>
                 <div className={`main-wrapper`}>
                     <SectionHeader title={new Text('Follow us', 'Suivez-nous')} subtitle={new Text('on Instagram', 'sur Instagram')} isColorWhite />
@@ -22,7 +22,7 @@ const InstagramBanner : React.FC<IInstagramBannerProps> = props => {
                     </div>
                 </div>
             </FadeIn>
-        </div>
+        </section>
     );
 }
 

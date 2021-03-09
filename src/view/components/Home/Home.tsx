@@ -11,10 +11,10 @@ interface IHomeProps {}
 const Home : React.FC<IHomeProps> = props => {
     return (
         <div className={`home`}>
-            <div className={`home-screen`}>
+            <section className={`home-screen`}>
                 <Header />
                 <HelloWorld />
-            </div>
+            </section>
             
             <LatestPosts />
             <InstagramBanner />

@@ -9,7 +9,7 @@ const GoToTldr : React.FC = props => {
     }
     
     return(
-        <Button onClick={onClickTldr} classname={`go-to-tldr`}>
+        <Button onClick={onClickTldr} classname={`go-to-tldr skip-link`}>
             <span><Text english='Go to TL;DR' french='Aller au TL;PL' /></span>
             <span className={`arrow-down`}>⌄</span>
         </Button>

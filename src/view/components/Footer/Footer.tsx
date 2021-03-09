@@ -14,7 +14,7 @@ interface IFooterProps {
 const Footer : React.FC<IFooterProps> = props => {
     const noMarginTopClassname = props.noMarginTop ? 'no-margin-top' : ''
     return (
-        <div className={`footer ${noMarginTopClassname}`}>
+        <footer className={`footer ${noMarginTopClassname}`}>
             <FadeIn noDelay>
                 <div className={`main-wrapper`}>
                     <div className={`footer-left`}>
@@ -28,7 +28,7 @@ const Footer : React.FC<IFooterProps> = props => {
                     </div>
                 </div>
             </FadeIn>
-        </div>
+        </footer>
     );
 }
 

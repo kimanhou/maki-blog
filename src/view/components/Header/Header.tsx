@@ -8,14 +8,14 @@ interface IHeaderProps {}
 
 const Header : React.FC<IHeaderProps> = props => {
     return (
-        <div className={`header`}>
+        <header className={`header`}>
             <FadeIn noDelay>
                 <div className={`main-wrapper`}>
                     <MakiLogoWithNames />
                     <Navigation />
                 </div>
             </FadeIn>
-        </div>
+        </header>
     );
 }
 

@@ -10,7 +10,7 @@ const LatestPosts : React.FC = props => {
     const posts = Post.getLatestposts(3);
 
     return (
-        <div className={`latest-posts`}>
+        <section className={`latest-posts`}>
             <FadeIn noDelay>
                 <div className={`main-wrapper`}>
                     <div className={`title`}>
@@ -21,7 +21,7 @@ const LatestPosts : React.FC = props => {
                     </div>
                 </div>
             </FadeIn>
-        </div>
+        </section>
     );
 }
 

@@ -10,7 +10,7 @@ const SkipToFun : React.FC = props => {
     }
     
     return(
-        <Button onClick={onClickFun} classname={`skip-to-fun`}>
+        <Button onClick={onClickFun} classname={`skip-to-fun skip-link`}>
             <span><Text english='Skip to the fun part' french='Aller à la partie fun' /></span>
             <span className={`arrow-down`}>⌄</span>
         </Button>

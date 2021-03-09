@@ -9,7 +9,7 @@ const BackToTop : React.FC = props => {
     }
     
     return(
-        <Button onClick={onClickTop} classname={`back-to-top`}>
+        <Button onClick={onClickTop} classname={`back-to-top skip-link`}>
             <span><Text english='Back to top' french='Retour en haut' /></span>
             <span className={`arrow-up`}>⌃</span>
         </Button>
