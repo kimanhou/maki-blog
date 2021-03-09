@@ -85,7 +85,7 @@ const English : React.FC<IPostContentProps> = props => {
             </p>
 
             <div className={`text-align-center`}>
-                <a href='https://corsapizza.dk/' target='_blank'>
+                <a href='https://corsapizza.dk/' target='_blank' rel="noopener">
                     <img src={getImageSrc(postId, '6.jpg')} className={`width50Mobile100`} />
                 </a>
             </div>
@@ -133,8 +133,8 @@ const English : React.FC<IPostContentProps> = props => {
                 Have fun in the process of finding the right typeface for your project!
             </p>
             <p>
-                The website <a href='https://ilovetypography.com/' target='_blank'>ilovetypography</a> publishes their favorite fonts every year and imagine the universe in which they could evolve.
-                The article for the year 2021 can be found <a href='https://ilovetypography.com/2021/01/12/my-favorite-fonts-of-2020/' target='_blank'>here</a> and is a good source of inspiration.
+                The website <a href='https://ilovetypography.com/' target='_blank' rel="noopener">ilovetypography</a> publishes their favorite fonts every year and imagine the universe in which they could evolve.
+                The article for the year 2021 can be found <a href='https://ilovetypography.com/2021/01/12/my-favorite-fonts-of-2020/' target='_blank' rel="noopener">here</a> and is a good source of inspiration.
             </p>
             <PhotoWithCredits imageUrl={getImageSrc(postId, '9.png')} text='Image by Ilovetypography' url='https://ilovetypography.com/2021/01/12/my-favorite-fonts-of-2020/' />
             
@@ -142,7 +142,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <Cross/><h2 className={`step-title`}>5. What are the most used fonts?</h2>
             <p>
-                <a href='https://fonts.google.com/analytics' target='_blank'><b>Google Fonts</b></a> has an analytics page that lists the most used fonts on the Internet.
+                <a href='https://fonts.google.com/analytics' target='_blank' rel="noopener"><b>Google Fonts</b></a> has an analytics page that lists the most used fonts on the Internet.
                 The big winners are <b>Roboto</b>, <b>Open Sans</b> and <b>Lato</b>. <br></br>
                 Even though these fonts are very well made and timeless, they are overused, <b> you see them everywhere! </b>
                 Roboto is not only the default font for Android, but also for Google services like YouTube, Gmail, and Google Maps. Impossible to miss it!

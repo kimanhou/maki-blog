@@ -13,7 +13,7 @@ const PhotoWithCredits : React.FC<IPhotoWithCreditsProps> = props => {
             <img src={props.imageUrl}/>
             <div className={`photo-with-credits-text`}>
                 {props.url != undefined && 
-                    <a href={props.url} target='_blank'>{props.text}</a>
+                    <a href={props.url} target='_blank' rel="noopener">{props.text}</a>
                 }
                 {props.url == undefined && props.text }
             </div>

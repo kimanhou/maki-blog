@@ -78,7 +78,7 @@ const Contact : React.FC = props => {
                         <span className={`this-is`}>thisis</span><br></br><span>makiworld</span>
                     </div>
                     <div className={`contact-item-relative`}>
-                        <a href='https://www.instagram.com/thisismakiworld/' target='_blank'><Text english='On Instagram' french='Sur Instagram' /></a>
+                        <a href='https://www.instagram.com/thisismakiworld/' rel="noopener"><Text english='On Instagram' french='Sur Instagram' /></a>
                     </div>
                 </div>
             </div>

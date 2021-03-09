@@ -85,7 +85,7 @@ const French : React.FC<IPostContentProps> = props => {
             </p>
 
             <div className={`text-align-center`}>
-                <a href='https://corsapizza.dk/' target='_blank'>
+                <a href='https://corsapizza.dk/' target='_blank' rel="noopener">
                     <img src={getImageSrc(postId, '6.jpg')} className={`width50Mobile100`} />
                 </a>
             </div>
@@ -131,8 +131,8 @@ const French : React.FC<IPostContentProps> = props => {
                 Que l'effet recherché soit luxueux, minimaliste, moderne, fou ou joyeux, le plus important est que l'atmosphère du projet soit respectée.
             </p>
             <p>
-                Le site <a href='https://ilovetypography.com/' target='_blank'>ilovetypography</a> publie tous les ans leurs polices préférées et imaginent l'univers dans lesquelles elles pourraient évoluer.
-                L'article de l'année 2021 se trouve <a href='https://ilovetypography.com/2021/01/12/my-favorite-fonts-of-2020/' target='_blank'>ici</a> et est une bonne source d'inspiration.
+                Le site <a href='https://ilovetypography.com/' target='_blank' rel="noopener">ilovetypography</a> publie tous les ans leurs polices préférées et imaginent l'univers dans lesquelles elles pourraient évoluer.
+                L'article de l'année 2021 se trouve <a href='https://ilovetypography.com/2021/01/12/my-favorite-fonts-of-2020/' target='_blank' rel="noopener">ici</a> et est une bonne source d'inspiration.
             </p>
             <PhotoWithCredits imageUrl={getImageSrc(postId, '9.png')} text='Image by Ilovetypography' url='https://ilovetypography.com/2021/01/12/my-favorite-fonts-of-2020/' />
             
@@ -140,7 +140,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <Cross/><h2 className={`step-title`}>5. Quelles sont les polices les plus populaires ?</h2>
             <p>
-                <a href='https://fonts.google.com/analytics' target='_blank'><b>La page Analytics de Google Fonts</b></a> répertorie les polices les plus utilisées sur Internet.
+                <a href='https://fonts.google.com/analytics' target='_blank' rel="noopener"><b>La page Analytics de Google Fonts</b></a> répertorie les polices les plus utilisées sur Internet.
                 Les grands gagnants sont <b>Roboto</b>, <b>Open Sans</b> et <b>Lato</b>. <br></br>
                 Même si ces polices sont très bien faites et intemporelles, elles sont utilisées à outrance, <b>on les voit partout ! </b>
                 Roboto est non seulement la police par défaut d'Android, mais également de services Google comme YouTube, Gmail et Google Maps. Impossible de la rater ! 

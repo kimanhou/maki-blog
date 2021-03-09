@@ -383,10 +383,10 @@ const French : React.FC<IPostContentProps> = props => {
             
             <Cross/><h2 className={`step-title`}>Liens utiles</h2>
             <p>
-                <a href='https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox' target='_blank'>Documentation de Mozilla</a>
+                <a href='https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox' target='_blank' rel="noopener">Documentation de Mozilla</a>
             </p>
             <p>
-                <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/' target='_blank'>Guide par CSS tricks</a>
+                <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/' target='_blank' rel="noopener">Guide par CSS tricks</a>
             </p>
 
         </PostTemplate>

@@ -160,7 +160,7 @@ const English : React.FC<IPostContentProps> = props => {
             </p>
             <img src={getImageSrc(postId, '4.png')}/>
             <p>
-                These tricks are called “<i><b>dark patterns</b></i>” and there is <a href='https://www.darkpatterns.org/' target='_blank'>a dedicated website</a> to help you recognize them.
+                These tricks are called “<i><b>dark patterns</b></i>” and there is <a href='https://www.darkpatterns.org/' target='_blank' rel="noopener">a dedicated website</a> to help you recognize them.
             </p>
             <p>
                 Hopefully, not all UI/UX designers are malicious. 

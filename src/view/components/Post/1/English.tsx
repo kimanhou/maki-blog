@@ -53,20 +53,20 @@ const English : React.FC<IPostContentProps> = props => {
             <div className={`section-separator`}></div>
             
             <h2 className={`step-title`}>1. Create / Have a Facebook developer account</h2>
-            <p className={`italic`}>Where ? <a href='https://www.facebook.com/' target='_blank'>facebook.com</a></p>
+            <p className={`italic`}>Where ? <a href='https://www.facebook.com/' target='_blank' rel="noopener">facebook.com</a></p>
             <Cross/><span>If you want to create a separate Facebook account from your personal account, log out from your personal account and <b>create a new Facebook account</b> from scratch. Confirm your email and log in into your new account.</span>
             <div className={`p-separator`}></div>
-            <Cross/><span>To make it a developer account, <b>go to <a href='http://www.facebook.com/developers/become_test_account.php' target='_blank'>http://www.facebook.com/developers/become_test_account.php</a></b> and click on the “Make [<span className={`italic`}>your developer username</span>] a Test Account” button.</span>
+            <Cross/><span>To make it a developer account, <b>go to <a href='http://www.facebook.com/developers/become_test_account.php' target='_blank' rel="noopener">http://www.facebook.com/developers/become_test_account.php</a></b> and click on the “Make [<span className={`italic`}>your developer username</span>] a Test Account” button.</span>
             
             <div className={`section-separator`}></div>
 
             <h2 className={`step-title`}>2. Create a registered Facebook App</h2>
-            <p className={`italic`}>Where ? <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
-            <Cross/><span>On Facebook for developers website, go to your <a href='https://developers.facebook.com/apps' target='_blank'>Apps panel</a>.</span>
+            <p className={`italic`}>Where ? <a href='https://developers.facebook.com' target='_blank' rel="noopener">developers.facebook.com</a></p>
+            <Cross/><span>On Facebook for developers website, go to your <a href='https://developers.facebook.com/apps' target='_blank' rel="noopener">Apps panel</a>.</span>
             <img src={getImageSrc(postId, '1.jpg')}/>
             <Cross/><span>Click on “Create an app”.</span>
             <img src={getImageSrc(postId, '2.jpg')}/>
-            <Cross/><span>Choose your app type, you will need to pick one that has oEmbed for Instagram in its list of Available products. You can read about <a href='https://developers.facebook.com/docs/development/create-an-app/app-dashboard/app-types' target='_blank'>app types here</a>. For example, for this blog I chose “Build connected experiences”.</span>
+            <Cross/><span>Choose your app type, you will need to pick one that has oEmbed for Instagram in its list of Available products. You can read about <a href='https://developers.facebook.com/docs/development/create-an-app/app-dashboard/app-types' target='_blank' rel="noopener">app types here</a>. For example, for this blog I chose “Build connected experiences”.</span>
             <img src={getImageSrc(postId, '3.jpg')} className={`width-50`}/>
             <Cross/><span>Fill in the app name and the email address.</span>
             <img src={getImageSrc(postId, '4.jpg')} className={`width-50`}/>
@@ -75,7 +75,7 @@ const English : React.FC<IPostContentProps> = props => {
             <div className={`section-separator`}></div>
 
             <h2 className={`step-title`}>3. Add oEmbed product</h2>
-            <p className={`italic`}>Where ? Still on <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
+            <p className={`italic`}>Where ? Still on <a href='https://developers.facebook.com' target='_blank' rel="noopener">developers.facebook.com</a></p>
             <Cross/><span>You now need to add oEmbed Product to your app. In order to do this, go to your app dashboard, scroll down to the section called “Add Products to Your App” and locate oEmbed. Click on the “Set up” button.</span>
             <img src={getImageSrc(postId, '5.jpg')}/>
             <Cross/><span>Confirm the acceptance of oEmbed. When you get back to your app dashboard, you should see oEmbed in “My Products” section.</span>
@@ -84,7 +84,7 @@ const English : React.FC<IPostContentProps> = props => {
             <div className={`section-separator`}></div>
 
             <h2 className={`step-title`}>4. Get the App ID and the Client token</h2>
-            <p className={`italic`}>Where ? Still on <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
+            <p className={`italic`}>Where ? Still on <a href='https://developers.facebook.com' target='_blank' rel="noopener">developers.facebook.com</a></p>
             <p>The Instagram oEmbed endpoint requires either an App Access Token or a Client Access Token. As mentioned in the introduction, we deal here with applications without a backend server so we use the Client Access Token, which consists in the App ID and the Client token, separated by a pipe symbol.</p>
             <Cross/><span>On your app dashboard, the <b>App ID</b> is the 16-digit number located at the top of your screen, next to the app name.</span>
             <img src={getImageSrc(postId, '7.jpg')}/>
@@ -99,7 +99,7 @@ const English : React.FC<IPostContentProps> = props => {
             <p className={`italic`}>Where ? In your code, you can also test from a terminal or a browser.</p>
             <Cross/><span>You need to send a request to: </span>
             <div className={`code-sample`}>GET /instagram_oembed?url=&#123;url&#125;&amp;access_token=&#123;access-token&#125;</div>
-            <span>With <span className={`color-green`}>&#123;url&#125;</span> = URL of the Instagram post you want to query. For example : <a href='https://www.instagram.com/p/CKMKlIzs5CG/' target='_blank'>https://www.instagram.com/p/CKMKlIzs5CG/</a></span>
+            <span>With <span className={`color-green`}>&#123;url&#125;</span> = URL of the Instagram post you want to query. For example : <a href='https://www.instagram.com/p/CKMKlIzs5CG/' target='_blank' rel="noopener">https://www.instagram.com/p/CKMKlIzs5CG/</a></span>
             <br></br>
             <span>And <span className={`color-green`}>&#123;access-token&#125;</span> = <span className={`color-green`}>&#123;app-id&#125;|&#123;client-token&#125;</span> as seen previously.</span>
             <p>Sample request:</p>
@@ -131,7 +131,7 @@ const English : React.FC<IPostContentProps> = props => {
             <p>If you just need the picture in relatively low quality, <b>'thumbnail_url'</b> gives you the link to the photo. Set it in the src of an image and you will get this:</p>
             <img src={thumbnailUrl!}/>
 
-            <p>For more information, check the <a href='https://developers.facebook.com/docs/instagram/oembed/' target='_blank'>official documentation of Instagram oEmbed</a>.</p>
+            <p>For more information, check the <a href='https://developers.facebook.com/docs/instagram/oembed/' target='_blank' rel="noopener">official documentation of Instagram oEmbed</a>.</p>
         </PostTemplate>
     );
 }

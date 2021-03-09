@@ -23,7 +23,7 @@ const InstagramPhoto : React.FC<IInstagramPhotoProps> = props => {
 
     return(
         <div className={`insta-photo`} style={{ backgroundImage: `url('${thumbnailUrl}')` }}>
-            <a href={props.url} target='_blank'>
+            <a href={props.url} target='_blank' rel="noopener">
                 <div className={`insta-photo-background-hover`}></div>
                 <div className='insta-photo-caption'>
                     {props.caption}

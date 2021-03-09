@@ -52,20 +52,20 @@ const French : React.FC<IPostContentProps> = props => {
             <div className={`section-separator`}></div>
             
             <h2 className={`step-title`}>1. Créer / Utiliser un compte de développeur Facebook</h2>
-            <p className={`italic`}>Où ça ? Sur <a href='https://www.facebook.com/' target='_blank'>facebook.com</a></p>
+            <p className={`italic`}>Où ça ? Sur <a href='https://www.facebook.com/' target='_blank' rel="noopener">facebook.com</a></p>
             <Cross/><span>Si vous voulez utiliser un compte Facebook différent de votre compte personnel, déconnectez-vous de votre compte personnel et <b>créez un nouveau compte</b>. Confirmez l'adresse e-mail et connectez-vous avec le nouveau compte.</span>
             <div className={`p-separator`}></div>
-            <Cross/><span>Pour le transformer en compte développeur, <b>allez sur <a href='http://www.facebook.com/developers/become_test_account.php' target='_blank'>http://www.facebook.com/developers/become_test_account.php</a></b> et cliquez sur le bouton “Make [ <span className={`italic`}>votre nom</span> ] a Test Account”.</span>
+            <Cross/><span>Pour le transformer en compte développeur, <b>allez sur <a href='http://www.facebook.com/developers/become_test_account.php' target='_blank' rel="noopener">http://www.facebook.com/developers/become_test_account.php</a></b> et cliquez sur le bouton “Make [ <span className={`italic`}>votre nom</span> ] a Test Account”.</span>
             
             <div className={`section-separator`}></div>
 
             <h2 className={`step-title`}>2. Créer une application Facebook enregistrée</h2>
-            <p className={`italic`}>Où ça ? Sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
-            <Cross/><span>Sur le site de Facebook pour développeurs, rendez-vous sur le <a href='https://developers.facebook.com/apps' target='_blank'>panneau des applications</a> en cliquand sur “Mes applications”.</span>
+            <p className={`italic`}>Où ça ? Sur <a href='https://developers.facebook.com' target='_blank' rel="noopener">developers.facebook.com</a></p>
+            <Cross/><span>Sur le site de Facebook pour développeurs, rendez-vous sur le <a href='https://developers.facebook.com/apps' target='_blank' rel="noopener">panneau des applications</a> en cliquand sur “Mes applications”.</span>
             <img src={getImageSrc(postId, '1.jpg')}/>
             <Cross/><span>Cliquez sur “Créer une app”.</span>
             <img src={getImageSrc(postId, '2.jpg')}/>
-            <Cross/><span>Choisissez un type d'app, il faut que oEmbed pour Instagram fasse partie des produits disponibles du type d'app choisi. Vous pouvez en savoir plus sur les types d'apps <a href='https://developers.facebook.com/docs/development/create-an-app/app-dashboard/app-types' target='_blank'>ici</a>. Par exemple, pour ce blog, j'ai choisi “Créer des expériences partagées”.</span>
+            <Cross/><span>Choisissez un type d'app, il faut que oEmbed pour Instagram fasse partie des produits disponibles du type d'app choisi. Vous pouvez en savoir plus sur les <a href='https://developers.facebook.com/docs/development/create-an-app/app-dashboard/app-types' target='_blank' rel="noopener">types d'apps ici</a>. Par exemple, pour ce blog, j'ai choisi “Créer des expériences partagées”.</span>
             <img src={getImageSrc(postId, '3.jpg')} className={`width-50`}/>
             <Cross/><span>Renseignez le nom de l'application et l'adresse e-mail.</span>
             <img src={getImageSrc(postId, '4.jpg')} className={`width-50`}/>
@@ -74,7 +74,7 @@ const French : React.FC<IPostContentProps> = props => {
             <div className={`section-separator`}></div>
 
             <h2 className={`step-title`}>3. Ajouter le produit oEmbed à l'application</h2>
-            <p className={`italic`}>Où ça ? Toujours sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
+            <p className={`italic`}>Où ça ? Toujours sur <a href='https://developers.facebook.com' target='_blank' rel="noopener">developers.facebook.com</a></p>
             <Cross/><span>Vous devez maintenant ajouter le produit oEmbed à votre application. Pour cela, rendez-vous sur le tableau de bord, faites défiler jusqu'à la section “Ajouter des produits à votre app” et repérez oEmbed. Cliquez sur le bouton “Configurer”.</span>
             <img src={getImageSrc(postId, '5.jpg')}/>
             <Cross/><span>Confirmez. De retour sur le tableau de bord, vous devriez voir oEmbed dans la rubrique “Mes Produits”.</span>
@@ -83,7 +83,7 @@ const French : React.FC<IPostContentProps> = props => {
             <div className={`section-separator`}></div>
 
             <h2 className={`step-title`}>4. Récupérer l'ID de l'application et le token client</h2>
-            <p className={`italic`}>Où ça ? Toujours sur <a href='https://developers.facebook.com' target='_blank'>developers.facebook.com</a></p>
+            <p className={`italic`}>Où ça ? Toujours sur <a href='https://developers.facebook.com' target='_blank' rel="noopener">developers.facebook.com</a></p>
             <p>Le point de terminaison d'oEmbed pour Instagram requiert soit un token d’accès d’app, soit un token d’accès client. Comme mentionné dans l'introduction de cet article, nous traitons ici les applications qui n'ont pas de serveur back-end, c'est pourquoi nous allons utiliser le token d'accès client, qui se compose de l'ID d'app et du token client, séparés par une barre verticale.</p>
             <Cross/><span>Sur le tableau de bord de l'application, <b>l'ID d'app</b> est le nombre à 16 chiffres situé en haut de votre écran, à côté du nom de l'application.</span>
             <img src={getImageSrc(postId, '7.jpg')}/>
@@ -98,7 +98,7 @@ const French : React.FC<IPostContentProps> = props => {
             <p className={`italic`}>Où ça ? Dans votre code, vous pouvez également faire des tests depuis un terminal ou un navigateur.</p>
             <Cross/><span>Vous devez envoyer une demande de type : </span>
             <div className={`code-sample`}>GET /instagram_oembed?url=&#123;url&#125;&amp;access_token=&#123;access-token&#125;</div>
-            <span>Avec <span className={`color-green`}>&#123;url&#125;</span> = l'URL du post Instagram que vous voulez ajouter. Par exemple : <a href='https://www.instagram.com/p/CKMKlIzs5CG/' target='_blank'>https://www.instagram.com/p/CKMKlIzs5CG/</a></span>
+            <span>Avec <span className={`color-green`}>&#123;url&#125;</span> = l'URL du post Instagram que vous voulez ajouter. Par exemple : <a href='https://www.instagram.com/p/CKMKlIzs5CG/' target='_blank' rel="noopener">https://www.instagram.com/p/CKMKlIzs5CG/</a></span>
             <br></br>
             <span>Et <span className={`color-green`}>&#123;access-token&#125;</span> = <span className={`color-green`}>&#123;app-id&#125;|&#123;token-client&#125;</span> comme vu précédemment.</span>
             <p>Exemple de requête :</p>
@@ -130,7 +130,7 @@ const French : React.FC<IPostContentProps> = props => {
             <p>Si vous avez seulement besoin de l'image dans une qualité relativement basse, <b>'thumbnail_url'</b> renvoie un lien vers l'image du post choisi. Mettez ce lien dans la source d'une image et vous obtenez ceci : </p>
             <img src={thumbnailUrl!}/>
 
-            <p>Pour plus d'informations, consultez la <a href='https://developers.facebook.com/docs/instagram/oembed/' target='_blank'>documentation officielle d'oEmbed pour Instagram</a>.</p>
+            <p>Pour plus d'informations, consultez la <a href='https://developers.facebook.com/docs/instagram/oembed/' target='_blank' rel="noopener">documentation officielle d'oEmbed pour Instagram</a>.</p>
         </PostTemplate>
     );
 }

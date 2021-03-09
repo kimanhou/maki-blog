@@ -10,7 +10,7 @@ const English : React.FC<IPostContentProps> = props => {
         <>
             <Cross/><span>Keep it simple: do not have too many colors. A color in a dark and a light shade is enough.</span>
             <br></br>
-            <Cross/><span>A cool website to get inspiration and create your color scheme is <a href='https://coolors.co/' target='_blank'><b>coolors.co</b></a>.</span>
+            <Cross/><span>A cool website to get inspiration and create your color scheme is <a href='https://coolors.co/' target='_blank' rel="noopener"><b>coolors.co</b></a>.</span>
             <br></br>
             <Cross/><span>Instead of pure black and white, experiment with off-blacks and off-whites.</span>
             <br></br>
@@ -53,9 +53,9 @@ const English : React.FC<IPostContentProps> = props => {
             <img src={getImageSrc(postId, '1.jpg')}/>
             <p>The colors are: yellow and its lighter brother, dark slate gray (echoes the color of a tree) and its lighter counterpart and an off-white for the background.</p>
 
-            <p>This color scheme has been created on a cool website called <a href='https://coolors.co/' target='_blank'><b>Coolors</b></a>. 
+            <p>This color scheme has been created on a cool website called <a href='https://coolors.co/' target='_blank' rel="noopener"><b>Coolors</b></a>. 
                 It's a really nice tool to get inspiration or experiment with color schemes.
-                You can find my color scheme <a href='https://coolors.co/edc041-f8e6b4-2f4f4f-508686-feffff' target='_blank'>here</a>.</p>
+                You can find my color scheme <a href='https://coolors.co/edc041-f8e6b4-2f4f4f-508686-feffff' target='_blank' rel="noopener">here</a>.</p>
 
             <div className={`section-separator`}></div>
 
@@ -64,7 +64,7 @@ const English : React.FC<IPostContentProps> = props => {
                 Try using an off-black for the text on an off-white background to improve the reading experience. 
                 Do not hesitate to try other colors than “neutral” greys, for which the values of rgb are all identical.
                 You should keep 100% black and 100% white to make certain things pop, like titles.</p>
-            <p>Example: On <a href='https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread' target='_blank'>Ideo website</a>, the title of each article is written in pure white on a pure black background and it definitely pops. However, the body of the article is written in a off-black color on a off-white background.</p>
+            <p>Example: On <a href='https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread' target='_blank' rel="noopener">Ideo website</a>, the title of each article is written in pure white on a pure black background and it definitely pops. However, the body of the article is written in a off-black color on a off-white background.</p>
             <img src={getImageSrc(postId, '2.png')}/>
             <p>Please find below the colors of the title (first line), those of the body of the article (second line) and finally two “neutral” greys (third line).
                 One can clearly see that the body of the article is not a neutral grey but is rather blue, which makes the page feel more alive.</p>
@@ -118,7 +118,7 @@ const English : React.FC<IPostContentProps> = props => {
 
             <Cross/><h2 className={`step-title`}>Bonus</h2>
             <p>
-                If you don't know where to start, <a href='https://picular.co/' target='_blank'>Picular</a> is a great place to start. 
+                If you don't know where to start, <a href='https://picular.co/' target='_blank' rel="noopener">Picular</a> is a great place to start. 
                 It's a sort of Google for colors: you type in a word, like “summer”, and the website answers with colors that match your search. Simple and magical!
             </p>
             <video width="100%" autoPlay playsInline loop muted>

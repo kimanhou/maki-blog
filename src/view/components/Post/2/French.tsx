@@ -10,7 +10,7 @@ const French : React.FC<IPostContentProps> = props => {
     <>
         <Cross/><span>Rester simple: ne pas avoir trop de couleurs différentes. Une couleur dans une teinte foncée et une teinte claire suffisent parfois.</span>
         <br></br>
-        <Cross/><span>Un site sympa pour trouver l'inspiration et créer des palettes de couleurs est <a href='https://coolors.co/' target='_blank'><b>coolors.co</b></a>.</span>
+        <Cross/><span>Un site sympa pour trouver l'inspiration et créer des palettes de couleurs est <a href='https://coolors.co/' target='_blank' rel="noopener"><b>coolors.co</b></a>.</span>
         <br></br>
         <Cross/><span>À la place d'un texte noir sur fond blanc, expérimenter avec des “faux” noirs et “faux” blancs.</span>
         <br></br>
@@ -54,8 +54,8 @@ const French : React.FC<IPostContentProps> = props => {
             <img src={getImageSrc(postId, '1.jpg')}/>
             <p>Les couleurs sont : jaune et sa teinte claire associée, un vert gris qui rappelle la couleur des sapins et sa teinte claire associée et un “faux” blanc en fond.</p>
 
-            <p>Cette palette de couleurs a été créée sur <a href='https://coolors.co/' target='_blank'><b>Coolors</b></a>, un site sympa et bourré d'inspirations, qui permet d'expérimenter facilement avec les couleurs. 
-                Vous pouvez trouver ma palette de couleurs <a href='https://coolors.co/edc041-f8e6b4-2f4f4f-508686-feffff' target='_blank'>ici</a>.</p>
+            <p>Cette palette de couleurs a été créée sur <a href='https://coolors.co/' target='_blank' rel="noopener"><b>Coolors</b></a>, un site sympa et bourré d'inspirations, qui permet d'expérimenter facilement avec les couleurs. 
+                Vous pouvez trouver ma palette de couleurs <a href='https://coolors.co/edc041-f8e6b4-2f4f4f-508686-feffff' target='_blank' rel="noopener">ici</a>.</p>
 
             <div className={`section-separator`}></div>
 
@@ -64,7 +64,7 @@ const French : React.FC<IPostContentProps> = props => {
                 Expérimentez avec un “faux” noir pour le texte et un “faux” blanc pour le fond pour un effet plus doux, et ainsi améliorer l'expérience de lecture. 
                 N'hésitez pas à sortir des gris “neutres”, pour lesquels les trois valeurs du rgb sont identiques.
                 Gardez le vrai noir et le vrai blanc pour faire ressortir certains éléments, comme par exemple les titres.</p>
-            <p>Exemple: sur le <a href='https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread' target='_blank'>blog Ideo</a>, le titre de chaque article apparait en blanc sur fond noir, il saute aux yeux. À l'inverse, le corps de l'article est écrit en “faux” noir sur un fond faussement blanc.</p>
+            <p>Exemple: sur le <a href='https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread' target='_blank' rel="noopener">blog Ideo</a>, le titre de chaque article apparait en blanc sur fond noir, il saute aux yeux. À l'inverse, le corps de l'article est écrit en “faux” noir sur un fond faussement blanc.</p>
             <img src={getImageSrc(postId, '2.png')}/>
             <p>Ci-dessous, les couleurs du titre (première ligne), celle du corps de l'article (deuxième ligne) et des gris neutres proches des teintes utilisées dans le corps de l'article (troisième ligne). 
                 On voit clairement ici que le corps de l'article n'est pas un gris neutre mais a une teinte bleutée qui rend la page plus vivante.</p>
@@ -120,7 +120,7 @@ const French : React.FC<IPostContentProps> = props => {
 
             <Cross/><h2 className={`step-title`}>Bonus</h2>
             <p>
-                Si vous ne savez pas par où commencer, le site <a href='https://picular.co/' target='_blank'>Picular</a> est un excellent point de départ. 
+                Si vous ne savez pas par où commencer, le site <a href='https://picular.co/' target='_blank' rel="noopener">Picular</a> est un excellent point de départ. 
                 Il s'agit d'une sorte de Google pour couleurs : vous tapez un mot, comme par exemple “summer”, et le site vous répond avec des couleurs correspondant à votre recherche. Simple et magique !
             </p>
             <video width="100%" autoPlay playsInline loop muted>
