@@ -101,7 +101,7 @@ const English : React.FC<IPostContentProps> = props => {
             <p>For a good reading experience, <b>the contrast ratio should be above 5</b>. 
                 It does not mean that everything in your website absolutely needs to respect that limit, however it is a good indicator. 
                 As an example, the links of this article appear yellow when the mouse hovers them. 
-                The contrast ratio is really bad (1.72), but I found it acceptable as it is only in the case of a hover. 
+                The contrast ratio is really bad (1.72), but I found it acceptable as it is only in the case of a hover <i>(update : links no longer change color, but instead they are underlined)</i>. 
                 On the other hand, the body of the article has a contrast ratio of 10.95, which is excellent.</p>
             <img src={getImageSrc(postId, '6.jpg')}/>
             

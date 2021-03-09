@@ -21,14 +21,24 @@
                 margin-bottom: var(--size-margin-80);
                 line-height: 1.5;
                 a {
+                    background-image: linear-gradient(transparent calc(100% - 1px),var(--color-yellow) 1px);
+                    background-size: 100% 100%;
+                    position: relative;
+                    text-decoration: none;
+                    background-repeat: no-repeat;
+                    transition: all .2s;
+                    transition-property: all;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease;
+                    transition-delay: 0s;
                     &:hover {
-                        color: var(--color-yellow);
+                        background-size: 0 100%;
                     }
                 }
                 .italic {
                     font-style: italic;
                 }
-                >.step-title {
+                .step-title {
                     font-size: var(--size-font-size-preview-title);
                 }
                 >.p-separator {
@@ -124,6 +134,9 @@
                     &:hover {
                         color: var(--color-yellow);
                     }
+                }
+                .text-align-center {
+                    text-align: center;
                 }
             }
         }

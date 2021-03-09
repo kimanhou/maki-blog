@@ -87,6 +87,9 @@
 
 @media screen and (max-width: 600px) {
     .about-kim-anh {
+        >.section-header {
+            margin-bottom: var(--size-margin-50);
+        }
         >.about-kim-anh-container {
             flex-direction: column;
             >.about-kim-anh-left, >.about-kim-anh-right {

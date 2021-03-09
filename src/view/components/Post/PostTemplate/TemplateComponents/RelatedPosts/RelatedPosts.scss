@@ -1,11 +1,13 @@
 .related-posts {
+    margin-top: var(--size-main-margin);
     >.fade-in {
         >.posts {
             display: flex;
             flex-direction: row;
             margin: 0 calc(var(--size-gutter) * (-1));
+            justify-content: center;
             >.post-preview {
-                max-width: 33.33%;
+                max-width: 50%;
             }
         }
     }

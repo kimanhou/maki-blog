@@ -90,6 +90,9 @@
 
 @media screen and (max-width: 600px) {
     .about-mark {
+        >.section-header {
+            margin-bottom: var(--size-margin-50);
+        }
         >.about-mark-container {
             flex-direction: column;
             >.about-mark-left, >.about-mark-right {

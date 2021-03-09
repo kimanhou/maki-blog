@@ -36,7 +36,7 @@ const About : React.FC = props => {
     var kiStart = rkStart + mainMargin;
     var kiDistance = manhWidth; 
 
-    var gapBetweenEndOfIntroAndScrollable = 1000;
+    var gapBetweenEndOfIntroAndScrollable = mobile ? 1500 : 1000;
     var markHeight = mobile ? window.innerHeight * 2.5 : window.innerHeight * 1.5;
     var thresholdBackgroundTransitionStart = kiStart + kiDistance + gapBetweenEndOfIntroAndScrollable + markHeight;
     var thresholdBackgroundTransitionStop = window.innerHeight * 0.9;
@@ -50,6 +50,7 @@ const About : React.FC = props => {
     const [introScrollableScrollPosition2, setIntroScrollableScrollPosition2] = useState(0);
     const [introScrollableScrollPosition3, setIntroScrollableScrollPosition3] = useState(0);
     const [introScrollableScrollPosition4, setIntroScrollableScrollPosition4] = useState(0);
+    const [introScrollableScrollPosition5, setIntroScrollableScrollPosition5] = useState(0);
 
     const distanceBetweenMaki = useScroll(makiStart, makiDistance, [ mobile ]);
     const rkLeft = useScroll(rkStart, rkDistance, [ mobile ]);
@@ -61,11 +62,12 @@ const About : React.FC = props => {
     const [green, setGreen] = useState(0);
     const [blue, setBlue] = useState(0);
 
-    const aboutIntroScrollableHeight = 100;
+    const aboutIntroScrollableHeight = mobile ? 200 : 100;
     const aboutIntroScrollableInitialTop = window.innerHeight * 1.8 + 30 + (window.innerWidth / 2) - maWidth - mainMargin + 18 + 30 + manhWidth + mainMargin ;
     const aboutIntroScrollableInitialTop2 = aboutIntroScrollableInitialTop + aboutIntroScrollableHeight;
-    const aboutIntroScrollableInitialTop3 = aboutIntroScrollableInitialTop2 + aboutIntroScrollableHeight * 1.5;
+    const aboutIntroScrollableInitialTop3 = aboutIntroScrollableInitialTop2 + aboutIntroScrollableHeight;
     const aboutIntroScrollableInitialTop4 = aboutIntroScrollableInitialTop3 + aboutIntroScrollableHeight;
+    const aboutIntroScrollableInitialTop5 = aboutIntroScrollableInitialTop4 + aboutIntroScrollableHeight;
     const markAndKimAnhInitialTop = aboutIntroScrollableInitialTop + gapBetweenEndOfIntroAndScrollable;
 
     const fixedHeight = markAndKimAnhInitialTop;
@@ -95,6 +97,7 @@ const About : React.FC = props => {
             setIntroScrollableScrollPosition2(Math.min(Math.max(scrollTop + window.innerHeight - aboutIntroScrollableInitialTop2, 0), window.innerHeight * 0.6));
             setIntroScrollableScrollPosition3(Math.min(Math.max(scrollTop + window.innerHeight - aboutIntroScrollableInitialTop3, 0), window.innerHeight * 0.6));
             setIntroScrollableScrollPosition4(Math.min(Math.max(scrollTop + window.innerHeight - aboutIntroScrollableInitialTop4, 0), window.innerHeight * 0.6));
+            setIntroScrollableScrollPosition5(Math.min(Math.max(scrollTop + window.innerHeight - aboutIntroScrollableInitialTop5, 0), window.innerHeight * 0.6));
         };
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
@@ -122,17 +125,19 @@ const About : React.FC = props => {
             <AboutIntroScrollable scrollPosition={introScrollableScrollPosition2} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop2}>
                 <Text english='We have honed our skills for years working for big companies,' 
                     french='Nous avons perfectionné nos compétences depuis des années au service de grandes entreprises,'/>
-                <br></br>
+            </AboutIntroScrollable>
+
+            <AboutIntroScrollable scrollPosition={introScrollableScrollPosition3} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop3}>
                 <Text english='and decided to take a break from that hectic lifestyle to travel the world and build out our own projects.' 
                     french='avant de quitter ce style de vie harassant pour parcourir le monde et construire nos propres projets.'/>
             </AboutIntroScrollable>
 
-            <AboutIntroScrollable scrollPosition={introScrollableScrollPosition3} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop3}>
+            <AboutIntroScrollable scrollPosition={introScrollableScrollPosition4} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop4}>
                 <Text english='Since then we have launched websites, web games, learned web design, infrastructure and much more.' 
                     french="Depuis lors, nous avons lancé des sites, des jeux, appris le web design, l'infrastructure et bien plus encore."/>
             </AboutIntroScrollable>
 
-            <AboutIntroScrollable scrollPosition={introScrollableScrollPosition4} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop4}>
+            <AboutIntroScrollable scrollPosition={introScrollableScrollPosition5} figureHeight={window.innerHeight * 0.6} initialTop={aboutIntroScrollableInitialTop5}>
                 <Text english="It's a long, ongoing but very rewarding journey and we have decided to share what we learn along the way." 
                     french="C'est un long et très enrichissant voyage et nous avons décidé de vous partager ici ce que nous apprenons en chemin."/>
             </AboutIntroScrollable>
