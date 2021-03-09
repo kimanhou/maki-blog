@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import PostRoot from './view/components/Post/PostRoot';
@@ -8,10 +8,13 @@ import ScrollToTop from './view/components/ScrollToTop/ScrollToTop';
 import LocalContext from './view/components/LocalisationContext/LocalContext';
 import About from './view/components/About/About';
 import Contact from './view/components/Contact/Contact';
+import SectionHeader from './view/components/SectionHeader/SectionHeader';
+import Text from './model/Text';
 
 const App : React.FunctionComponent = props => {
 
     return (
+    <Suspense fallback={<SectionHeader title={new Text('Loading', 'En cours de chargement')} subtitle={new Text('', '')} ></SectionHeader>}>
         <div className={`App`}>
             <HashRouter>
                 <LocalContext>
@@ -36,6 +39,7 @@ const App : React.FunctionComponent = props => {
                 </LocalContext>
             </HashRouter>
         </div>
+    </Suspense>
     )
 }
 export default App;
