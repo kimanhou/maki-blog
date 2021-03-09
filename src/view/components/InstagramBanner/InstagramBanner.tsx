@@ -14,11 +14,11 @@ const InstagramBanner : React.FC<IInstagramBannerProps> = props => {
                 <div className={`main-wrapper`}>
                     <SectionHeader title={new Text('Follow us', 'Suivez-nous')} subtitle={new Text('on Instagram', 'sur Instagram')} isColorWhite />
                     <div className={`insta-photos-container`}>
+                        <InstagramPhoto caption='' photoCredits='@thisismakiworld' url='https://www.instagram.com/p/CMCozpDJQdJ/' />
+                        <InstagramPhoto caption='' photoCredits='@thisismakiworld' url='https://www.instagram.com/p/CLwmOjzIR_A/' />
+                        <InstagramPhoto caption='' photoCredits='@thisismakiworld' url='https://www.instagram.com/p/CLeioPZso_1/' />
                         <InstagramPhoto caption='' photoCredits='@thisismakiworld' url='https://www.instagram.com/p/CLMu1pYi0Si/' />
                         <InstagramPhoto caption='' photoCredits='@thisismakiworld' url='https://www.instagram.com/p/CLBwqBAC_3G/' />
-                        <InstagramPhoto caption='' photoCredits='@thisismakiworld' url='https://www.instagram.com/p/CK_m37rszVh/' />
-                        <InstagramPhoto caption='' photoCredits='@thisismakiworld' url='https://www.instagram.com/p/CKMKlIzs5CG/' />
-                        <InstagramPhoto caption='' photoCredits='@kimanhou' url='https://www.instagram.com/p/B8V2_xkpzwn/' />
                     </div>
                 </div>
             </FadeIn>
