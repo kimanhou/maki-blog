@@ -12,7 +12,7 @@ interface IPostPreviewProps {
 }
 
 const PostPreview : React.FC<IPostPreviewProps> = props => {
-    const image = require(`../Post/${props.post.id}/images/hero-image.jpg`);
+    const image = !props.post.isHeroVideo ? require(`../Post/${props.post.id}/images/hero-image.jpg`) : undefined;
     const video = props.post.isHeroVideo ? require(`../Post/${props.post.id}/images/hero-video.mp4`) : undefined;
 
     var localisation = useContext(LocalValueContext);
