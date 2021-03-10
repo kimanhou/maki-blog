@@ -42,7 +42,7 @@
             transition: top 0.4s, left 0.4s;
         }
         >.button-border {
-            border: solid 1px var(--color-off-black);
+            border: solid 1px var(--color-black);
             top: calc(var(--size-post-button-margin) * (-1));
             left: calc(var(--size-post-button-margin) * (-1));
             transition: top 0.4s, left 0.4s;
@@ -84,7 +84,7 @@
 
 @keyframes button-border-animation {
     0% {
-        border: solid 1px var(--color-off-black);
+        border: solid 1px var(--color-black);
     }
     100% {
         border: none;

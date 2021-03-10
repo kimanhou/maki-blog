@@ -107,7 +107,7 @@ const French : React.FC<IPostContentProps> = props => {
             <span className={`code-title`}>Le résultat</span><br></br>
             J'ai rajouté des bordures pour que ce soit plus clair.<br></br>
             <div className={`my-div-2 font-size-big`}>
-                <div className={`text`} style={{border: 'solid 1px var(--color-off-black)'}}>Hello world</div>
+                <div className={`text`} style={{border: 'solid 1px var(--color-black)'}}>Hello world</div>
                 <div className={`text pink`} style={{border: 'solid 1px pink'}}>Hello world</div>
             </div>
 

@@ -21,7 +21,7 @@ export const useDemoExample1ControlColumns = (columnNumberMax : number) : [ numb
 const getColor = (rgb : string) => {
     const green = rgb.split(',')[1];
     if (parseInt(green) > 149) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     else {
         return 'var(--color-white)';

@@ -21,7 +21,7 @@ export const getBackgroundColor4x4Pacman = (x : number, y : number) => {
     ];
 
     if (isInList(x, y, blackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     if (isInList(x, y, yellowCoordinates)) {
         return 'var(--color-yellow)';
@@ -110,7 +110,7 @@ export const getBackgroundColor8x8Pikachu = (x : number, y : number) : string =>
         return 'black';
     }
     if (isInList(x, y, offBlackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     if (isInList(x, y, brownCoordinates)) {
         return 'rgb(197,109,26)';
@@ -151,7 +151,7 @@ export const getBackgroundColor8x8Kirby = (x : number, y : number) : string => {
         return 'rgb(27,39,124)';
     }
     if (isInList(x, y, blackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     if (isInList(x, y, pinkCoordinates)) {
         return 'rgb(238,100,146)';
@@ -196,7 +196,7 @@ export const getBackgroundColor8x8SpaceInvader = (x : number, y : number) : stri
         return 'rgb(30,44,82)';
     }
     if (isInList(x, y, blackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     return 'var(--color-white)';
 }
@@ -249,7 +249,7 @@ export const getBackgroundColor8x8Ghost = (x : number, y : number) : string => {
         return 'rgb(194,195,199)';
     }
     if (isInList(x, y, blackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     if (isInList(x, y, beigeCoordinates)) {
         return 'rgb(255,241,233)';
@@ -358,7 +358,7 @@ export const getBackgroundColor16x16Charmander = (x : number, y : number) => {
         return 'rgb(188,48,59)';
     }
     if (isInList(x, y, blackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     if (isInList(x, y, orangeCoordinates)) {
         return 'rgb(253,125,72)';
@@ -419,7 +419,7 @@ export const getBackgroundColor16x16AmongUs = (x : number, y : number) => {
         return 'rgb(0,85,255)';
     }
     if (isInList(x, y, blackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     if (isInList(x, y, redCoordinates)) {
         return 'red';
@@ -468,7 +468,7 @@ export const getBackgroundColor16x16Yoshi = (x : number, y : number) => {
     ];
 
     if (isInList(x, y, blackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     if (isInList(x, y, greenCoordinates)) {
         return 'rgb(177,191,77)';
@@ -566,7 +566,7 @@ export const getBackgroundColor32x32Pikachu = (x : number, y : number) => {
         return 'red';
     }
     if (isInList(x, y, blackCoordinates)) {
-        return 'var(--color-off-black)';
+        return 'var(--color-black)';
     }
     if (isInList(x, y, yellowCoordinates)) {
         return 'var(--color-yellow)';

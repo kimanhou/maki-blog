@@ -13,6 +13,8 @@ import English6 from "../view/components/Post/6/English";
 import French6 from "../view/components/Post/6/French";
 import English7 from "../view/components/Post/7/English";
 import French7 from "../view/components/Post/7/French";
+import English8 from "../view/components/Post/8/English";
+import French8 from "../view/components/Post/8/French";
 import Category from "./Category";
 import LanguageVersion from "./LanguageVersion";
 
@@ -45,8 +47,8 @@ export default class Post {
 
     static getAllPosts = () => {
         return [ 
-            Post.SEVEN, 
-            Post.SIX, Post.FIVE, Post.FOUR, Post.THREE, Post.TWO, Post.ONE,
+            Post.EIGHT, 
+            Post.SEVEN, Post.SIX, Post.FIVE, Post.FOUR, Post.THREE, Post.TWO, Post.ONE,
          ];
     }
 
@@ -126,6 +128,7 @@ export default class Post {
     static FIVE = new Post(5, new Date('2021-02-19'), new LanguageVersion(English5, 'Flexbox cheatsheet'), new LanguageVersion(French5, "Flexbox cheatsheet"), [ Category.CODE ], true);
     static SIX = new Post(6, new Date('2021-02-26'), new LanguageVersion(English6, 'Pixel art'), new LanguageVersion(French6, "Pixel art"), [ Category.GAME ]);
     static SEVEN = new Post(7, new Date('2021-03-05'), new LanguageVersion(English7, '5 essential questions to ask yourself before picking a typeface'), new LanguageVersion(French7, "5 questions essentielles à se poser avant de choisir une police"), [ Category.UI ], true);
+    static EIGHT = new Post(8, new Date('2021-03-12'), new LanguageVersion(English8, 'Take a compliment'), new LanguageVersion(French8, "Prends un compliment"), [ Category.GAME ], true);
 }
 
 const monthsFr = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ]

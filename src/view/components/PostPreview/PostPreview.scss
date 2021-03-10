@@ -30,7 +30,7 @@
             left: calc(var(--size-margin-10) * (-1));
             width: 100%;
             height: 100%;
-            background-color: var(--color-off-black);
+            background-color: var(--color-black);
             opacity: 0;
             transition: opacity 0.6s, top 0.6s, left 0.6s;
         }

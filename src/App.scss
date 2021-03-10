@@ -5,13 +5,13 @@
 .App {
     font-family: AnticDidone;
     background-color: var(--color-white);
-    color: var(--color-off-black);
+    color: var(--color-black);
     .main-wrapper {
         margin: 0 var(--size-main-margin);
         max-width: var(--size-main-wrapper-max-width);
     }
     a {
-        color: var(--color-off-black);
+        color: var(--color-black);
         text-decoration: none;
     }
     h1, h2, h3, h4, h5 {

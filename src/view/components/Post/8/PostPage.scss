@@ -1,0 +1,29 @@
+
+.post {
+    &.eight {
+        >.post-hero-image {
+            background: url('images/hero-image.jpg') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .post-text {
+            text-align: center;
+            .take-a-compliment-container {
+                display: inline-flex;
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .post {
+        &.eight {
+            .post-text {
+                
+            }
+        }
+    }
+}
