@@ -1,14 +1,16 @@
 import React from 'react';
+import ComplimentModel from '../model/Compliment';
 import './Compliment.scss';
 
 interface IComplimentProps {
-    sentence : string;
+    compliment : ComplimentModel;
+    onClick : () => void;
 }
 
 const Compliment : React.FC<IComplimentProps> = props => {
     return (
-        <div className={`compliment`}>
-            {props.sentence}
+        <div className={`compliment`} onClick={props.onClick}>
+            {props.compliment.title}
         </div>
     );
 }

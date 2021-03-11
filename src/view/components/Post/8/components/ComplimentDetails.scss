@@ -1,0 +1,50 @@
+.compliment-details {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(60, 60, 65, 0.5);
+    opacity: 0;
+    display: none;
+    align-items: center;
+    >.compliment-details-content {
+        >.compliment-details-title {
+            font-size: var(--size-font-size-preview-title);
+        }
+        >.compliment-details-hastag {
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            font-size: var(--size-font-size-small);
+            margin-top: var(--size-margin-30);
+        }
+        width: 60vw;
+        margin: 0 auto;
+        padding: var(--size-margin-30);
+        color: var(--color-white);
+        background: #2C3E50;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    &.active {
+        pointer-events: unset;
+        display: flex;
+        animation: fade-in-animation 1s ease-in 0s forwards;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .compliment-details {
+        width: 100%;
+    }
+}
+
+@keyframes fade-in-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
