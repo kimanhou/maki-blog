@@ -6,6 +6,7 @@ interface IComplimentDetailsProps {
     compliment : Compliment
     active : boolean;
     onClick : () => void;
+    background : string;
 }
 
 const ComplimentDetails : React.FC<IComplimentDetailsProps> = props => {
@@ -13,11 +14,13 @@ const ComplimentDetails : React.FC<IComplimentDetailsProps> = props => {
 
     return (
         <section className={`compliment-details ${activeClassname}`} onClick={props.onClick}>
-            <div className={`compliment-details-content`}>
+            <div className={`compliment-details-content ${props.background}`}>
                 <h2 className={`compliment-details-title`}>
                     {props.compliment.title}
                 </h2>
-                {props.compliment.text}
+                <p className={`compliment-details-text`}>
+                    {props.compliment.text}
+                </p>
                 <p className={`compliment-details-hastag`}>
                     #goodvibesonly
                 </p>

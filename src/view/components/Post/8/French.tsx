@@ -13,11 +13,13 @@ const French : React.FC<IPostContentProps> = props => {
 
     const [ compliment, setCompliment ] = useState(emptyCompliment);
     const [ complimentDetailsActive, setComplimentDetailsActive ] = useState(false);
+    const [ complimentDetailBackground, setComplimentDetailsBackground] = useState('');
 
 
     const onClickCompliment = (compliment : ComplimentModel) => {
         setCompliment(compliment);
         setComplimentDetailsActive(true);
+        setComplimentDetailsBackground(compliment.background)
     }
 
     return (
@@ -40,7 +42,10 @@ const French : React.FC<IPostContentProps> = props => {
                 <Compliment compliment={compliment8} onClick={() => onClickCompliment(compliment8)}/>
             </section>
 
-            <ComplimentDetails compliment={compliment} active={complimentDetailsActive} onClick={() => setComplimentDetailsActive(false)}/>
+            <ComplimentDetails compliment={compliment} 
+                                active={complimentDetailsActive} 
+                                onClick={() => setComplimentDetailsActive(false)} 
+                                background={complimentDetailBackground}/>
             
         </PostTemplate>
     );

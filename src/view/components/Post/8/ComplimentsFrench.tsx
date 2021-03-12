@@ -1,8 +1,7 @@
 import React from 'react';
-import Text from '../../../../model/Text';
 import Compliment from './model/Compliment';
 
-export const emptyCompliment = new Compliment('', '');
+export const emptyCompliment = new Compliment('', '', '');
 
 const compliment1Text = <p>
     I'll take you to the <span className={`font-family-dawning`}>future</span><br></br>
@@ -15,16 +14,16 @@ const compliment1Text = <p>
     Is where the night will end<br></br>
     Them bright big lights are shining on us<br></br>
     That beat so tight it makes you wanna<br></br>
-    Get up, get down like <span className={`font-family-dawning`}>there's no tomorrow</span><br></br>
+    Get up, get down like <span className={`nbsp`}></span><span className={`font-family-dawning`}>there's no tomorrow</span><br></br>
     Like there's no tomorrow
 </p>
 
 
-export const compliment1 = new Compliment('Tu es génial / géniale', compliment1Text);
-export const compliment2 = new Compliment('Tu es radieux / radieuse', compliment1Text);
-export const compliment3 = new Compliment('Tu es incroyable', compliment1Text);
-export const compliment4 = new Compliment('Tu es courageux / courageuse', compliment1Text);
-export const compliment5 = new Compliment('Tu es unique', compliment1Text);
-export const compliment6 = new Compliment('Tu en vaux la peine', compliment1Text);
-export const compliment7 = new Compliment('Tu es une bonne personne', compliment1Text);
-export const compliment8 = new Compliment('Tu le mérites', compliment1Text);
+export const compliment1 = new Compliment('Tu es génial / géniale', compliment1Text, '');
+export const compliment2 = new Compliment('Tu es radieux / radieuse', compliment1Text, 'lawrencium');
+export const compliment3 = new Compliment('Tu es incroyable', compliment1Text, 'celestial');
+export const compliment4 = new Compliment('Tu es courageux / courageuse', compliment1Text, 'horizon');
+export const compliment5 = new Compliment('Tu es unique', compliment1Text, 'moonlit-asteroid');
+export const compliment6 = new Compliment('Tu en vaux la peine', compliment1Text, 'red-sunset');
+export const compliment7 = new Compliment('Tu es une bonne personne', compliment1Text, 'blu');
+export const compliment8 = new Compliment('Tu le mérites', compliment1Text, 'cherry-blossom');
